@@ -6,7 +6,7 @@ activities in different locations. Its primary purpose is to be able
 to display maps of activities at those different locations, while
 allowing for smart filtering.
 
-![example screen](https://github.com/jariarkko/psgeo/blob/master/doc/screenshot.png)
+![example screen](https://github.com/jariarkko/psgeo/blob/master/doc/screenshot-small.png)
 
 
 Psgeo has been used for tracking skiing activities by
