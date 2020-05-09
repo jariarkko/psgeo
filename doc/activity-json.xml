@@ -186,6 +186,85 @@
     <section anchor="modelling" title="Modelling Activities">
 
       <t>...</t>
+
+      <t>In this version of the specification, the supported
+      activities and their sub-activities are as follows:
+      
+      <list style="hanging">
+        
+        <t hangText="Biking"><vspace blankLines="1"/>
+        The sub-activities are Road and Mountain.</t>
+        
+        <t hangText="Canoeing"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Caving"><vspace blankLines="1"/>
+        The sub-activities are Rock, Ice, Man-made, Science, and Equipment.</t>
+        
+        <t hangText="Charity"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Climbing"><vspace blankLines="1"/>
+        The sub-activities are Mountain, Rock, Ice, Wall, and Volcanoes.</t>
+        
+        <t hangText="Diving"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Equipment"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Hiking"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="History"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Sauna"><vspace blankLines="1"/>
+        The sub-activities are Normal, Smoke, Steam.</t>
+        
+        <t hangText="Skiing"><vspace blankLines="1"/> The
+        sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
+        Asphalt, Grass, Mud, Plastic, Other-substances, and
+        Imported-snow.</t>
+        
+        <t hangText="Skydiving"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Sliding"><vspace blankLines="1"/>
+        The sub-activities are the same as for Skiing.</t>
+        
+        <t hangText="Snowboarding"><vspace blankLines="1"/>
+        The sub-activities are the same as for Skiing.</t>
+        
+        <t hangText="Surfing"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Swimming"><vspace blankLines="1"/>
+        Indoor, Outdoor, Underground, Water, Ice.</t>
+        
+        <t hangText="Travel"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Urban-exploration"><vspace blankLines="1"/>
+        The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
+        Quarries, Industrial, Silos, Ski-lifts, Landfills, Castles,
+        Vehicles, Trenches, Memorial, Historic-sites, Bridges,
+        Skating-rinks, Amusement-parks, Airports, Catacombs, Railways,
+        Smokestacks, Towers, Prisons, Harbours, and Military.</t>
+        
+        <t hangText="Wakeboarding"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Walking"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Waterfalls"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+        <t hangText="Other"><vspace blankLines="1"/>
+        There are no sub-activities.</t>
+        
+      </list></t>
       
     </section>
     

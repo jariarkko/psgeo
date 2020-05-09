@@ -67,18 +67,18 @@ Table of Contents
    2.  Normative Language  . . . . . . . . . . . . . . . . . . . . .   3
    3.  Goals . . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Modelling Activities  . . . . . . . . . . . . . . . . . . . .   4
-   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   4
-     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .   5
-     5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .   6
-     5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .   8
-   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .   9
-   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .   9
-   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  10
-   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  10
-     9.1.  Normative References  . . . . . . . . . . . . . . . . . .  10
-     9.2.  Informative References  . . . . . . . . . . . . . . . . .  10
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  11
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  11
+   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   6
+     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .   7
+     5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .   8
+     5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  10
+   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  11
+   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  11
+   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  12
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  12
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .  12
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .  12
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  13
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  13
 
 1.  Introduction
 
@@ -212,6 +212,118 @@ Internet-Draft                Activity JSON                     May 2020
 
    ...
 
+   In this version of the specification, the supported activities and
+   their sub-activities are as follows:
+
+   Biking
+
+      The sub-activities are Road and Mountain.
+
+
+
+Arkko                   Expires November 10, 2020               [Page 4]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
+   Canoeing
+
+      There are no sub-activities.
+
+   Caving
+
+      The sub-activities are Rock, Ice, Man-made, Science, and
+      Equipment.
+
+   Charity
+
+      There are no sub-activities.
+
+   Climbing
+
+      The sub-activities are Mountain, Rock, Ice, Wall, and Volcanoes.
+
+   Diving
+
+      There are no sub-activities.
+
+   Equipment
+
+      There are no sub-activities.
+
+   Hiking
+
+      There are no sub-activities.
+
+   History
+
+      There are no sub-activities.
+
+   Sauna
+
+      The sub-activities are Normal, Smoke, Steam.
+
+   Skiing
+
+      The sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
+      Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
+
+   Skydiving
+
+      There are no sub-activities.
+
+   Sliding
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 5]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
+      The sub-activities are the same as for Skiing.
+
+   Snowboarding
+
+      The sub-activities are the same as for Skiing.
+
+   Surfing
+
+      There are no sub-activities.
+
+   Swimming
+
+      Indoor, Outdoor, Underground, Water, Ice.
+
+   Travel
+
+      There are no sub-activities.
+
+   Urban-exploration
+
+      The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
+      Quarries, Industrial, Silos, Ski-lifts, Landfills, Castles,
+      Vehicles, Trenches, Memorial, Historic-sites, Bridges, Skating-
+      rinks, Amusement-parks, Airports, Catacombs, Railways,
+      Smokestacks, Towers, Prisons, Harbours, and Military.
+
+   Wakeboarding
+
+      There are no sub-activities.
+
+   Walking
+
+      There are no sub-activities.
+
+   Waterfalls
+
+      There are no sub-activities.
+
+   Other
+
+      There are no sub-activities.
+
 5.  Generation 2 Format
 
    The format is a specialization of GeoJSON.  Every Activity JSON
@@ -221,7 +333,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 4]
+Arkko                   Expires November 10, 2020               [Page 6]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -277,7 +389,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 5]
+Arkko                   Expires November 10, 2020               [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -333,7 +445,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 6]
+Arkko                   Expires November 10, 2020               [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -389,7 +501,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 7]
+Arkko                   Expires November 10, 2020               [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -445,7 +557,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 8]
+Arkko                   Expires November 10, 2020              [Page 10]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -501,7 +613,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 9]
+Arkko                   Expires November 10, 2020              [Page 11]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -557,7 +669,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020              [Page 10]
+Arkko                   Expires November 10, 2020              [Page 12]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -613,4 +725,4 @@ Author's Address
 
 
 
-Arkko                   Expires November 10, 2020              [Page 11]
+Arkko                   Expires November 10, 2020              [Page 13]
