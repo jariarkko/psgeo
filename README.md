@@ -10,7 +10,9 @@ allowing for smart filtering.
 
 Psgeo has been used for tracking skiing activities by
 [Planetskier](https://planetskier.net) and caving by
-[Luolaseura](https://luolaseura.fi) and [Planetcaver](https://planetcaver.net).
+[Luolaseura](https://luolaseura.fi) and
+[Planetcaver](https://planetcaver.net). For an example application,
+see Ralf Strandell's [Finnish caves page](https://luolaseura.fi/luolakanta/kartta.html) at the on the Luolaseura web.
 
 Psgeo is based on
 [Activity JSON](https://github.com/jariarkko/psgeo/blob/master/doc/activity-json.txt),

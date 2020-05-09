@@ -71,7 +71,18 @@ Table of Contents
 
 1.  Introduction
 
-   ...
+   The author has worked with web applications that deal with sports
+   activities in different locations.  The applications allow displaying
+   varying activities on a map, smart filtering based on specific type
+   or attributes of those activities.
+
+   Activity JSON is a simple format that allows providing information
+   about activities and their geographic positions.  It is an extension
+   of existing formats, specialized to provide some additional
+   information that applications can use to perform filtering, showing
+   useful information to the user, and so on.  Activity JSON is
+   primarily targeted towards passing information between a web server
+   and an application running in a browser.
 
    JavaScript Object Notation (JSON) [RFC7159] is a popular format used
    in web applications.  GeoJSON [RFC7946] [GeoJSON] is a format for
@@ -95,17 +106,6 @@ Table of Contents
 
    An empty file should contain just:
 
-             []
-
-   Here's an example of a file with just one entry:
-
-
-
-
-
-
-
-
 
 
 
@@ -113,6 +113,10 @@ Arkko                   Expires November 10, 2020               [Page 2]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+             []
+
+   Here's an example of a file with just one entry:
 
              [
              {"n": "Kattilajaerven iso lippaluola, Nuuksio, Espoo",
@@ -158,10 +162,6 @@ Internet-Draft                Activity JSON                     May 2020
       location for privacy etc. reasons.  Default is false.  This
       attribute is optional.
 
-   m
-
-      The cave map link URL, if any.  If there's no URL, the attribute
-      should not be specified at all (and should not be set to, e.g.,
 
 
 
@@ -170,6 +170,10 @@ Arkko                   Expires November 10, 2020               [Page 3]
 Internet-Draft                Activity JSON                     May 2020
 
 
+   m
+
+      The cave map link URL, if any.  If there's no URL, the attribute
+      should not be specified at all (and should not be set to, e.g.,
       empty string, although it is recommended that software recognises
       empty strings similarly to missing attributes.
 
@@ -214,10 +218,6 @@ Internet-Draft                Activity JSON                     May 2020
       optional.  If no image URL known, the attribute should not be
       specified at all.
 
-   w
-
-      List of people who were there.  This attribute is mandatory.
-
 
 
 
@@ -225,6 +225,10 @@ Arkko                   Expires November 10, 2020               [Page 4]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   w
+
+      List of people who were there.  This attribute is mandatory.
 
    y
 
@@ -270,10 +274,6 @@ Internet-Draft                Activity JSON                     May 2020
               DOI 10.17487/RFC7946, August 2016,
               <https://www.rfc-editor.org/info/rfc7946>.
 
-   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
-              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
-
 
 
 
@@ -281,6 +281,10 @@ Arkko                   Expires November 10, 2020               [Page 5]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
 4.2.  Informative References
 
@@ -313,10 +317,6 @@ Author's Address
    Finland
 
    Email: jari@arkko.com
-
-
-
-
 
 
 
