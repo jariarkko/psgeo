@@ -35,7 +35,14 @@
 
     <abstract>
 
-      <t>...</t>
+      <t>Activity JSON is a simple format that allows providing
+      information about activities and their geographic positions.  It
+      is an extension of existing formats, specialized to provide some
+      additional information that applications can use to perform
+      filtering, showing useful information to the user, and so
+      on. Activity JSON is primarily targeted towards passing
+      information between a web server and an application running in a
+      browser.</t>
       
     </abstract>
 
@@ -69,6 +76,23 @@
       target="Planetskier"/> and caving-related activities reported in
       <xref target="Luolaseura"/> and <xref
       target="Planetcaver"/>.</t>
+
+      <t>The rest of this document is organized as follows. <xref
+      target="gen2"/> describes the currently specified format for
+      Activity JSON. The description includes specification of the
+      syntax rules and the structure as inherited from base
+      specifications, and a detailed discussion of the specific
+      properties that can be described by Activity JSON objects.</t>
+
+      <t>There are, however, two older versions of Activity JSON.
+      Software libraries support all format variants, so using an
+      older format is generally ok, but for new information the
+      Generation 2 format is RECOMMENDED.  Note that with Generation 2
+      format, Activity JSON can be directly supplied to a wide variety
+      of software that accepts GeoJSON. The earlier format generations
+      and compatibility discussion can be found in <xref
+      target="gen1"/>, <xref target="gen0"/>, and <xref
+      target="compat"/>.</t>
       
     </section>
 
@@ -83,25 +107,13 @@
       
     </section>
 
-    <section title="Generation 2 Format">
+    <section anchor="gen2" title="Generation 2 Format">
 
       <t>The format is a specialization of GeoJSON. Every Activity
       JSON object is also a valid GeoJSON object, but has some extra
       properties to carry the information that is needed to describe
       the activities.</t>
 
-      <t>Generation 1 and 2 are very similar. The information content
-      is the same, and the attributes about the activities are
-      represented literally in the same way. The only difference is
-      the wrapping of entries in the GeoJSON objects vs. simply
-      containing them in a list.</t>
-
-      <t>Compatability note: The Psgeo software library supports both
-      <xref target="Psgeo"/>, so existing files with content in
-      Generation 1 format continue to be readable. However, Generation
-      2 format is better in the sense that it can be directly supplied
-      to a wide variety of software that accepts GeoJSON.</t>
-      
       <t>For example, an empty file contains just:</t>
       
       <figure>
@@ -148,7 +160,7 @@
       </figure>
     </section>
     
-    <section title="Generation 1 Format">
+    <section anchor="gen1" title="Generation 1 Format">
       
       <t>The format is based on JSON. An Activity JSON Generation 1
       object MUST be a JSON array of records. </t>
@@ -283,6 +295,40 @@
       
     </section>
     
+    <section anchor="gen0" title="Generation 1 Format">
+
+      <t>Generation 0 format is similar to Generation 1 format, with the following differences:
+      
+      <list style="symbols">
+
+      <t>The "k" (city) field was not used.</t>
+      <t>The "y" (year) and "m" (month) fields were not used.</t>
+      </list>
+      </t>
+
+   </section>
+
+   <section anchor="compat" title="Compatibility">
+   
+      <t>All the formats are very similar. The information content is
+      the same, and the attributes about the activities are
+      represented literally in the same way. The only differences are
+      some additional information in Generation 2 and Generation 1
+      formats, and the wrapping of entries in the GeoJSON objects in
+      Generation 2 format vs. simply containing them in a list in
+      Generations 1 and 2 formats.</t>
+
+      <t>The Psgeo software library supports both <xref
+      target="Psgeo"/>, so existing files with content in Generation 1
+      format continue to be readable. </t>
+
+      <t>For compatibility between generation 1 and 0, the differences
+      are again supported by software libraries and any Generation 0
+      content continues to be acceptable by systems consuming Activity
+      JSON.</t>
+      
+    </section>
+    
   </middle>
   <back>
 
@@ -348,7 +394,7 @@
       
       <t>The author would like to acknowledge the contributions of Ralf
       Strandell, Jarmo Ruuth, and Dare Talvitie. Discussions with you
-      have greatly informed me about this topic.</t>
+      have greatly enhanced knowledge about this topic.</t>
       
     </section>
     

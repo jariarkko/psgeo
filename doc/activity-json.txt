@@ -13,7 +13,13 @@ Expires: November 10, 2020
 
 Abstract
 
-   ...
+   Activity JSON is a simple format that allows providing information
+   about activities and their geographic positions.  It is an extension
+   of existing formats, specialized to provide some additional
+   information that applications can use to perform filtering, showing
+   useful information to the user, and so on.  Activity JSON is
+   primarily targeted towards passing information between a web server
+   and an application running in a browser.
 
 Status of This Memo
 
@@ -44,12 +50,6 @@ Copyright Notice
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
    include Simplified BSD License text as described in Section 4.e of
-   the Trust Legal Provisions and are provided without warranty as
-   described in the Simplified BSD License.
-
-
-
-
 
 
 
@@ -58,17 +58,22 @@ Arkko                   Expires November 10, 2020               [Page 1]
 Internet-Draft                Activity JSON                     May 2020
 
 
+   the Trust Legal Provisions and are provided without warranty as
+   described in the Simplified BSD License.
+
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  Normative Language  . . . . . . . . . . . . . . . . . . . . .   2
-   3.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Normative Language  . . . . . . . . . . . . . . . . . . . . .   3
+   3.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   3
    4.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .   4
-   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
-     5.1.  Normative References  . . . . . . . . . . . . . . . . . .   6
-     5.2.  Informative References  . . . . . . . . . . . . . . . . .   7
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .   7
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   7
+   5.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .   7
+   6.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .   7
+   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     7.1.  Normative References  . . . . . . . . . . . . . . . . . .   8
+     7.2.  Informative References  . . . . . . . . . . . . . . . . .   8
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .   9
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   9
 
 1.  Introduction
 
@@ -93,6 +98,30 @@ Table of Contents
    activities reported in [Planetskier] and caving-related activities
    reported in [Luolaseura] and [Planetcaver].
 
+   The rest of this document is organized as follows.  Section 3
+   describes the currently specified format for Activity JSON.  The
+   description includes specification of the syntax rules and the
+   structure as inherited from base specifications, and a detailed
+   discussion of the specific properties that can be described by
+   Activity JSON objects.
+
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 2]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
+   There are, however, two older versions of Activity JSON.  Software
+   libraries support all format variants, so using an older format is
+   generally ok, but for new information the Generation 2 format is
+   RECOMMENDED.  Note that with Generation 2 format, Activity JSON can
+   be directly supplied to a wide variety of software that accepts
+   GeoJSON.  The earlier format generations and compatibility discussion
+   can be found in Section 4, Section 5, and Section 6.
+
 2.  Normative Language
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
@@ -107,24 +136,6 @@ Table of Contents
    object is also a valid GeoJSON object, but has some extra properties
    to carry the information that is needed to describe the activities.
 
-
-
-Arkko                   Expires November 10, 2020               [Page 2]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
-   Generation 1 and 2 are very similar.  The information content is the
-   same, and the attributes about the activities are represented
-   literally in the same way.  The only difference is the wrapping of
-   entries in the GeoJSON objects vs. simply containing them in a list.
-
-   Compatability note: The Psgeo software library supports both [Psgeo],
-   so existing files with content in Generation 1 format continue to be
-   readable.  However, Generation 2 format is better in the sense that
-   it can be directly supplied to a wide variety of software that
-   accepts GeoJSON.
-
    For example, an empty file contains just:
 
              {
@@ -133,6 +144,31 @@ Internet-Draft                Activity JSON                     May 2020
              }
 
    Here's an example of a file with just one entry:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 3]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
       {
         "type": "FeatureCollection",
@@ -162,14 +198,6 @@ Internet-Draft                Activity JSON                     May 2020
         ]
       }
 
-
-
-
-Arkko                   Expires November 10, 2020               [Page 3]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
 4.  Generation 1 Format
 
    The format is based on JSON.  An Activity JSON Generation 1 object
@@ -180,6 +208,23 @@ Internet-Draft                Activity JSON                     May 2020
              []
 
    Here's an example of a file with just one entry:
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 4]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
         [
          {"n": "Kattilajaerven iso lippaluola, Nuuksio, Espoo",
@@ -219,13 +264,6 @@ Internet-Draft                Activity JSON                     May 2020
       An optional attribute that describes the altitude the location or
       the highest point in the destination, in memeters.
 
-
-
-Arkko                   Expires November 10, 2020               [Page 4]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
    fz
 
       Set to true if the coordinates are "fuzzy" to hide the true
@@ -236,6 +274,14 @@ Internet-Draft                Activity JSON                     May 2020
 
       The cave map link URL, if any.  If there's no URL, the attribute
       should not be specified at all (and should not be set to, e.g.,
+
+
+
+Arkko                   Expires November 10, 2020               [Page 5]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       empty string, although it is recommended that software recognises
       empty strings similarly to missing attributes.
 
@@ -274,14 +320,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       The title.  This attribute is mandatory.
 
-
-
-
-Arkko                   Expires November 10, 2020               [Page 5]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
    i
 
       URL for an image representing the article.  This attribute is
@@ -291,6 +329,14 @@ Internet-Draft                Activity JSON                     May 2020
    w
 
       List of people who were there.  This attribute is mandatory.
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 6]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    y
 
@@ -318,9 +364,43 @@ Internet-Draft                Activity JSON                     May 2020
       URL for the article.  This attribute is optional.  If no URL is
       known, the attribute should not be specified at all.
 
-5.  References
+5.  Generation 1 Format
 
-5.1.  Normative References
+   Generation 0 format is similar to Generation 1 format, with the
+   following differences:
+
+   o  The "k" (city) field was not used.
+
+   o  The "y" (year) and "m" (month) fields were not used.
+
+6.  Compatibility
+
+   All the formats are very similar.  The information content is the
+   same, and the attributes about the activities are represented
+   literally in the same way.  The only differences are some additional
+   information in Generation 2 and Generation 1 formats, and the
+   wrapping of entries in the GeoJSON objects in Generation 2 format vs.
+   simply containing them in a list in Generations 1 and 2 formats.
+
+   The Psgeo software library supports both [Psgeo], so existing files
+   with content in Generation 1 format continue to be readable.
+
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 7]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
+   For compatibility between generation 1 and 0, the differences are
+   again supported by software libraries and any Generation 0 content
+   continues to be acceptable by systems consuming Activity JSON.
+
+7.  References
+
+7.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -331,13 +411,6 @@ Internet-Draft                Activity JSON                     May 2020
               Interchange Format", RFC 7159, DOI 10.17487/RFC7159, March
               2014, <https://www.rfc-editor.org/info/rfc7159>.
 
-
-
-Arkko                   Expires November 10, 2020               [Page 6]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
    [RFC7946]  Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S.,
               and T. Schaub, "The GeoJSON Format", RFC 7946,
               DOI 10.17487/RFC7946, August 2016,
@@ -347,7 +420,7 @@ Internet-Draft                Activity JSON                     May 2020
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
-5.2.  Informative References
+7.2.  Informative References
 
    [GeoJSON]  GeoJSON, "GeoJSON", website https://geojson.org, May 2020.
 
@@ -366,11 +439,22 @@ Internet-Draft                Activity JSON                     May 2020
    [Psgeo]    Arkko, J., "Psgeo: Activity location library",
               website https://github.com/jariarkko/psgeo, May 2020.
 
+
+
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 8]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
 Appendix A.  Contributors
 
    The author would like to acknowledge the contributions of Ralf
    Strandell, Jarmo Ruuth, and Dare Talvitie.  Discussions with you have
-   greatly informed me about this topic.
+   greatly enhanced knowledge about this topic.
 
 Author's Address
 
@@ -389,4 +473,32 @@ Author's Address
 
 
 
-Arkko                   Expires November 10, 2020               [Page 7]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 9]
