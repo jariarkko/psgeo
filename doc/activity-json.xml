@@ -64,8 +64,10 @@
       target="RFC7946"/> <xref target="GeoJSON"/> is a format for
       encoding a variety of geographic data structures using JSON.</t>
 
-      <t>Activity JSON has been used in building websites for <xref
-      target="Planetskier"/>, <xref target="Luolaseura"/>, and <xref
+      <t>Activity JSON has been used in building websites for
+      skiing-related activities reported in <xref
+      target="Planetskier"/> and caving-related activities reported in
+      <xref target="Luolaseura"/> and <xref
       target="Planetcaver"/>.</t>
       
     </section>
@@ -81,12 +83,77 @@
       
     </section>
 
-    <section title="Format">
+    <section title="Generation 2 Format">
+
+      <t>The format is a specialization of GeoJSON. Every Activity
+      JSON object is also a valid GeoJSON object, but has some extra
+      properties to carry the information that is needed to describe
+      the activities.</t>
+
+      <t>Generation 1 and 2 are very similar. The information content
+      is the same, and the attributes about the activities are
+      represented literally in the same way. The only difference is
+      the wrapping of entries in the GeoJSON objects vs. simply
+      containing them in a list.</t>
+
+      <t>Compatability note: The Psgeo software library supports both
+      <xref target="Psgeo"/>, so existing files with content in
+      Generation 1 format continue to be readable. However, Generation
+      2 format is better in the sense that it can be directly supplied
+      to a wide variety of software that accepts GeoJSON.</t>
       
-      <t>The locations.json file is in JSON format. It should be array
-      of records. </t>
+      <t>For example, an empty file contains just:</t>
       
-      <t>An empty file should contain just:</t>
+      <figure>
+        <artwork>
+          {
+            "type": "FeatureCollection",
+            "features": []
+          }
+        </artwork>
+      </figure>
+      
+      <t>Here's an example of a file with just one entry:</t>
+
+      <figure>
+        <artwork>
+      {
+        "type": "FeatureCollection",
+        "features": [
+            {
+              "type": "Feature",
+              "geometry": { "type": "Point", "coordinates": [60.30145486, 24.62792567] },
+              "properties": {
+                "n": "Kattilajärven iso lippaluola, Nuuksio, Espoo",
+                "m": "https://example.com/cavemap-kattilajarvi.pdf",
+                "l": 9.3,
+                "la": "exact",
+                "k": "Espoo",
+                "c": "Finland",
+                "o": "Europe",
+                "rl": [{ "t": "Kattilajärvi roof caves",
+                         "i": "https://example.com/kattilajarvi-pic.jpg"
+                         "w": ["Jari"],
+                         "y": 2020,
+                         "m": 5,
+                         "a": ["Caving"],
+                         "sa": ["Rock"],
+                         "u": "https://example.com/kattilajarvi-article.html" }
+                      ]
+               }
+            }
+        ]
+      }
+        </artwork>
+      </figure>
+    </section>
+    
+    <section title="Generation 1 Format">
+      
+      <t>The format is based on JSON. An Activity JSON Generation 1
+      object MUST be a JSON array of records. </t>
+      
+      <t>For example, an empty file contains just:</t>
       
       <figure>
         <artwork>
@@ -98,8 +165,8 @@
 
       <figure>
         <artwork>
-          [
-          {"n": "Kattilajärven iso lippaluola, Nuuksio, Espoo",
+        [
+         {"n": "Kattilajärven iso lippaluola, Nuuksio, Espoo",
           "lat": 60.30145486,
           "lon": 24.62792567,
           "m": "https://example.com/cavemap-kattilajarvi.pdf",
@@ -109,16 +176,16 @@
           "c": "Finland",
           "o": "Europe",
           "rl": [{ "t": "Kattilajärvi roof caves",
-          "i": "https://example.com/kattilajarvi-pic.jpg"
-          "w": ["Jari"],
-          "y": 2020,
-          "m": 5,
-          "a": ["Caving"],
-          "sa": ["Rock"],
-          "u": "https://example.com/kattilajarvi-article.html" }
-          ]
-          }
-          ]
+                   "i": "https://example.com/kattilajarvi-pic.jpg"
+                   "w": ["Jari"],
+                   "y": 2020,
+                   "m": 5,
+                   "a": ["Caving"],
+                   "sa": ["Rock"],
+                   "u": "https://example.com/kattilajarvi-article.html" }
+                ]
+         }
+        ]
         </artwork>
       </figure>
 
@@ -229,6 +296,15 @@
     </references>
 
     <references title="Informative References">
+
+      <reference anchor="Psgeo">
+        <front>
+	  <title>Psgeo: Activity location library</title>
+          <author initials="J" surname="Arkko"></author>
+	  <date month="May" year="2020" />
+        </front>
+        <seriesInfo name="website" value="https://github.com/jariarkko/psgeo" />
+      </reference>
 
       <reference anchor="GeoJSON">
         <front>
