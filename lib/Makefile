@@ -47,6 +47,9 @@ testlang.res:	$(SOURCES) $(TESTFILES)
 	cat testlang.res
 	diff testlang.res testlang.res.ok
 
+wc:
+	wc -l *.js
+
 clean:
 	-rm -f *.res
 

@@ -16,4 +16,10 @@
 --> cs len 2
 --> cs min1 0 max1 5
 --> cs min2 100 max2 ud
+--> generation 0 format test
+-->   dbgen0.PsgeoDB
+-->   dbgen0.itemgen0
+-->   dbgen0.applyAll
+--> generation 1 format test
+--> generation 2 format test
 --> test complete and successful

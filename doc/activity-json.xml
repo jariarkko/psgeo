@@ -116,6 +116,70 @@
       objects. Formats for information relating to this (such as <xref
       target="RFC7946"/> or <xref target="KML"/>) are prior art and
       not something that needs to be replicated.</t>
+
+      <t>However, what is not as easily available in these formats is
+      all the additional metadata associated with the entries. Such
+      metadata is essential for many functions, like searching,
+      filtering, organizing information in various ways, sorting, and
+      so on. Of course, any particularly application can use whatever
+      metadata it prefers to, but for some categories of applications
+      it may be preferrable to provide a common definition of what
+      information is needed. This will facilitate interoperability
+      across systems, and enable easier sharing of data.</t>
+
+      <t>The goal of this document is to define such metadata in a
+      concrete fashion as an extension of GeoJSON properties, for
+      sports/nature exploration type activites, such as skiing or
+      caving. Specifically, we wish to define a data format for
+      applications sharing information about activities, their
+      locations, and associated metadata.</t>
+      
+      <t>It should also be noted that defining a data format
+      is just about defining a data format, and it is not a solution
+      for all other problems. For instance, the following are outside
+      the scope of the sharing data format and therefore
+      non-goals for this effort:
+
+      <list style="symbols">
+        <t>Representing media about particular activities. This work
+        takes the approach that all substantial information is merely
+        a reference rather than the data itself.</t>
+        <t>While this format is well suited for sharing information
+        about
+        detailed maps about the places of the activities -- such as
+        ski area  maps or cave maps -- this happens again via
+        references.
+        Representing such complex maps themselves inside this format
+        is not a goal, and the format does not have the expressive
+        power for such specialized work. References are sufficient for
+        our purposes.</t>
+        <t>Databases -- how data is stored in servers and other
+        systems is outside the scope of this work. Databases are often
+        needed, but we take no position on how that happens, it is an
+        internal matter to who ever is building the system in
+        question.
+        <vspace blankLines="1"/>
+        One should note that database access mechanisms are often
+        used to retrieve data, and as such, are an alternative to
+        datasharing. However, we have found that binding to particular
+        details of access via a database is often more complex than
+        merely passing easily parsable JSON around. But there are of
+        course situations where databases are necessary as well.
+        The main goal of this work is to enable sharing in an
+        easy, web-friendly manner, and support applications that might
+        for instance fetch data from multiple sources.</t>
+        <t>Functionality of applications. What the various
+        applications do with the information shared is outside the
+        scope of this work.</t>
+        <t>Access control to non-public information. This format is
+        primarily designed for carrying information that is publicly
+        available. It has support to hide some things -- such as the
+        location of caves with restricted access -- but it is not a
+        good vehicle for managing access for more information to specific authorized
+        individuals. The format is best suited for bulk transfer of
+        public data (with the occasional obfuscated location).</t>
+      </list></t>
+
       
     </section>
     
@@ -165,7 +229,7 @@
             "c": "Finland",
             "o": "Europe",
             "rl": [{ "t": "Kattilajärvi roof caves",
-                     "i": "https://example.com/a-picture.jpg"
+                     "i": "https://example.com/a-picture.jpg",
                      "w": ["Jari"],
                      "y": 2020,
                      "m": 5,
@@ -311,7 +375,7 @@
         "c": "Finland",
         "o": "Europe",
         "rl": [{ "t": "Kattilajärvi roof caves",
-                 "i": "https://example.com/a-picture.jpg"
+                 "i": "https://example.com/a-picture.jpg",
                  "w": ["Jari"],
                  "y": 2020,
                  "m": 5,
