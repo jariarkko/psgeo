@@ -71,7 +71,7 @@ Table of Contents
      5.1.  Properties  . . . . . . . . . . . . . . . . . . . . . . .   4
      5.2.  Article Objects . . . . . . . . . . . . . . . . . . . . .   5
    6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .   6
-   7.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .   7
+   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .   7
    8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .   7
    9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
      9.1.  Normative References  . . . . . . . . . . . . . . . . . .   8
@@ -362,7 +362,7 @@ Internet-Draft                Activity JSON                     May 2020
 
    Where the fields are as described in Section 5.1.
 
-7.  Generation 1 Format
+7.  Generation 0 Format
 
    Generation 0 format is similar to Generation 1 format, with the
    following differences:
