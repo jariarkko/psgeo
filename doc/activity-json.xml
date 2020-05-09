@@ -78,6 +78,8 @@
       target="Planetcaver"/>.</t>
 
       <t>The rest of this document is organized as follows. <xref
+      target="goals"/> discusses the goals for this work, and <xref
+      target="modelling"/> covers some of the modelling issues. <xref
       target="gen2"/> describes the currently specified format for
       Activity JSON. The description includes specification of the
       syntax rules and the structure as inherited from base
@@ -107,6 +109,18 @@
       
     </section>
 
+    <section anchor="goals" title="Goals">
+
+      <t>...</t>
+      
+    </section>
+    
+    <section anchor="modelling" title="Modelling Activities">
+
+      <t>...</t>
+      
+    </section>
+    
     <section anchor="gen2" title="Generation 2 Format">
 
       <t>The format is a specialization of GeoJSON. Every Activity
@@ -129,80 +143,43 @@
 
       <figure>
         <artwork>
-      {
-        "type": "FeatureCollection",
-        "features": [
-            {
-              "type": "Feature",
-              "geometry": { "type": "Point", "coordinates": [60.30145486, 24.62792567] },
-              "properties": {
-                "n": "Kattilajärven iso lippaluola, Nuuksio, Espoo",
-                "m": "https://example.com/cavemap-kattilajarvi.pdf",
-                "l": 9.3,
-                "la": "exact",
-                "k": "Espoo",
-                "c": "Finland",
-                "o": "Europe",
-                "rl": [{ "t": "Kattilajärvi roof caves",
-                         "i": "https://example.com/kattilajarvi-pic.jpg"
-                         "w": ["Jari"],
-                         "y": 2020,
-                         "m": 5,
-                         "a": ["Caving"],
-                         "sa": ["Rock"],
-                         "u": "https://example.com/kattilajarvi-article.html" }
-                      ]
-               }
-            }
-        ]
-      }
-        </artwork>
-      </figure>
-    </section>
-    
-    <section anchor="gen1" title="Generation 1 Format">
-      
-      <t>The format is based on JSON. An Activity JSON Generation 1
-      object MUST be a JSON array of records. </t>
-      
-      <t>For example, an empty file contains just:</t>
-      
-      <figure>
-        <artwork>
-          []
-        </artwork>
-      </figure>
-      
-      <t>Here's an example of a file with just one entry:</t>
-
-      <figure>
-        <artwork>
-        [
-         {"n": "Kattilajärven iso lippaluola, Nuuksio, Espoo",
-          "lat": 60.30145486,
-          "lon": 24.62792567,
-          "m": "https://example.com/cavemap-kattilajarvi.pdf",
-          "l": 9.3,
-          "la": "exact",
-          "k": "Espoo",
-          "c": "Finland",
-          "o": "Europe",
-          "rl": [{ "t": "Kattilajärvi roof caves",
-                   "i": "https://example.com/kattilajarvi-pic.jpg"
-                   "w": ["Jari"],
-                   "y": 2020,
-                   "m": 5,
-                   "a": ["Caving"],
-                   "sa": ["Rock"],
-                   "u": "https://example.com/kattilajarvi-article.html" }
-                ]
-         }
-        ]
+  {
+    "type": "FeatureCollection",
+    "features": [
+        {
+          "type":
+             "Feature",
+          "geometry":
+             { "type": "Point",
+               "coordinates": [60.30145486, 24.62792567] },
+          "properties": {
+            "n": "Kattilajärven iso lippaluola, Nuuksio, Espoo",
+            "m": "https://example.com/cavemap-kattilajarvi.pdf",
+            "l": 9.3,
+            "la": "exact",
+            "k": "Espoo",
+            "c": "Finland",
+            "o": "Europe",
+            "rl": [{ "t": "Kattilajärvi roof caves",
+                     "i": "https://example.com/a-picture.jpg"
+                     "w": ["Jari"],
+                     "y": 2020,
+                     "m": 5,
+                     "a": ["Caving"],
+                     "sa": ["Rock"],
+                     "u": "https://example.com/an-article.html" }
+                  ]
+           }
+        }
+    ]
+  }
         </artwork>
       </figure>
 
-      <t>Where the fields are as follows:
+      <section anchor="prop" title="Properties">
 
+      <t>The properties described in a GeoJSON file are as follows:
+      
       <list style="hanging">
 
         <t hangText="n"><vspace blankLines="1"/>
@@ -246,14 +223,19 @@
         <t hangText="o"><vspace blankLines="1"/>
         The continent. This attribute is mandatory.</t>
         
-        <t hangText="rl"><vspace blankLines="1"/>
-        The "reading list", a list of articles describing visits
-        etc. This can of course be empty, i.e., [], but the attribute
-        itself is mandatory.</t>
+        <t hangText="rl"><vspace blankLines="1"/> The "reading list",
+        a list of articles describing visits etc. This can of course
+        be empty, i.e., [], but the attribute itself is mandatory. The
+        description of what an article object is can be found from
+        <xref target="article"/>.</t>
         
       </list></t>
-      
-      <t>Where each article has the following fields:
+
+    </section>
+
+    <section anchor="article" title="Article Objects">
+    
+      <t>Aach article is a JSON record. The record has the following fields:
       
       <list style="hanging">
 
@@ -292,6 +274,53 @@
         known, the attribute should not be specified at all.</t>
 
       </list></t>
+
+      </section>
+
+    </section>
+    
+    <section anchor="gen1" title="Generation 1 Format">
+      
+      <t>The format is based on JSON. An Activity JSON Generation 1
+      object MUST be a JSON array of records. </t>
+      
+      <t>For example, an empty file contains just:</t>
+      
+      <figure>
+        <artwork>
+          []
+        </artwork>
+      </figure>
+      
+      <t>Here's an example of a file with just one entry:</t>
+
+      <figure>
+        <artwork>
+      [
+       {"n": "Kattilajärven iso lippaluola, Nuuksio, Espoo",
+        "lat": 60.30145486,
+        "lon": 24.62792567,
+        "m": "https://example.com/cavemap-kattilajarvi.pdf",
+        "l": 9.3,
+        "la": "exact",
+        "k": "Espoo",
+        "c": "Finland",
+        "o": "Europe",
+        "rl": [{ "t": "Kattilajärvi roof caves",
+                 "i": "https://example.com/a-picture.jpg"
+                 "w": ["Jari"],
+                 "y": 2020,
+                 "m": 5,
+                 "a": ["Caving"],
+                 "sa": ["Rock"],
+                 "u": "https://example.com/an-article.html" }
+              ]
+       }
+      ]
+        </artwork>
+      </figure>
+
+      <t>Where the fields are as described in <xref target="prop"/>.</t>
       
     </section>
     
