@@ -168,9 +168,6 @@
         The main goal of this work is to enable sharing in an
         easy, web-friendly manner, and support applications that might
         for instance fetch data from multiple sources.</t>
-        <t>Functionality of applications. What the various
-        applications do with the information shared is outside the
-        scope of this work.</t>
         <t>Access control to non-public information. This format is
         primarily designed for carrying information that is publicly
         available. It has support to hide some things -- such as the
@@ -178,6 +175,9 @@
         good vehicle for managing access for more information to specific authorized
         individuals. The format is best suited for bulk transfer of
         public data (with the occasional obfuscated location).</t>
+        <t>Functionality of applications. What the various
+        applications do with the information shared is outside the
+        scope of this work.</t>
       </list></t>
 
       
@@ -244,6 +244,13 @@
         </artwork>
       </figure>
 
+      <section anchor="usage" title="Features">
+        
+        <t>In this version of the specification, only features of the
+        type "Point" are allowed.</t>
+        
+      </section>
+      
       <section anchor="prop" title="Properties">
 
       <t>The properties described in a GeoJSON file are as follows:
@@ -256,10 +263,35 @@
         
         <t hangText="lat, lon"><vspace blankLines="1"/>
         The coordinates, in WGS84 format. Mandatory.</t>
+
+        <t hangText="rn"><vspace blankLines="1"/>
+        This optional attribute enables building relations between
+        different items. The "rn" attribute identifies another entity
+        in the same dataset that there is a special relationship to.
+        The value of the "rn" attribute should be the name of the
+        place where there's a relationship to, i.e., the value of the
+        "n" attribute in some other item in the same dataset.
+        The "rt" attribute provides the type of this relationship.</t>
+        
+        <t hangText="rt"><vspace blankLines="1"/>
+        This optional attribute MUST be present when the "rn"
+        attribute is present. The "rt" attribute describes the
+        type of the relationship. Currently supported relationship
+        types are:
+        <list style="symbols">
+          <t>"entrance": This entity is another entrance to the
+          same cave as described in the entity referred to.</t>
+          <t>"sidecave": This entity is another (side) cave of the
+          main cave described in the entity referred to.</t>
+          <t>"peak": This entity is a mountain peak, top lift, or
+          other similar location in the entity referred to.</t>
+          <t>"part": This entity is somehow otherwise part of the
+          entity referred to.</t>
+        </list></t>
         
         <t hangText="alt"><vspace blankLines="1"/>
         An optional attribute that describes the altitude the location
-        or the highest point in the destination, in memeters.</t>
+        or the highest point in the destination, in meters.</t>
         
         <t hangText="fz"><vspace blankLines="1"/>
         Set to true if the coordinates are "fuzzy" to hide the true
@@ -277,13 +309,18 @@
         The length of the cave in meters, if known. The attribute is
         optional, and should be left out if no value is known.</t>
         
+        <t hangText="h"><vspace blankLines="1"/>
+        The height/vertical difference in the cave in meters, if known. The attribute is
+        optional, and should be left out if no value is known.</t>
+        
         <t hangText="la"><vspace blankLines="1"/>
-        The cave length accuracy ("exact" or "approx"). The attribute
+        The cave length and height accuracy ("exact" or "approx"). The attribute
         is optional, and the default value is "approx" if no other
         value is provided.</t>
         
         <t hangText="k"><vspace blankLines="1"/>
-        The city/town/county. This attribute is mandatory.</t>
+        The city/town/county. In Finland the relevant "kunta" or
+        community should be filled in. This attribute is mandatory.</t>
         
         <t hangText="c"><vspace blankLines="1"/>
         The country. This attribute is mandatory.</t>

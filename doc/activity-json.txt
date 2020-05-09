@@ -68,16 +68,17 @@ Table of Contents
    3.  Goals . . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Modelling Activities  . . . . . . . . . . . . . . . . . . . .   4
    5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   4
-     5.1.  Properties  . . . . . . . . . . . . . . . . . . . . . . .   5
-     5.2.  Article Objects . . . . . . . . . . . . . . . . . . . . .   7
-   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .   8
-   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .   8
-   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .   9
-   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   9
-     9.1.  Normative References  . . . . . . . . . . . . . . . . . .   9
-     9.2.  Informative References  . . . . . . . . . . . . . . . . .   9
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  10
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  10
+     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .   5
+     5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .   6
+     5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .   8
+   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .   9
+   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .   9
+   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  10
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  10
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .  10
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .  10
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  11
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  11
 
 1.  Introduction
 
@@ -105,7 +106,6 @@ Table of Contents
    The rest of this document is organized as follows.  Section 3
    discusses the goals for this work, and Section 4 covers some of the
    modelling issues.  Section 5 describes the currently specified format
-   for Activity JSON.  The description includes specification of the
 
 
 
@@ -114,6 +114,7 @@ Arkko                   Expires November 10, 2020               [Page 2]
 Internet-Draft                Activity JSON                     May 2020
 
 
+   for Activity JSON.  The description includes specification of the
    syntax rules and the structure as inherited from base specifications,
    and a detailed discussion of the specific properties that can be
    described by Activity JSON objects.
@@ -164,7 +165,6 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-
 Arkko                   Expires November 10, 2020               [Page 3]
 
 Internet-Draft                Activity JSON                     May 2020
@@ -197,9 +197,6 @@ Internet-Draft                Activity JSON                     May 2020
       applications that might for instance fetch data from multiple
       sources.
 
-   o  Functionality of applications.  What the various applications do
-      with the information shared is outside the scope of this work.
-
    o  Access control to non-public information.  This format is
       primarily designed for carrying information that is publicly
       available.  It has support to hide some things -- such as the
@@ -207,6 +204,9 @@ Internet-Draft                Activity JSON                     May 2020
       vehicle for managing access for more information to specific
       authorized individuals.  The format is best suited for bulk
       transfer of public data (with the occasional obfuscated location).
+
+   o  Functionality of applications.  What the various applications do
+      with the information shared is outside the scope of this work.
 
 4.  Modelling Activities
 
@@ -266,14 +266,14 @@ Internet-Draft                Activity JSON                     May 2020
        ]
      }
 
-5.1.  Properties
+5.1.  Features
 
-   The properties described in a GeoJSON file are as follows:
+   In this version of the specification, only features of the type
+   "Point" are allowed.
 
-   n
 
-      The name of the place.  By convention the last item of the name
-      (after last comma) should be city name.  Mandatory.
+
+
 
 
 
@@ -282,16 +282,61 @@ Arkko                   Expires November 10, 2020               [Page 5]
 Internet-Draft                Activity JSON                     May 2020
 
 
+5.2.  Properties
+
+   The properties described in a GeoJSON file are as follows:
+
+   n
+
+      The name of the place.  By convention the last item of the name
+      (after last comma) should be city name.  Mandatory.
+
    lat, lon
 
       The coordinates, in WGS84 format.  Mandatory.
 
+   rn
+
+      This optional attribute enables building relations between
+      different items.  The "rn" attribute identifies another entity in
+      the same dataset that there is a special relationship to.  The
+      value of the "rn" attribute should be the name of the place where
+      there's a relationship to, i.e., the value of the "n" attribute in
+      some other item in the same dataset.  The "rt" attribute provides
+      the type of this relationship.
+
+   rt
+
+      This optional attribute MUST be present when the "rn" attribute is
+      present.  The "rt" attribute describes the type of the
+      relationship.  Currently supported relationship types are:
+
+      *  "entrance": This entity is another entrance to the same cave as
+         described in the entity referred to.
+
+      *  "sidecave": This entity is another (side) cave of the main cave
+         described in the entity referred to.
+
+      *  "peak": This entity is a mountain peak, top lift, or other
+         similar location in the entity referred to.
+
+      *  "part": This entity is somehow otherwise part of the entity
+         referred to.
+
    alt
 
       An optional attribute that describes the altitude the location or
-      the highest point in the destination, in memeters.
+      the highest point in the destination, in meters.
 
    fz
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 6]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
       Set to true if the coordinates are "fuzzy" to hide the true
       location for privacy etc. reasons.  Default is false.  This
@@ -309,15 +354,22 @@ Internet-Draft                Activity JSON                     May 2020
       The length of the cave in meters, if known.  The attribute is
       optional, and should be left out if no value is known.
 
+   h
+
+      The height/vertical difference in the cave in meters, if known.
+      The attribute is optional, and should be left out if no value is
+      known.
+
    la
 
-      The cave length accuracy ("exact" or "approx").  The attribute is
-      optional, and the default value is "approx" if no other value is
-      provided.
+      The cave length and height accuracy ("exact" or "approx").  The
+      attribute is optional, and the default value is "approx" if no
+      other value is provided.
 
    k
 
-      The city/town/county.  This attribute is mandatory.
+      The city/town/county.  In Finland the relevant "kunta" or
+      community should be filled in.  This attribute is mandatory.
 
    c
 
@@ -329,21 +381,20 @@ Internet-Draft                Activity JSON                     May 2020
 
    rl
 
+      The "reading list", a list of articles describing visits etc.
+      This can of course be empty, i.e., [], but the attribute itself is
+      mandatory.  The description of what an article object is can be
+      found from Section 5.3.
 
 
 
 
-Arkko                   Expires November 10, 2020               [Page 6]
+Arkko                   Expires November 10, 2020               [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
 
-      The "reading list", a list of articles describing visits etc.
-      This can of course be empty, i.e., [], but the attribute itself is
-      mandatory.  The description of what an article object is can be
-      found from Section 5.2.
-
-5.2.  Article Objects
+5.3.  Article Objects
 
    Aach article is a JSON record.  The record has the following fields:
 
@@ -389,7 +440,12 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 7]
+
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -427,7 +483,7 @@ Internet-Draft                Activity JSON                     May 2020
           }
          ]
 
-   Where the fields are as described in Section 5.1.
+   Where the fields are as described in Section 5.2.
 
 7.  Generation 0 Format
 
@@ -445,7 +501,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 8]
+Arkko                   Expires November 10, 2020               [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -501,7 +557,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 9]
+Arkko                   Expires November 10, 2020              [Page 10]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -557,4 +613,4 @@ Author's Address
 
 
 
-Arkko                   Expires November 10, 2020              [Page 10]
+Arkko                   Expires November 10, 2020              [Page 11]
