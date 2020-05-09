@@ -111,7 +111,11 @@
 
     <section anchor="goals" title="Goals">
 
-      <t>...</t>
+      <t>There are many tools and formats to manipulate, collect,
+      store, and display collections of points or other geographic
+      objects. Formats for information relating to this (such as <xref
+      target="RFC7946"/> or <xref target="KML"/>) are prior art and
+      not something that needs to be replicated.</t>
       
     </section>
     
@@ -371,6 +375,15 @@
     </references>
 
     <references title="Informative References">
+
+      <reference anchor="KML">
+        <front>
+	  <title>OGC KML</title>
+          <author initials="T" surname="Wilson"></author>
+	  <date month="April" year="2008" />
+        </front>
+        <seriesInfo name="OGC 07-147r2" value="version 2.2.20" />
+      </reference>
 
       <reference anchor="Psgeo">
         <front>

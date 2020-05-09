@@ -76,7 +76,7 @@ Table of Contents
    9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
      9.1.  Normative References  . . . . . . . . . . . . . . . . . .   8
      9.2.  Informative References  . . . . . . . . . . . . . . . . .   8
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .   8
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .   9
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   9
 
 1.  Introduction
@@ -136,7 +136,10 @@ Internet-Draft                Activity JSON                     May 2020
 
 3.  Goals
 
-   ...
+   There are many tools and formats to manipulate, collect, store, and
+   display collections of points or other geographic objects.  Formats
+   for information relating to this (such as [RFC7946] or [KML]) are
+   prior art and not something that needs to be replicated.
 
 4.  Modelling Activities
 
@@ -156,9 +159,6 @@ Internet-Draft                Activity JSON                     May 2020
              }
 
    Here's an example of a file with just one entry:
-
-
-
 
 
 
@@ -420,6 +420,9 @@ Internet-Draft                Activity JSON                     May 2020
 
    [GeoJSON]  GeoJSON, "GeoJSON", website https://geojson.org, May 2020.
 
+   [KML]      Wilson, T., "OGC KML", OGC 07-147r2 version 2.2.20, April
+              2008.
+
    [Luolaseura]
               Luolaseura, "Suomen Luolaseura",
               website https://luolaseura.fi, May 2020.
@@ -435,11 +438,8 @@ Internet-Draft                Activity JSON                     May 2020
    [Psgeo]    Arkko, J., "Psgeo: Activity location library",
               website https://github.com/jariarkko/psgeo, May 2020.
 
-Appendix A.  Contributors
 
-   The author would like to acknowledge the contributions of Ralf
-   Strandell, Jarmo Ruuth, and Dare Talvitie.  Discussions with you have
-   greatly enhanced knowledge about this topic.
+
 
 
 
@@ -450,6 +450,12 @@ Arkko                   Expires November 10, 2020               [Page 8]
 Internet-Draft                Activity JSON                     May 2020
 
 
+Appendix A.  Contributors
+
+   The author would like to acknowledge the contributions of Ralf
+   Strandell, Jarmo Ruuth, and Dare Talvitie.  Discussions with you have
+   greatly enhanced knowledge about this topic.
+
 Author's Address
 
    Jari Arkko
@@ -459,12 +465,6 @@ Author's Address
    Finland
 
    Email: jari@arkko.com
-
-
-
-
-
-
 
 
 
