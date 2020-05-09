@@ -49,8 +49,12 @@
 
       <t>JavaScript Object Notation (JSON) <xref target="RFC7159"/> is
       a popular format used in web applications. GeoJSON <xref
-      target="RFC7946"/> is a format for encoding a variety of geographic data
-      structures using JSON.</t>
+      target="RFC7946"/> <xref target="GeoJSON"/> is a format for
+      encoding a variety of geographic data structures using JSON.</t>
+
+      <t>Activity JSON has been used in building websites for <xref
+      target="Planetskier"/>, <xref target="Luolaseura"/>, and <xref
+      target="Planetcaver"/>.</t>
       
     </section>
 
@@ -74,7 +78,7 @@
       
       <figure>
         <artwork>
-    []
+          []
         </artwork>
       </figure>
       
@@ -82,27 +86,27 @@
 
       <figure>
         <artwork>
-      [
-       {"n": "Kattilajärven iso lippaluola, Nuuksio, Espoo",
-        "lat": 60.30145486,
-        "lon": 24.62792567,
-        "m": "https://example.com/cavemap-kattilajarvi.pdf",
-        "l": 9.3,
-        "la": "exact",
-        "k": "Espoo",
-        "c": "Finland",
-        "o": "Europe",
-        "rl": [{ "t": "Kattilajärvi roof caves",
-                 "i": "https://example.com/kattilajarvi-pic.jpg"
-                 "w": ["Jari"],
-                 "y": 2020,
-                 "m": 5,
-                 "a": ["Caving"],
-                 "sa": ["Rock"],
-                 "u": "https://example.com/kattilajarvi-article.html" }
-              ]
-       }
-      ]
+          [
+          {"n": "Kattilajärven iso lippaluola, Nuuksio, Espoo",
+          "lat": 60.30145486,
+          "lon": 24.62792567,
+          "m": "https://example.com/cavemap-kattilajarvi.pdf",
+          "l": 9.3,
+          "la": "exact",
+          "k": "Espoo",
+          "c": "Finland",
+          "o": "Europe",
+          "rl": [{ "t": "Kattilajärvi roof caves",
+          "i": "https://example.com/kattilajarvi-pic.jpg"
+          "w": ["Jari"],
+          "y": 2020,
+          "m": 5,
+          "a": ["Caving"],
+          "sa": ["Rock"],
+          "u": "https://example.com/kattilajarvi-article.html" }
+          ]
+          }
+          ]
         </artwork>
       </figure>
 
@@ -214,6 +218,15 @@
 
     <references title="Informative References">
 
+      <reference anchor="GeoJSON">
+        <front>
+	  <title>GeoJSON</title>
+          <author><organization>GeoJSON</organization></author>
+	  <date month="May" year="2020" />
+        </front>
+        <seriesInfo name="website" value="https://geojson.org" />
+      </reference>
+      
       <reference anchor="Luolaseura">
         <front>
 	  <title>Suomen Luolaseura</title>
@@ -232,25 +245,25 @@
         <seriesInfo name="website" value="https://planetskier.net" />
       </reference>
       
-        <reference anchor="Planetcaver">
-	  <front>
-	    <title>The Planetcaver</title>
-            <author initials="J" surname="Arkko"></author>
-	    <date month="May" year="2020" />
-	  </front>
-	  <seriesInfo name="website" value="https://planetcaver.net" />
-        </reference>
-        
-      </references>
+      <reference anchor="Planetcaver">
+	<front>
+	  <title>The Planetcaver</title>
+          <author initials="J" surname="Arkko"></author>
+	  <date month="May" year="2020" />
+	</front>
+	<seriesInfo name="website" value="https://planetcaver.net" />
+      </reference>
       
-      <section title="Contributors">
-        
-        <t>The author would like to acknowledge the contributions of Ralf
-        Strandell, Jarmo Ruuth, and Dare Talvitie. Discussions with you
-        have greatly informed me about this topic.</t>
-        
-      </section>
-      
-    </back>
+    </references>
     
-  </rfc>
+    <section title="Contributors">
+      
+      <t>The author would like to acknowledge the contributions of Ralf
+      Strandell, Jarmo Ruuth, and Dare Talvitie. Discussions with you
+      have greatly informed me about this topic.</t>
+      
+    </section>
+    
+  </back>
+  
+</rfc>

@@ -74,8 +74,11 @@ Table of Contents
    ...
 
    JavaScript Object Notation (JSON) [RFC7159] is a popular format used
-   in web applications.  GeoJSON [RFC7946] is a format for encoding a
-   variety of geographic data structures using JSON.
+   in web applications.  GeoJSON [RFC7946] [GeoJSON] is a format for
+   encoding a variety of geographic data structures using JSON.
+
+   Activity JSON has been used in building websites for [Planetskier],
+   [Luolaseura], and [Planetcaver].
 
 2.  Normative Language
 
@@ -92,12 +95,9 @@ Table of Contents
 
    An empty file should contain just:
 
-       []
+             []
 
    Here's an example of a file with just one entry:
-
-
-
 
 
 
@@ -114,27 +114,27 @@ Arkko                   Expires November 10, 2020               [Page 2]
 Internet-Draft                Activity JSON                     May 2020
 
 
-       [
-        {"n": "Kattilajaerven iso lippaluola, Nuuksio, Espoo",
-         "lat": 60.30145486,
-         "lon": 24.62792567,
-         "m": "https://example.com/cavemap-kattilajarvi.pdf",
-         "l": 9.3,
-         "la": "exact",
-         "k": "Espoo",
-         "c": "Finland",
-         "o": "Europe",
-         "rl": [{ "t": "Kattilajaervi roof caves",
-                  "i": "https://example.com/kattilajarvi-pic.jpg"
-                  "w": ["Jari"],
-                  "y": 2020,
-                  "m": 5,
-                  "a": ["Caving"],
-                  "sa": ["Rock"],
-                  "u": "https://example.com/kattilajarvi-article.html" }
-               ]
-        }
-       ]
+             [
+             {"n": "Kattilajaerven iso lippaluola, Nuuksio, Espoo",
+             "lat": 60.30145486,
+             "lon": 24.62792567,
+             "m": "https://example.com/cavemap-kattilajarvi.pdf",
+             "l": 9.3,
+             "la": "exact",
+             "k": "Espoo",
+             "c": "Finland",
+             "o": "Europe",
+             "rl": [{ "t": "Kattilajaervi roof caves",
+             "i": "https://example.com/kattilajarvi-pic.jpg"
+             "w": ["Jari"],
+             "y": 2020,
+             "m": 5,
+             "a": ["Caving"],
+             "sa": ["Rock"],
+             "u": "https://example.com/kattilajarvi-article.html" }
+             ]
+             }
+             ]
 
    Where the fields are as follows:
 
@@ -284,6 +284,8 @@ Internet-Draft                Activity JSON                     May 2020
 
 4.2.  Informative References
 
+   [GeoJSON]  GeoJSON, "GeoJSON", website https://geojson.org, May 2020.
+
    [Luolaseura]
               Luolaseura, "Suomen Luolaseura",
               website https://luolaseura.fi, May 2020.
@@ -311,8 +313,6 @@ Author's Address
    Finland
 
    Email: jari@arkko.com
-
-
 
 
 
