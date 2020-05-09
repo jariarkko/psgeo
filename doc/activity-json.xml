@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
+
+<rfc ipr='trust200902' docName="draft-arkko-activity-json-00" category="info">
+
+  <?rfc toc="yes"?>
+  <?rfc symrefs="yes"?>
+  <?rfc autobreaks="yes"?>
+  <?rfc tocindent="yes"?>
+  <?rfc compact="yes"?>
+  <?rfc subcompact="no"?>
+
+  <front>
+
+    <title abbrev="Activity JSON">Activity JSON</title>
+
+    <author initials="J" surname="Arkko" fullname="Jari Arkko">
+      <organization>Planetskier</organization>
+      <address>
+        <postal>
+          <street>Välitie 1B</street>
+          <city>Kauniainen</city> <code>02700</code>
+          <country>Finland</country>
+        </postal>
+        <email>jari@arkko.com</email>
+      </address>
+    </author>
+
+
+    <date month="May" year="2020" />
+
+    <keyword>JSON</keyword>
+    <keyword>Activity</keyword>
+    <keyword>GeoJSON</keyword>
+
+    <abstract>
+
+      <t>...</t>
+      
+    </abstract>
+
+  </front>
+
+  <middle>
+
+    <section title="Introduction">
+
+      <t>...</t>
+
+      <t>JavaScript Object Notation (JSON) <xref target="RFC7159"/> is
+      a popular format used in web applications. GeoJSON <xref
+      target="RFC7946"/> is a format for encoding a variety of geographic data
+      structures using JSON.</t>
+      
+    </section>
+
+    <section title="Normative Language">
+      
+      <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
+      NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED",
+      "MAY", and "OPTIONAL" in this document are to be interpreted as
+      described in BCP 14 <xref target="RFC2119"/> <xref
+      target="RFC8174"/> when, and only when, they appear in all
+      capitals, as shown here.</t>
+      
+    </section>
+
+    <section title="Format">
+      
+      <t>The locations.json file is in JSON format. It should be array
+      of records. </t>
+      
+      <t>An empty file should contain just:</t>
+      
+      <figure>
+        <artwork>
+    []
+        </artwork>
+      </figure>
+      
+      <t>Here's an example of a file with just one entry:</t>
+
+      <figure>
+        <artwork>
+      [
+       {"n": "Kattilajärven iso lippaluola, Nuuksio, Espoo",
+        "lat": 60.30145486,
+        "lon": 24.62792567,
+        "m": "https://example.com/cavemap-kattilajarvi.pdf",
+        "l": 9.3,
+        "la": "exact",
+        "k": "Espoo",
+        "c": "Finland",
+        "o": "Europe",
+        "rl": [{ "t": "Kattilajärvi roof caves",
+                 "i": "https://example.com/kattilajarvi-pic.jpg"
+                 "w": ["Jari"],
+                 "y": 2020,
+                 "m": 5,
+                 "a": ["Caving"],
+                 "sa": ["Rock"],
+                 "u": "https://example.com/kattilajarvi-article.html" }
+              ]
+       }
+      ]
+        </artwork>
+      </figure>
+
+      <t>Where the fields are as follows:
+
+      <list style="hanging">
+
+        <t hangText="n"><vspace blankLines="1"/>
+        The name of the place. By convention the last item of the name
+        (after last comma) should be city name. Mandatory.</t>
+        
+        <t hangText="lat, lon"><vspace blankLines="1"/>
+        The coordinates, in WGS84 format. Mandatory.</t>
+        
+        <t hangText="alt"><vspace blankLines="1"/>
+        An optional attribute that describes the altitude the location
+        or the highest point in the destination, in memeters.</t>
+        
+        <t hangText="fz"><vspace blankLines="1"/>
+        Set to true if the coordinates are "fuzzy" to hide the true
+        location for privacy etc. reasons. Default is false. This
+        attribute is optional.</t>
+        
+        <t hangText="m"><vspace blankLines="1"/>
+        The cave map link URL, if any. If there's no URL, the
+        attribute should not be specified at all (and should not be
+        set to, e.g., empty string, although it is recommended that
+        software recognises empty strings similarly to missing
+        attributes.</t>
+        
+        <t hangText="l"><vspace blankLines="1"/>
+        The length of the cave in meters, if known. The attribute is
+        optional, and should be left out if no value is known.</t>
+        
+        <t hangText="la"><vspace blankLines="1"/>
+        The cave length accuracy ("exact" or "approx"). The attribute
+        is optional, and the default value is "approx" if no other
+        value is provided.</t>
+        
+        <t hangText="k"><vspace blankLines="1"/>
+        The city/town/county. This attribute is mandatory.</t>
+        
+        <t hangText="c"><vspace blankLines="1"/>
+        The country. This attribute is mandatory.</t>
+        
+        <t hangText="o"><vspace blankLines="1"/>
+        The continent. This attribute is mandatory.</t>
+        
+        <t hangText="rl"><vspace blankLines="1"/>
+        The "reading list", a list of articles describing visits
+        etc. This can of course be empty, i.e., [], but the attribute
+        itself is mandatory.</t>
+        
+      </list></t>
+      
+      <t>Where each article has the following fields:
+      
+      <list style="hanging">
+
+        <t hangText="t"><vspace blankLines="1"/>
+        The title. This attribute is mandatory.</t>
+        
+        <t hangText="i"><vspace blankLines="1"/>
+        URL for an image representing the article. This attribute is
+        optional. If no image URL known, the attribute should not be
+        specified at all.</t>
+        
+        <t hangText="w"><vspace blankLines="1"/>
+        List of people who were there. This attribute is
+        mandatory.</t>
+        
+        <t hangText="y"><vspace blankLines="1"/>
+        Year of visit (as a number). This attribute is mandatory.</t>
+        
+        <t hangText="m"><vspace blankLines="1"/>
+        The month of visit (as a number, between 1-12). This attribute
+        is mandatory.</t>
+        
+        <t hangText="a"><vspace blankLines="1"/>
+        The activity: Caving, Skiing, etc. This attribute is mandatory.</t>
+
+        <t hangText="sa"><vspace blankLines="1"/>
+        The sub-activity, e.g., within caving the allowed
+        sub-activities or cave types are Rock, Ice, Man-made, Science,
+        and Equipment and within skiing they are Outdoor, Indoor,
+        Snow, Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic,
+        Other-substances, and Imported-snow. This attribute is
+        mandatory.</t>
+        
+        <t hangText="u"><vspace blankLines="1"/>
+        URL for the article. This attribute is optional. If no URL is
+        known, the attribute should not be specified at all.</t>
+
+      </list></t>
+      
+    </section>
+    
+  </middle>
+  <back>
+
+    <references title="Normative References">
+      
+      <?rfc include="reference.RFC.2119.xml"?>
+      <?rfc include="reference.RFC.7159.xml"?>
+      <?rfc include="reference.RFC.7946.xml"?>
+      <?rfc include="reference.RFC.8174.xml"?>
+      
+    </references>
+
+    <references title="Informative References">
+
+      <reference anchor="Luolaseura">
+        <front>
+	  <title>Suomen Luolaseura</title>
+          <author><organization>Luolaseura</organization></author>
+	  <date month="May" year="2020" />
+        </front>
+        <seriesInfo name="website" value="https://luolaseura.fi" />
+      </reference>
+      
+      <reference anchor="Planetskier">
+        <front>
+	  <title>Skiing the Planet</title>
+          <author initials="J" surname="Arkko"></author>
+	  <date month="May" year="2020" />
+        </front>
+        <seriesInfo name="website" value="https://planetskier.net" />
+      </reference>
+      
+        <reference anchor="Planetcaver">
+	  <front>
+	    <title>The Planetcaver</title>
+            <author initials="J" surname="Arkko"></author>
+	    <date month="May" year="2020" />
+	  </front>
+	  <seriesInfo name="website" value="https://planetcaver.net" />
+        </reference>
+        
+      </references>
+      
+      <section title="Contributors">
+        
+        <t>The author would like to acknowledge the contributions of Ralf
+        Strandell, Jarmo Ruuth, and Dare Talvitie. Discussions with you
+        have greatly informed me about this topic.</t>
+        
+      </section>
+      
+    </back>
+    
+  </rfc>

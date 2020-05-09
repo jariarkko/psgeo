@@ -1,0 +1,19 @@
+--> db4.nArticles == 2
+--> db4p = Patschkofel,Vuokatti,Copper Mountain, Colorado
+--> db4a = Sauna im Stubai,Vuokatti
+--> state tests
+--> db4.states = Colorado
+--> filter tests
+--> cave size filter tests
+--> cs len 1
+--> cs min1 0 max1 5
+--> cs len 1
+--> cs min1 5 max1 100
+--> cave size or filter tests
+--> filter object = {"op":"or","conds":[{"op":"and","conds":[{"op":"minCaveSize","param1":0},{"op":"maxCaveSize","param1":5}]},{"op":"minCaveSize","param1":100}]}
+--> filter condition list length = 2
+--> filter string = ((cavesize>=0 and cavesize<=5) or cavesize>=100)
+--> cs len 2
+--> cs min1 0 max1 5
+--> cs min2 100 max2 ud
+--> test complete and successful
