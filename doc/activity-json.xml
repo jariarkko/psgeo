@@ -185,7 +185,50 @@
     
     <section anchor="modelling" title="Modelling Activities">
 
-      <t>...</t>
+      <t>First off, there's a philosophical question of whether we are
+      describing real-world entities or their exploration. We've
+      chosen to model everything as visits or exploration, leaving
+      some coordinates, descriptions, articles and maps as a record of
+      the activity. But this still describes real-world entities such
+      as ski slopes or caves accurately. The information is just that
+      -- information. Whether an application or human decides to pay
+      attention to who visited that place and when or just the
+      characteristics of the place, is their choice.</t>
+
+      <t>Nevertheless, we've chosen to structure the model around the
+      locations, in line with GeoJSON. Each activity, report,
+      participant list, cave map, etc. is hanging off the location,
+      rather than being an independent entity that has
+      locations. We've found this design to be most workable for
+      software that attempts to display activities on a map.</t>
+      
+      <t>There is an interesting design trade-off between describing
+      high-level entities vs. going all the way to the finest
+      detail. As noted above, we have chosen to not attempt to model
+      detailed maps of particular ski resort, for instance. That is
+      something reserved for the ski resort itself. Nevertheless,
+      sometimes it is useful to not just describe that a ski resort
+      exists at a particular location, but also describe visits or
+      activity that takes place at a special place in that ski resort,
+      e.g., a mountain top.</t>
+
+      <t>In great amounts, such additional information can become
+      confusing, however. We've chosen to enable the model to show
+      relationships, such as a mountaintop having a relation to the
+      ski resort. Or a side peak having a relationship to the main
+      peak of a mountain. This additional information can then be
+      chosen to be used or displayed by software or ignored, depending
+      on the needs of the application, the granularity of the map
+      being shown, etc.</t>
+      
+      <t>The distinction between a main attraction and side ones is perhaps more relevant for caving.
+      Where there are caves there are often several in a group, or
+      small side caves accompany a larger cave. And even for a large
+      cave itself, there may be multiple entrances. While Activity
+      JSON does not attempt to describe the internal maps of the cave
+      (except by reference), it can still describe the fact that there
+      are side caves and multiple entrances. This information can be
+      useful when looking at an area of caves in detail.</t>
 
       <t>In this version of the specification, the supported
       activities and their sub-activities are as follows:

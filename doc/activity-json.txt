@@ -67,18 +67,18 @@ Table of Contents
    2.  Normative Language  . . . . . . . . . . . . . . . . . . . . .   3
    3.  Goals . . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Modelling Activities  . . . . . . . . . . . . . . . . . . . .   4
-   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   6
-     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .   7
+   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   7
+     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .   8
      5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .   8
      5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  10
    6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  11
-   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  11
+   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  12
    8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  12
-   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  12
-     9.1.  Normative References  . . . . . . . . . . . . . . . . . .  12
-     9.2.  Informative References  . . . . . . . . . . . . . . . . .  12
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  13
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  13
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  13
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .  13
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .  13
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  14
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  14
 
 1.  Introduction
 
@@ -210,14 +210,14 @@ Internet-Draft                Activity JSON                     May 2020
 
 4.  Modelling Activities
 
-   ...
+   First off, there's a philosophical question of whether we are
+   describing real-world entities or their exploration.  We've chosen to
+   model everything as visits or exploration, leaving some coordinates,
+   descriptions, articles and maps as a record of the activity.  But
+   this still describes real-world entities such as ski slopes or caves
+   accurately.  The information is just that -- information.  Whether an
+   application or human decides to pay attention to who visited that
 
-   In this version of the specification, the supported activities and
-   their sub-activities are as follows:
-
-   Biking
-
-      The sub-activities are Road and Mountain.
 
 
 
@@ -226,11 +226,61 @@ Arkko                   Expires November 10, 2020               [Page 4]
 Internet-Draft                Activity JSON                     May 2020
 
 
+   place and when or just the characteristics of the place, is their
+   choice.
+
+   Nevertheless, we've chosen to structure the model around the
+   locations, in line with GeoJSON.  Each activity, report, participant
+   list, cave map, etc. is hanging off the location, rather than being
+   an independent entity that has locations.  We've found this design to
+   be most workable for software that attempts to display activities on
+   a map.
+
+   There is an interesting design trade-off between describing high-
+   level entities vs. going all the way to the finest detail.  As noted
+   above, we have chosen to not attempt to model detailed maps of
+   particular ski resort, for instance.  That is something reserved for
+   the ski resort itself.  Nevertheless, sometimes it is useful to not
+   just describe that a ski resort exists at a particular location, but
+   also describe visits or activity that takes place at a special place
+   in that ski resort, e.g., a mountain top.
+
+   In great amounts, such additional information can become confusing,
+   however.  We've chosen to enable the model to show relationships,
+   such as a mountaintop having a relation to the ski resort.  Or a side
+   peak having a relationship to the main peak of a mountain.  This
+   additional information can then be chosen to be used or displayed by
+   software or ignored, depending on the needs of the application, the
+   granularity of the map being shown, etc.
+
+   The distinction between a main attraction and side ones is perhaps
+   more relevant for caving.  Where there are caves there are often
+   several in a group, or small side caves accompany a larger cave.  And
+   even for a large cave itself, there may be multiple entrances.  While
+   Activity JSON does not attempt to describe the internal maps of the
+   cave (except by reference), it can still describe the fact that there
+   are side caves and multiple entrances.  This information can be
+   useful when looking at an area of caves in detail.
+
+   In this version of the specification, the supported activities and
+   their sub-activities are as follows:
+
+   Biking
+
+      The sub-activities are Road and Mountain.
+
    Canoeing
 
       There are no sub-activities.
 
    Caving
+
+
+
+Arkko                   Expires November 10, 2020               [Page 5]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
       The sub-activities are Rock, Ice, Man-made, Science, and
       Equipment.
@@ -274,19 +324,19 @@ Internet-Draft                Activity JSON                     May 2020
 
    Sliding
 
-
-
-
-Arkko                   Expires November 10, 2020               [Page 5]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
       The sub-activities are the same as for Skiing.
 
    Snowboarding
 
       The sub-activities are the same as for Skiing.
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 6]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    Surfing
 
@@ -330,20 +380,19 @@ Internet-Draft                Activity JSON                     May 2020
    object is also a valid GeoJSON object, but has some extra properties
    to carry the information that is needed to describe the activities.
 
-
-
-
-Arkko                   Expires November 10, 2020               [Page 6]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
    For example, an empty file contains just:
 
              {
                "type": "FeatureCollection",
                "features": []
              }
+
+
+
+Arkko                   Expires November 10, 2020               [Page 7]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    Here's an example of a file with just one entry:
 
@@ -383,17 +432,6 @@ Internet-Draft                Activity JSON                     May 2020
    In this version of the specification, only features of the type
    "Point" are allowed.
 
-
-
-
-
-
-
-Arkko                   Expires November 10, 2020               [Page 7]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
 5.2.  Properties
 
    The properties described in a GeoJSON file are as follows:
@@ -404,6 +442,13 @@ Internet-Draft                Activity JSON                     May 2020
       (after last comma) should be city name.  Mandatory.
 
    lat, lon
+
+
+
+Arkko                   Expires November 10, 2020               [Page 8]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
       The coordinates, in WGS84 format.  Mandatory.
 
@@ -442,14 +487,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    fz
 
-
-
-
-Arkko                   Expires November 10, 2020               [Page 8]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
       Set to true if the coordinates are "fuzzy" to hide the true
       location for privacy etc. reasons.  Default is false.  This
       attribute is optional.
@@ -460,6 +497,14 @@ Internet-Draft                Activity JSON                     May 2020
       should not be specified at all (and should not be set to, e.g.,
       empty string, although it is recommended that software recognises
       empty strings similarly to missing attributes.
+
+
+
+
+Arkko                   Expires November 10, 2020               [Page 9]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    l
 
@@ -498,14 +543,6 @@ Internet-Draft                Activity JSON                     May 2020
       mandatory.  The description of what an article object is can be
       found from Section 5.3.
 
-
-
-
-Arkko                   Expires November 10, 2020               [Page 9]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
 5.3.  Article Objects
 
    Aach article is a JSON record.  The record has the following fields:
@@ -515,6 +552,15 @@ Internet-Draft                Activity JSON                     May 2020
       The title.  This attribute is mandatory.
 
    i
+
+
+
+
+
+Arkko                   Expires November 10, 2020              [Page 10]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
       URL for an image representing the article.  This attribute is
       optional.  If no image URL known, the attribute should not be
@@ -550,18 +596,6 @@ Internet-Draft                Activity JSON                     May 2020
       URL for the article.  This attribute is optional.  If no URL is
       known, the attribute should not be specified at all.
 
-
-
-
-
-
-
-
-Arkko                   Expires November 10, 2020              [Page 10]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
 6.  Generation 1 Format
 
    The format is based on JSON.  An Activity JSON Generation 1 object
@@ -572,6 +606,17 @@ Internet-Draft                Activity JSON                     May 2020
              []
 
    Here's an example of a file with just one entry:
+
+
+
+
+
+
+
+Arkko                   Expires November 10, 2020              [Page 11]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
          [
           {"n": "Kattilajaerven iso lippaluola, Nuuksio, Espoo",
@@ -606,18 +651,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    o  The "y" (year) and "m" (month) fields were not used.
 
-
-
-
-
-
-
-
-Arkko                   Expires November 10, 2020              [Page 11]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
 8.  Compatibility
 
    All the formats are very similar.  The information content is the
@@ -633,6 +666,13 @@ Internet-Draft                Activity JSON                     May 2020
    For compatibility between generation 1 and 0, the differences are
    again supported by software libraries and any Generation 0 content
    continues to be acceptable by systems consuming Activity JSON.
+
+
+
+Arkko                   Expires November 10, 2020              [Page 12]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
 9.  References
 
@@ -667,13 +707,6 @@ Internet-Draft                Activity JSON                     May 2020
               Luolaseura, "Suomen Luolaseura",
               website https://luolaseura.fi, May 2020.
 
-
-
-Arkko                   Expires November 10, 2020              [Page 12]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
    [Planetcaver]
               Arkko, J., "The Planetcaver",
               website https://planetcaver.net, May 2020.
@@ -684,6 +717,18 @@ Internet-Draft                Activity JSON                     May 2020
 
    [Psgeo]    Arkko, J., "Psgeo: Activity location library",
               website https://github.com/jariarkko/psgeo, May 2020.
+
+
+
+
+
+
+
+
+Arkko                   Expires November 10, 2020              [Page 13]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
 Appendix A.  Contributors
 
@@ -725,4 +770,15 @@ Author's Address
 
 
 
-Arkko                   Expires November 10, 2020              [Page 13]
+
+
+
+
+
+
+
+
+
+
+
+Arkko                   Expires November 10, 2020              [Page 14]

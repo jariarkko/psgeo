@@ -20,5 +20,8 @@ a simple format that allows a server to provide information about
 activities and their geographic positions to a web application running
 in a browser.
 
+For more information on the usage and API of Psgeo, read the
+[Psgeo Usage Introduction](https://github.com/jariarkko/psgeo/blob/master/doc/Psgeo-Intro.md),
+
 Psgeo was initially written by Jari Arkko, but there has also been
 contributions by Ralf Strandell.
