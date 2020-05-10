@@ -25,7 +25,7 @@ Include the following code on your .html page:
     <script src="psgeolib.js"></script>
     <script src="psgeostat.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqFWFnWWY6Zbk20c-TYyRLOhyTtLA4CfA&callback=psgeoInitMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&callback=psgeoInitMap"
     async defer></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </body>
