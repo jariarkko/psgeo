@@ -455,6 +455,13 @@
         be empty, i.e., [], but the attribute itself is mandatory. The
         description of what an article object is can be found from
         <xref target="article"/>.</t>
+
+        <t hangText="s"><vspace blankLines="1"/>The source of the
+        data, if specified. The source is simply represented as a
+        string.
+        Note that the source often defaults from whereever the data is
+        being fetched, so typically this does not need to be set
+        unless somehow specifically different from other entries.</t>
         
       </list></t>
 

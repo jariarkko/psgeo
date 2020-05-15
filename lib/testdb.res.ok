@@ -22,4 +22,6 @@
 -->   dbgen0.applyAll
 --> generation 1 format test
 --> generation 2 format test
+--> source = hah
+--> itemgen2 = {"n":"Kattilajärven iso lippaluola, Nuuksio, Espoo","m":"https://example.com/cavemap-kattilajarvi.pdf","l":9.3,"la":"exact","k":"Espoo","c":"Finland","o":"Europe","rl":[{"t":"Kattilajärvi roof caves","i":"https://example.com/a-picture.jpg","w":["Jari"],"y":2020,"m":5,"a":["Caving"],"sa":["Rock"],"u":"https://example.com/an-article.html"}],"lat":60.30145486,"lon":24.62792567,"s":"hah"}
 --> test complete and successful
