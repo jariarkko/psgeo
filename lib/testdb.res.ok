@@ -4,6 +4,7 @@
 --> state tests
 --> db4.states = Colorado
 --> filter tests
+--> fs = true
 --> cave size filter tests
 --> cs len 1
 --> cs min1 0 max1 5
@@ -12,7 +13,7 @@
 --> cave size or filter tests
 --> filter object = {"op":"or","conds":[{"op":"and","conds":[{"op":"minCaveSize","param1":0},{"op":"maxCaveSize","param1":5}]},{"op":"minCaveSize","param1":100}]}
 --> filter condition list length = 2
---> filter string = ((cavesize>=0 and cavesize<=5) or cavesize>=100)
+--> filter string = ((cavesize>=0 and cavesize<5) or cavesize>=100)
 --> cs len 2
 --> cs min1 0 max1 5
 --> cs min2 100 max2 ud
@@ -23,5 +24,19 @@
 --> generation 1 format test
 --> generation 2 format test
 --> source = hah
---> itemgen2 = {"n":"Kattilajärven iso lippaluola, Nuuksio, Espoo","m":"https://example.com/cavemap-kattilajarvi.pdf","l":9.3,"la":"exact","k":"Espoo","c":"Finland","o":"Europe","rl":[{"t":"Kattilajärvi roof caves","i":"https://example.com/a-picture.jpg","w":["Jari"],"y":2020,"m":5,"a":["Caving"],"sa":["Rock"],"u":"https://example.com/an-article.html"}],"lat":60.30145486,"lon":24.62792567,"s":"hah"}
+--> itemgen2 = {"n":"Kattilajärven iso lippaluola, Nuuksio, Espoo","m":"https://example.com/cavemap-kattilajarvi.pdf","lc":"5><50","la":"exact","k":"Espoo","c":"Finland","o":"Europe","rl":[{"t":"Kattilajärvi roof caves","i":"https://example.com/a-picture.jpg","w":["Jari"],"y":2020,"m":5,"a":["Caving"],"sa":["Rock"],"u":"https://example.com/an-article.html"}],"lat":60.30145486,"lon":24.62792567,"s":"hah"}
+--> itemgen2.lc = 5><50
+--> itemgen2.lc.min = 5
+--> itemgen2.lc.max = 50
+--> -- all cave sizes
+--> entry Lintukiiman Silmäsuon luola, Nummi-Pusula passed the filter (all cave sizes)
+--> entry Peuramaan iso vaakahalkeama, Kirkkonummi passed the filter (all cave sizes)
+--> -- all cave sizes except big
+--> entry Lintukiiman Silmäsuon luola, Nummi-Pusula passed the filter (except big)
+--> entry Peuramaan iso vaakahalkeama, Kirkkonummi passed the filter (except big)
+--> -- all cave sizes except small
+--> entry Lintukiiman Silmäsuon luola, Nummi-Pusula passed the filter (except small)
+--> -- all cave sizes except medium
+--> entry Peuramaan iso vaakahalkeama, Kirkkonummi passed the filter (except medium)
+--> -- no cave sizes
 --> test complete and successful

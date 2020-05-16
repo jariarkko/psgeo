@@ -4,8 +4,8 @@
 
 Network Working Group                                           J. Arkko
 Internet-Draft                                               Planetskier
-Intended status: Informational                               May 9, 2020
-Expires: November 10, 2020
+Intended status: Informational                              May 16, 2020
+Expires: November 17, 2020
 
 
                              Activity JSON
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on November 10, 2020.
+   This Internet-Draft will expire on November 17, 2020.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Arkko                   Expires November 10, 2020               [Page 1]
+Arkko                   Expires November 17, 2020               [Page 1]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -70,10 +70,10 @@ Table of Contents
    5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   7
      5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .   8
      5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .   8
-     5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  10
-   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  11
+     5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  11
+   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  12
    7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  12
-   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  12
+   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  13
    9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  13
      9.1.  Normative References  . . . . . . . . . . . . . . . . . .  13
      9.2.  Informative References  . . . . . . . . . . . . . . . . .  13
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Arkko                   Expires November 10, 2020               [Page 2]
+Arkko                   Expires November 17, 2020               [Page 2]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -165,7 +165,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 3]
+Arkko                   Expires November 17, 2020               [Page 3]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -221,7 +221,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 4]
+Arkko                   Expires November 17, 2020               [Page 4]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -277,7 +277,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 5]
+Arkko                   Expires November 17, 2020               [Page 5]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -333,7 +333,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 6]
+Arkko                   Expires November 17, 2020               [Page 6]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -389,7 +389,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 7]
+Arkko                   Expires November 17, 2020               [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -445,7 +445,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 8]
+Arkko                   Expires November 17, 2020               [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -501,7 +501,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 10, 2020               [Page 9]
+Arkko                   Expires November 17, 2020               [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -509,7 +509,17 @@ Internet-Draft                Activity JSON                     May 2020
    l
 
       The length of the cave in meters, if known.  The attribute is
-      optional, and should be left out if no value is known.
+      optional, and should be left out if no value is known.  The value
+      should be a number and can include a decimal point.
+
+   lc
+
+      If the length is not specified, one can also specify a length
+      category.  This is expressed as a string of the forms "<a", ">a",
+      or "a><b" where a and b are numbers that may include also decimal
+      points.  The numbers represents cave lengths in meters, and
+      express the cave length size category, e.g., cave larger than 50
+      meters long would be represented as ">50".
 
    h
 
@@ -543,6 +553,21 @@ Internet-Draft                Activity JSON                     May 2020
       mandatory.  The description of what an article object is can be
       found from Section 5.3.
 
+   s
+
+
+
+Arkko                   Expires November 17, 2020              [Page 10]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
+      The source of the data, if specified.  The source is simply
+      represented as a string.  Note that the source often defaults from
+      whereever the data is being fetched, so typically this does not
+      need to be set unless somehow specifically different from other
+      entries.
+
 5.3.  Article Objects
 
    Aach article is a JSON record.  The record has the following fields:
@@ -552,15 +577,6 @@ Internet-Draft                Activity JSON                     May 2020
       The title.  This attribute is mandatory.
 
    i
-
-
-
-
-
-Arkko                   Expires November 10, 2020              [Page 10]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       URL for an image representing the article.  This attribute is
       optional.  If no image URL known, the attribute should not be
@@ -593,6 +609,15 @@ Internet-Draft                Activity JSON                     May 2020
 
    u
 
+
+
+
+
+Arkko                   Expires November 17, 2020              [Page 11]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       URL for the article.  This attribute is optional.  If no URL is
       known, the attribute should not be specified at all.
 
@@ -606,17 +631,6 @@ Internet-Draft                Activity JSON                     May 2020
              []
 
    Here's an example of a file with just one entry:
-
-
-
-
-
-
-
-Arkko                   Expires November 10, 2020              [Page 11]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
          [
           {"n": "Kattilajaerven iso lippaluola, Nuuksio, Espoo",
@@ -651,6 +665,15 @@ Internet-Draft                Activity JSON                     May 2020
 
    o  The "y" (year) and "m" (month) fields were not used.
 
+
+
+
+
+Arkko                   Expires November 17, 2020              [Page 12]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
 8.  Compatibility
 
    All the formats are very similar.  The information content is the
@@ -666,13 +689,6 @@ Internet-Draft                Activity JSON                     May 2020
    For compatibility between generation 1 and 0, the differences are
    again supported by software libraries and any Generation 0 content
    continues to be acceptable by systems consuming Activity JSON.
-
-
-
-Arkko                   Expires November 10, 2020              [Page 12]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
 9.  References
 
@@ -707,6 +723,13 @@ Internet-Draft                Activity JSON                     May 2020
               Luolaseura, "Suomen Luolaseura",
               website https://luolaseura.fi, May 2020.
 
+
+
+Arkko                   Expires November 17, 2020              [Page 13]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
    [Planetcaver]
               Arkko, J., "The Planetcaver",
               website https://planetcaver.net, May 2020.
@@ -717,18 +740,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    [Psgeo]    Arkko, J., "Psgeo: Activity location library",
               website https://github.com/jariarkko/psgeo, May 2020.
-
-
-
-
-
-
-
-
-Arkko                   Expires November 10, 2020              [Page 13]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
 Appendix A.  Contributors
 
@@ -770,15 +781,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-Arkko                   Expires November 10, 2020              [Page 14]
+Arkko                   Expires November 17, 2020              [Page 14]
