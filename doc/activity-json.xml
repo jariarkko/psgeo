@@ -390,24 +390,39 @@
         This optional attribute enables building relations between
         different items. The "rn" attribute identifies another entity
         in the same dataset that there is a special relationship to.
-        The value of the "rn" attribute should be the name of the
+        The value of the "rn" attribute should be a list, with one
+        list element for each different relationship that the item
+        is involved in. By default, items do not have relationships,
+        and in this case the list can be empty or omitted entirely.
+        <vspace blankLines="1"/>
+        
+        Each entry in the list should be a string, the name of the
         place where there's a relationship to, i.e., the value of the
         "n" attribute in some other item in the same dataset.
         The "rt" attribute provides the type of this relationship.</t>
         
-        <t hangText="rt"><vspace blankLines="1"/>
-        This optional attribute MUST be present when the "rn"
-        attribute is present. The "rt" attribute describes the
-        type of the relationship. Currently supported relationship
-        types are:
+        <t hangText="rt"><vspace blankLines="1"/> This optional
+        attribute MUST be present when the "rn" attribute is
+        present. The "rt" attribute describes the type of the
+        relationship. Since there can be a number of relationships,
+        the value should be a list. Each list item should be a string
+        that describes a relationship type. Currently supported
+        relationship types are:
+        
         <list style="symbols">
-          <t>"entrance": This entity is another entrance to the
+          <t>"entranceof": This entity is another entrance to the
           same cave as described in the entity referred to.</t>
-          <t>"sidecave": This entity is another (side) cave of the
+          <t>"sidecaveof": This entity is another (side) cave of the
           main cave described in the entity referred to.</t>
-          <t>"peak": This entity is a mountain peak, top lift, or
+          <t>"peakof": This entity is a mountain peak, top lift, or
           other similar location in the entity referred to.</t>
-          <t>"part": This entity is somehow otherwise part of the
+          <t>"secondaryto": This entity is an alternate/secondary
+          entity that describes something already described by some
+          other entity. This can be used to represent reports from
+          multiple, alternate sources about the same thing, for
+          instance, when for some reason there is no desire to merge
+          their entity descriptions in other ways.</t>
+          <t>"partof": This entity is somehow otherwise part of the
           entity referred to.</t>
         </list></t>
         

@@ -4,8 +4,8 @@
 
 Network Working Group                                           J. Arkko
 Internet-Draft                                               Planetskier
-Intended status: Informational                              May 16, 2020
-Expires: November 17, 2020
+Intended status: Informational                              May 22, 2020
+Expires: November 23, 2020
 
 
                              Activity JSON
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on November 17, 2020.
+   This Internet-Draft will expire on November 23, 2020.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Arkko                   Expires November 17, 2020               [Page 1]
+Arkko                   Expires November 23, 2020               [Page 1]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -72,11 +72,11 @@ Table of Contents
      5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .   8
      5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  11
    6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  12
-   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  12
+   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  13
    8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  13
    9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  13
      9.1.  Normative References  . . . . . . . . . . . . . . . . . .  13
-     9.2.  Informative References  . . . . . . . . . . . . . . . . .  13
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .  14
    Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  14
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  14
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Arkko                   Expires November 17, 2020               [Page 2]
+Arkko                   Expires November 23, 2020               [Page 2]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -165,7 +165,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 17, 2020               [Page 3]
+Arkko                   Expires November 23, 2020               [Page 3]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -221,7 +221,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 17, 2020               [Page 4]
+Arkko                   Expires November 23, 2020               [Page 4]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -277,7 +277,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 17, 2020               [Page 5]
+Arkko                   Expires November 23, 2020               [Page 5]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -333,7 +333,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 17, 2020               [Page 6]
+Arkko                   Expires November 23, 2020               [Page 6]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -389,7 +389,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 17, 2020               [Page 7]
+Arkko                   Expires November 23, 2020               [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -445,7 +445,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 17, 2020               [Page 8]
+Arkko                   Expires November 23, 2020               [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -457,27 +457,35 @@ Internet-Draft                Activity JSON                     May 2020
       This optional attribute enables building relations between
       different items.  The "rn" attribute identifies another entity in
       the same dataset that there is a special relationship to.  The
-      value of the "rn" attribute should be the name of the place where
-      there's a relationship to, i.e., the value of the "n" attribute in
-      some other item in the same dataset.  The "rt" attribute provides
-      the type of this relationship.
+      value of the "rn" attribute should be a list, with one list
+      element for each different relationship that the item is involved
+      in.  By default, items do not have relationships, and in this case
+      the list can be empty or omitted entirely.
+
+      Each entry in the list should be a string, the name of the place
+      where there's a relationship to, i.e., the value of the "n"
+      attribute in some other item in the same dataset.  The "rt"
+      attribute provides the type of this relationship.
 
    rt
 
       This optional attribute MUST be present when the "rn" attribute is
       present.  The "rt" attribute describes the type of the
-      relationship.  Currently supported relationship types are:
+      relationship.  Since there can be a number of relationships, the
+      value should be a list.  Each list item should be a string that
+      describes a relationship type.  Currently supported relationship
+      types are:
 
-      *  "entrance": This entity is another entrance to the same cave as
-         described in the entity referred to.
+      *  "entranceof": This entity is another entrance to the same cave
+         as described in the entity referred to.
 
-      *  "sidecave": This entity is another (side) cave of the main cave
-         described in the entity referred to.
+      *  "sidecaveof": This entity is another (side) cave of the main
+         cave described in the entity referred to.
 
-      *  "peak": This entity is a mountain peak, top lift, or other
+      *  "peakof": This entity is a mountain peak, top lift, or other
          similar location in the entity referred to.
 
-      *  "part": This entity is somehow otherwise part of the entity
+      *  "partof": This entity is somehow otherwise part of the entity
          referred to.
 
    alt
@@ -491,20 +499,19 @@ Internet-Draft                Activity JSON                     May 2020
       location for privacy etc. reasons.  Default is false.  This
       attribute is optional.
 
+
+
+Arkko                   Expires November 23, 2020               [Page 9]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
    m
 
       The cave map link URL, if any.  If there's no URL, the attribute
       should not be specified at all (and should not be set to, e.g.,
       empty string, although it is recommended that software recognises
       empty strings similarly to missing attributes.
-
-
-
-
-Arkko                   Expires November 17, 2020               [Page 9]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    l
 
@@ -548,19 +555,19 @@ Internet-Draft                Activity JSON                     May 2020
 
    rl
 
+
+
+Arkko                   Expires November 23, 2020              [Page 10]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       The "reading list", a list of articles describing visits etc.
       This can of course be empty, i.e., [], but the attribute itself is
       mandatory.  The description of what an article object is can be
       found from Section 5.3.
 
    s
-
-
-
-Arkko                   Expires November 17, 2020              [Page 10]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       The source of the data, if specified.  The source is simply
       represented as a string.  Note that the source often defaults from
@@ -603,20 +610,19 @@ Internet-Draft                Activity JSON                     May 2020
 
       The sub-activity, e.g., within caving the allowed sub-activities
       or cave types are Rock, Ice, Man-made, Science, and Equipment and
+
+
+
+Arkko                   Expires November 23, 2020              [Page 11]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       within skiing they are Outdoor, Indoor, Snow, Sand, Rock, Ash,
       Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
       This attribute is mandatory.
 
    u
-
-
-
-
-
-Arkko                   Expires November 17, 2020              [Page 11]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       URL for the article.  This attribute is optional.  If no URL is
       known, the attribute should not be specified at all.
@@ -656,6 +662,18 @@ Internet-Draft                Activity JSON                     May 2020
 
    Where the fields are as described in Section 5.2.
 
+
+
+
+
+
+
+
+Arkko                   Expires November 23, 2020              [Page 12]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
 7.  Generation 0 Format
 
    Generation 0 format is similar to Generation 1 format, with the
@@ -664,15 +682,6 @@ Internet-Draft                Activity JSON                     May 2020
    o  The "k" (city) field was not used.
 
    o  The "y" (year) and "m" (month) fields were not used.
-
-
-
-
-
-Arkko                   Expires November 17, 2020              [Page 12]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
 8.  Compatibility
 
@@ -712,6 +721,15 @@ Internet-Draft                Activity JSON                     May 2020
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
+
+
+
+
+Arkko                   Expires November 23, 2020              [Page 13]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
 9.2.  Informative References
 
    [GeoJSON]  GeoJSON, "GeoJSON", website https://geojson.org, May 2020.
@@ -722,13 +740,6 @@ Internet-Draft                Activity JSON                     May 2020
    [Luolaseura]
               Luolaseura, "Suomen Luolaseura",
               website https://luolaseura.fi, May 2020.
-
-
-
-Arkko                   Expires November 17, 2020              [Page 13]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    [Planetcaver]
               Arkko, J., "The Planetcaver",
@@ -770,15 +781,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-Arkko                   Expires November 17, 2020              [Page 14]
+Arkko                   Expires November 23, 2020              [Page 14]

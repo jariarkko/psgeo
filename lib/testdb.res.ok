@@ -39,4 +39,14 @@
 --> -- all cave sizes except medium
 --> entry Peuramaan iso vaakahalkeama, Kirkkonummi passed the filter (except medium)
 --> -- no cave sizes
+--> -- side caves and relationships
+--> Solamäen luola, Siuntio is not a side cave
+--> Solamäen luola, Siuntio is a primary entity
+--> Solamäen luola, Siuntio has no relationships
+--> Solamäen kivenalusluola, Siuntio is a side cave
+--> Solamäen kivenalusluola, Siuntio is a primary entity
+--> Solamäen kivenalusluola, Siuntio has a sidecaveof relation to Solamäen luola, Siuntio
+--> Solamäen lippaluolanen, Siuntio is a side cave
+--> Solamäen lippaluolanen, Siuntio is a primary entity
+--> Solamäen lippaluolanen, Siuntio has a sidecaveof relation to Solamäen luola, Siuntio
 --> test complete and successful
