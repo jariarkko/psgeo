@@ -457,8 +457,8 @@
         
         <t hangText="m"><vspace blankLines="1"/>
         The cave map link URL, if any. If there's no URL, the
-        attribute should not be specified at all (and should not be
-        set to, e.g., empty string, although it is recommended that
+        attribute SHOULD NOT be specified at all (and SHOULD NOT be
+        set to, e.g., empty string, although it is RECOMMENDED that
         software recognises empty strings similarly to missing
         attributes.</t>
         

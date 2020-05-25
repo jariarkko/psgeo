@@ -42,11 +42,20 @@
 --> -- side caves and relationships
 --> Solamäen luola, Siuntio is not a side cave
 --> Solamäen luola, Siuntio is a primary entity
---> Solamäen luola, Siuntio has no relationships
+--> Solamäen luola, Siuntio has a sidecave relation to Solamäen kivenalusluola, Siuntio
+--> Solamäen luola, Siuntio has a sidecave relation to Solamäen lippaluolanen, Siuntio
 --> Solamäen kivenalusluola, Siuntio is a side cave
 --> Solamäen kivenalusluola, Siuntio is a primary entity
 --> Solamäen kivenalusluola, Siuntio has a sidecaveof relation to Solamäen luola, Siuntio
 --> Solamäen lippaluolanen, Siuntio is a side cave
 --> Solamäen lippaluolanen, Siuntio is a primary entity
 --> Solamäen lippaluolanen, Siuntio has a sidecaveof relation to Solamäen luola, Siuntio
+--> -- names and searching
+--> result length 1
+--> result item name Solamäen kivenalusluola, Siuntio
+--> result main cave Solamäen luola, Siuntio
+--> main result length 1
+--> main result item name Solamäen luola, Siuntio
+--> main result main cave undefined
+--> main result side caves ["Solamäen kivenalusluola, Siuntio","Solamäen lippaluolanen, Siuntio"]
 --> test complete and successful
