@@ -412,20 +412,40 @@
         <list style="symbols">
           <t>"entranceof": This entity is another entrance to the
           same cave as described in the entity referred to.</t>
+          <t>"entrance": A reverse relationship of the above, i.e.,
+          this entity points to another entity that represents another
+          entrance to this cave.</t>
           <t>"sidecaveof": This entity is another (side) cave of the
           main cave described in the entity referred to.</t>
+          <t>"sidecave": A reverse relationship of the above, i.e.,
+          this entity points to another entity is a side cave of this cave.</t>
           <t>"peakof": This entity is a mountain peak, top lift, or
           other similar location in the entity referred to.</t>
+          <t>"peak": A reverse relationship of the above, i.e.,
+          this entity points to another entity is a peak of this
+          mountain or ski  area.</t>
           <t>"secondaryto": This entity is an alternate/secondary
           entity that describes something already described by some
           other entity. This can be used to represent reports from
           multiple, alternate sources about the same thing, for
           instance, when for some reason there is no desire to merge
           their entity descriptions in other ways.</t>
+          <t>"secondary": A reverse relationship of the above, i.e.,
+          this entity points to another entity that is a secondary entry
+          for this entity.</t>
           <t>"partof": This entity is somehow otherwise part of the
           entity referred to.</t>
-        </list></t>
-        
+          <t>"part": A reverse relationship of the above, i.e.,
+          this entity points to another entity that is a part of this entity.</t>
+        </list>
+
+        Implementation note: Implementations typically calculate
+        the reverse relationships automatically from one side of the
+        relationship. So, for instance, only the "sidecaveof"
+        relationship needs to communicated in an Activity JSON file,
+        and the receiver builds the "sidecave" relationships based on
+        that.</t>
+
         <t hangText="alt"><vspace blankLines="1"/>
         An optional attribute that describes the altitude the location
         or the highest point in the destination, in meters.</t>
