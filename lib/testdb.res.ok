@@ -50,6 +50,12 @@
 --> Solamäen lippaluolanen, Siuntio is a side cave
 --> Solamäen lippaluolanen, Siuntio is a primary entity
 --> Solamäen lippaluolanen, Siuntio has a sidecaveof relation to Solamäen luola, Siuntio
+--> Extraluola 1 is not a side cave
+--> Extraluola 1 is a primary entity
+--> Extraluola 1 has no relationships
+--> Extraluola 2 is not a side cave
+--> Extraluola 2 is a primary entity
+--> Extraluola 2 has no relationships
 --> -- names and searching
 --> result length 1
 --> result item name Solamäen kivenalusluola, Siuntio
@@ -58,4 +64,15 @@
 --> main result item name Solamäen luola, Siuntio
 --> main result main cave undefined
 --> main result side caves ["Solamäen kivenalusluola, Siuntio","Solamäen lippaluolanen, Siuntio"]
+--> -- article filters
+--> has map "https://www.arkko.com/solamaen-luolat/Solamaki.pdf"
+--> has article true
+-->   map filter entry Solamäen luola, Siuntio
+-->   map filter entry Solamäen kivenalusluola, Siuntio
+-->   map filter entry Solamäen lippaluolanen, Siuntio
+-->   map filter entry Extraluola 2
+-->   article filter entry Solamäen luola, Siuntio
+-->   article filter entry Solamäen kivenalusluola, Siuntio
+-->   article filter entry Solamäen lippaluolanen, Siuntio
+-->   article filter entry Extraluola 1
 --> test complete and successful
