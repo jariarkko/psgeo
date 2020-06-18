@@ -66,7 +66,7 @@
       information between a web server and an application running in a
       browser.</t>
 
-      <t>JavaScript Object Notation (JSON) <xref target="RFC7159"/> is
+      <t>JavaScript Object Notation (JSON) <xref target="RFC8259"/> is
       a popular format used in web applications. GeoJSON <xref
       target="RFC7946"/> <xref target="GeoJSON"/> is a format for
       encoding a variety of geographic data structures using JSON.</t>
@@ -635,6 +635,11 @@
       JSON.</t>
       
     </section>
+
+    <section title="Character Set">
+      <t>Activity JSON is always in UTF-8, as specified in <xref
+      target="RFC8259"/> Section 8.1.</t>
+    </section>
     
   </middle>
   <back>
@@ -642,9 +647,9 @@
     <references title="Normative References">
       
       <?rfc include="reference.RFC.2119.xml"?>
-      <?rfc include="reference.RFC.7159.xml"?>
       <?rfc include="reference.RFC.7946.xml"?>
       <?rfc include="reference.RFC.8174.xml"?>
+      <?rfc include="reference.RFC.8259.xml"?>
       
     </references>
 
