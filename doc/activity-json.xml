@@ -283,7 +283,7 @@
           there. A single reading list item may cover multiple
           activities, so an activity list of
           ["Caving","Urban-exploration"] and sub-activity list of
-          [["Man-made"],["Bunkers"]] is perfect legal Activity JSON.</t>
+          [["Man-made"],["Bunkers"]] is perfectly legal Activity JSON.</t>
           
           <t hangText="Caving method"><vspace blankLines="1"/>
 
