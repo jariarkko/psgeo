@@ -257,7 +257,7 @@
         
         The sub-activities can represent the following 
         aspects. Different aspects can appear in an orthogonal
-        manner, e.g., you could be diving and visiting an ice cave.
+        manner, e.g., you could be diving while visiting an ice cave.
         Not all combinations make sense, of course, but in general one
         can combine a number of different sub-activities in one experience.
         
@@ -301,6 +301,13 @@
           instance, Caving:Media can represent watching a
           caving-related movie and Caving:Equipment can represent a
           story about fixing a cave lamp.</t>
+          
+          <t hangText="Independent characteristics"><vspace
+          blankLines="1"/>
+          You may be visiting a show cave tour, if so, you can use the
+          sub-activity tag "Showtour". Note that this describes a
+          visit/article, not the cave itself, as one may be on a wild
+          cave exploration even in a show cave.</t>
           
         </list>
         </t>

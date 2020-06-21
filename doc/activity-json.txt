@@ -67,19 +67,19 @@ Table of Contents
    2.  Normative Language  . . . . . . . . . . . . . . . . . . . . .   3
    3.  Goals . . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Modelling Activities  . . . . . . . . . . . . . . . . . . . .   4
-   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   8
-     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .   9
-     5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .   9
+   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   9
+     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .  10
+     5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  10
      5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  13
    6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  14
    7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  15
    8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  15
-   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  15
-   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  15
-     10.1.  Normative References . . . . . . . . . . . . . . . . . .  15
+   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  16
+   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  16
+     10.1.  Normative References . . . . . . . . . . . . . . . . . .  16
      10.2.  Informative References . . . . . . . . . . . . . . . . .  16
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  16
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  16
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  17
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  17
 
 1.  Introduction
 
@@ -296,9 +296,9 @@ Internet-Draft                Activity JSON                     May 2020
 
       The sub-activities can represent the following aspects.  Different
       aspects can appear in an orthogonal manner, e.g., you could be
-      diving and visiting an ice cave.  Not all combinations make sense,
-      of course, but in general one can combine a number of different
-      sub-activities in one experience.
+      diving while visiting an ice cave.  Not all combinations make
+      sense, of course, but in general one can combine a number of
+      different sub-activities in one experience.
 
       Environment
 
@@ -343,6 +343,13 @@ Internet-Draft                Activity JSON                     May 2020
          movie and Caving:Equipment can represent a story about fixing a
          cave lamp.
 
+      Independent characteristics
+
+         You may be visiting a show cave tour, if so, you can use the
+         sub-activity tag "Showtour".  Note that this describes a visit/
+         article, not the cave itself, as one may be on a wild cave
+         exploration even in a show cave.
+
    Charity
 
       There are no sub-activities.
@@ -380,19 +387,18 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-   Sliding
-
-      The sub-activities are the same as for Skiing.
-
-   Snowboarding
-
-
 
 
 Arkko                   Expires November 2, 2020                [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   Sliding
+
+      The sub-activities are the same as for Skiing.
+
+   Snowboarding
 
       The sub-activities are the same as for Skiing.
 
@@ -432,13 +438,7 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-5.  Generation 2 Format
 
-   The format is a specialization of GeoJSON.  Every Activity JSON
-   object is also a valid GeoJSON object, but has some extra properties
-   to carry the information that is needed to describe the activities.
-
-   For example, an empty file contains just:
 
 
 
@@ -449,6 +449,14 @@ Arkko                   Expires November 2, 2020                [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+5.  Generation 2 Format
+
+   The format is a specialization of GeoJSON.  Every Activity JSON
+   object is also a valid GeoJSON object, but has some extra properties
+   to carry the information that is needed to describe the activities.
+
+   For example, an empty file contains just:
 
              {
                "type": "FeatureCollection",
@@ -488,6 +496,16 @@ Internet-Draft                Activity JSON                     May 2020
        ]
      }
 
+
+
+
+
+
+Arkko                   Expires November 2, 2020                [Page 9]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
 5.1.  Features
 
    In this version of the specification, only features of the type
@@ -498,13 +516,6 @@ Internet-Draft                Activity JSON                     May 2020
    The properties described in a GeoJSON file are as follows:
 
    n
-
-
-
-Arkko                   Expires November 2, 2020                [Page 9]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       The name of the place.  By convention the last item of the name
       (after last comma) should be city name.  Mandatory.
@@ -543,6 +554,14 @@ Internet-Draft                Activity JSON                     May 2020
       present.  The "rt" attribute describes the type of the
       relationship.  Since there can be a number of relationships, the
       value should be a list.  Each list item should be a string that
+
+
+
+Arkko                   Expires November 2, 2020               [Page 10]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       describes a relationship type.  Currently supported relationship
       types are:
 
@@ -552,15 +571,6 @@ Internet-Draft                Activity JSON                     May 2020
       *  "entrance": A reverse relationship of the above, i.e., this
          entity points to another entity that represents another
          entrance to this cave.
-
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 10]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       *  "sidecaveof": This entity is another (side) cave of the main
          cave described in the entity referred to.
@@ -600,6 +610,14 @@ Internet-Draft                Activity JSON                     May 2020
 
    alt
 
+
+
+
+Arkko                   Expires November 2, 2020               [Page 11]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       An optional attribute that describes the altitude the location or
       the highest point in the destination, in meters.
 
@@ -610,13 +628,6 @@ Internet-Draft                Activity JSON                     May 2020
       attribute is optional.
 
    m
-
-
-
-Arkko                   Expires November 2, 2020               [Page 11]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       The cave map link URL, if any.  If there's no URL, the attribute
       SHOULD NOT be specified at all (and SHOULD NOT be set to, e.g.,
@@ -655,6 +666,14 @@ Internet-Draft                Activity JSON                     May 2020
       The city/town/county.  In Finland the relevant "kunta" or
       community should be filled in.  This attribute is mandatory.
 
+
+
+
+Arkko                   Expires November 2, 2020               [Page 12]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
    c
 
       The country.  This attribute is mandatory.
@@ -664,15 +683,6 @@ Internet-Draft                Activity JSON                     May 2020
       The continent.  This attribute is mandatory.
 
    rl
-
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 12]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       The "reading list", a list of articles describing visits etc.
       This can of course be empty, i.e., [], but the attribute itself is
@@ -711,6 +721,15 @@ Internet-Draft                Activity JSON                     May 2020
 
    m
 
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 13]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       The month of visit (as a number, between 1-12).  This attribute is
       mandatory.
 
@@ -722,14 +741,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       The sub-activity, e.g., within caving the allowed sub-activities
       or cave types are Rock, Ice, Man-made, Science, and Equipment and
-
-
-
-Arkko                   Expires November 2, 2020               [Page 13]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
       within skiing they are Outdoor, Indoor, Snow, Sand, Rock, Ash,
       Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
       This attribute is mandatory.
@@ -757,6 +768,24 @@ Internet-Draft                Activity JSON                     May 2020
 
    Here's an example of a file with just one entry:
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 14]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
          [
           {"n": "Kattilajaerven iso lippaluola, Nuuksio, Espoo",
            "lat": 60.30145486,
@@ -778,13 +807,6 @@ Internet-Draft                Activity JSON                     May 2020
                  ]
           }
          ]
-
-
-
-Arkko                   Expires November 2, 2020               [Page 14]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    Where the fields are as described in Section 5.2.
 
@@ -813,6 +835,13 @@ Internet-Draft                Activity JSON                     May 2020
    again supported by software libraries and any Generation 0 content
    continues to be acceptable by systems consuming Activity JSON.
 
+
+
+Arkko                   Expires November 2, 2020               [Page 15]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
 9.  Character Set
 
    Activity JSON is always in UTF-8, as specified in [RFC8259]
@@ -831,16 +860,6 @@ Internet-Draft                Activity JSON                     May 2020
               and T. Schaub, "The GeoJSON Format", RFC 7946,
               DOI 10.17487/RFC7946, August 2016,
               <https://www.rfc-editor.org/info/rfc7946>.
-
-
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 15]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
@@ -870,6 +889,15 @@ Internet-Draft                Activity JSON                     May 2020
               Arkko, J., "Skiing the Planet",
               website https://planetskier.net, May 2020.
 
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 16]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
    [Psgeo]    Arkko, J., "Psgeo: Activity location library",
               website https://github.com/jariarkko/psgeo, May 2020.
 
@@ -893,4 +921,32 @@ Author's Address
 
 
 
-Arkko                   Expires November 2, 2020               [Page 16]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 17]
