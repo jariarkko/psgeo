@@ -284,14 +284,21 @@ Internet-Draft                Activity JSON                     May 2020
 
    Caving
 
-      OLD: The sub-activities are Rock, Ice, Man-made, Science, and
+      OLD:
+
+      The sub-activities are Rock, Ice, Man-made, Science, and
       Equipment.
 
-      NEW: The sub-activities consist of a number sub-attributes that
-      can be combined to represent a detailed activity and environment.
+      NEW:
+
+      The sub-activities consist of a number sub-attributes that can be
+      combined to represent a detailed activity and environment.
+
       The sub-activities can represent the following aspects.  Different
       aspects can appear in an orthogonal manner, e.g., you could be
-      diving and visiting an ice cave.
+      diving and visiting an ice cave.  Not all combinations make sense,
+      of course, but in general one can combine a number of different
+      sub-activities in one experience.
 
       Environment
 
@@ -323,13 +330,6 @@ Internet-Draft                Activity JSON                     May 2020
 
          Sometimes we report on activities related to, but not actual
          caving.  This can be represented with the following sub-
-         activities: Science, Social, Equipment, and Media.  For
-         instance, Caving:Media can represent watching a caving-related
-         movie and Caving:Equipment can represent a story about fixing a
-         cave lamp.
-
-   Charity
-
 
 
 
@@ -337,6 +337,13 @@ Arkko                   Expires November 2, 2020                [Page 6]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+         activities: Science, Social, Equipment, and Media.  For
+         instance, Caving:Media can represent watching a caving-related
+         movie and Caving:Equipment can represent a story about fixing a
+         cave lamp.
+
+   Charity
 
       There are no sub-activities.
 
@@ -379,13 +386,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    Snowboarding
 
-      The sub-activities are the same as for Skiing.
-
-   Surfing
-
-      There are no sub-activities.
-
-   Swimming
 
 
 
@@ -393,6 +393,14 @@ Arkko                   Expires November 2, 2020                [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      The sub-activities are the same as for Skiing.
+
+   Surfing
+
+      There are no sub-activities.
+
+   Swimming
 
       Indoor, Outdoor, Underground, Water, Ice.
 
@@ -432,14 +440,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    For example, an empty file contains just:
 
-             {
-               "type": "FeatureCollection",
-               "features": []
-             }
-
-   Here's an example of a file with just one entry:
-
-
 
 
 
@@ -449,6 +449,13 @@ Arkko                   Expires November 2, 2020                [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+             {
+               "type": "FeatureCollection",
+               "features": []
+             }
+
+   Here's an example of a file with just one entry:
 
      {
        "type": "FeatureCollection",
@@ -492,19 +499,19 @@ Internet-Draft                Activity JSON                     May 2020
 
    n
 
-      The name of the place.  By convention the last item of the name
-      (after last comma) should be city name.  Mandatory.
-
-   lat, lon
-
-      The coordinates, in WGS84 format.  Mandatory.
-
 
 
 Arkko                   Expires November 2, 2020                [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      The name of the place.  By convention the last item of the name
+      (after last comma) should be city name.  Mandatory.
+
+   lat, lon
+
+      The coordinates, in WGS84 format.  Mandatory.
 
    d
 
@@ -546,6 +553,15 @@ Internet-Draft                Activity JSON                     May 2020
          entity points to another entity that represents another
          entrance to this cave.
 
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 10]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       *  "sidecaveof": This entity is another (side) cave of the main
          cave described in the entity referred to.
 
@@ -554,13 +570,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       *  "peakof": This entity is a mountain peak, top lift, or other
          similar location in the entity referred to.
-
-
-
-Arkko                   Expires November 2, 2020               [Page 10]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       *  "peak": A reverse relationship of the above, i.e., this entity
          points to another entity is a peak of this mountain or ski
@@ -602,21 +611,19 @@ Internet-Draft                Activity JSON                     May 2020
 
    m
 
-      The cave map link URL, if any.  If there's no URL, the attribute
-      SHOULD NOT be specified at all (and SHOULD NOT be set to, e.g.,
-      empty string, although it is RECOMMENDED that software recognises
-      empty strings similarly to missing attributes.
-
-   l
-
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 11]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      The cave map link URL, if any.  If there's no URL, the attribute
+      SHOULD NOT be specified at all (and SHOULD NOT be set to, e.g.,
+      empty string, although it is RECOMMENDED that software recognises
+      empty strings similarly to missing attributes.
+
+   l
 
       The length of the cave in meters, if known.  The attribute is
       optional, and should be left out if no value is known.  The value
@@ -658,13 +665,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    rl
 
-      The "reading list", a list of articles describing visits etc.
-      This can of course be empty, i.e., [], but the attribute itself is
-      mandatory.  The description of what an article object is can be
-      found from Section 5.3.
-
-   s
-
 
 
 
@@ -673,6 +673,13 @@ Arkko                   Expires November 2, 2020               [Page 12]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      The "reading list", a list of articles describing visits etc.
+      This can of course be empty, i.e., [], but the attribute itself is
+      mandatory.  The description of what an article object is can be
+      found from Section 5.3.
+
+   s
 
       The source of the data, if specified.  The source is simply
       represented as a string.  Note that the source often defaults from
@@ -715,13 +722,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       The sub-activity, e.g., within caving the allowed sub-activities
       or cave types are Rock, Ice, Man-made, Science, and Equipment and
-      within skiing they are Outdoor, Indoor, Snow, Sand, Rock, Ash,
-      Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
-      This attribute is mandatory.
-
-   p
-
-
 
 
 
@@ -729,6 +729,12 @@ Arkko                   Expires November 2, 2020               [Page 13]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      within skiing they are Outdoor, Indoor, Snow, Sand, Rock, Ash,
+      Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
+      This attribute is mandatory.
+
+   p
 
       Each article may be described by a URL (if available) or by a
       printed publication such as a book.  The "p" field provides the
@@ -773,18 +779,14 @@ Internet-Draft                Activity JSON                     May 2020
           }
          ]
 
-   Where the fields are as described in Section 5.2.
-
-
-
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 14]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   Where the fields are as described in Section 5.2.
 
 7.  Generation 0 Format
 
@@ -830,9 +832,7 @@ Internet-Draft                Activity JSON                     May 2020
               DOI 10.17487/RFC7946, August 2016,
               <https://www.rfc-editor.org/info/rfc7946>.
 
-   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
-              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
+
 
 
 
@@ -841,6 +841,10 @@ Arkko                   Expires November 2, 2020               [Page 15]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
    [RFC8259]  Bray, T., Ed., "The JavaScript Object Notation (JSON) Data
               Interchange Format", STD 90, RFC 8259,
@@ -884,10 +888,6 @@ Author's Address
    Finland
 
    Email: jari@arkko.com
-
-
-
-
 
 
 

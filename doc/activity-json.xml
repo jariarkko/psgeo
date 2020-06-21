@@ -243,16 +243,23 @@
         
         <t hangText="Caving"><vspace blankLines="1"/>
         
-        OLD: The sub-activities are Rock, Ice, Man-made, Science, and
+        OLD: <vspace blankLines="1"/>
+
+        The sub-activities are Rock, Ice, Man-made, Science, and
         Equipment.
         <vspace blankLines="1"/>
         
-        NEW: The sub-activities consist of a number sub-attributes
+        NEW: <vspace blankLines="1"/>
+
+        The sub-activities consist of a number sub-attributes
         that can be combined to represent a detailed activity and
-        environment.
+        environment. <vspace blankLines="1"/>
+        
         The sub-activities can represent the following 
         aspects. Different aspects can appear in an orthogonal
         manner, e.g., you could be diving and visiting an ice cave.
+        Not all combinations make sense, of course, but in general one
+        can combine a number of different sub-activities in one experience.
         
         <list style="hanging">
           
