@@ -386,6 +386,14 @@
         <t hangText="lat, lon"><vspace blankLines="1"/>
         The coordinates, in WGS84 format. Mandatory.</t>
 
+        <t hangText="d"><vspace blankLines="1"/> Free-form text
+        description of the location. Optional. Note that this SHOULD
+        NOT be used to write long stories about the location, but
+        rather a line or two about it. The articles and URLs
+        referenced from the entry are the right place to write full
+        descriptions. But the short description may be displayed by
+        tools when hovering over the location by mouse, etc.</t>
+        
         <t hangText="rn"><vspace blankLines="1"/>
         This optional attribute enables building relations between
         different items. The "rn" attribute identifies another entity
@@ -476,13 +484,14 @@
         larger than 50 meters long would be represented as "&gt;50".</t>
         
         <t hangText="h"><vspace blankLines="1"/>
-        The height/vertical difference in the cave in meters, if known. The attribute is
-        optional, and should be left out if no value is known.</t>
+        The height/vertical difference in the cave in meters, if
+        known. The attribute is optional, and should be left out if no
+        value is known.</t>
         
         <t hangText="la"><vspace blankLines="1"/>
-        The cave length and height accuracy ("exact" or "approx"). The attribute
-        is optional, and the default value is "approx" if no other
-        value is provided.</t>
+        The cave length and height accuracy ("exact" or "approx"). The
+        attribute is optional, and the default value is "approx" if no
+        other value is provided.</t>
         
         <t hangText="k"><vspace blankLines="1"/>
         The city/town/county. In Finland the relevant "kunta" or
@@ -500,12 +509,22 @@
         description of what an article object is can be found from
         <xref target="article"/>.</t>
 
-        <t hangText="s"><vspace blankLines="1"/>The source of the
-        data, if specified. The source is simply represented as a
-        string.
-        Note that the source often defaults from whereever the data is
-        being fetched, so typically this does not need to be set
-        unless somehow specifically different from other entries.</t>
+        <t hangText="s"><vspace blankLines="1"/>
+        The source of the data, if specified. The source is simply
+        represented as a string.  Note that the source often defaults
+        from whereever the data is being fetched, so typically this
+        does not need to be set unless somehow specifically different
+        from other entries.</t>
+
+        <t hangText="id"><vspace blankLines="1"/> Within Activity
+        JSON, the "n" field specifies the canonical, unique name for a
+        place. In some cases one may wish to provide additional
+        identifiers, e.g., an index specified by a caving
+        association. This field is optional, and if present, MUST
+        contain an array of strings. The strings in the array are the
+        identifier strings. Each identifier string MUST be of the form
+        KIND=VALUE, where KIND is the identifier system being used,
+        and VALUE is the identifier itself.</t>
         
       </list></t>
 
@@ -546,6 +565,13 @@
         Snow, Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic,
         Other-substances, and Imported-snow. This attribute is
         mandatory.</t>
+
+        <t hangText="p"><vspace blankLines="1"/>
+        Each article may be described by a URL (if available) or by a
+        printed publication such as a book. The "p" field provides the
+        name of the book and any associated other reference
+        information such as page or section numbers.
+        </t>
         
         <t hangText="u"><vspace blankLines="1"/>
         URL for the article. This attribute is optional. If no URL is
