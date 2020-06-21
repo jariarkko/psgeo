@@ -516,16 +516,6 @@
         does not need to be set unless somehow specifically different
         from other entries.</t>
 
-        <t hangText="id"><vspace blankLines="1"/> Within Activity
-        JSON, the "n" field specifies the canonical, unique name for a
-        place. In some cases one may wish to provide additional
-        identifiers, e.g., an index specified by a caving
-        association. This field is optional, and if present, MUST
-        contain an array of strings. The strings in the array are the
-        identifier strings. Each identifier string MUST be of the form
-        KIND=VALUE, where KIND is the identifier system being used,
-        and VALUE is the identifier itself.</t>
-        
       </list></t>
 
     </section>

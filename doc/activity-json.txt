@@ -74,12 +74,12 @@ Table of Contents
    6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  13
    7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  14
    8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  14
-   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  15
-   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  15
-     10.1.  Normative References . . . . . . . . . . . . . . . . . .  15
+   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  14
+   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  14
+     10.1.  Normative References . . . . . . . . . . . . . . . . . .  14
      10.2.  Informative References . . . . . . . . . . . . . . . . .  15
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  16
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  16
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  15
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  15
 
 1.  Introduction
 
@@ -631,17 +631,6 @@ Internet-Draft                Activity JSON                     May 2020
       need to be set unless somehow specifically different from other
       entries.
 
-   id
-
-      Within Activity JSON, the "n" field specifies the canonical,
-      unique name for a place.  In some cases one may wish to provide
-      additional identifiers, e.g., an index specified by a caving
-      association.  This field is optional, and if present, MUST contain
-      an array of strings.  The strings in the array are the identifier
-      strings.  Each identifier string MUST be of the form KIND=VALUE,
-      where KIND is the identifier system being used, and VALUE is the
-      identifier itself.
-
 5.3.  Article Objects
 
    Aach article is a JSON record.  The record has the following fields:
@@ -666,14 +655,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    m
 
-
-
-
-Arkko                   Expires November 2, 2020               [Page 12]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
       The month of visit (as a number, between 1-12).  This attribute is
       mandatory.
 
@@ -685,6 +666,14 @@ Internet-Draft                Activity JSON                     May 2020
 
       The sub-activity, e.g., within caving the allowed sub-activities
       or cave types are Rock, Ice, Man-made, Science, and Equipment and
+
+
+
+Arkko                   Expires November 2, 2020               [Page 12]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       within skiing they are Outdoor, Indoor, Snow, Sand, Rock, Ash,
       Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
       This attribute is mandatory.
@@ -712,24 +701,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    Here's an example of a file with just one entry:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 13]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
          [
           {"n": "Kattilajaerven iso lippaluola, Nuuksio, Espoo",
            "lat": 60.30145486,
@@ -751,6 +722,13 @@ Internet-Draft                Activity JSON                     May 2020
                  ]
           }
          ]
+
+
+
+Arkko                   Expires November 2, 2020               [Page 13]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    Where the fields are as described in Section 5.2.
 
@@ -779,13 +757,6 @@ Internet-Draft                Activity JSON                     May 2020
    again supported by software libraries and any Generation 0 content
    continues to be acceptable by systems consuming Activity JSON.
 
-
-
-Arkko                   Expires November 2, 2020               [Page 14]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
 9.  Character Set
 
    Activity JSON is always in UTF-8, as specified in [RFC8259]
@@ -804,6 +775,16 @@ Internet-Draft                Activity JSON                     May 2020
               and T. Schaub, "The GeoJSON Format", RFC 7946,
               DOI 10.17487/RFC7946, August 2016,
               <https://www.rfc-editor.org/info/rfc7946>.
+
+
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 14]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
@@ -833,15 +814,6 @@ Internet-Draft                Activity JSON                     May 2020
               Arkko, J., "Skiing the Planet",
               website https://planetskier.net, May 2020.
 
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 15]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
    [Psgeo]    Arkko, J., "Psgeo: Activity location library",
               website https://github.com/jariarkko/psgeo, May 2020.
 
@@ -865,32 +837,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 16]
+Arkko                   Expires November 2, 2020               [Page 15]
