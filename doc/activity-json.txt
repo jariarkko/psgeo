@@ -303,11 +303,16 @@ Internet-Draft                Activity JSON                     May 2020
       Environment
 
          To describe the environment, use one of the following three
-         sub-activity tags: Rock, Ice, and Man-made.
+         sub-activity tags: Rock, Ice, Man-made, and Other-material.
 
          There is an additional sub-sub-activity tag for Rock, to
          describe the kind of rock being explored: Rock-Granite, Rock-
          Limestone, Rock-Marble, and Rock-Volcanic.
+
+         Another additional sub-sub-activity tag for the Rock sub-
+         activity tag is how the caves were formed, i.e., their
+         morphology: Morphology-Crack, Morphology-Boulders, Morphology-
+         Karst, Morphology-Volcanic, and Morphology-Other.
 
          More than one of these may appear in a single cave.
 
@@ -326,11 +331,6 @@ Internet-Draft                Activity JSON                     May 2020
          Digging.  More than one of these may appear in a single trip.
          The tag None describes that no actual caving was done.
 
-      Associated activities
-
-         Sometimes we report on activities related to, but not actual
-         caving.  This can be represented with the following sub-
-
 
 
 Arkko                   Expires November 2, 2020                [Page 6]
@@ -338,10 +338,14 @@ Arkko                   Expires November 2, 2020                [Page 6]
 Internet-Draft                Activity JSON                     May 2020
 
 
-         activities: Science, Social, Equipment, and Media.  For
-         instance, Caving:Media can represent watching a caving-related
-         movie and Caving:Equipment can represent a story about fixing a
-         cave lamp.
+      Associated activities
+
+         Sometimes we report on activities related to, but not actual
+         caving.  This can be represented with the following sub-
+         activities: Surveying, Researching, Training, Studying, Social,
+         Equipment, Media, and Other.  For instance, Caving:Media can
+         represent watching a caving-related movie and Caving:Equipment
+         can represent a story about fixing a cave lamp.
 
       Independent characteristics
 
@@ -383,16 +387,16 @@ Internet-Draft                Activity JSON                     May 2020
       The sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
       Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
 
-   Skydiving
-
-      There are no sub-activities.
-
 
 
 Arkko                   Expires November 2, 2020                [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   Skydiving
+
+      There are no sub-activities.
 
    Sliding
 
@@ -437,10 +441,6 @@ Internet-Draft                Activity JSON                     May 2020
    Other
 
       There are no sub-activities.
-
-
-
-
 
 
 

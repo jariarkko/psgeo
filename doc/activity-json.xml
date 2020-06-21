@@ -266,7 +266,7 @@
           <t hangText="Environment"><vspace blankLines="1"/>
 
           To describe the environment, use one of the following three
-          sub-activity tags: Rock, Ice, and Man-made. <vspace
+          sub-activity tags: Rock, Ice, Man-made, and Other-material. <vspace
           blankLines="1"/>
           
           There is an additional sub-sub-activity tag for Rock, to
@@ -274,6 +274,12 @@
           Rock-Limestone, Rock-Marble, and Rock-Volcanic. <vspace
           blankLines="1"/>
 
+          Another additional sub-sub-activity tag for the Rock
+          sub-activity tag is how the caves were formed, i.e., their
+          morphology: Morphology-Crack, Morphology-Boulders,
+          Morphology-Karst, Morphology-Volcanic, and Morphology-Other.
+          <vspace blankLines="1"/>
+          
           More than one of these may appear in a single cave. <vspace
           blankLines="1"/>
 
@@ -297,10 +303,11 @@
 
           Sometimes we report on activities related to, but not actual
           caving. This can be represented with the following
-          sub-activities: Science, Social, Equipment, and Media.  For
-          instance, Caving:Media can represent watching a
-          caving-related movie and Caving:Equipment can represent a
-          story about fixing a cave lamp.</t>
+          sub-activities: Surveying, Researching, Training, Studying,
+          Social, Equipment, Media, and Other.  For instance, Caving:Media
+          can represent watching a caving-related movie and
+          Caving:Equipment can represent a story about fixing a cave
+          lamp.</t>
           
           <t hangText="Independent characteristics"><vspace
           blankLines="1"/>
