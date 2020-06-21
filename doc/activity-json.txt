@@ -316,7 +316,7 @@ Internet-Draft                Activity JSON                     May 2020
          categories of Urban-exploration, and properly specified there.
          A single reading list item may cover multiple activities, so an
          activity list of ["Caving","Urban-exploration"] and sub-
-         activity list of [["Man-made"],["Bunkers"]] is perfect legal
+         activity list of [["Man-made"],["Bunkers"]] is perfectly legal
          Activity JSON.
 
       Caving method
