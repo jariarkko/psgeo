@@ -243,14 +243,6 @@
         
         <t hangText="Caving"><vspace blankLines="1"/>
         
-        OLD: <vspace blankLines="1"/>
-
-        The sub-activities are Rock, Ice, Man-made, Science, and
-        Equipment.
-        <vspace blankLines="1"/>
-        
-        NEW: <vspace blankLines="1"/>
-
         The sub-activities consist of a number sub-attributes
         that can be combined to represent a detailed activity and
         environment. <vspace blankLines="1"/>
@@ -614,22 +606,25 @@
         mandatory.</t>
         
         <t hangText="y"><vspace blankLines="1"/>
+
         Year of visit (as a number). This attribute is mandatory.</t>
         
         <t hangText="m"><vspace blankLines="1"/>
+
         The month of visit (as a number, between 1-12). This attribute
         is mandatory.</t>
         
         <t hangText="a"><vspace blankLines="1"/>
-        The activity: Caving, Skiing, etc. This attribute is mandatory.</t>
+
+        The activity: Caving, Skiing, etc. This attribute is
+        mandatory.</t>
 
         <t hangText="sa"><vspace blankLines="1"/>
-        The sub-activity, e.g., within caving the allowed
-        sub-activities or cave types are Rock, Ice, Man-made, Science,
-        and Equipment and within skiing they are Outdoor, Indoor,
-        Snow, Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic,
-        Other-substances, and Imported-snow. This attribute is
-        mandatory.</t>
+
+        The sub-activity, e.g., within caving sub-activities or cave
+        types are can be Rock, Ice, and so on, wereas within skiing
+        they the sub-activities can be Outdoor, Indoor, Snow, Sand,
+        and so on. This attribute is mandatory.</t>
 
         <t hangText="p"><vspace blankLines="1"/>
         Each article may be described by a URL (if available) or by a

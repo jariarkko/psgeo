@@ -67,8 +67,8 @@ Table of Contents
    2.  Normative Language  . . . . . . . . . . . . . . . . . . . . .   3
    3.  Goals . . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Modelling Activities  . . . . . . . . . . . . . . . . . . . .   4
-   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   9
-     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .  10
+   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   8
+     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .   9
      5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  10
      5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  13
    6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  14
@@ -284,13 +284,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    Caving
 
-      OLD:
-
-      The sub-activities are Rock, Ice, Man-made, Science, and
-      Equipment.
-
-      NEW:
-
       The sub-activities consist of a number sub-attributes that can be
       combined to represent a detailed activity and environment.
 
@@ -331,6 +324,13 @@ Internet-Draft                Activity JSON                     May 2020
          Digging.  More than one of these may appear in a single trip.
          The tag None describes that no actual caving was done.
 
+      Associated activities
+
+         Sometimes we report on activities related to, but not actual
+         caving.  This can be represented with the following sub-
+         activities: Surveying, Researching, Training, Studying, Social,
+         Equipment, Media, and Other.  For instance, Caving:Media can
+
 
 
 Arkko                   Expires November 2, 2020                [Page 6]
@@ -338,12 +338,6 @@ Arkko                   Expires November 2, 2020                [Page 6]
 Internet-Draft                Activity JSON                     May 2020
 
 
-      Associated activities
-
-         Sometimes we report on activities related to, but not actual
-         caving.  This can be represented with the following sub-
-         activities: Surveying, Researching, Training, Studying, Social,
-         Equipment, Media, and Other.  For instance, Caving:Media can
          represent watching a caving-related movie and Caving:Equipment
          can represent a story about fixing a cave lamp.
 
@@ -387,18 +381,18 @@ Internet-Draft                Activity JSON                     May 2020
       The sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
       Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
 
+   Skydiving
+
+      There are no sub-activities.
+
+   Sliding
+
 
 
 Arkko                   Expires November 2, 2020                [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
-
-   Skydiving
-
-      There are no sub-activities.
-
-   Sliding
 
       The sub-activities are the same as for Skiing.
 
@@ -442,6 +436,12 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
+5.  Generation 2 Format
+
+   The format is a specialization of GeoJSON.  Every Activity JSON
+   object is also a valid GeoJSON object, but has some extra properties
+   to carry the information that is needed to describe the activities.
+
 
 
 
@@ -449,12 +449,6 @@ Arkko                   Expires November 2, 2020                [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
-
-5.  Generation 2 Format
-
-   The format is a specialization of GeoJSON.  Every Activity JSON
-   object is also a valid GeoJSON object, but has some extra properties
-   to carry the information that is needed to describe the activities.
 
    For example, an empty file contains just:
 
@@ -496,6 +490,12 @@ Internet-Draft                Activity JSON                     May 2020
        ]
      }
 
+5.1.  Features
+
+   In this version of the specification, only features of the type
+   "Point" are allowed.
+
+
 
 
 
@@ -505,11 +505,6 @@ Arkko                   Expires November 2, 2020                [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
-
-5.1.  Features
-
-   In this version of the specification, only features of the type
-   "Point" are allowed.
 
 5.2.  Properties
 
@@ -554,6 +549,11 @@ Internet-Draft                Activity JSON                     May 2020
       present.  The "rt" attribute describes the type of the
       relationship.  Since there can be a number of relationships, the
       value should be a list.  Each list item should be a string that
+      describes a relationship type.  Currently supported relationship
+      types are:
+
+      *  "entranceof": This entity is another entrance to the same cave
+         as described in the entity referred to.
 
 
 
@@ -561,12 +561,6 @@ Arkko                   Expires November 2, 2020               [Page 10]
 
 Internet-Draft                Activity JSON                     May 2020
 
-
-      describes a relationship type.  Currently supported relationship
-      types are:
-
-      *  "entranceof": This entity is another entrance to the same cave
-         as described in the entity referred to.
 
       *  "entrance": A reverse relationship of the above, i.e., this
          entity points to another entity that represents another
@@ -610,6 +604,12 @@ Internet-Draft                Activity JSON                     May 2020
 
    alt
 
+      An optional attribute that describes the altitude the location or
+      the highest point in the destination, in meters.
+
+   fz
+
+
 
 
 
@@ -617,11 +617,6 @@ Arkko                   Expires November 2, 2020               [Page 11]
 
 Internet-Draft                Activity JSON                     May 2020
 
-
-      An optional attribute that describes the altitude the location or
-      the highest point in the destination, in meters.
-
-   fz
 
       Set to true if the coordinates are "fuzzy" to hide the true
       location for privacy etc. reasons.  Default is false.  This
@@ -666,6 +661,11 @@ Internet-Draft                Activity JSON                     May 2020
       The city/town/county.  In Finland the relevant "kunta" or
       community should be filled in.  This attribute is mandatory.
 
+   c
+
+      The country.  This attribute is mandatory.
+
+   o
 
 
 
@@ -673,12 +673,6 @@ Arkko                   Expires November 2, 2020               [Page 12]
 
 Internet-Draft                Activity JSON                     May 2020
 
-
-   c
-
-      The country.  This attribute is mandatory.
-
-   o
 
       The continent.  This attribute is mandatory.
 
@@ -721,6 +715,12 @@ Internet-Draft                Activity JSON                     May 2020
 
    m
 
+      The month of visit (as a number, between 1-12).  This attribute is
+      mandatory.
+
+   a
+
+      The activity: Caving, Skiing, etc.  This attribute is mandatory.
 
 
 
@@ -730,19 +730,11 @@ Arkko                   Expires November 2, 2020               [Page 13]
 Internet-Draft                Activity JSON                     May 2020
 
 
-      The month of visit (as a number, between 1-12).  This attribute is
-      mandatory.
-
-   a
-
-      The activity: Caving, Skiing, etc.  This attribute is mandatory.
-
    sa
 
-      The sub-activity, e.g., within caving the allowed sub-activities
-      or cave types are Rock, Ice, Man-made, Science, and Equipment and
-      within skiing they are Outdoor, Indoor, Snow, Sand, Rock, Ash,
-      Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
+      The sub-activity, e.g., within caving sub-activities or cave types
+      are can be Rock, Ice, and so on, wereas within skiing they the
+      sub-activities can be Outdoor, Indoor, Snow, Sand, and so on.
       This attribute is mandatory.
 
    p
@@ -767,6 +759,14 @@ Internet-Draft                Activity JSON                     May 2020
              []
 
    Here's an example of a file with just one entry:
+
+
+
+
+
+
+
+
 
 
 
