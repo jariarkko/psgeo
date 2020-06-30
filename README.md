@@ -25,3 +25,5 @@ For more information on the usage and API of Psgeo, read the
 
 Psgeo was initially written by Jari Arkko, but there has also been
 contributions by Ralf Strandell.
+
+NOTE: Psgeo is a software library. It shows data provided to it, as faithfully as the software can. Any mistakes or other issues with the data, please contact whoever manages the relevant data source. No warranty, data accuracy, material ownership, or safety can be provided by Psgeo or its authors. When it comes to data shown by Psgeo, Jari Arkko manages all data associated to https://planetskier.net, https://planetcaver.net, https://saunablogger.cool etc. The Finnish Caving Association is responsible for all data shown at [Luolaseura](https://luolaseura.fi/luolakanta/kartta.html). 
