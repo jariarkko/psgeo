@@ -67,19 +67,20 @@ Table of Contents
    2.  Normative Language  . . . . . . . . . . . . . . . . . . . . .   3
    3.  Goals . . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Modelling Activities  . . . . . . . . . . . . . . . . . . . .   4
-   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   8
-     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .   9
+   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   9
+     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .  10
      5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  10
      5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  13
-   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  14
-   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  15
-   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  15
-   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  16
-   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  16
-     10.1.  Normative References . . . . . . . . . . . . . . . . . .  16
-     10.2.  Informative References . . . . . . . . . . . . . . . . .  16
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  17
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  17
+     5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  14
+   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  15
+   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  16
+   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  16
+   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  17
+   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  17
+     10.1.  Normative References . . . . . . . . . . . . . . . . . .  17
+     10.2.  Informative References . . . . . . . . . . . . . . . . .  17
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  18
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  18
 
 1.  Introduction
 
@@ -104,8 +105,7 @@ Table of Contents
    activities reported in [Planetskier] and caving-related activities
    reported in [Luolaseura] and [Planetcaver].
 
-   The rest of this document is organized as follows.  Section 3
-   discusses the goals for this work, and Section 4 covers some of the
+
 
 
 
@@ -114,6 +114,8 @@ Arkko                   Expires November 2, 2020                [Page 2]
 Internet-Draft                Activity JSON                     May 2020
 
 
+   The rest of this document is organized as follows.  Section 3
+   discusses the goals for this work, and Section 4 covers some of the
    modelling issues.  Section 5 describes the currently specified format
    for Activity JSON.  The description includes specification of the
    syntax rules and the structure as inherited from base specifications,
@@ -159,8 +161,6 @@ Internet-Draft                Activity JSON                     May 2020
    we wish to define a data format for applications sharing information
    about activities, their locations, and associated metadata.
 
-   It should also be noted that defining a data format is just about
-   defining a data format, and it is not a solution for all other
 
 
 
@@ -170,6 +170,8 @@ Arkko                   Expires November 2, 2020                [Page 3]
 Internet-Draft                Activity JSON                     May 2020
 
 
+   It should also be noted that defining a data format is just about
+   defining a data format, and it is not a solution for all other
    problems.  For instance, the following are outside the scope of the
    sharing data format and therefore non-goals for this effort:
 
@@ -216,8 +218,6 @@ Internet-Draft                Activity JSON                     May 2020
    First off, there's a philosophical question of whether we are
    describing real-world entities or their exploration.  We've chosen to
    model everything as visits or exploration, leaving some coordinates,
-   descriptions, articles and maps as a record of the activity.  But
-   this still describes real-world entities such as ski slopes or caves
 
 
 
@@ -226,6 +226,8 @@ Arkko                   Expires November 2, 2020                [Page 4]
 Internet-Draft                Activity JSON                     May 2020
 
 
+   descriptions, articles and maps as a record of the activity.  But
+   this still describes real-world entities such as ski slopes or caves
    accurately.  The information is just that -- information.  Whether an
    application or human decides to pay attention to who visited that
    place and when or just the characteristics of the place, is their
@@ -273,14 +275,14 @@ Internet-Draft                Activity JSON                     May 2020
 
    Canoeing
 
-      There are no sub-activities.
-
 
 
 Arkko                   Expires November 2, 2020                [Page 5]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      There are no sub-activities.
 
    Caving
 
@@ -328,8 +330,6 @@ Internet-Draft                Activity JSON                     May 2020
 
          Sometimes we report on activities related to, but not actual
          caving.  This can be represented with the following sub-
-         activities: Surveying, Researching, Training, Studying, Social,
-         Equipment, Media, and Other.  For instance, Caving:Media can
 
 
 
@@ -338,6 +338,8 @@ Arkko                   Expires November 2, 2020                [Page 6]
 Internet-Draft                Activity JSON                     May 2020
 
 
+         activities: Surveying, Researching, Training, Studying, Social,
+         Equipment, Media, and Other.  For instance, Caving:Media can
          represent watching a caving-related movie and Caving:Equipment
          can represent a story about fixing a cave lamp.
 
@@ -385,14 +387,14 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-   Sliding
-
 
 
 Arkko                   Expires November 2, 2020                [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   Sliding
 
       The sub-activities are the same as for Skiing.
 
@@ -432,15 +434,13 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-   Other
+   Meteorites
 
       There are no sub-activities.
 
-5.  Generation 2 Format
+   Other
 
-   The format is a specialization of GeoJSON.  Every Activity JSON
-   object is also a valid GeoJSON object, but has some extra properties
-   to carry the information that is needed to describe the activities.
+      There are no sub-activities.
 
 
 
@@ -449,6 +449,12 @@ Arkko                   Expires November 2, 2020                [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+5.  Generation 2 Format
+
+   The format is a specialization of GeoJSON.  Every Activity JSON
+   object is also a valid GeoJSON object, but has some extra properties
+   to carry the information that is needed to describe the activities.
 
    For example, an empty file contains just:
 
@@ -490,12 +496,6 @@ Internet-Draft                Activity JSON                     May 2020
        ]
      }
 
-5.1.  Features
-
-   In this version of the specification, only features of the type
-   "Point" are allowed.
-
-
 
 
 
@@ -505,6 +505,11 @@ Arkko                   Expires November 2, 2020                [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+5.1.  Features
+
+   In this version of the specification, only features of the type
+   "Point" are allowed.
 
 5.2.  Properties
 
@@ -528,10 +533,35 @@ Internet-Draft                Activity JSON                     May 2020
       descriptions.  But the short description may be displayed by tools
       when hovering over the location by mouse, etc.
 
+      The text itself can be in two forms, either simply the text as is.
+      In that case there is only one text available, and it is in
+      whatever language it happens to be.  An example:
+
+             "d": "This place is really cool!"
+
+      Alternatively, the text may be a record with two-letter language
+      codes representing language versions.  See Section 5.4 for the
+      available language code designations.
+
+      Here is an example:
+
+             "d": {
+                      "en": "This place is really cool!",
+                      "fi": "Ei paskempi paikka!"
+                    }
+
    rn
 
       This optional attribute enables building relations between
       different items.  The "rn" attribute identifies another entity in
+
+
+
+Arkko                   Expires November 2, 2020               [Page 10]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       the same dataset that there is a special relationship to.  The
       value of the "rn" attribute should be a list, with one list
       element for each different relationship that the item is involved
@@ -554,13 +584,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       *  "entranceof": This entity is another entrance to the same cave
          as described in the entity referred to.
-
-
-
-Arkko                   Expires November 2, 2020               [Page 10]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       *  "entrance": A reverse relationship of the above, i.e., this
          entity points to another entity that represents another
@@ -586,6 +609,15 @@ Internet-Draft                Activity JSON                     May 2020
          some reason there is no desire to merge their entity
          descriptions in other ways.
 
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 11]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       *  "secondary": A reverse relationship of the above, i.e., this
          entity points to another entity that is a secondary entry for
          this entity.
@@ -608,15 +640,6 @@ Internet-Draft                Activity JSON                     May 2020
       the highest point in the destination, in meters.
 
    fz
-
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 11]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       Set to true if the coordinates are "fuzzy" to hide the true
       location for privacy etc. reasons.  Default is false.  This
@@ -644,6 +667,13 @@ Internet-Draft                Activity JSON                     May 2020
       express the cave length size category, e.g., cave larger than 50
       meters long would be represented as ">50".
 
+
+
+Arkko                   Expires November 2, 2020               [Page 12]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
    h
 
       The height/vertical difference in the cave in meters, if known.
@@ -666,13 +696,6 @@ Internet-Draft                Activity JSON                     May 2020
       The country.  This attribute is mandatory.
 
    o
-
-
-
-Arkko                   Expires November 2, 2020               [Page 12]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       The continent.  This attribute is mandatory.
 
@@ -699,6 +722,14 @@ Internet-Draft                Activity JSON                     May 2020
 
       The title.  This attribute is mandatory.
 
+
+
+
+Arkko                   Expires November 2, 2020               [Page 13]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
    i
 
       URL for an image representing the article.  This attribute is
@@ -722,14 +753,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       The activity: Caving, Skiing, etc.  This attribute is mandatory.
 
-
-
-
-Arkko                   Expires November 2, 2020               [Page 13]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
    sa
 
       The sub-activity, e.g., within caving sub-activities or cave types
@@ -748,6 +771,42 @@ Internet-Draft                Activity JSON                     May 2020
 
       URL for the article.  This attribute is optional.  If no URL is
       known, the attribute should not be specified at all.
+
+5.4.  Language Codes
+
+   The following language codes are supported:
+
+   dk Danish
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 14]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
+   fi Finnish
+
+   fr French
+
+   de German
+
+   en English
+
+   es Spanish
+
+   it Italian
+
+   jp Japanese
+
+   no Norwegian
+
+   pt Portuguese
+
+   ru Russian
+
+   se Swedish
 
 6.  Generation 1 Format
 
@@ -778,10 +837,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-
-
-
-Arkko                   Expires November 2, 2020               [Page 14]
+Arkko                   Expires November 2, 2020               [Page 15]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -837,7 +893,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 15]
+Arkko                   Expires November 2, 2020               [Page 16]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -893,7 +949,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 16]
+Arkko                   Expires November 2, 2020               [Page 17]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -949,4 +1005,4 @@ Author's Address
 
 
 
-Arkko                   Expires November 2, 2020               [Page 17]
+Arkko                   Expires November 2, 2020               [Page 18]

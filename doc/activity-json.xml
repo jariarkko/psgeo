@@ -462,7 +462,34 @@
         rather a line or two about it. The articles and URLs
         referenced from the entry are the right place to write full
         descriptions. But the short description may be displayed by
-        tools when hovering over the location by mouse, etc.</t>
+        tools when hovering over the location by mouse, etc. <vspace blankLines="1"/>
+
+        The text itself can be in two forms, either simply the text as
+        is. In that case there is only one text available, and it is
+        in whatever language it happens to be. An example:
+
+      <figure>
+        <artwork>
+          "d": "This place is really cool!"
+        </artwork>
+      </figure>
+
+        Alternatively, the
+        text may be a record with two-letter language codes
+        representing language versions. See <xref target="lc"/> for
+        the available language code designations. <vspace blankLines="1"/>
+
+        Here is an example:
+        
+      <figure>
+        <artwork>
+          "d": {
+                   "en": "This place is really cool!", 
+                   "fi": "Ei paskempi paikka!"
+                 }
+        </artwork>
+      </figure>
+        </t>
         
         <t hangText="rn"><vspace blankLines="1"/>
         This optional attribute enables building relations between
@@ -633,15 +660,43 @@
         Each article may be described by a URL (if available) or by a
         printed publication such as a book. The "p" field provides the
         name of the book and any associated other reference
-        information such as page or section numbers.
+        information such as page or section numbers. If there's a URL
+        for the book itself (not the article in the book), use the
+        field "pu" for that.
         </t>
         
         <t hangText="u"><vspace blankLines="1"/>
         URL for the article. This attribute is optional. If no URL is
         known, the attribute should not be specified at all.</t>
 
+        <t hangText="pu"><vspace blankLines="1"/>
+        URL for a publication that contains the article. E.g., if
+        there's an article about the topic or place in a book, place
+        the book article here.
+        </t>
+        
       </list></t>
 
+    </section>
+
+    <section anchor="lc" title="Language Codes">
+      <t>The following language codes are supported:
+      <list style="hanging">
+        <t hangText="dk">Danish</t>
+        <t hangText="fi">Finnish</t>
+        <t hangText="fr">French</t>
+        <t hangText="de">German</t>
+        <t hangText="en">English</t>
+        <t hangText="es">Spanish</t>
+        <t hangText="it">Italian</t>
+        <t hangText="jp">Japanese</t>
+        <t hangText="no">Norwegian</t>
+        <t hangText="pt">Portuguese</t>
+        <t hangText="ru">Russian</t>
+        <t hangText="se">Swedish</t>
+      </list>
+      </t>
+      
       </section>
 
     </section>
