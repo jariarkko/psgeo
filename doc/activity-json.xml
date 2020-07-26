@@ -263,13 +263,14 @@
           
           There is an additional sub-sub-activity tag for Rock, to
           describe the kind of rock being explored: Rock-Granite,
-          Rock-Limestone, Rock-Marble, and Rock-Volcanic. <vspace
-          blankLines="1"/>
+          Rock-Limestone, Rock-Sandstone, Rock-Marble, Rock-Volcanic,
+          and Rock-Other. <vspace blankLines="1"/>
 
           Another additional sub-sub-activity tag for the Rock
           sub-activity tag is how the caves were formed, i.e., their
           morphology: Morphology-Crack, Morphology-Boulders,
-          Morphology-Karst, Morphology-Volcanic, and Morphology-Other.
+          Morphology-Karst, Morphology-Volcanic, Morphology-Erosion,
+          and Morphology-Other.
           <vspace blankLines="1"/>
           
           More than one of these may appear in a single cave. <vspace
@@ -286,8 +287,8 @@
           <t hangText="Caving method"><vspace blankLines="1"/>
 
           Caving can be performed in various ways. The following
-          sub-activity tags can be used: None, Basic, SRT, Swimming,
-          Diving, Digging. More than one of these may appear in a
+          sub-activity tags can be used: None, Basic, SRT, Swimming, Boating,
+          Diving, Digging, and Skiing. More than one of these may appear in a
           single trip. The tag None describes that no actual caving
           was done.</t>
           
