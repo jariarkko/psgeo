@@ -454,6 +454,12 @@
         The name of the place. By convention the last item of the name
         (after last comma) should be city name. Mandatory.</t>
         
+        <t hangText="an"><vspace blankLines="1"/>
+        This optional field allows listing alternative names, should
+        the place have several names or several alternative spellings
+        of the same name. The value, if present, should be an array
+        of strings in the same format as in the "n" field.</t>
+        
         <t hangText="lat, lon"><vspace blankLines="1"/>
         The coordinates, in WGS84 format. Mandatory.</t>
 
