@@ -70,8 +70,8 @@ Table of Contents
    5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   9
      5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .  10
      5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  10
-     5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  13
-     5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  14
+     5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  14
+     5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  15
    6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  15
    7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  16
    8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  16
@@ -302,12 +302,14 @@ Internet-Draft                Activity JSON                     May 2020
 
          There is an additional sub-sub-activity tag for Rock, to
          describe the kind of rock being explored: Rock-Granite, Rock-
-         Limestone, Rock-Marble, and Rock-Volcanic.
+         Limestone, Rock-Sandstone, Rock-Marble, Rock-Volcanic, and
+         Rock-Other.
 
          Another additional sub-sub-activity tag for the Rock sub-
          activity tag is how the caves were formed, i.e., their
          morphology: Morphology-Crack, Morphology-Boulders, Morphology-
-         Karst, Morphology-Volcanic, and Morphology-Other.
+         Karst, Morphology-Volcanic, Morphology-Erosion, and Morphology-
+         Other.
 
          More than one of these may appear in a single cave.
 
@@ -322,14 +324,12 @@ Internet-Draft                Activity JSON                     May 2020
       Caving method
 
          Caving can be performed in various ways.  The following sub-
-         activity tags can be used: None, Basic, SRT, Swimming, Diving,
-         Digging.  More than one of these may appear in a single trip.
-         The tag None describes that no actual caving was done.
+         activity tags can be used: None, Basic, SRT, Swimming, Boating,
+         Diving, Digging, and Skiing.  More than one of these may appear
+         in a single trip.  The tag None describes that no actual caving
+         was done.
 
       Associated activities
-
-         Sometimes we report on activities related to, but not actual
-         caving.  This can be represented with the following sub-
 
 
 
@@ -338,6 +338,8 @@ Arkko                   Expires November 2, 2020                [Page 6]
 Internet-Draft                Activity JSON                     May 2020
 
 
+         Sometimes we report on activities related to, but not actual
+         caving.  This can be represented with the following sub-
          activities: Surveying, Researching, Training, Studying, Social,
          Equipment, Media, and Other.  For instance, Caving:Media can
          represent watching a caving-related movie and Caving:Equipment
@@ -385,14 +387,14 @@ Internet-Draft                Activity JSON                     May 2020
 
    Skydiving
 
-      There are no sub-activities.
-
 
 
 Arkko                   Expires November 2, 2020                [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      There are no sub-activities.
 
    Sliding
 
@@ -440,8 +442,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    Other
 
-      There are no sub-activities.
-
 
 
 
@@ -449,6 +449,8 @@ Arkko                   Expires November 2, 2020                [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      There are no sub-activities.
 
 5.  Generation 2 Format
 
@@ -499,8 +501,6 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-
-
 Arkko                   Expires November 2, 2020                [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
@@ -519,6 +519,13 @@ Internet-Draft                Activity JSON                     May 2020
 
       The name of the place.  By convention the last item of the name
       (after last comma) should be city name.  Mandatory.
+
+   an
+
+      This optional field allows listing alternative names, should the
+      place have several names or several alternative spellings of the
+      same name.  The value, if present, should be an array of strings
+      in the same format as in the "n" field.
 
    lat, lon
 
@@ -545,6 +552,16 @@ Internet-Draft                Activity JSON                     May 2020
 
       Here is an example:
 
+
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 10]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
              "d": {
                       "en": "This place is really cool!",
                       "fi": "Ei paskempi paikka!"
@@ -554,14 +571,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       This optional attribute enables building relations between
       different items.  The "rn" attribute identifies another entity in
-
-
-
-Arkko                   Expires November 2, 2020               [Page 10]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
       the same dataset that there is a special relationship to.  The
       value of the "rn" attribute should be a list, with one list
       element for each different relationship that the item is involved
@@ -602,21 +611,19 @@ Internet-Draft                Activity JSON                     May 2020
          points to another entity is a peak of this mountain or ski
          area.
 
-      *  "secondaryto": This entity is an alternate/secondary entity
-         that describes something already described by some other
-         entity.  This can be used to represent reports from multiple,
-         alternate sources about the same thing, for instance, when for
-         some reason there is no desire to merge their entity
-         descriptions in other ways.
-
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 11]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      *  "secondaryto": This entity is an alternate/secondary entity
+         that describes something already described by some other
+         entity.  This can be used to represent reports from multiple,
+         alternate sources about the same thing, for instance, when for
+         some reason there is no desire to merge their entity
+         descriptions in other ways.
 
       *  "secondary": A reverse relationship of the above, i.e., this
          entity points to another entity that is a secondary entry for
@@ -660,19 +667,19 @@ Internet-Draft                Activity JSON                     May 2020
 
    lc
 
-      If the length is not specified, one can also specify a length
-      category.  This is expressed as a string of the forms "<a", ">a",
-      or "a><b" where a and b are numbers that may include also decimal
-      points.  The numbers represents cave lengths in meters, and
-      express the cave length size category, e.g., cave larger than 50
-      meters long would be represented as ">50".
-
 
 
 Arkko                   Expires November 2, 2020               [Page 12]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      If the length is not specified, one can also specify a length
+      category.  This is expressed as a string of the forms "<a", ">a",
+      or "a><b" where a and b are numbers that may include also decimal
+      points.  The numbers represents cave lengths in meters, and
+      express the cave length size category, e.g., cave larger than 50
+      meters long would be represented as ">50".
 
    h
 
@@ -714,13 +721,6 @@ Internet-Draft                Activity JSON                     May 2020
       need to be set unless somehow specifically different from other
       entries.
 
-5.3.  Article Objects
-
-   Aach article is a JSON record.  The record has the following fields:
-
-   t
-
-      The title.  This attribute is mandatory.
 
 
 
@@ -729,6 +729,14 @@ Arkko                   Expires November 2, 2020               [Page 13]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+5.3.  Article Objects
+
+   Aach article is a JSON record.  The record has the following fields:
+
+   t
+
+      The title.  This attribute is mandatory.
 
    i
 
@@ -765,18 +773,10 @@ Internet-Draft                Activity JSON                     May 2020
       Each article may be described by a URL (if available) or by a
       printed publication such as a book.  The "p" field provides the
       name of the book and any associated other reference information
-      such as page or section numbers.
+      such as page or section numbers.  If there's a URL for the book
+      itself (not the article in the book), use the field "pu" for that.
 
    u
-
-      URL for the article.  This attribute is optional.  If no URL is
-      known, the attribute should not be specified at all.
-
-5.4.  Language Codes
-
-   The following language codes are supported:
-
-   dk Danish
 
 
 
@@ -785,6 +785,21 @@ Arkko                   Expires November 2, 2020               [Page 14]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      URL for the article.  This attribute is optional.  If no URL is
+      known, the attribute should not be specified at all.
+
+   pu
+
+      URL for a publication that contains the article.  E.g., if there's
+      an article about the topic or place in a book, place the book
+      article here.
+
+5.4.  Language Codes
+
+   The following language codes are supported:
+
+   dk Danish
 
    fi Finnish
 
@@ -818,21 +833,6 @@ Internet-Draft                Activity JSON                     May 2020
              []
 
    Here's an example of a file with just one entry:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
