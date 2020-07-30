@@ -463,6 +463,14 @@
         <t hangText="lat, lon"><vspace blankLines="1"/>
         The coordinates, in WGS84 format. Mandatory.</t>
 
+        <t hangText="ac"><vspace blankLines="1"/>
+        In some cases there are alternative coordinates for some
+        reason, perhaps different measurements or different entrances
+        or different location within a larger entity. The "ac" field
+        can be used to carry these coordinates. Its value should be an
+        array of records, with each record having  the "lat" and "lon"
+        fields. The "ac" field is optional.</t>
+
         <t hangText="d"><vspace blankLines="1"/> Free-form text
         description of the location. Optional. Note that this SHOULD
         NOT be used to write long stories about the location, but
@@ -561,6 +569,11 @@
         <t hangText="alt"><vspace blankLines="1"/>
         An optional attribute that describes the altitude the location
         or the highest point in the destination, in meters.</t>
+
+        <t hangText="aa"><vspace blankLines="1"/>
+        An optional attribute that describes alternative altitudes (if
+        there are several measurements or different locations within
+        the place).</t>
         
         <t hangText="fz"><vspace blankLines="1"/>
         Set to true if the coordinates are "fuzzy" to hide the true
@@ -573,6 +586,11 @@
         set to, e.g., empty string, although it is RECOMMENDED that
         software recognises empty strings similarly to missing
         attributes.</t>
+
+        <t hangText="am"><vspace blankLines="1"/>
+        If there are several maps, additional links MAY be provided in
+        this optional attribute. Its value should be an array of URL strings.
+        </t>
         
         <t hangText="l"><vspace blankLines="1"/>
         The length of the cave in meters, if known. The attribute is
@@ -681,6 +699,10 @@
         there's an article about the topic or place in a book, place
         the book article here.
         </t>
+        
+        <t hangText="s"><vspace blankLines="1"/>
+        The source of the data, if specified and different from the
+        source of the overall entry.</t>
         
       </list></t>
 
