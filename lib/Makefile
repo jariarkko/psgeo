@@ -28,7 +28,7 @@ test.res:	$(SOURCES) $(TESTFILES)
 	diff test.res test.res.ok
 
 testdb.res:	$(SOURCES) $(TESTFILES)
-	$(JSC) psgeolib.js psgeodb.js psgeodbtest.js 2> testdb.res
+	$(JSC) psgeolang.js psgeolib.js psgeodb.js psgeodbtest.js 2> testdb.res
 	cat testdb.res
 	diff testdb.res testdb.res.ok
 
