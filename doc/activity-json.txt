@@ -72,15 +72,15 @@ Table of Contents
      5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  10
      5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  14
      5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  15
-   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  15
-   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  16
-   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  16
-   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  17
-   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  17
-     10.1.  Normative References . . . . . . . . . . . . . . . . . .  17
-     10.2.  Informative References . . . . . . . . . . . . . . . . .  17
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  18
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  18
+   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  16
+   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  17
+   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  17
+   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  18
+   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  18
+     10.1.  Normative References . . . . . . . . . . . . . . . . . .  18
+     10.2.  Informative References . . . . . . . . . . . . . . . . .  18
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  19
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  19
 
 1.  Introduction
 
@@ -531,6 +531,15 @@ Internet-Draft                Activity JSON                     May 2020
 
       The coordinates, in WGS84 format.  Mandatory.
 
+   ac
+
+      In some cases there are alternative coordinates for some reason,
+      perhaps different measurements or different entrances or different
+      location within a larger entity.  The "ac" field can be used to
+      carry these coordinates.  Its value should be an array of records,
+      with each record having the "lat" and "lon" fields.  The "ac"
+      field is optional.
+
    d
 
       Free-form text description of the location.  Optional.  Note that
@@ -546,15 +555,6 @@ Internet-Draft                Activity JSON                     May 2020
 
              "d": "This place is really cool!"
 
-      Alternatively, the text may be a record with two-letter language
-      codes representing language versions.  See Section 5.4 for the
-      available language code designations.
-
-      Here is an example:
-
-
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 10]
@@ -562,10 +562,23 @@ Arkko                   Expires November 2, 2020               [Page 10]
 Internet-Draft                Activity JSON                     May 2020
 
 
+      Alternatively, the text may be a record with two-letter language
+      codes representing language versions.  See Section 5.4 for the
+      available language code designations.
+
+      Here is an example:
+
              "d": {
                       "en": "This place is really cool!",
                       "fi": "Ei paskempi paikka!"
                     }
+
+   ad
+
+      Optional alternative descriptions, if any.  The value should be an
+      array of description objects, where each object should have the
+      field "d" for the description (as above) and "s" for the source of
+      the alternate description.
 
    rn
 
@@ -598,6 +611,13 @@ Internet-Draft                Activity JSON                     May 2020
          entity points to another entity that represents another
          entrance to this cave.
 
+
+
+Arkko                   Expires November 2, 2020               [Page 11]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       *  "sidecaveof": This entity is another (side) cave of the main
          cave described in the entity referred to.
 
@@ -610,13 +630,6 @@ Internet-Draft                Activity JSON                     May 2020
       *  "peak": A reverse relationship of the above, i.e., this entity
          points to another entity is a peak of this mountain or ski
          area.
-
-
-
-Arkko                   Expires November 2, 2020               [Page 11]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       *  "secondaryto": This entity is an alternate/secondary entity
          that describes something already described by some other
@@ -646,7 +659,20 @@ Internet-Draft                Activity JSON                     May 2020
       An optional attribute that describes the altitude the location or
       the highest point in the destination, in meters.
 
+   aa
+
+      An optional attribute that describes alternative altitudes (if
+      there are several measurements or different locations within the
+      place).
+
    fz
+
+
+
+Arkko                   Expires November 2, 2020               [Page 12]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
       Set to true if the coordinates are "fuzzy" to hide the true
       location for privacy etc. reasons.  Default is false.  This
@@ -659,6 +685,12 @@ Internet-Draft                Activity JSON                     May 2020
       empty string, although it is RECOMMENDED that software recognises
       empty strings similarly to missing attributes.
 
+   am
+
+      If there are several maps, additional links MAY be provided in
+      this optional attribute.  Its value should be an array of URL
+      strings.
+
    l
 
       The length of the cave in meters, if known.  The attribute is
@@ -666,13 +698,6 @@ Internet-Draft                Activity JSON                     May 2020
       should be a number and can include a decimal point.
 
    lc
-
-
-
-Arkko                   Expires November 2, 2020               [Page 12]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       If the length is not specified, one can also specify a length
       category.  This is expressed as a string of the forms "<a", ">a",
@@ -698,6 +723,13 @@ Internet-Draft                Activity JSON                     May 2020
       The city/town/county.  In Finland the relevant "kunta" or
       community should be filled in.  This attribute is mandatory.
 
+
+
+Arkko                   Expires November 2, 2020               [Page 13]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
    c
 
       The country.  This attribute is mandatory.
@@ -720,15 +752,6 @@ Internet-Draft                Activity JSON                     May 2020
       whereever the data is being fetched, so typically this does not
       need to be set unless somehow specifically different from other
       entries.
-
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 13]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
 5.3.  Article Objects
 
@@ -754,6 +777,15 @@ Internet-Draft                Activity JSON                     May 2020
 
    m
 
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 14]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       The month of visit (as a number, between 1-12).  This attribute is
       mandatory.
 
@@ -778,14 +810,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    u
 
-
-
-
-Arkko                   Expires November 2, 2020               [Page 14]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
       URL for the article.  This attribute is optional.  If no URL is
       known, the attribute should not be specified at all.
 
@@ -794,6 +818,11 @@ Internet-Draft                Activity JSON                     May 2020
       URL for a publication that contains the article.  E.g., if there's
       an article about the topic or place in a book, place the book
       article here.
+
+   s
+
+      The source of the data, if specified and different from the source
+      of the overall entry.
 
 5.4.  Language Codes
 
@@ -804,6 +833,14 @@ Internet-Draft                Activity JSON                     May 2020
    fi Finnish
 
    fr French
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 15]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    de German
 
@@ -837,7 +874,26 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 15]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 16]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -893,7 +949,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 16]
+Arkko                   Expires November 2, 2020               [Page 17]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -949,7 +1005,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 17]
+Arkko                   Expires November 2, 2020               [Page 18]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -1005,4 +1061,4 @@ Author's Address
 
 
 
-Arkko                   Expires November 2, 2020               [Page 18]
+Arkko                   Expires November 2, 2020               [Page 19]

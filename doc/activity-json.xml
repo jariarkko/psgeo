@@ -270,6 +270,7 @@
           sub-activity tag is how the caves were formed, i.e., their
           morphology: Morphology-Crack, Morphology-Boulders,
           Morphology-Karst, Morphology-Volcanic, Morphology-Erosion,
+          Morphology-Weathering (e.g., Tafons), Morphology-Crystallization,
           and Morphology-Other.
           <vspace blankLines="1"/>
           
@@ -471,7 +472,7 @@
         array of records, with each record having  the "lat" and "lon"
         fields. The "ac" field is optional.</t>
 
-        <t hangText="d"><vspace blankLines="1"/> Free-form text
+        <t hangText="d"><vspace blankLines="1"/> Free-form text 
         description of the location. Optional. Note that this SHOULD
         NOT be used to write long stories about the location, but
         rather a line or two about it. The articles and URLs
@@ -505,6 +506,12 @@
         </artwork>
       </figure>
         </t>
+        
+        <t hangText="ad"><vspace blankLines="1"/> Optional alternative
+        descriptions, if any. The value should be an array of
+        description objects, where each object should have the field
+        "d"  for the description (as above) and "s" for  the source of
+        the alternate description.</t>
         
         <t hangText="rn"><vspace blankLines="1"/>
         This optional attribute enables building relations between
