@@ -76,12 +76,16 @@
 -->   article filter entry Solamäen kivenalusluola, Siuntio
 -->   article filter entry Solamäen lippaluolanen, Siuntio
 -->   article filter entry Extraluola 1
---> -- merging of items
+--> -- converting complex names
 -->   creating db
--->   showing db results
+-->   showing convert db results
+--> convert result: {"n":"Rokokallion luolat, Vihti","lat":60.4985969,"lon":24.477130225,"l":86,"la":"exact","c":"Finland","o":"Europe","rl":[{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":["Rock"],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat"}],"k":"Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","s":"convert","d":{"en":"A cave from the book Suomen luolat. The book's code for this cave is U93. Cave type class is BE,F. 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","fi":"Suomen luolat -kirjan luolia. Kirjan koodi luolalle U93. Luolan tyyppi on BE,F. 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m."}}
+--> -- merging of items
+-->   creating merge db
+-->   showing merge db results
 --> merge result: {"n":"Vuorisen luola","lat":62.067613573832,"lon":23.822323132184,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[],"k":"Vuorisen luola","s":"merge"}
 --> merge result: {"n":"Tommin luola","lat":61.059315413301,"lon":23.386241059515,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[{"t":"Tommin luola","w":["Tommi Vuorinen"],"a":["Caving"],"sa":["Rock"]}],"k":"Tommin luola","s":"merge"}
---> merge result: {"n":"Pääluola, Rokokallio, Vihti","lat":60.489854,"lon":24.476853,"an":["Rokokallion luolat, Vihti"],"lc":"5><50","la":"approx","k":"Vihti","c":"Finland","o":"Europe","rl":[{"t":"Going to Rokokallio!","i":"https://1.bp.blogspot.com/-x_Q6RufLg1s/XwoUNGfkBDI/AAAAAAABibI/Cd91-EERE1oTBHqUknLBFz-Hfek_v8-XwCK4BGAsYHg/w400-h250/blog811_edit.jpg","y":2020,"m":7,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Rock","Rock-Granite","Morphology-Crack","Morphology-Boulders","Basic"]],"u":"https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html"},{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":["Rock"],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat","s":"merge"}],"s":"merge","ac":[{"lat":60.4985969,"lon":24.477130225,"s":"merge"}]}
+--> merge result: {"n":"Pääluola, Rokokallio, Vihti","lat":60.489854,"lon":24.476853,"an":["Rokokallion luolat, Vihti"],"d":"One description of this cave. Lets see if we can see another one.","lc":"5><50","la":"approx","k":"Vihti","c":"Finland","o":"Europe","rl":[{"t":"Going to Rokokallio!","i":"https://1.bp.blogspot.com/-x_Q6RufLg1s/XwoUNGfkBDI/AAAAAAABibI/Cd91-EERE1oTBHqUknLBFz-Hfek_v8-XwCK4BGAsYHg/w400-h250/blog811_edit.jpg","y":2020,"m":7,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Rock","Rock-Granite","Morphology-Crack","Morphology-Boulders","Basic"]],"u":"https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html"},{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":["Rock"],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat","s":"merge"}],"s":"merge","ac":[{"lat":60.4985969,"lon":24.477130225,"s":"merge"}],"ad":[{"d":{"en":"A cave from the book Suomen luolat. The book's code for this cave is U93. Cave type class is BE,F. 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","fi":"Suomen luolat -kirjan luolia. Kirjan koodi luolalle U93. Luolan tyyppi on BE,F. 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m."},"s":"merge"}]}
 -->   creating lang object
 -->   describing all items
 --> x = {"n":"Vuorisen luola","lat":62.067613573832,"lon":23.822323132184,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[],"k":"Vuorisen luola","s":"merge"}
@@ -124,14 +128,18 @@ Koordinaatit: N 61.05932 E 23.38624 (http://www.google.com/maps/place/61.0593154
 Pituus: ~15m
 
 
---> x = {"n":"Pääluola, Rokokallio, Vihti","lat":60.489854,"lon":24.476853,"an":["Rokokallion luolat, Vihti"],"lc":"5><50","la":"approx","k":"Vihti","c":"Finland","o":"Europe","rl":[{"t":"Going to Rokokallio!","i":"https://1.bp.blogspot.com/-x_Q6RufLg1s/XwoUNGfkBDI/AAAAAAABibI/Cd91-EERE1oTBHqUknLBFz-Hfek_v8-XwCK4BGAsYHg/w400-h250/blog811_edit.jpg","y":2020,"m":7,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Rock","Rock-Granite","Morphology-Crack","Morphology-Boulders","Basic"]],"u":"https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html"},{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":["Rock"],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat","s":"merge"}],"s":"merge","ac":[{"lat":60.4985969,"lon":24.477130225,"s":"merge"}]}
+--> x = {"n":"Pääluola, Rokokallio, Vihti","lat":60.489854,"lon":24.476853,"an":["Rokokallion luolat, Vihti"],"d":"One description of this cave. Lets see if we can see another one.","lc":"5><50","la":"approx","k":"Vihti","c":"Finland","o":"Europe","rl":[{"t":"Going to Rokokallio!","i":"https://1.bp.blogspot.com/-x_Q6RufLg1s/XwoUNGfkBDI/AAAAAAABibI/Cd91-EERE1oTBHqUknLBFz-Hfek_v8-XwCK4BGAsYHg/w400-h250/blog811_edit.jpg","y":2020,"m":7,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Rock","Rock-Granite","Morphology-Crack","Morphology-Boulders","Basic"]],"u":"https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html"},{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":["Rock"],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat","s":"merge"}],"s":"merge","ac":[{"lat":60.4985969,"lon":24.477130225,"s":"merge"}],"ad":[{"d":{"en":"A cave from the book Suomen luolat. The book's code for this cave is U93. Cave type class is BE,F. 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","fi":"Suomen luolat -kirjan luolia. Kirjan koodi luolalle U93. Luolan tyyppi on BE,F. 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m."},"s":"merge"}]}
 --> describing item Pääluola, Rokokallio, Vihti:
 --> Basic HTML description:
-<p><b>Pääluola, Rokokallio, Vihti</b></p><img src="https://1.bp.blogspot.com/-x_Q6RufLg1s/XwoUNGfkBDI/AAAAAAABibI/Cd91-EERE1oTBHqUknLBFz-Hfek_v8-XwCK4BGAsYHg/w400-h250/blog811_edit.jpg" width="140"><p>Koordinaatit: <a href="http://www.google.com/maps/place/60.489854,24.476853" target="_blank">N 60.48985 E 24.47685</a> (Merge). Muita ilmoitettuja koordinaatteja: <a href="http://www.google.com/maps/place/60.4985969,24.477130225" target="_blank">N 60.49860 E 24.47713</a> (MERGE, 972m etäisyydellä).</p><p>Pituusluokka: 5-50 m. Kivi: Graniitti. Syntytapa: Halkeama/Lohkare. Muita nimiä: Rokokallion luolat, Vihti</p><p>Artikkeli: <a href="https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html" target="_blank">Going to Rokokallio!</a> (JA '20)<br/>Kirja: <a href="https://www.salakirjat.net/product/242/suomen-luolat" target="_blank">Suomen luolat</a> (AK)</p>
+<p><b>Pääluola, Rokokallio, Vihti</b></p><img src="https://1.bp.blogspot.com/-x_Q6RufLg1s/XwoUNGfkBDI/AAAAAAABibI/Cd91-EERE1oTBHqUknLBFz-Hfek_v8-XwCK4BGAsYHg/w400-h250/blog811_edit.jpg" width="140"><p>One description of this cave. Lets see if we can see another one.</p><p>Merge: Suomen luolat -kirjan luolia. Kirjan koodi luolalle U93. Luolan tyyppi on BE,F. 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.</p><p>Koordinaatit: <a href="http://www.google.com/maps/place/60.489854,24.476853" target="_blank">N 60.48985 E 24.47685</a> (Merge). Muita ilmoitettuja koordinaatteja: <a href="http://www.google.com/maps/place/60.4985969,24.477130225" target="_blank">N 60.49860 E 24.47713</a> (Merge, 972m etäisyydellä).</p><p>Pituusluokka: 5-50 m. Kivi: Graniitti. Syntytapa: Halkeama/Lohkare. Muita nimiä: Rokokallion luolat, Vihti</p><p>Artikkeli: <a href="https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html" target="_blank">Going to Rokokallio!</a> (JA '20)<br/>Kirja: <a href="https://www.salakirjat.net/product/242/suomen-luolat" target="_blank">Suomen luolat</a> (AK)</p>
 --> Basic TXT description:
 PÄÄLUOLA, ROKOKALLIO, VIHTI
 
-Koordinaatit: N 60.48985 E 24.47685 (http://www.google.com/maps/place/60.489854,24.476853) (Merge). Muita ilmoitettuja koordinaatteja: N 60.49860 E 24.47713 (http://www.google.com/maps/place/60.4985969,24.477130225) (MERGE, 972m etäisyydellä).
+One description of this cave. Lets see if we can see another one.
+
+Merge: Suomen luolat -kirjan luolia. Kirjan koodi luolalle U93. Luolan tyyppi on BE,F. 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.
+
+Koordinaatit: N 60.48985 E 24.47685 (http://www.google.com/maps/place/60.489854,24.476853) (Merge). Muita ilmoitettuja koordinaatteja: N 60.49860 E 24.47713 (http://www.google.com/maps/place/60.4985969,24.477130225) (Merge, 972m etäisyydellä).
 
 Pituusluokka: 5-50 m. Kivi: Graniitti. Syntytapa: Halkeama/Lohkare. Muita nimiä: Rokokallion luolat, Vihti
 
@@ -141,6 +149,8 @@ Kirja: Suomen luolat https://www.salakirjat.net/product/242/suomen-luolat  (AK)
 
 --> Compact TXT description:
 PÄÄLUOLA, ROKOKALLIO, VIHTI
+
+One description of this cave. Lets see if we can see another one.
 
 Koordinaatit: N 60.48985 E 24.47685 (http://www.google.com/maps/place/60.489854,24.476853)
 
