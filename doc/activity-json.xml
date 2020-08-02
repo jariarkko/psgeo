@@ -352,7 +352,13 @@
         There are no sub-activities.</t>
         
         <t hangText="Swimming"><vspace blankLines="1"/>
-        Indoor, Outdoor, Underground, Water, Ice.</t>
+        Indoor, Outdoor, Underground, Water, Ice, and Balls (as in
+        children's "ball pit"). In addition, when the type is Water or
+        Ice, the additional items Waterbody-River, Waterbody-Lake,
+        Waterbody-Sandpit, Waterbody-Sea,
+        Waterbody-Pool, Waterbody-Cave, and Waterbody-Other can be
+        specified. The items Beach and Nature can also specified for
+        official and unofficial swimming spots.</t>
         
         <t hangText="Travel"><vspace blankLines="1"/>
         There are no sub-activities.</t>

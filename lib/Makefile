@@ -3,7 +3,8 @@ SOURCES		=	Makefile \
 			psgeo.js \
 			psgeolib.js \
 			psgeostat.js \
-			psgeodb.js
+			psgeodb.js \
+			psgeolang.js
 TESTFILES	=	psgeotest.js \
 	  		psgeolangtest.js \
 			psgeodbtest.js \
