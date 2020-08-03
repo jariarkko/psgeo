@@ -744,7 +744,7 @@ Internet-Draft                Activity JSON                     May 2020
 
       If the length is not specified, one can also specify a length
       category.  This is expressed as a string of the forms "<a", ">a",
-      or "a><b" where a and b are numbers that may include also decimal
+      or "a<<b" where a and b are numbers that may include also decimal
       points.  The numbers represents cave lengths in meters, and
       express the cave length size category, e.g., cave larger than 50
       meters long would be represented as ">50".
