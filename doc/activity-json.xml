@@ -651,6 +651,11 @@
         does not need to be set unless somehow specifically different
         from other entries.</t>
 
+        <t hangText="as"><vspace blankLines="1"/>
+        Alternative sources of the data, if more than given in the "s"
+        field. This field is optional. If present, it should contain
+        an array of strings representing the names of sources.</t>
+
       </list></t>
 
     </section>

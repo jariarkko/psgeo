@@ -160,4 +160,26 @@ Artikkeli: Going to Rokokallio! https://planetskier.blogspot.com/2020/07/going-t
 Kirja: Suomen luolat https://www.salakirjat.net/product/242/suomen-luolat 
 
 
+--> -- complex merge and gen 2 test
+--> LUOLAVUOREN LUOLA, TURKU
+
+Luolassa on useita reittejä.
+
+Dataset 1: Luolakirjallisuudessa kuvattu luola. Suomalainen luolakoodi luolalle on TP124. Luolan tyyppi on BEF.
+
+Dataset 2: Loistava kaupunkiluola, lähellä Turun keskustaa. Helppo luola aloittelijoille käydä, ja luolaa onkin käytety Suomen Luolaseuran opetustilaisuuksissa. Mutta edetessäsi tämän 60-metrisen luolan sisempiin osiin tarjoaa se myös haasteita ja ahtaita paikkoja kaikentasoisille luolailijoille!
+
+Koordinaatit: N 60.43057 E 22.28060 (http://www.google.com/maps/place/60.430570994,22.280602151) (Dataset 1). Muita ilmoitettuja koordinaatteja: N 60.42999 E 22.27778 (http://www.google.com/maps/place/60.429993,22.277781) (Dataset 2, 168m etäisyydellä).
+
+Pituus: ~60m. Kivi: Graniitti. Syntytapa: Halkeama/Lohkare
+
+Aktiviteetit: Luolailu, Opetus
+
+Artikkeli: Esimerkki retkestä luolaan Luolavuoren luola   (AK '20)
+Artikkeli: More multi-flash practice in caves https://planetskier.blogspot.com/2018/10/more-multi-flash-practice-in-caves.html  (JA,JP,RS... '18)
+
+
+--> n (all) = 1
+--> n (filter 1) = 1
+--> n (filter 2) = 1
 --> test complete and successful
