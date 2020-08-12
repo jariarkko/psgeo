@@ -220,7 +220,6 @@ Koordinaatit: N 60.40911 E 24.70933 (http://www.google.com/maps/place/60.4091060
 Luolakartta: kartta (https://www.arkko.com/klaukkala-luolat/Klaukkalan-hyypianmaen-lippaluola.pdf)Pituus: 78.2m. Kivi: Graniitti. Syntytapa: Halkeama/Rapautuminen
 
 Artikkeli: Hyypiänmäki massive roof cave https://planetskier.blogspot.com/2020/08/hyypianmaki-massive-roof-cave.html  (JA '20)
-
 Kirjallisuusviite: U59 Hyypiänmäen lippaluola. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
 
 
@@ -240,6 +239,18 @@ Artikkeli: More cave photo & flash exercise https://planetskier.blogspot.com/201
 Artikkeli: Virtual caving club meeting. In a cave. https://planetskier.blogspot.com/2020/04/virtual-caving-club-meeting-in-cave.html  (JA,JR,RS... '20)
 Artikkeli: Luolia Suomessa, Korkberget https://luolaseura.fi/suomessa/luolia-suomessa/#Korkbergetin%20lohkareluola  (SL '20)
 Kirjallisuusviite: U22 Korkbergetin luolat. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+
+
+--> -- test against the bug that causes extra empty lines in article lists
+--> SOIDENKALLION ONKALOT, LAPINJÄRVI
+
+Luolan tunniste U26. Geneettis-morfologinen luokitus {BD2D3}. 1-5x25m
+
+Koordinaatit: N 60.65716 E 26.02430 (http://www.google.com/maps/place/60.657160204,26.024298863)
+
+Pituus: 25m. Syntytapa: Halkeama/Rapautuminen
+
+Kirjallisuusviite: U26 Soidenkallion onkalot. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
 
 
 --> test complete and successful
