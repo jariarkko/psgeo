@@ -25,27 +25,22 @@ test:	test.res \
 
 test.res:	$(SOURCES) $(TESTFILES)
 	$(JSC) psgeolib.js psgeotest.js 2> test.res
-	cat test.res
 	diff test.res test.res.ok
 
 testdb.res:	$(SOURCES) $(TESTFILES)
 	$(JSC) psgeolang.js psgeolib.js psgeodb.js psgeodbtest.js 2> testdb.res
-	cat testdb.res
 	diff testdb.res testdb.res.ok
 
 teststat.res:	$(SOURCES) $(TESTFILES)
 	$(JSC) psgeostat.js psgeolib.js psgeodb.js psgeostattest.js 2> teststat.res
-	cat teststat.res
 	diff teststat.res teststat.res.ok
 
 testlib.res:	$(SOURCES) $(TESTFILES)
 	$(JSC) psgeolib.js psgeodb.js psgeolibtest.js 2> testlib.res
-	cat testlib.res
 	diff testlib.res testlib.res.ok
 
 testlang.res:	$(SOURCES) $(TESTFILES)
 	$(JSC) psgeolang.js psgeolangtest.js 2> testlang.res
-	cat testlang.res
 	diff testlang.res testlang.res.ok
 
 wc:
