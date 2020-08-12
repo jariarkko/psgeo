@@ -131,11 +131,11 @@ Pituus: ~15m
 --> x = {"n":"Pääluola, Rokokallio, Vihti","lat":60.489854,"lon":24.476853,"an":["Rokokallion luolat, Vihti"],"d":"One description of this cave. Lets see if we can see another one.","lc":"5<<50","la":"approx","k":"Vihti","c":"Finland","o":"Europe","rl":[{"t":"Going to Rokokallio!","i":"https://1.bp.blogspot.com/-x_Q6RufLg1s/XwoUNGfkBDI/AAAAAAABibI/Cd91-EERE1oTBHqUknLBFz-Hfek_v8-XwCK4BGAsYHg/w400-h250/blog811_edit.jpg","y":2020,"m":7,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Rock","Rock-Granite","Morphology-Crack","Morphology-Boulders","Basic"]],"u":"https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html"},{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat","s":"merge"}],"s":"merge","ac":[{"lat":60.4985969,"lon":24.477130225,"s":"merge"}],"ad":[{"d":{"en":"A cave the literature. The Finnish identification code for this cave is U93. Cave type class is BE,F. Dimensions 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","fi":"Luolakirjallisuudessa kuvattu luola. Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on BE,F. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m."},"s":"merge"}]}
 --> describing item Pääluola, Rokokallio, Vihti:
 --> Basic HTML description:
-<p><b>Pääluola, Rokokallio, Vihti</b></p><img src="https://1.bp.blogspot.com/-x_Q6RufLg1s/XwoUNGfkBDI/AAAAAAABibI/Cd91-EERE1oTBHqUknLBFz-Hfek_v8-XwCK4BGAsYHg/w400-h250/blog811_edit.jpg" width="140"><p>One description of this cave. Lets see if we can see another one.</p><p>Merge: Luolakirjallisuudessa kuvattu luola. Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on BE,F. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.</p><p>Koordinaatit: <a href="http://www.google.com/maps/place/60.489854,24.476853" target="_blank">N 60.48985 E 24.47685</a> (Merge). Muita ilmoitettuja koordinaatteja: <a href="http://www.google.com/maps/place/60.4985969,24.477130225" target="_blank">N 60.49860 E 24.47713</a> (Merge, 972m etäisyydellä).</p><p>Pituusluokka: 5-50 m. Kivi: Graniitti. Syntytapa: Halkeama/Lohkare. Muita nimiä: Rokokallion luolat, Vihti</p><p>Artikkeli: <a href="https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html" target="_blank">Going to Rokokallio!</a> (JA '20)<br/>Kirjallisuusviite: Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}. <a href="https://www.salakirjat.net/product/242/suomen-luolat" target="_blank">Suomen luolat</a> (AK)</p>
+<p><b>Pääluola, Rokokallio, Vihti</b></p><img src="https://1.bp.blogspot.com/-x_Q6RufLg1s/XwoUNGfkBDI/AAAAAAABibI/Cd91-EERE1oTBHqUknLBFz-Hfek_v8-XwCK4BGAsYHg/w400-h250/blog811_edit.jpg" width="140"><p>Merge: One description of this cave. Lets see if we can see another one.</p><p>Merge: Luolakirjallisuudessa kuvattu luola. Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on BE,F. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.</p><p>Koordinaatit: <a href="http://www.google.com/maps/place/60.489854,24.476853" target="_blank">N 60.48985 E 24.47685</a> (Merge). Muita ilmoitettuja koordinaatteja: <a href="http://www.google.com/maps/place/60.4985969,24.477130225" target="_blank">N 60.49860 E 24.47713</a> (Merge, 972m etäisyydellä).</p><p>Pituusluokka: 5-50 m. Kivi: Graniitti. Syntytapa: Halkeama/Lohkare. Muita nimiä: Rokokallion luolat, Vihti</p><p>Artikkeli: <a href="https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html" target="_blank">Going to Rokokallio!</a> (JA '20)<br/>Kirjallisuusviite: Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}. <a href="https://www.salakirjat.net/product/242/suomen-luolat" target="_blank">Suomen luolat</a> (AK)</p>
 --> Basic TXT description:
 PÄÄLUOLA, ROKOKALLIO, VIHTI
 
-One description of this cave. Lets see if we can see another one.
+Merge: One description of this cave. Lets see if we can see another one.
 
 Merge: Luolakirjallisuudessa kuvattu luola. Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on BE,F. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.
 
@@ -163,7 +163,7 @@ Kirjallisuusviite: Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m
 --> -- complex merge and gen 2 test
 --> LUOLAVUOREN LUOLA, TURKU
 
-Luolassa on useita reittejä.
+Dataset 1: Luolassa on useita reittejä.
 
 Dataset 1: Luolakirjallisuudessa kuvattu luola. Suomalainen luolakoodi luolalle on TP124. Luolan tyyppi on BEF.
 
@@ -205,6 +205,31 @@ Pituus: 8m. Syntytapa: Lohkare
 
 Kirjallisuusviite: Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK)
 Artikkeli: Esimerkki retkestä luolaan Jeremian luolat https://luolaseura.fi/suomessa/luolia-suomessa/#Jeremian%20luolat  (AY)
+
+
+--> BRUNNSKOBBIN LUOLA, VÅRDÖ
+
+Luolan tunniste AL21. Geneettis-morfologinen luokitus {A}.
+
+Koordinaatit: N 60.44292 E 20.38394 (http://www.google.com/maps/place/60.442924881,20.383939821)
+
+Pituus: 2m. Syntytapa: Kiteytyminen. Muita nimiä: Brunnskobbin luola ja Brunnskoppankittel
+
+
+--> -- testing merge failure issue #60
+--> HYYPIÄNMÄEN LIPPALUOLA, NURMIJÄRVI
+
+Map entry: Valtava lippaluola suuren kalliojyrkänteen alapuolella, Hyypiänmäen pohjoisreunalla ja lähellä Klaukkalan Valkjärveä. Hyypiänmäki on myös loistava mustikkapaikka.
+
+Basic entry: Luolan tunniste U59. Geneettis-morfologinen luokitus {BED3}. 2-6x55m
+
+Koordinaatit: N 60.40911 E 24.70933 (http://www.google.com/maps/place/60.40910603,24.70933372) (Map entry). Muita ilmoitettuja koordinaatteja: N 60.40808 E 24.71043 (http://www.google.com/maps/place/60.408075528,24.710425509) (Basic entry, 129m etäisyydellä).
+
+Luolakartta: kartta (https://www.arkko.com/klaukkala-luolat/Klaukkalan-hyypianmaen-lippaluola.pdf)Pituus: 78.2m. Kivi: Graniitti. Syntytapa: Halkeama/Rapautuminen
+
+Artikkeli: Hyypiänmäki massive roof cave https://planetskier.blogspot.com/2020/08/hyypianmaki-massive-roof-cave.html  (JA '20)
+
+Kirjallisuusviite: U59 Hyypiänmäen lippaluola. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
 
 
 --> test complete and successful
