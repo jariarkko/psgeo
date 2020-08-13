@@ -358,7 +358,9 @@
         Waterbody-Sandpit, Waterbody-Sea,
         Waterbody-Pool, Waterbody-Cave, and Waterbody-Other can be
         specified. The items Beach and Nature can also specified for
-        official and unofficial swimming spots.</t>
+        official and unofficial swimming spots. Thermal-Bath can be
+        specified
+        for thermal baths (whether in a pool or a river or lake, for instance).</t>
         
         <t hangText="Travel"><vspace blankLines="1"/>
         There are no sub-activities.</t>
