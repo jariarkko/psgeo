@@ -235,8 +235,14 @@
       
       <list style="hanging">
         
-        <t hangText="Biking"><vspace blankLines="1"/>
-        The sub-activities are Road and Mountain.</t>
+        <t hangText="Biking"><vspace blankLines="1"/> The
+        sub-activities are about type of bike: Bike-City, Bike-Road,
+        Bike-Mountain, Bike-Unicycle, Bike-Tandem, Bike-Tricycle, and
+        Bike-Other. The sub-activities about type of place to bike in
+        are Track-City, Track-Road, Track-Trail, Track-Nature, Indoor,
+        Outdoor, and Underground. In addition, Equipment can be used
+        to designate places and events that have to do with bike
+        technology or equipment.</t>
         
         <t hangText="Canoeing"><vspace blankLines="1"/>
         There are no sub-activities.</t>
@@ -289,7 +295,7 @@
 
           Caving can be performed in various ways. The following
           sub-activity tags can be used: None, Basic, SRT, Swimming, Boating,
-          Diving, Digging, and Skiing. More than one of these may appear in a
+          Diving, Digging, Biking, and Skiing. More than one of these may appear in a
           single trip. The tag None describes that no actual caving
           was done.</t>
           
@@ -367,7 +373,7 @@
         
         <t hangText="Urban-exploration"><vspace blankLines="1"/>
         The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
-        Quarries, Industrial, Silos, Ski-lifts, Landfills, Castles,
+        Quarries, Mines, Industrial, Silos, Ski-lifts, Landfills, Castles,
         Vehicles, Trenches, Memorial, Historic-sites, Bridges,
         Skating-rinks, Amusement-parks, Airports, Catacombs, Railways,
         Smokestacks, Towers, Prisons, Harbours, and Military.</t>
