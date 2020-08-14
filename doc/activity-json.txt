@@ -73,7 +73,7 @@ Table of Contents
      5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  15
      5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  16
    6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  17
-   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  17
+   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  18
    8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  18
    9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  18
    10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  18
@@ -271,9 +271,9 @@ Internet-Draft                Activity JSON                     May 2020
 
    Biking
 
-      The sub-activities are Road and Mountain.
-
-   Canoeing
+      The sub-activities are about type of bike: Bike-City, Bike-Road,
+      Bike-Mountain, Bike-Unicycle, Bike-Tandem, Bike-Tricycle, and
+      Bike-Other.  The sub-activities about type of place to bike in are
 
 
 
@@ -281,6 +281,13 @@ Arkko                   Expires November 2, 2020                [Page 5]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      Track-City, Track-Road, Track-Trail, Track-Nature, Indoor,
+      Outdoor, and Underground.  In addition, Equipment can be used to
+      designate places and events that have to do with bike technology
+      or equipment.
+
+   Canoeing
 
       There are no sub-activities.
 
@@ -324,19 +331,18 @@ Internet-Draft                Activity JSON                     May 2020
 
       Caving method
 
-         Caving can be performed in various ways.  The following sub-
-         activity tags can be used: None, Basic, SRT, Swimming, Boating,
-         Diving, Digging, and Skiing.  More than one of these may appear
-         in a single trip.  The tag None describes that no actual caving
-         was done.
-
-
 
 
 Arkko                   Expires November 2, 2020                [Page 6]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+         Caving can be performed in various ways.  The following sub-
+         activity tags can be used: None, Basic, SRT, Swimming, Boating,
+         Diving, Digging, Biking, and Skiing.  More than one of these
+         may appear in a single trip.  The tag None describes that no
+         actual caving was done.
 
       Associated activities
 
@@ -380,12 +386,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    Sauna
 
-      The sub-activities are Normal, Smoke, Steam.
-
-   Skiing
-
-      The sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
-      Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
 
 
 
@@ -393,6 +393,16 @@ Arkko                   Expires November 2, 2020                [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      The sub-activities are Normal, Smoke, Steam, and Infrared.
+
+   Skiing
+
+      The sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
+      Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
+      For the going up part, the sub-activities Lifts, Heli, Hiking, and
+      Skinning can be used.  Use the Racing subtype if there was a
+      competition.
 
    Skydiving
 
@@ -418,6 +428,8 @@ Internet-Draft                Activity JSON                     May 2020
       Waterbody-Sandpit, Waterbody-Sea, Waterbody-Pool, Waterbody-Cave,
       and Waterbody-Other can be specified.  The items Beach and Nature
       can also specified for official and unofficial swimming spots.
+      Thermal-Bath can be specified for thermal baths (whether in a pool
+      or a river or lake, for instance).
 
    Travel
 
@@ -426,10 +438,17 @@ Internet-Draft                Activity JSON                     May 2020
    Urban-exploration
 
       The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
-      Quarries, Industrial, Silos, Ski-lifts, Landfills, Castles,
+      Quarries, Mines, Industrial, Silos, Ski-lifts, Landfills, Castles,
       Vehicles, Trenches, Memorial, Historic-sites, Bridges, Skating-
       rinks, Amusement-parks, Airports, Catacombs, Railways,
       Smokestacks, Towers, Prisons, Harbours, and Military.
+
+
+
+Arkko                   Expires November 2, 2020                [Page 8]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    Wakeboarding
 
@@ -442,13 +461,6 @@ Internet-Draft                Activity JSON                     May 2020
    Waterfalls
 
       There are no sub-activities.
-
-
-
-Arkko                   Expires November 2, 2020                [Page 8]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    Meteorites
 
@@ -472,18 +484,6 @@ Internet-Draft                Activity JSON                     May 2020
              }
 
    Here's an example of a file with just one entry:
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -797,6 +797,12 @@ Internet-Draft                Activity JSON                     May 2020
       need to be set unless somehow specifically different from other
       entries.
 
+   as
+
+      Alternative sources of the data, if more than given in the "s"
+      field.  This field is optional.  If present, it should contain an
+      array of strings representing the names of sources.
+
 5.3.  Article Objects
 
    Aach article is a JSON record.  The record has the following fields:
@@ -828,12 +834,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       The activity: Caving, Skiing, etc.  This attribute is mandatory.
 
-   sa
-
-      The sub-activity, e.g., within caving sub-activities or cave types
-      are can be Rock, Ice, and so on, wereas within skiing they the
-      sub-activities can be Outdoor, Indoor, Snow, Sand, and so on.
-      This attribute is mandatory.
 
 
 
@@ -841,6 +841,13 @@ Arkko                   Expires November 2, 2020               [Page 15]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   sa
+
+      The sub-activity, e.g., within caving sub-activities or cave types
+      are can be Rock, Ice, and so on, wereas within skiing they the
+      sub-activities can be Outdoor, Indoor, Snow, Sand, and so on.
+      This attribute is mandatory.
 
    p
 
@@ -884,19 +891,18 @@ Internet-Draft                Activity JSON                     May 2020
 
    it Italian
 
-   jp Japanese
-
-   no Norwegian
-
-   pt Portuguese
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 16]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   jp Japanese
+
+   no Norwegian
+
+   pt Portuguese
 
    ru Russian
 
@@ -937,14 +943,8 @@ Internet-Draft                Activity JSON                     May 2020
 
    Where the fields are as described in Section 5.2.
 
-7.  Generation 0 Format
 
-   Generation 0 format is similar to Generation 1 format, with the
-   following differences:
 
-   o  The "k" (city) field was not used.
-
-   o  The "y" (year) and "m" (month) fields were not used.
 
 
 
@@ -953,6 +953,15 @@ Arkko                   Expires November 2, 2020               [Page 17]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+7.  Generation 0 Format
+
+   Generation 0 format is similar to Generation 1 format, with the
+   following differences:
+
+   o  The "k" (city) field was not used.
+
+   o  The "y" (year) and "m" (month) fields were not used.
 
 8.  Compatibility
 
@@ -993,15 +1002,6 @@ Internet-Draft                Activity JSON                     May 2020
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
-   [RFC8259]  Bray, T., Ed., "The JavaScript Object Notation (JSON) Data
-              Interchange Format", STD 90, RFC 8259,
-              DOI 10.17487/RFC8259, December 2017,
-              <https://www.rfc-editor.org/info/rfc8259>.
-
-
-
-
-
 
 
 
@@ -1009,6 +1009,11 @@ Arkko                   Expires November 2, 2020               [Page 18]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   [RFC8259]  Bray, T., Ed., "The JavaScript Object Notation (JSON) Data
+              Interchange Format", STD 90, RFC 8259,
+              DOI 10.17487/RFC8259, December 2017,
+              <https://www.rfc-editor.org/info/rfc8259>.
 
 10.2.  Informative References
 
@@ -1047,11 +1052,6 @@ Author's Address
    Finland
 
    Email: jari@arkko.com
-
-
-
-
-
 
 
 
