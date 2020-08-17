@@ -721,7 +721,11 @@
         <t hangText="u"><vspace blankLines="1"/>
         URL for the article. This attribute is optional. If no URL is
         known, the attribute should not be specified at all.</t>
-
+        
+        <t hangText="v"><vspace blankLines="1"/>
+        URL for a video. This attribute is optional. If no URL is
+        known, the attribute should not be specified at all.</t>
+        
         <t hangText="pu"><vspace blankLines="1"/>
         URL for a publication that contains the article. E.g., if
         there's an article about the topic or place in a book, place
