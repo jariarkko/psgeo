@@ -684,6 +684,17 @@
         optional. If no image URL known, the attribute should not be
         specified at all.</t>
         
+        <t hangText="r"><vspace blankLines="1"/>
+        If present and set to the value of 1, field denotes that the
+        image in the "i" field is a representative of the place. This image
+        can then be shown in user interfaces, etc. If not present or
+        set to 0, the image may or may not be representative, and is
+        less preferred if better images are available. Note that an
+        image may be a representative of a visit (e.g., a picture of
+        the persons on a trip) so even these images may be shown in
+        user interfaces when it comes to the article. But the goal of
+        the "r" field is to be able to show pictures of the places.</t>
+        
         <t hangText="w"><vspace blankLines="1"/>
         List of people who were there. This attribute is
         mandatory.</t>
