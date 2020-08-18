@@ -71,16 +71,16 @@ Table of Contents
      5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .  10
      5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  10
      5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  15
-     5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  16
+     5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  17
    6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  17
    7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  18
    8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  18
-   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  18
-   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  18
-     10.1.  Normative References . . . . . . . . . . . . . . . . . .  18
+   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  19
+   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  19
+     10.1.  Normative References . . . . . . . . . . . . . . . . . .  19
      10.2.  Informative References . . . . . . . . . . . . . . . . .  19
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  19
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  19
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  20
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  20
 
 1.  Introduction
 
@@ -523,7 +523,7 @@ Internet-Draft                Activity JSON                     May 2020
                "k": "Espoo",
                "c": "Finland",
                "o": "Europe",
-               "rl": [{ "t": "Kattilajaervi roof caves",
+               "rl": [{ "t": "KattilajA[currency units]rvi roof caves",
                         "i": "https://example.com/a-picture.jpg",
                         "w": ["Jari"],
                         "y": 2020,
@@ -740,6 +740,15 @@ Internet-Draft                Activity JSON                     May 2020
       optional, and should be left out if no value is known.  The value
       should be a number and can include a decimal point.
 
+      The length should be given as surveyed length, i.e., the sum of
+      the lengths of the cave passages.  For roof caves, the length is
+      usually indicated as the width of the roof lid, plus the lengthof
+      any other cave passages that might exist.
+
+      Other length, volume, or size designations MUST NOT be provided in
+      the "l" field.  If they need to be included in an entry, they
+      should be verbally explained in the description ("d") field.
+
    lc
 
       If the length is not specified, one can also specify a length
@@ -770,6 +779,13 @@ Internet-Draft                Activity JSON                     May 2020
 
       The country.  This attribute is mandatory.
 
+
+
+Arkko                   Expires November 2, 2020               [Page 14]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
    o
 
       The continent.  This attribute is mandatory.
@@ -778,14 +794,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       The "reading list", a list of articles describing visits etc.
       This can of course be empty, i.e., [], but the attribute itself is
-
-
-
-Arkko                   Expires November 2, 2020               [Page 14]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
       mandatory.  The description of what an article object is can be
       found from Section 5.3.
 
@@ -817,6 +825,26 @@ Internet-Draft                Activity JSON                     May 2020
       optional.  If no image URL known, the attribute should not be
       specified at all.
 
+   r
+
+      If present and set to the value of 1, field denotes that the image
+      in the "i" field is a representative of the place.  This image can
+      then be shown in user interfaces, etc.  If not present or set to
+      0, the image may or may not be representative, and is less
+      preferred if better images are available.  Note that an image may
+      be a representative of a visit (e.g., a picture of the persons on
+      a trip) so even these images may be shown in user interfaces when
+
+
+
+Arkko                   Expires November 2, 2020               [Page 15]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
+      it comes to the article.  But the goal of the "r" field is to be
+      able to show pictures of the places.
+
    w
 
       List of people who were there.  This attribute is mandatory.
@@ -833,14 +861,6 @@ Internet-Draft                Activity JSON                     May 2020
    a
 
       The activity: Caving, Skiing, etc.  This attribute is mandatory.
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 15]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    sa
 
@@ -869,6 +889,15 @@ Internet-Draft                Activity JSON                     May 2020
 
    pu
 
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 16]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
       URL for a publication that contains the article.  E.g., if there's
       an article about the topic or place in a book, place the book
       article here.
@@ -889,14 +918,6 @@ Internet-Draft                Activity JSON                     May 2020
    fr French
 
    de German
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 16]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    en English
 
@@ -925,6 +946,14 @@ Internet-Draft                Activity JSON                     May 2020
 
    Here's an example of a file with just one entry:
 
+
+
+
+Arkko                   Expires November 2, 2020               [Page 17]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
          [
           {"n": "Kattilajaerven iso lippaluola, Nuuksio, Espoo",
            "lat": 60.30145486,
@@ -946,13 +975,6 @@ Internet-Draft                Activity JSON                     May 2020
                  ]
           }
          ]
-
-
-
-Arkko                   Expires November 2, 2020               [Page 17]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    Where the fields are as described in Section 5.2.
 
@@ -981,6 +1003,13 @@ Internet-Draft                Activity JSON                     May 2020
    again supported by software libraries and any Generation 0 content
    continues to be acceptable by systems consuming Activity JSON.
 
+
+
+Arkko                   Expires November 2, 2020               [Page 18]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
 9.  Character Set
 
    Activity JSON is always in UTF-8, as specified in [RFC8259]
@@ -999,16 +1028,6 @@ Internet-Draft                Activity JSON                     May 2020
               and T. Schaub, "The GeoJSON Format", RFC 7946,
               DOI 10.17487/RFC7946, August 2016,
               <https://www.rfc-editor.org/info/rfc7946>.
-
-
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 18]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
@@ -1038,6 +1057,15 @@ Internet-Draft                Activity JSON                     May 2020
               Arkko, J., "Skiing the Planet",
               website https://planetskier.net, May 2020.
 
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 19]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
    [Psgeo]    Arkko, J., "Psgeo: Activity location library",
               website https://github.com/jariarkko/psgeo, May 2020.
 
@@ -1051,7 +1079,7 @@ Author's Address
 
    Jari Arkko
    Planetskier
-   Vaelitie 1B
+   VA[currency units]litie 1B
    Kauniainen  02700
    Finland
 
@@ -1061,4 +1089,32 @@ Author's Address
 
 
 
-Arkko                   Expires November 2, 2020               [Page 19]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 20]

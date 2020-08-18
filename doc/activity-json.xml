@@ -431,7 +431,7 @@
              { "type": "Point",
                "coordinates": [60.30145486, 24.62792567] },
           "properties": {
-            "n": "Kattilaj√§rven iso lippaluola, Nuuksio, Espoo",
+            "n": "Kattilaj‰rven iso lippaluola, Nuuksio, Espoo",
             "m": "https://example.com/cavemap-kattilajarvi.pdf",
             "l": 9.3,
             "la": "exact",
@@ -799,7 +799,7 @@
       <figure>
         <artwork>
       [
-       {"n": "Kattilaj√§rven iso lippaluola, Nuuksio, Espoo",
+       {"n": "Kattilaj‰rven iso lippaluola, Nuuksio, Espoo",
         "lat": 60.30145486,
         "lon": 24.62792567,
         "m": "https://example.com/cavemap-kattilajarvi.pdf",
@@ -808,7 +808,7 @@
         "k": "Espoo",
         "c": "Finland",
         "o": "Europe",
-        "rl": [{ "t": "Kattilaj√§rvi roof caves",
+        "rl": [{ "t": "Kattilaj‰rvi roof caves",
                  "i": "https://example.com/a-picture.jpg",
                  "w": ["Jari"],
                  "y": 2020,
