@@ -18,7 +18,7 @@
       <organization>Planetskier</organization>
       <address>
         <postal>
-          <street>V‰litie 1B</street>
+          <street>V√§litie 1B</street>
           <city>Kauniainen</city> <code>02700</code>
           <country>Finland</country>
         </postal>
@@ -431,14 +431,14 @@
              { "type": "Point",
                "coordinates": [60.30145486, 24.62792567] },
           "properties": {
-            "n": "Kattilaj‰rven iso lippaluola, Nuuksio, Espoo",
+            "n": "Kattilaj√§rven iso lippaluola, Nuuksio, Espoo",
             "m": "https://example.com/cavemap-kattilajarvi.pdf",
             "l": 9.3,
             "la": "exact",
             "k": "Espoo",
             "c": "Finland",
             "o": "Europe",
-            "rl": [{ "t": "Kattilaj‰rvi roof caves",
+            "rl": [{ "t": "Kattilaj√§rvi roof caves",
                      "i": "https://example.com/a-picture.jpg",
                      "w": ["Jari"],
                      "y": 2020,
@@ -618,7 +618,15 @@
         <t hangText="l"><vspace blankLines="1"/>
         The length of the cave in meters, if known. The attribute is
         optional, and should be left out if no value is known. The
-        value should be a number and can include a decimal point.</t>
+        value should be a number and can include a decimal point.
+	      
+	<vspace blankLines="1"/>
+	The length should be given as surveyed length, i.e., the sum of the lengths of the cave passages. For roof caves,
+	the length is usually indicated as the width of the roof lid, plus the lengthof any other cave passages that might exist.
+	<vspace blankLines="1"/>
+	Other length, volume, or size designations MUST NOT be provided in the "l" field.
+	If they need to be included in an entry, they should be verbally explained in the description ("d") field.
+	</t>
         
         <t hangText="lc"><vspace blankLines="1"/>
         If the length is not specified, one can also specify a length
@@ -791,7 +799,7 @@
       <figure>
         <artwork>
       [
-       {"n": "Kattilaj‰rven iso lippaluola, Nuuksio, Espoo",
+       {"n": "Kattilaj√§rven iso lippaluola, Nuuksio, Espoo",
         "lat": 60.30145486,
         "lon": 24.62792567,
         "m": "https://example.com/cavemap-kattilajarvi.pdf",
@@ -800,7 +808,7 @@
         "k": "Espoo",
         "c": "Finland",
         "o": "Europe",
-        "rl": [{ "t": "Kattilaj‰rvi roof caves",
+        "rl": [{ "t": "Kattilaj√§rvi roof caves",
                  "i": "https://example.com/a-picture.jpg",
                  "w": ["Jari"],
                  "y": 2020,
