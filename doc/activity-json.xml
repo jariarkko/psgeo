@@ -270,14 +270,18 @@
           There is an additional sub-sub-activity tag for Rock, to
           describe the kind of rock being explored: Rock-Granite,
           Rock-Limestone, Rock-Sandstone, Rock-Marble, Rock-Volcanic,
-          and Rock-Other. <vspace blankLines="1"/>
+          and Rock-Other. In addition, Rock-Unknown signifies that the
+          rock type is not known.<vspace blankLines="1"/>
 
           Another additional sub-sub-activity tag for the Rock
           sub-activity tag is how the caves were formed, i.e., their
           morphology: Morphology-Crack, Morphology-Boulders,
           Morphology-Karst, Morphology-Volcanic, Morphology-Erosion,
-          Morphology-Weathering (e.g., Tafons), Morphology-Crystallization,
-          and Morphology-Other.
+          Morphology-Weathering (e.g., Tafons),
+          Morphology-Crystallization,
+          Morphology-Organic,
+          and Morphology-Other. In addition, Morphology-Unknown
+          signifies that the morphology is not known.
           <vspace blankLines="1"/>
           
           More than one of these may appear in a single cave. <vspace
@@ -365,7 +369,8 @@
         Ice, the additional items Waterbody-River, Waterbody-Lake,
         Waterbody-Sandpit, Waterbody-Sea,
         Waterbody-Pool, Waterbody-Cave, and Waterbody-Other can be
-        specified. The items Beach and Nature can also specified for
+        specified. Waterbody-Unknown represents unknown waterbody
+        types. The items Beach and Nature can also specified for
         official and unofficial swimming spots. Thermal-Bath can be
         specified
         for thermal baths (whether in a pool or a river or lake, for instance).</t>

@@ -79,7 +79,7 @@
 --> -- converting complex names
 -->   creating db
 -->   showing convert db results
---> convert result: {"n":"Rokokallion luolat, Vihti","lat":60.4985969,"lon":24.477130225,"l":86,"la":"exact","c":"Finland","o":"Europe","rl":[{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat"}],"k":"Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","s":"convert","d":{"en":"A cave the literature. The Finnish identification code for this cave is U93. Cave type class is BE,F. Dimensions 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","fi":"Luolakirjallisuudessa kuvattu luola. Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on BE,F. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m."}}
+--> convert result: {"n":"Rokokallion luolat, Vihti","lat":60.4985969,"lon":24.477130225,"l":86,"la":"exact","c":"Finland","o":"Europe","rl":[{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders","Rock-Unknown"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat"}],"k":"Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","s":"convert","d":{"en":"A cave the literature. The Finnish identification code for this cave is U93. Cave type class is BE,F. Dimensions 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","fi":"Luolakirjallisuudessa kuvattu luola. Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on BE,F. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m."}}
 --> -- merging of items
 -->   creating merge db
 -->   showing merge db results
@@ -324,4 +324,32 @@ Kirjallisuusviite: Joo joo. Suomen luolat. Kesäläinen et al. Salakirjat
 
 --> -- search tests
 --> filter b non-sensitive: Blaa blaa
+--> -- video tests
+--> HULUBERGSGROTTAN, SIPOO
+
+Luolaseura: Luolan tunniste U82. Geneettis-morfologinen luokitus {C}. Planetswimmer: Suomessa harvinainen kalkkikiviluola. Pieni, osin veden täyttämä.
+
+Koordinaatit: N 60.32342 E 25.27709 (http://www.google.com/maps/place/60.323422154,25.277089468) (Luolaseura). Muita ilmoitettuja koordinaatteja: N 60.32343 E 25.27722 (http://www.google.com/maps/place/60.32343278,25.27721764) (Planetswimmer, 7m etäisyydellä).
+
+Pituus: 18m. Kivi: Kalkkikivi. Syntytapa: Karsti.
+
+Luettavaa:
+Hulubergsgrottan https://luolaseura.fi/luolaretkelle/luolia-suomessa/#Hulubergsgrottan (AK '15)
+Kirjallisuusviite: U82 Hulubergsgrottan. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+Water in Boots https://vimeo.com/172493398 (video) (JA&JA '16)
+
+
+--> -- issue102 tests
+--> OGOF CNWC, SOUTH WALES
+
+Geneettis-morfologinen luokitus {C}.
+
+Koordinaatit: N 51.82734 W 3.14682 (http://www.google.com/maps/place/51.82734,-3.14682)
+
+Pituus: 27.0km. Kivi: Kalkkikivi. Syntytapa: Karsti. Muita nimiä: Ogof Cnwc ja Price's Dig.
+
+Luettavaa:
+Ogof Cnwc https://lohkareikko.wordpress.com/2013/12/07/7-12-prices-dig-eli-ei-nain/ (VA '20)
+
+
 --> test complete and successful
