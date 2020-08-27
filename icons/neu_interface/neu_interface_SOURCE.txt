@@ -5,3 +5,8 @@ Designer: Neuicons
 Categories:  User Interface & Gesture · Style: Outline, Flat · License: MIT License
 
 https://icon-icons.com/pack/Neu-Interface/2469
+
+Also look at:
+https://neuicons.com/
+https://github.com/neuicons/neu
+
