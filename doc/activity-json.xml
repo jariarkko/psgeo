@@ -385,7 +385,10 @@
         Quarries, Mines, Industrial, Silos, Ski-lifts, Landfills, Castles,
         Vehicles, Trenches, Memorial, Historic-sites, Bridges,
         Skating-rinks, Amusement-parks, Airports, Catacombs, Railways,
-        Smokestacks, Towers, Prisons, Harbours, and Military.</t>
+        Smokestacks, Towers, Prisons, Harbours, and Military. If the
+        target does not fit in these categories, use the sub-activity Other. If the
+        target type is unknown, use the Unknown sub-activity. If no
+        actual target was used, use the sub-activity None.</t>
         
         <t hangText="Wakeboarding"><vspace blankLines="1"/>
         There are no sub-activities.</t>
