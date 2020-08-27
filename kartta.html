@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+      #Filter {
+        font-family: Arial, sans-serif;
+        font-size: 90%;
+        background: #fff;
+        padding: 6px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+      }
+      #Filter h3 {
+        margin-top: 0;
+      }
+      #Fullstats {
+        font-family: Arial, sans-serif;
+        font-size: 80%;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+      }
+      #Info {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+      }
+      #Info h3 {
+        margin-top: 0;
+      }
+      #Info img {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src="./lib/psgeo.js"></script>
+    <script src="./lib/psgeodb.js"></script>
+    <script src="./lib/psgeolang.js"></script>
+    <script src="./lib/psgeolib.js"></script>
+    <script src="./lib/psgeostat.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&callback=psgeoInitMap" async defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    </body>
+</html>
