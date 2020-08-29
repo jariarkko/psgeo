@@ -740,7 +740,7 @@ function psgeoArticlesText(db,lang,item) {
         }
         return(lang.capitalize(lang.getText("noArticleYet")));
     } else {
-        return(lang.capitalize(lang.getText("noArticleYetText")));
+        return(lang.capitalize(lang.getText("noArticleYet")));
     }
 }
 
@@ -1198,7 +1198,7 @@ function psgeoUpdateStatsPaneText(db,
                                      filterButtonLocation,
                                      function() {
 	                                 psgeoDebug("Filter button pressed!");
-                                         psgeoFilterMenuBringUp(db,lib,lang,map,true);
+                                         psgeoFilterMenuBringUp(db,lib,lang,map,true);	// TYPE ERROR
                                      });
     }
 
@@ -1385,7 +1385,7 @@ function psgeoOtherToolsMenuBringUp(db,lib,lang,map) {
         div.appendChild(titleelement);
         var explanation = lang.capitalize(lang.getText("toolsExplanation") + ".");
         explanation += " ";
-        explanation += lang.capitalize(lang.getText("openInNewWindowT") + ".");
+        explanation += lang.capitalize(lang.getText("openInNewWindow") + ".");
         div.appendChild(document.createTextNode(explanation));
         div.appendChild(document.createElement("br"));
         div.appendChild(document.createElement("br"));
@@ -1397,12 +1397,14 @@ function psgeoOtherToolsMenuBringUp(db,lib,lang,map) {
                 lib.htmlLink(lib.htmlImage(tool.icon,'width="80"'),
                              tool.url,
                              true),
-                lib.htmlFontSize(lib.htmlLink(lang.getText(tool.nameFunction), 	// e.g. tool.nameFunction=nimisampoToolName
-                                              tool.url,					//
+		// WAS lang[tool.nameFunction] which references a property (tool.nameFunction, e.g. retkipaikkaToolName)
+		// of the lang object. Now these nameFunctions have almost all been removed in favor of getText(string).
+
+                lib.htmlFontSize(lib.htmlLink(lang[getText(tool.nameFunction)], // WAS lang[tool.nameFunction]
+                                              tool.url,				// Should it be lang[getText(tool.nameFunction)]?
                                               true) +
                                  ": " +
-                                 lang.getText(tool.descriptionTextFunction),
-                         //        lang[tool.descriptionTextFunction](),
+                                 lang[getText(tool.descriptionTextFunction)],	// WAS lang[tool.descriptionTextFunction](),
                                  "-1")
             ];
             rows.push(columns);
@@ -1460,7 +1462,7 @@ function psgeoFilterMenuContents(db,lib,lang,map,subdiv) {
             group.displaySizeSelector[psgeoSmallDisplayMode]) {
             psgeoDebug("selected");
             psgeoDebug("going to use lang function " + group.descriptionTextFunction);
-            psgeoFilterSectionPrefix(lang,lang[group.descriptionTextFunction](),subdiv);
+            psgeoFilterSectionPrefix(lang,lang[group.descriptionTextFunction](),subdiv);	// TYPE ERROR
             var checkboxList = psgeoGetSubtypeGroupCheckboxList(lib,lang,group,subdiv);
             psgeoSubtypeGroupCheckboxLists.push(checkboxList);
         }
@@ -1541,14 +1543,14 @@ function psgeoFilterMenuBringUp(db,lib,lang,map,toOpen) {
         psgeoFilterWindow = new google.maps.InfoWindow(params);
         var div = document.createElement("div");
         var titleelement = document.createElement("h3");
-        var titletext = document.createTextNode(lang.capitalize(lang.filterHeaderText()));
+        var titletext = document.createTextNode(lang.capitalize(lang.getText("filterHeader")));
         titleelement.appendChild(titletext);
         div.appendChild(titleelement);
         subdiv = document.createElement("div");
         subdiv.innerHTML = "";
         div.appendChild(subdiv);
         div.appendChild(document.createElement("br"));
-        psgeoFilterMenuContents(db,lib,lang,map,subdiv);
+        psgeoFilterMenuContents(db,lib,lang,map,subdiv);	// TYPE ERROR
         psgeoFilterWindow.setContent(div);
     }
     if (toOpen) {
