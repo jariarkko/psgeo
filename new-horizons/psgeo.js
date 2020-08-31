@@ -21,6 +21,8 @@
 // header: Access-Control-Allow-Origin may help.
 //
 
+// NOTE: this code now includes comments marked with words NOTE
+
 const psgeoSourcesPlain = [
     {
         name: { en: "Planetcaver", fi: "Planetcaver" },
@@ -119,7 +121,7 @@ const psgeoStatLinesCaving = {
 // interface (by psgeo.js) to texts associated with specific choices
 // (as defined in psgeolang.js).
 //
-// Note that the table is represented as an indirection. I.e., it
+// NOTE that the table is represented as an indirection. I.e., it
 // doesn't really list subtypes and other things as such, but refers
 // to them via function pointers to psgeolib.js. Note also that all
 // function pointers here are represented as strings, which enables us
@@ -163,11 +165,15 @@ const psgeoStatLinesCaving = {
 
 const psgeoSubtypeGroups = [
 
+    // NOTE
+    // 1) descriptionTextFunctions are no longer functions but strings, and "Text" has been stripped from the end
+    //    (variable renaming to descriptionText would be nice, less confusion later, but we'll see when that change is due)
+    // 2) When the ValueText functions in psgeolang get changed (combined, something) all subActivityTextFunctions below are affected
     // Waterbodies in activity Swimming, e.g., Waterbody-Lake, Waterbody-Sea, etc.
     {
         selector: "waterbodySearch",
         displaySizeSelector: { true: true, false: true },
-        descriptionTextFunction: "waterbodyText",
+        descriptionTextFunction: "waterbody",
         activity: "Swimming",
         getSubActivitiesFunction: "getSwimmingWaterbodySubActivities",
         getSubActivitiesFunctionArgument: false,
@@ -180,7 +186,7 @@ const psgeoSubtypeGroups = [
     {
         selector: "saunaTypeSearch",
         displaySizeSelector: { true: true, false: true },
-        descriptionTextFunction: "saunaTypeText",
+        descriptionTextFunction: "saunaType",
         activity: "Sauna",
         getSubActivitiesFunction: "getSaunaTypeSubActivities",
         getSubActivitiesFunctionArgument: false,
@@ -193,7 +199,7 @@ const psgeoSubtypeGroups = [
     {
         selector: "skiingSubstanceSearch",
         displaySizeSelector: { true: true, false: true },
-        descriptionTextFunction: "skiMaterialText",
+        descriptionTextFunction: "skiMaterial",
         activity: "Skiing",
         getSubActivitiesFunction: "getSkiingSubstanceSubActivities",
         getSubActivitiesFunctionArgument: false,
@@ -206,7 +212,7 @@ const psgeoSubtypeGroups = [
     {
         selector: "rockTypeSearch",
         displaySizeSelector: { true: false, false: true },
-        descriptionTextFunction: "rockTypeText",
+        descriptionTextFunction: "rockType",
         activity: "Caving",
         getSubActivitiesFunction: "getCavingRockTypeSubActivities",
         getSubActivitiesFunctionArgument: true,
@@ -219,7 +225,7 @@ const psgeoSubtypeGroups = [
     {
         selector: "morphologySearch",
         displaySizeSelector: { true: true, false: true },
-        descriptionTextFunction: "morphologyText",
+        descriptionTextFunction: "morphology",
         activity: "Caving",
         getSubActivitiesFunction: "getCavingMorphologySubActivities",
         getSubActivitiesFunctionArgument: true,
@@ -232,7 +238,7 @@ const psgeoSubtypeGroups = [
     {
         selector: "urbanexTargetSearch",
         displaySizeSelector: { true: true, false: true },
-        descriptionTextFunction: "urbanexTargetText",
+        descriptionTextFunction: "urbanexTarget",
         activity: "Urban-exploration",
         getSubActivitiesFunction: "getUrbanexTargetSubActivities",
         getSubActivitiesFunctionArgument: true,
@@ -240,6 +246,17 @@ const psgeoSubtypeGroups = [
         extraSubActivitiesAfter: [],
         subActivityTextFunction: "urbanexTargetValueText"
     }
+
+        // NOTE to developers
+	// Planned for winter 2020/spring 2021: Historical Diving Society Finland wants a map in 2021.
+        //	Diving:
+	//	subtypes-A: snorkel, freediving, diving bell, surface supplied air, self contained open circuit, self contained closed circuit, submarine
+	//	subtypes-B: recovery, military, construction, fishing, sports and recreational
+	//	"length categories":historical period: 2000,1900,1800,1700,1600,1500,1500..500,roman,greek,old,prehistoric
+	//		A NOTE comes to mind: for some activities the length (of cave, piste, slope, ...) is important,
+	//		while others may perefer temperature range (sauna,recreational diving,...),
+	//		and still others prefer weight range (weight lifting) ... and HDS Finland wants centuries,
+	//		This would be an obvious location to generalize: length --> numeric range. Not making this an issue now.
 ];
 
 //
@@ -1186,7 +1203,7 @@ function psgeoUpdateStatsPaneText(db,
     arrayitems[6].innerHTML = (statLines.cavemap[psgeoSmallDisplayMode])(lang,ncavemaps);
     
     // If a Filter Menu is needed, then make a button for it
-    // Note that both Filter menu button and More menu button are in the stats window on small screens!
+    // NOTE that both Filter menu button and More menu button are in the stats window on small screens!
     if (psgeoFilterMenuButton === undefined &&
         psgeoMoreFilterWindowNeeded()) {
         var filterButtonLocation = 
@@ -1198,7 +1215,7 @@ function psgeoUpdateStatsPaneText(db,
                                      filterButtonLocation,
                                      function() {
 	                                 psgeoDebug("Filter button pressed!");
-                                         psgeoFilterMenuBringUp(db,lib,lang,map,true);	// TYPE ERROR
+                                         psgeoFilterMenuBringUp(db,lib,lang,map,true);
                                      });
     }
 
@@ -1399,12 +1416,13 @@ function psgeoOtherToolsMenuBringUp(db,lib,lang,map) {
                              true),
 		// WAS lang[tool.nameFunction] which references a property (tool.nameFunction, e.g. retkipaikkaToolName)
 		// of the lang object. Now these nameFunctions have almost all been removed in favor of getText(string).
+                // lib.htmlFontSize(lib.htmlLink(lang[getText(tool.nameFunction)], // WAS lang[tool.nameFunction]
 
-                lib.htmlFontSize(lib.htmlLink(lang[getText(tool.nameFunction)], // WAS lang[tool.nameFunction]
+                lib.htmlFontSize(lib.htmlLink(lang.getText(tool.nameFunction), // WAS lang[tool.nameFunction]
                                               tool.url,				// Should it be lang[getText(tool.nameFunction)]?
                                               true) +
                                  ": " +
-                                 lang[getText(tool.descriptionTextFunction)],	// WAS lang[tool.descriptionTextFunction](),
+                                 lang.getText(tool.descriptionTextFunction),	// WAS lang[tool.descriptionTextFunction](),
                                  "-1")
             ];
             rows.push(columns);
@@ -1441,9 +1459,8 @@ function psgeoFilterMenuContents(db,lib,lang,map,subdiv) {
                " " +
                JSON.stringify(psgeoDomainDefault.rockTypeSearch));
 
-    // Name searches
     if (psgeoDomainDefault.nameSearch) {
-        psgeoFilterSectionPrefix(lang,lang.getText("name"),subdiv);
+        psgeoFilterSectionPrefix(lang,lang.getText("name"),subdiv); // Name search box has header "Name"
         psgeoNameFilterInput = psgeoGetNameInput(lib,lang,subdiv);
         psgeoNameFilterInput.addEventListener('input', function() {
 	    psgeoDebug("Name filter entered!");
@@ -1461,8 +1478,13 @@ function psgeoFilterMenuContents(db,lib,lang,map,subdiv) {
         if (psgeoDomainDefault[group.selector] &&
             group.displaySizeSelector[psgeoSmallDisplayMode]) {
             psgeoDebug("selected");
-            psgeoDebug("going to use lang function " + group.descriptionTextFunction);
-            psgeoFilterSectionPrefix(lang,lang[group.descriptionTextFunction](),subdiv);	// TYPE ERROR
+            psgeoDebug("going to use lang string " + group.descriptionTextFunction);
+            // psgeoFilterSectionPrefix(lang,lang[group.descriptionTextFunction](),subdiv);
+            // 		commented becase: group.descriptionTextFunction IS ACTUALLY a string now
+            //		- it is the actual text to be translated
+            //		- translate and pass on
+            psgeoFilterSectionPrefix(lang,lang.getText(group.descriptionTextFunction),subdiv);
+            //		- translate and pass on
             var checkboxList = psgeoGetSubtypeGroupCheckboxList(lib,lang,group,subdiv);
             psgeoSubtypeGroupCheckboxLists.push(checkboxList);
         }
@@ -1550,7 +1572,7 @@ function psgeoFilterMenuBringUp(db,lib,lang,map,toOpen) {
         subdiv.innerHTML = "";
         div.appendChild(subdiv);
         div.appendChild(document.createElement("br"));
-        psgeoFilterMenuContents(db,lib,lang,map,subdiv);	// TYPE ERROR
+        psgeoFilterMenuContents(db,lib,lang,map,subdiv);
         psgeoFilterWindow.setContent(div);
     }
     if (toOpen) {

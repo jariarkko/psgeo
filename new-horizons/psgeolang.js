@@ -780,8 +780,8 @@ function PsgeoLang(language) {
 
 // COULD BE COMBINED -- TEMPORARY ---> 
     function rockTypeAndOtherMaterialValueText(value) {
-        if (value == "ice") return(iceText());
-        else if (value == "other-material") return(otherMaterialText());
+        if (value == "ice") return(genText(iceTexts));
+        else if (value == "other-material") return(genText(otherMaterialTexts));
         else return(rockTypeValueText(value));
     	}
     function rockTypeValueText(value) {
