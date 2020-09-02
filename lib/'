@@ -157,30 +157,7 @@ function PsgeoLang(language) {
         "rock-other": "muu kivi",
         "rock-unknown": "ei tiedossa"
     };
-   
-    var groundTypeValueTexts = [];			// non-rock type grounds 
-    groundTypeValueTexts["en"] = {
-	"ice": "ice",
-	"snow": "snow",					// types of snow not yet included: https://en.wikipedia.org/wiki/Classifications_of_snow
-	"sand": "sand",
-	"gravel": "gravel",
-	"moraine": "moraine",
-	"rock": "rock",					// see rockTypeValueTexts for detailed classification
-	"turf": "turf",
-	"other-material": "other material"
-    };
-    groundTypeValueTexts["fi"] = {
-	"ice": "jää",
-	"snow": "lumi",
-	"sand": "hiekka",
-	"gravel": "sora",
-	"moraine": "moreeni",
-	"rock": "kallio",
-	"turf": "turve",
-	"other-material": "other material"
-    };
-
-
+    
     var morphologyTexts = [];
     morphologyTexts["en"] = "cave type";
     morphologyTexts["fi"] = "luolan tyyppi";
@@ -917,57 +894,41 @@ function PsgeoLang(language) {
 
 	function getText(textId) {
 
-		// replaces all: {textId}Text()
-
-		// Checks
-		if ( textId === undefined || textId == "" ) {
-			psgeoDebug("Error: a text string was requested from function Text, but there is no textId!");
-			}
+		if ( textId === undefined || textId == "" ) psgeoDebug("Error: a text string was requested from function Text, but there is no textId!");
 
 		var translationArrayName = eval(textId + "Texts");
 		return(genText(translationArrayName));
 	}
 
-	function getTextCollectionItem(controlledVocabulary,tagText) {
+	function getTextCollectionItem(collection,itemText) {
 
-		// Replaces all: function {controlledVocabulary}ValueText(tagText)
+		// Replaces all: function {text-id}ValueText()
 
-		// controlledVocabularies of psgeo include (but are not limited to):
-		//	rockType		[of caves] such as volcanic, (sediment) sandstone, (sediment) limestone/dolomite, (metamorphic) marble...
-		//	morphology		[of caves] such as karst, crevice, boulders, ... extended Finnish classification
-		//	swimming		such as indoor, outdoor, underground, waterbody-lake
-		//	swimmingMaterial	such as water, ice	// both swimming taxonomies needs work
-		//	skiMaterial		...	
-		//	urbanexTarget
-		//	bikeTrack
-		//	bikeType
-		//	saunaType
-		//	cavingActivity
+		if ( textId === undefined || textId == "" ) psgeoDebug("Error: a text string was requested from function Text, but there is no textId!");
+		if ( value === undefined || value == "" ) psgeoDebug("Error: a text string was requested from function Text, but there is no value!");
 
-
-		// Checks
-		if ( controlledVocabulary === undefined || controlledVocabulary == "" ) {
-			psgeoDebug("Error: Cannot return tag text unless the relevant controlled vocabulary is non-empty!");
-			}
-		if ( tagText === undefined || tagText == "" ) {
-			psgeoDebug("Error: an empty or undefined tag text in vocabulary " + controlledVocabulary + " was requested!");
-			}
-
-
-		// Caves exist in rock, ice, moraine and turf, at least.
-		//	Rock types however can be used in climbing too.
-		//	A two level classification is thus in order.
-
-		if (  controlledVocabulary == "rockTypeAndOtherMaterial" ) {				// SHOULD THIS NOT BE CALLED CaveMaterialTopLevelCategory ?
+		// SOME SPECIAL THINGS
+		if ( textId == "rockTypeAndOtherMaterial" ) {
 			switch (value) {
-				case "other-material": 	return(genText("otherMaterial"));	break;	// return "other than ice or rock" [relevant for caves]
-				case "ice": 		controlledVocabulary="groundType";	break;
-				default: 		controlledVocabulary="rockType";
-				}
+				case "ice": 		return(getText("ice")); break;
+				case "other-material": 	return(getText("otherMaterial")); break;
+				default: 		return(getTextValue("rockType",value))			// TARKISTA
 			}
+		}
 
-		var source = controlledVocabulary + "ValueTexts";
-		return(genValueText(tagText,source));
+		switch (textId) {
+			case "rockType":		return(genValueText(value,rockTypeValueTexts)); break;
+			case "morphology":		return(genValueText(value,morphologyValueTexts)); break;
+			case "swimming":		return(genValueText(value,swimmingValueTexts)); break;
+			case "swimmingMaterial":	return(genValueText(value,swimmingMaterialValueTexts)); break;
+			case "skiMaterial":		return(genValueText(value,skiMaterialValueTexts)); break;
+			case "urbanexTarget":		return(genValueText(value,urbanexTargetTexts)); break;
+			case "bikeTrack":		return(genValueText(value,bikeTrackValueTexts)); break;
+			case "bikeType":		return(genValueText(value,bikeTypeValueTexts)); break;
+			case "saunaType":		return(genValueText(value,saunaTypeValueTexts)); break;
+			case "cavingActivity":		return(genValueText(value,cavingActivityValueTexts)); break;
+			default: return("ERROR");
+		}
 	}
 
 
