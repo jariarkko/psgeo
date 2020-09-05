@@ -55,6 +55,7 @@ testlang.res:	$(SOURCES) $(TESTFILES)
 	rm -f testlang.res
 
 checksource:	checkgettextusage \
+		checkgettextcollectionusage \
 		checktabs
 
 checkgettextusage:
@@ -68,6 +69,20 @@ checkgettextusage:
 	@sort -u < translations1.res > translations2.res
 	@(for x in `cat gettext4.res` ; do if fgrep $$x translations2.res > /dev/null; then nop=nop; else echo $x no; fi; done) > usage0.res
 	@echo The following psgeolang text identifiers have been used but not defined:
+	@cat usage0.res
+	@test ! -s usage0.res
+
+checkgettextcollectionusage:
+	@fgrep 'getTextCollectionItem("' *.js > gettext0.res
+	@cut -f2- -d: gettext0.res > gettext1.res
+	@sed 's/.*getTextCollectionItem//' gettext1.res > gettext2.res
+	@cut -f2 -d'"' gettext2.res > gettext3.res
+	@sort -u < gettext3.res > gettext4.res
+	@grep 'v = addVocabulary' psgeolang.js > translations0.res
+	@cut -f2 -d'"' < translations0.res > translations1.res
+	@sort -u < translations1.res > translations2.res
+	@(for x in `cat gettext4.res` ; do if fgrep $$x translations2.res > /dev/null; then nop=nop; else echo $x no; fi; done) > usage0.res
+	@echo The following psgeolang text vocabulary identifiers have been used but not defined:
 	@cat usage0.res
 	@test ! -s usage0.res
 
