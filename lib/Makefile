@@ -63,11 +63,10 @@ checkgettextusage:
 	@sed 's/.*getText//' gettext1.res > gettext2.res
 	@cut -f2 -d'"' gettext2.res > gettext3.res
 	@sort -u < gettext3.res > gettext4.res
-	@grep '^    translations[.].* = ' psgeolang.js > translations0.res
-	@cut -f2 -d. < translations0.res > translations1.res
-	@cut -f1 -d' ' < translations1.res > translations2.res
-	@sort -u < translations2.res > translations3.res
-	@for x in `cat gettext4.res` ; do if fgrep $$x translations3.res > /dev/null; then nop=nop; else echo $x no; fi; done > usage0.res
+	@grep '^    addTranslation' psgeolang.js > translations0.res
+	@cut -f2 -d'"' < translations0.res > translations1.res
+	@sort -u < translations1.res > translations2.res
+	@(for x in `cat gettext4.res` ; do if fgrep $$x translations2.res > /dev/null; then nop=nop; else echo $x no; fi; done) > usage0.res
 	@echo The following psgeolang text identifiers have been used but not defined:
 	@cat usage0.res
 	@test ! -s usage0.res
