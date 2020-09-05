@@ -92,10 +92,14 @@ checktabs:
 	@test ! -s checktabs.res
 
 updateversion:
-	@echo Only run this if you know what you are doing
+	@echo This makefile target updates one software source file based on tags in GitHub,
+	@echo to set the version number of the software.
+	@echo ''
+	@echo Only run this if you know what you are doing. Press Control-C now otherwise.
 	@sleep 5
 	@git describe > version.res
-	@sed 's/var softwareVersion = "UNKNOWN"/var softwareVersion="'`cat version.res`'"/';
+	@sed 's/var softwareVersion = .*;/var softwareVersion = "'`cat version.res`'";/' < psgeolib.js > lib.res
+	cp -i lib.res psgeolib.js
 
 wc:
 	wc -l *.js
