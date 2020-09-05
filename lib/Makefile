@@ -15,7 +15,8 @@ TESTFILES	=	psgeotest.js \
 			testdb.res.ok
 JSC	=	jsc
 
-all:	test
+all:	test \
+	checksource
 
 test:	test.res \
 	testlib.res \
@@ -52,6 +53,15 @@ testlang.res:	$(SOURCES) $(TESTFILES)
 	$(JSC) psgeolang.js psgeolangtest.js 2> testlang.res
 	diff testlang.res testlang.res.ok
 	rm -f testlang.res
+
+checksource:	checkgettextusage \
+		checktabs
+
+checkgettextusage:
+	fgrep 'getText("' *.js > gettext.res
+
+checktabs:
+	true
 
 wc:
 	wc -l *.js
