@@ -91,6 +91,12 @@ checktabs:
 	@(fgrep -l '	' *.js > checktabs.res; exec true)
 	@test ! -s checktabs.res
 
+updateversion:
+	@echo Only run this if you know what you are doing
+	@sleep 5
+	@git describe > version.res
+	@sed 's/var softwareVersion = "UNKNOWN"/var softwareVersion="'`cat version.res`'"/';
+
 wc:
 	wc -l *.js
 
