@@ -89,7 +89,6 @@ checkgettextcollectionusage:
 checktabs:
 	@echo The following source files use TABs:
 	@(fgrep -l '	' *.js > checktabs.res; exec true)
-	@echo Note: The use of TABs will generate an error, please use spaces
 	@test ! -s checktabs.res
 
 wc:
