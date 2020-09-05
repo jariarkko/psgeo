@@ -68,14 +68,15 @@ checkgettextusage:
 	@cut -f1 -d' ' < translations1.res > translations2.res
 	@sort -u < translations2.res > translations3.res
 	@for x in `cat gettext4.res` ; do if fgrep $$x translations3.res > /dev/null; then nop=nop; else echo $x no; fi; done > usage0.res
-	@echo the following psgeolang text identifiers have been used but not defined:
+	@echo The following psgeolang text identifiers have been used but not defined:
 	@cat usage0.res
 	@test ! -s usage0.res
 
 checktabs:
-	@echo the following source files use TABs:
-	-@fgrep -l '	' *.js
-	@echo Note: going forward, the use of TABs will generate an error
+	@echo The following source files use TABs:
+	@(fgrep -l '	' *.js > checktabs.res; exec true)
+	@echo Note: The use of TABs will generate an error, please use spaces
+	@test ! -s checktabs.res
 
 wc:
 	wc -l *.js
