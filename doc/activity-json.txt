@@ -305,31 +305,31 @@ Internet-Draft                Activity JSON                     May 2020
       Environment
 
          To describe the environment, use one of the following three
-         sub-activity tags: Rock, Ice, Man-made, and Other-material.
+         sub-activity tags: Rock, Ice, Man-Made, and Other-Material.
 
          There is an additional sub-sub-activity tag for Rock, to
          describe the kind of rock being explored: Rock-Granite, Rock-
          Limestone, Rock-Sandstone, Rock-Marble, Rock-Volcanic, and
-         Rock-Other.
+         Rock-Other.  In addition, Rock-Unknown signifies that the rock
+         type is not known.
 
          Another additional sub-sub-activity tag for the Rock sub-
          activity tag is how the caves were formed, i.e., their
          morphology: Morphology-Crack, Morphology-Boulders, Morphology-
          Karst, Morphology-Volcanic, Morphology-Erosion, Morphology-
-         Weathering (e.g., Tafons), Morphology-Crystallization, and
-         Morphology-Other.
+         Weathering (e.g., Tafons), Morphology-Crystallization,
+         Morphology-Organic, and Morphology-Other.  In addition,
+         Morphology-Unknown signifies that the morphology is not known.
 
          More than one of these may appear in a single cave.
 
-         Note that while several types of Man-made environments may
+         Note that while several types of Man-Made environments may
          exist, e.g., tunnels or bunkers.  These should additionally be
          categories of Urban-exploration, and properly specified there.
          A single reading list item may cover multiple activities, so an
          activity list of ["Caving","Urban-exploration"] and sub-
-         activity list of [["Man-made"],["Bunkers"]] is perfectly legal
+         activity list of [["Man-Made"],["Bunkers"]] is perfectly legal
          Activity JSON.
-
-      Caving method
 
 
 
@@ -337,6 +337,8 @@ Arkko                   Expires November 2, 2020                [Page 6]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      Caving method
 
          Caving can be performed in various ways.  The following sub-
          activity tags can be used: None, Basic, SRT, Swimming, Boating,
@@ -384,8 +386,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-   Sauna
-
 
 
 
@@ -394,15 +394,19 @@ Arkko                   Expires November 2, 2020                [Page 7]
 Internet-Draft                Activity JSON                     May 2020
 
 
-      The sub-activities are Normal, Smoke, Steam, and Infrared.
+   Sauna
+
+      The sub-activities are Normal, Smoke, Steam, and Infrared.  The
+      sub-activity Unknown represents an unknown Sauna type.
 
    Skiing
 
       The sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
-      Asphalt, Grass, Mud, Plastic, Other-substances, and Imported-snow.
-      For the going up part, the sub-activities Lifts, Heli, Hiking, and
-      Skinning can be used.  Use the Racing subtype if there was a
-      competition.
+      Asphalt, Grass, Mud, Plastic, Other-Substances, and Imported-Snow.
+      If we do not know what material the skiing was on, use Unknown-
+      Substance.  For the going up part, the sub-activities Lifts, Heli,
+      Hiking, and Skinning can be used.  Use the Racing subtype if there
+      was a competition.
 
    Skydiving
 
@@ -426,7 +430,8 @@ Internet-Draft                Activity JSON                     May 2020
       children's "ball pit").  In addition, when the type is Water or
       Ice, the additional items Waterbody-River, Waterbody-Lake,
       Waterbody-Sandpit, Waterbody-Sea, Waterbody-Pool, Waterbody-Cave,
-      and Waterbody-Other can be specified.  The items Beach and Nature
+      and Waterbody-Other can be specified.  Waterbody-Unknown
+      represents unknown waterbody types.  The items Beach and Nature
       can also specified for official and unofficial swimming spots.
       Thermal-Bath can be specified for thermal baths (whether in a pool
       or a river or lake, for instance).
@@ -437,11 +442,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    Urban-exploration
 
-      The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
-      Quarries, Mines, Industrial, Silos, Ski-lifts, Landfills, Castles,
-      Vehicles, Trenches, Memorial, Historic-sites, Bridges, Skating-
-      rinks, Amusement-parks, Airports, Catacombs, Railways,
-      Smokestacks, Towers, Prisons, Harbours, and Military.
 
 
 
@@ -449,6 +449,16 @@ Arkko                   Expires November 2, 2020                [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
+      Quarries, Mines, Industrial, Silos, Ski-Lifts, Landfills, Castles,
+      Vehicles, Trenches, Memorial, Historic-Sites, Bridges, Skating-
+      Rinks, Amusement-Parks, Airports, Catacombs, Railways,
+      Smokestacks, Towers, Prisons, Harbours, and Military.  If the
+      target does not fit in these categories, use the sub-activity
+      Other.  If the target type is unknown, use the Unknown sub-
+      activity.  If no actual target was used, use the sub-activity
+      None.
 
    Wakeboarding
 
@@ -484,16 +494,6 @@ Internet-Draft                Activity JSON                     May 2020
              }
 
    Here's an example of a file with just one entry:
-
-
-
-
-
-
-
-
-
-
 
 
 
