@@ -89,7 +89,7 @@ checkgettextcollectionusage:
 checktabs:
 	@echo The following source files use TABs:
 	@(fgrep -l '	' *.js > checktabs.res; exec true)
-	@test ! -s checktabs.res
+	-@test ! -s checktabs.res
 
 updateversion:
 	@echo This makefile target updates one software source file based on tags in GitHub,
