@@ -1,1 +1,11 @@
+--> basic tests
+--> missing language tests
+--> variable replacement tests
+--> string processing tests
+-->   list0 = 
+-->   list1 = foo
+-->   list2 = foo and bar
+-->   list3 = foo, bar and snaap
+--> vocabulary tests
+-->   diving = sukellus
 --> test complete and successful
