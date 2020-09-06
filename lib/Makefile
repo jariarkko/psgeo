@@ -50,7 +50,7 @@ testlib.res:	$(SOURCES) $(TESTFILES)
 
 testlang.res:	$(SOURCES) $(TESTFILES)
 	-@rm -f *.res
-	$(JSC) psgeolang.js psgeolangtest.js 2> testlang.res
+	$(JSC) psgeolang.js psgeolib.js psgeolangtest.js 2> testlang.res
 	diff testlang.res testlang.res.ok
 	rm -f testlang.res
 
