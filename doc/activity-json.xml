@@ -264,7 +264,7 @@
           <t hangText="Environment"><vspace blankLines="1"/>
 
           To describe the environment, use one of the following three
-          sub-activity tags: Rock, Ice, Man-made, and Other-material. <vspace
+          sub-activity tags: Rock, Ice, Man-Made, and Other-Material. <vspace
           blankLines="1"/>
           
           There is an additional sub-sub-activity tag for Rock, to
@@ -287,13 +287,13 @@
           More than one of these may appear in a single cave. <vspace
           blankLines="1"/>
 
-          Note that while several types of Man-made environments may
+          Note that while several types of Man-Made environments may
           exist, e.g., tunnels or bunkers. These should additionally
           be categories of Urban-exploration, and properly specified
           there. A single reading list item may cover multiple
           activities, so an activity list of
           ["Caving","Urban-exploration"] and sub-activity list of
-          [["Man-made"],["Bunkers"]] is perfectly legal Activity JSON.</t>
+          [["Man-Made"],["Bunkers"]] is perfectly legal Activity JSON.</t>
           
           <t hangText="Caving method"><vspace blankLines="1"/>
 
@@ -347,9 +347,9 @@
         
         <t hangText="Skiing"><vspace blankLines="1"/> The
         sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
-        Asphalt, Grass, Mud, Plastic, Other-substances, and
-        Imported-snow. If we do not know what material the skiing was
-        on, use Unknown-substance. For the going up part, the sub-activities
+        Asphalt, Grass, Mud, Plastic, Other-Substances, and
+        Imported-Snow. If we do not know what material the skiing was
+        on, use Unknown-Substance. For the going up part, the sub-activities
         Lifts, Heli, Hiking, and Skinning can be used. Use the Racing
         subtype if there was a competition.</t>
         
@@ -382,9 +382,9 @@
         
         <t hangText="Urban-exploration"><vspace blankLines="1"/>
         The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
-        Quarries, Mines, Industrial, Silos, Ski-lifts, Landfills, Castles,
-        Vehicles, Trenches, Memorial, Historic-sites, Bridges,
-        Skating-rinks, Amusement-parks, Airports, Catacombs, Railways,
+        Quarries, Mines, Industrial, Silos, Ski-Lifts, Landfills, Castles,
+        Vehicles, Trenches, Memorial, Historic-Sites, Bridges,
+        Skating-Rinks, Amusement-Parks, Airports, Catacombs, Railways,
         Smokestacks, Towers, Prisons, Harbours, and Military. If the
         target does not fit in these categories, use the sub-activity Other. If the
         target type is unknown, use the Unknown sub-activity. If no
