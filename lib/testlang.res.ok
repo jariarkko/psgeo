@@ -21,6 +21,7 @@
 -->   testing vocabulary urbanexTarget in language fi: ["Tunnels","Buildings","Ruins","Bunkers","Quarries","Mines","Industrial","Silos","Ski-Lifts","Landfills","Castles","Vehicles","Trenches","Memorial","Historic-Sites","Bridges","Skating-Rinks","Amusement-Parks","Airports","Catacombs","Railways","Smokestacks","Towers","Prisons","Harbours","Military","Other","None","Unknown"]
 -->   testing vocabulary bikeTrack in language fi: ["Track-City","Track-Road","Track-Trail","Track-Nature","Indoor","Outdoor","Underground"]
 -->   testing vocabulary bikeType in language fi: ["Bike-City","Bike-Road","Bike-Mountain","Bike-Unicycle","Bike-Tandem","Bike-Tricycle","Bike-Other"]
+-->   testing vocabulary climbingType in language fi: ["Mountain","Rock","Ice","Wall","Volcanoes"]
 -->   testing vocabulary saunaType in language fi: ["Normal","Smoke","Steam","Infrared","Unknown"]
 -->   testing vocabulary rockType in language en: ["Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
 -->   testing vocabulary rockTypeAndOtherMaterial in language en: ["Ice","Other-Material","Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
@@ -34,5 +35,6 @@
 -->   testing vocabulary urbanexTarget in language en: ["Tunnels","Buildings","Ruins","Bunkers","Quarries","Mines","Industrial","Silos","Ski-Lifts","Landfills","Castles","Vehicles","Trenches","Memorial","Historic-Sites","Bridges","Skating-Rinks","Amusement-Parks","Airports","Catacombs","Railways","Smokestacks","Towers","Prisons","Harbours","Military","Other","None","Unknown"]
 -->   testing vocabulary bikeTrack in language en: ["Track-City","Track-Road","Track-Trail","Track-Nature","Indoor","Outdoor","Underground"]
 -->   testing vocabulary bikeType in language en: ["Bike-City","Bike-Road","Bike-Mountain","Bike-Unicycle","Bike-Tandem","Bike-Tricycle","Bike-Other"]
+-->   testing vocabulary climbingType in language en: ["Mountain","Rock","Ice","Wall","Volcanoes"]
 -->   testing vocabulary saunaType in language en: ["Normal","Smoke","Steam","Infrared","Unknown"]
 --> test complete and successful
