@@ -350,7 +350,8 @@
         Asphalt, Grass, Mud, Plastic, Other-Substances, and
         Imported-Snow. If we do not know what material the skiing was
         on, use Unknown-Substance. For the going up part, the sub-activities
-        Lifts, Heli, Hiking, and Skinning can be used. Use the Racing
+        Lifts, Heli, Hiking, Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other,
+        and Unknown-Uphill can be used. Use the Racing
         subtype if there was a competition.</t>
         
         <t hangText="Skydiving"><vspace blankLines="1"/>

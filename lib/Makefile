@@ -67,7 +67,7 @@ checkgettextusage:
 	@grep '^    addTranslation' psgeolang.js > translations0.res
 	@cut -f2 -d'"' < translations0.res > translations1.res
 	@sort -u < translations1.res > translations2.res
-	@(for x in `cat gettext4.res` ; do if fgrep $$x translations2.res > /dev/null; then nop=nop; else echo $x no; fi; done) > usage0.res
+	@(for x in `cat gettext4.res` ; do if fgrep $$x translations2.res > /dev/null; then nop=nop; else echo Text ID $$x not defined in psgeolang.js; fi; done) > usage0.res
 	@echo The following psgeolang text identifiers have been used but not defined:
 	@cat usage0.res
 	@test ! -s usage0.res
