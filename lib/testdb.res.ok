@@ -79,7 +79,7 @@
 --> -- converting complex names
 -->   creating db
 -->   showing convert db results
---> convert result: {"n":"Rokokallion luolat, Vihti","lat":60.4985969,"lon":24.477130225,"l":86,"la":"exact","c":"Finland","o":"Europe","rl":[{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders","Rock-Unknown"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat"}],"k":"Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","s":"convert","d":{"en":"The Finnish identification code for this cave is U93. Cave type is BE,F. Dimensions 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","fi":"Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on BE,F. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m."}}
+--> convert result: {"n":"Rokokallion luolat, Vihti","lat":60.4985969,"lon":24.477130225,"d":"Pituudet (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m). Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on {BE,F}.","l":86,"la":"exact","c":"Finland","o":"Europe","rl":[{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders","Rock-Unknown"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat"}],"k":"Vihti","s":"convert"}
 --> -- merging of items
 -->   creating merge db
 -->   showing merge db results
