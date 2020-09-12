@@ -87,8 +87,8 @@ checkgettextcollectionusage:
 	@test ! -s usage0.res
 
 checktabs:
-	@echo The following source files use TABs:
 	@(fgrep -l '	' *.js > checktabs.res; exec true)
+	@echo The following source files use TABs: `cat  checktabs.res` 
 	-@test ! -s checktabs.res
 
 updateversion:
