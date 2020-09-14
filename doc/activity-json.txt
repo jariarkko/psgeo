@@ -67,8 +67,8 @@ Table of Contents
    2.  Normative Language  . . . . . . . . . . . . . . . . . . . . .   3
    3.  Goals . . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Modelling Activities  . . . . . . . . . . . . . . . . . . . .   4
-   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   9
-     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .  10
+   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .  10
+     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .  11
      5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  11
      5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  15
      5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  17
@@ -405,11 +405,11 @@ Internet-Draft                Activity JSON                     May 2020
 
    Skiing
 
-      The sub-activities are Outdoor, Indoor for the type of place, and
-      Snow, Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic, Other-
-      Substances, and Imported-Snow for the type of material skied on.
-      If we do not know what material the skiing was on, use Unknown-
-      Substance.
+      The sub-activities are Outdoor, Indoor, and Underground for the
+      type of place.  Unknown represents an unknown location.  Snow,
+      Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic, Other-Substances,
+      and Imported-Snow for the type of material skied on.  If we do not
+      know what material the skiing was on, use Unknown-Substance.
 
       For the going up part, the sub-activities Lifts, Heli, Hiking,
       Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and Unknown-
@@ -434,14 +434,14 @@ Internet-Draft                Activity JSON                     May 2020
 
    Swimming
 
-      Indoor, Outdoor, Underground, Water, Ice, and Balls (as in
-      children's "ball pit").  The sub-activity Other represents a known
-      swimming place type but one that does not fit this classification.
-      The sub-activity Unknown represents that the swimming place type
-      is not known, and None that no actual swimming was done.
+      Indoor, Outdoor, and Underground.  The items Beach and Nature can
+      also specified for official and unofficial swimming spots.
+      Thermal-Bath can be specified for thermal baths (whether in a pool
+      or a river or lake, for instance).
 
-      In addition, when the type is Water or Ice, the additional items
-      Waterbody-River, Waterbody-Lake, Waterbody-Sandpit, Waterbody-Sea,
+      The material in which one has been swimming can be specified as
+      Water, Ice, and Balls (as in children's "ball pit").  Other-
+
 
 
 
@@ -450,12 +450,18 @@ Arkko                   Expires November 2, 2020                [Page 8]
 Internet-Draft                Activity JSON                     May 2020
 
 
+      Material and Unknown-Material represent known but unclassified
+      materials and unknown materials.
+
+      The sub-activity Other represents a known swimming place type but
+      one that does not fit this classification.  The sub-activity
+      Unknown represents that the swimming place type is not known, and
+      None that no actual swimming was done.
+
+      In addition, when the type is Water or Ice, the additional items
+      Waterbody-River, Waterbody-Lake, Waterbody-Sandpit, Waterbody-Sea,
       Waterbody-Pool, Waterbody-Cave, and Waterbody-Other can be
       specified.  Waterbody-Unknown represents unknown waterbody types.
-      The items Beach and Nature can also specified for official and
-      unofficial swimming spots.  Thermal-Bath can be specified for
-      thermal baths (whether in a pool or a river or lake, for
-      instance).
 
    Travel
 
@@ -493,18 +499,18 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-5.  Generation 2 Format
-
-   The format is a specialization of GeoJSON.  Every Activity JSON
-   object is also a valid GeoJSON object, but has some extra properties
-   to carry the information that is needed to describe the activities.
-
 
 
 Arkko                   Expires November 2, 2020                [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+5.  Generation 2 Format
+
+   The format is a specialization of GeoJSON.  Every Activity JSON
+   object is also a valid GeoJSON object, but has some extra properties
+   to carry the information that is needed to describe the activities.
 
    For example, an empty file contains just:
 
@@ -546,12 +552,6 @@ Internet-Draft                Activity JSON                     May 2020
        ]
      }
 
-5.1.  Features
-
-   In this version of the specification, only features of the type
-   "Point" are allowed.
-
-
 
 
 
@@ -561,6 +561,11 @@ Arkko                   Expires November 2, 2020               [Page 10]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+5.1.  Features
+
+   In this version of the specification, only features of the type
+   "Point" are allowed.
 
 5.2.  Properties
 
@@ -606,17 +611,16 @@ Internet-Draft                Activity JSON                     May 2020
 
              "d": "This place is really cool!"
 
-      Alternatively, the text may be a record with two-letter language
-      codes representing language versions.  See Section 5.4 for the
-      available language code designations.
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 11]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      Alternatively, the text may be a record with two-letter language
+      codes representing language versions.  See Section 5.4 for the
+      available language code designations.
 
       Here is an example:
 
@@ -663,16 +667,15 @@ Internet-Draft                Activity JSON                     May 2020
          entity points to another entity that represents another
          entrance to this cave.
 
-      *  "sidecaveof": This entity is another (side) cave of the main
-         cave described in the entity referred to.
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 12]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      *  "sidecaveof": This entity is another (side) cave of the main
+         cave described in the entity referred to.
 
       *  "sidecave": A reverse relationship of the above, i.e., this
          entity points to another entity is a side cave of this cave.
@@ -719,9 +722,6 @@ Internet-Draft                Activity JSON                     May 2020
       place).
 
    fz
-
-
-
 
 
 
