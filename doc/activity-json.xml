@@ -351,13 +351,17 @@
         sub-activity Unknown represents an unknown Sauna type.</t>
         
         <t hangText="Skiing"><vspace blankLines="1"/> The
-        sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
-        Asphalt, Grass, Mud, Plastic, Other-Substances, and
-        Imported-Snow. If we do not know what material the skiing was
-        on, use Unknown-Substance. For the going up part, the sub-activities
-        Lifts, Heli, Hiking, Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other,
-        and Unknown-Uphill can be used. Use the Racing
-        subtype if there was a competition.</t>
+        sub-activities are Outdoor, Indoor for the type of place, and
+        Snow, Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic,
+        Other-Substances, and Imported-Snow for the type of material
+        skied on. If we do not know what material the skiing was on,
+        use Unknown-Substance.
+        <vspace blankLines="1"/>
+        
+        For the going up part, the sub-activities Lifts, Heli, Hiking,
+        Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and
+        Unknown-Uphill can be used. Use the Racing subtype if there
+        was a competition.</t>
         
         <t hangText="Skydiving"><vspace blankLines="1"/>
         There are no sub-activities.</t>

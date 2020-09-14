@@ -69,16 +69,16 @@ Table of Contents
    4.  Modelling Activities  . . . . . . . . . . . . . . . . . . . .   4
    5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   9
      5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .  10
-     5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  10
+     5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  11
      5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  15
      5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  17
-   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  17
+   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  18
    7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  18
-   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  18
+   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  19
    9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  19
    10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  19
      10.1.  Normative References . . . . . . . . . . . . . . . . . .  19
-     10.2.  Informative References . . . . . . . . . . . . . . . . .  19
+     10.2.  Informative References . . . . . . . . . . . . . . . . .  20
    Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  20
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  20
 
@@ -405,12 +405,15 @@ Internet-Draft                Activity JSON                     May 2020
 
    Skiing
 
-      The sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
-      Asphalt, Grass, Mud, Plastic, Other-Substances, and Imported-Snow.
+      The sub-activities are Outdoor, Indoor for the type of place, and
+      Snow, Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic, Other-
+      Substances, and Imported-Snow for the type of material skied on.
       If we do not know what material the skiing was on, use Unknown-
-      Substance.  For the going up part, the sub-activities Lifts, Heli,
-      Hiking, Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and
-      Unknown-Uphill can be used.  Use the Racing subtype if there was a
+      Substance.
+
+      For the going up part, the sub-activities Lifts, Heli, Hiking,
+      Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and Unknown-
+      Uphill can be used.  Use the Racing subtype if there was a
       competition.
 
    Skydiving
@@ -439,9 +442,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       In addition, when the type is Water or Ice, the additional items
       Waterbody-River, Waterbody-Lake, Waterbody-Sandpit, Waterbody-Sea,
-      Waterbody-Pool, Waterbody-Cave, and Waterbody-Other can be
-      specified.  Waterbody-Unknown represents unknown waterbody types.
-      The items Beach and Nature can also specified for official and
 
 
 
@@ -450,6 +450,9 @@ Arkko                   Expires November 2, 2020                [Page 8]
 Internet-Draft                Activity JSON                     May 2020
 
 
+      Waterbody-Pool, Waterbody-Cave, and Waterbody-Other can be
+      specified.  Waterbody-Unknown represents unknown waterbody types.
+      The items Beach and Nature can also specified for official and
       unofficial swimming spots.  Thermal-Bath can be specified for
       thermal baths (whether in a pool or a river or lake, for
       instance).
@@ -496,15 +499,14 @@ Internet-Draft                Activity JSON                     May 2020
    object is also a valid GeoJSON object, but has some extra properties
    to carry the information that is needed to describe the activities.
 
-   For example, an empty file contains just:
-
-
 
 
 Arkko                   Expires November 2, 2020                [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   For example, an empty file contains just:
 
              {
                "type": "FeatureCollection",
@@ -549,11 +551,9 @@ Internet-Draft                Activity JSON                     May 2020
    In this version of the specification, only features of the type
    "Point" are allowed.
 
-5.2.  Properties
 
-   The properties described in a GeoJSON file are as follows:
 
-   n
+
 
 
 
@@ -561,6 +561,12 @@ Arkko                   Expires November 2, 2020               [Page 10]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+5.2.  Properties
+
+   The properties described in a GeoJSON file are as follows:
+
+   n
 
       The name of the place.  By convention the last item of the name
       (after last comma) should be city name.  Mandatory.
@@ -604,12 +610,6 @@ Internet-Draft                Activity JSON                     May 2020
       codes representing language versions.  See Section 5.4 for the
       available language code designations.
 
-      Here is an example:
-
-             "d": {
-                      "en": "This place is really cool!",
-                      "fi": "Ei paskempi paikka!"
-                    }
 
 
 
@@ -617,6 +617,13 @@ Arkko                   Expires November 2, 2020               [Page 11]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      Here is an example:
+
+             "d": {
+                      "en": "This place is really cool!",
+                      "fi": "Ei paskempi paikka!"
+                    }
 
    ad
 
@@ -659,13 +666,6 @@ Internet-Draft                Activity JSON                     May 2020
       *  "sidecaveof": This entity is another (side) cave of the main
          cave described in the entity referred to.
 
-      *  "sidecave": A reverse relationship of the above, i.e., this
-         entity points to another entity is a side cave of this cave.
-
-      *  "peakof": This entity is a mountain peak, top lift, or other
-         similar location in the entity referred to.
-
-
 
 
 
@@ -673,6 +673,12 @@ Arkko                   Expires November 2, 2020               [Page 12]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      *  "sidecave": A reverse relationship of the above, i.e., this
+         entity points to another entity is a side cave of this cave.
+
+      *  "peakof": This entity is a mountain peak, top lift, or other
+         similar location in the entity referred to.
 
       *  "peak": A reverse relationship of the above, i.e., this entity
          points to another entity is a peak of this mountain or ski
@@ -714,14 +720,8 @@ Internet-Draft                Activity JSON                     May 2020
 
    fz
 
-      Set to true if the coordinates are "fuzzy" to hide the true
-      location for privacy etc. reasons.  Default is false.  This
-      attribute is optional.
 
-   m
 
-      The cave map link URL, if any.  If there's no URL, the attribute
-      SHOULD NOT be specified at all (and SHOULD NOT be set to, e.g.,
 
 
 
@@ -730,6 +730,14 @@ Arkko                   Expires November 2, 2020               [Page 13]
 Internet-Draft                Activity JSON                     May 2020
 
 
+      Set to true if the coordinates are "fuzzy" to hide the true
+      location for privacy etc. reasons.  Default is false.  This
+      attribute is optional.
+
+   m
+
+      The cave map link URL, if any.  If there's no URL, the attribute
+      SHOULD NOT be specified at all (and SHOULD NOT be set to, e.g.,
       empty string, although it is RECOMMENDED that software recognises
       empty strings similarly to missing attributes.
 
@@ -771,20 +779,18 @@ Internet-Draft                Activity JSON                     May 2020
 
    la
 
-      The cave length and height accuracy ("exact" or "approx").  The
-      attribute is optional, and the default value is "approx" if no
-      other value is provided.
-
-   k
-
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 14]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      The cave length and height accuracy ("exact" or "approx").  The
+      attribute is optional, and the default value is "approx" if no
+      other value is provided.
+
+   k
 
       The city/town/county.  In Finland the relevant "kunta" or
       community should be filled in.  This attribute is mandatory.
@@ -828,12 +834,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    i
 
-      URL for an image representing the article.  This attribute is
-      optional.  If no image URL known, the attribute should not be
-      specified at all.
-
-   r
-
 
 
 
@@ -841,6 +841,12 @@ Arkko                   Expires November 2, 2020               [Page 15]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      URL for an image representing the article.  This attribute is
+      optional.  If no image URL known, the attribute should not be
+      specified at all.
+
+   r
 
       If present and set to the value of 1, field denotes that the image
       in the "i" field is a representative of the place.  This image can
@@ -884,12 +890,6 @@ Internet-Draft                Activity JSON                     May 2020
       such as page or section numbers.  If there's a URL for the book
       itself (not the article in the book), use the field "pu" for that.
 
-   u
-
-      URL for the article.  This attribute is optional.  If no URL is
-      known, the attribute should not be specified at all.
-
-   v
 
 
 
@@ -897,6 +897,13 @@ Arkko                   Expires November 2, 2020               [Page 16]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   u
+
+      URL for the article.  This attribute is optional.  If no URL is
+      known, the attribute should not be specified at all.
+
+   v
 
       URL for a video.  This attribute is optional.  If no URL is known,
       the attribute should not be specified at all.
@@ -940,19 +947,19 @@ Internet-Draft                Activity JSON                     May 2020
 
    se Swedish
 
-6.  Generation 1 Format
-
-   The format is based on JSON.  An Activity JSON Generation 1 object
-   MUST be a JSON array of records.
-
-   For example, an empty file contains just:
-
 
 
 Arkko                   Expires November 2, 2020               [Page 17]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+6.  Generation 1 Format
+
+   The format is based on JSON.  An Activity JSON Generation 1 object
+   MUST be a JSON array of records.
+
+   For example, an empty file contains just:
 
              []
 
@@ -991,6 +998,18 @@ Internet-Draft                Activity JSON                     May 2020
 
    o  The "y" (year) and "m" (month) fields were not used.
 
+
+
+
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 18]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
 8.  Compatibility
 
    All the formats are very similar.  The information content is the
@@ -1002,13 +1021,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    The Psgeo software library supports both [Psgeo], so existing files
    with content in Generation 1 format continue to be readable.
-
-
-
-Arkko                   Expires November 2, 2020               [Page 18]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    For compatibility between generation 1 and 0, the differences are
    again supported by software libraries and any Generation 0 content
@@ -1042,6 +1054,18 @@ Internet-Draft                Activity JSON                     May 2020
               DOI 10.17487/RFC8259, December 2017,
               <https://www.rfc-editor.org/info/rfc8259>.
 
+
+
+
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 19]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
 10.2.  Informative References
 
    [GeoJSON]  GeoJSON, "GeoJSON", website https://geojson.org, May 2020.
@@ -1056,15 +1080,6 @@ Internet-Draft                Activity JSON                     May 2020
    [Planetcaver]
               Arkko, J., "The Planetcaver",
               website https://planetcaver.net, May 2020.
-
-
-
-
-
-Arkko                   Expires November 2, 2020               [Page 19]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    [Planetskier]
               Arkko, J., "Skiing the Planet",
@@ -1088,21 +1103,6 @@ Author's Address
    Finland
 
    Email: jari@arkko.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
