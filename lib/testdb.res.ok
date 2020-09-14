@@ -455,4 +455,155 @@ Luettavaa:
 Kazakhstan Sauna! https://planetskier.blogspot.ru/2018/02/kazakhstan-sauna.html (JA,TK&JR '18)
 
 
+--> -- unknown additions
+--> Unknown0: Sauna: ["Smoke"]
+--> UNKNOWN0
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Savusauna.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown1: Sauna: ["Unknown"]
+--> UNKNOWN1
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Saunatyyppi ei tiedossa.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown2: Swimming: ["Balls","Unknown"]
+--> UNKNOWN2
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Uintia ei tiedossa olevassa paikassa, pallomeressä.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown3: Swimming: ["Waterbody-Lake","Unknown"]
+--> UNKNOWN3
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Uintia järvellä ja ei tiedossa olevassa paikassa,
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown4: Swimming: ["Water","Unknown","Waterbody-Unknown"]
+--> UNKNOWN4
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Uintia ei tiedossa olevassa paikassa ja ei tiedossa olevassa vesialtaassa, vedessä.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown5: Climbing: ["Unknown"]
+--> UNKNOWN5
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Kiipeilytyyppi on tuntematon kiipeilytyyppi.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown6: Skiing: ["Unknown","Unknown-Uphill","Unknown-Substance"]
+--> UNKNOWN6
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Hiihtoa tuntemattomassa paikassa, ei tiedossa olevalla materiaalilla. Ylös ei tiedossa olevalla tavalla.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown7: Snowboarding: ["Lifts","Unknown","Unknown-Substance"]
+--> UNKNOWN7
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Hiihtoa tuntemattomassa paikassa, ei tiedossa olevalla materiaalilla. Ylös hissillä.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown8: Sliding: ["Ash","Unknown","Unknown-Uphill"]
+--> UNKNOWN8
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Hiihtoa tuntemattomassa paikassa, tuhkalla. Ylös ei tiedossa olevalla tavalla.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown9: Sliding: ["Ash","Hiking","Unknown"]
+--> UNKNOWN9
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Hiihtoa tuntemattomassa paikassa, tuhkalla. Ylös kävelemällä.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown10: Caving: []
+--> UNKNOWN10
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown11: Caving: ["Ice"]
+--> UNKNOWN11
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Materiaali: jää.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown12: Caving: ["Rock","Rock-Unknown","Morphology-Unknown"]
+--> UNKNOWN12
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown13: Caving: ["Rock","Morphology-Crack","Rock-Unknown"]
+--> UNKNOWN13
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Luolan tyyppi: rako.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
 --> test complete and successful
