@@ -369,6 +369,10 @@ Internet-Draft                Activity JSON                     May 2020
    Climbing
 
       The sub-activities are Mountain, Rock, Ice, Wall, and Volcanoes.
+      The sub-activity Other represents a known climbing type but one
+      that does not fit this classification.  The sub-activity Unknown
+      represents an unknown climbing type, and None that no actual
+      climbing was done.
 
    Diving
 
@@ -382,10 +386,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-   History
-
-      There are no sub-activities.
-
 
 
 
@@ -393,6 +393,10 @@ Arkko                   Expires November 2, 2020                [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   History
+
+      There are no sub-activities.
 
    Sauna
 
@@ -405,8 +409,9 @@ Internet-Draft                Activity JSON                     May 2020
       Asphalt, Grass, Mud, Plastic, Other-Substances, and Imported-Snow.
       If we do not know what material the skiing was on, use Unknown-
       Substance.  For the going up part, the sub-activities Lifts, Heli,
-      Hiking, and Skinning can be used.  Use the Racing subtype if there
-      was a competition.
+      Hiking, Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and
+      Unknown-Uphill can be used.  Use the Racing subtype if there was a
+      competition.
 
    Skydiving
 
@@ -427,21 +432,16 @@ Internet-Draft                Activity JSON                     May 2020
    Swimming
 
       Indoor, Outdoor, Underground, Water, Ice, and Balls (as in
-      children's "ball pit").  In addition, when the type is Water or
-      Ice, the additional items Waterbody-River, Waterbody-Lake,
-      Waterbody-Sandpit, Waterbody-Sea, Waterbody-Pool, Waterbody-Cave,
-      and Waterbody-Other can be specified.  Waterbody-Unknown
-      represents unknown waterbody types.  The items Beach and Nature
-      can also specified for official and unofficial swimming spots.
-      Thermal-Bath can be specified for thermal baths (whether in a pool
-      or a river or lake, for instance).
+      children's "ball pit").  The sub-activity Other represents a known
+      swimming place type but one that does not fit this classification.
+      The sub-activity Unknown represents that the swimming place type
+      is not known, and None that no actual swimming was done.
 
-   Travel
-
-      There are no sub-activities.
-
-   Urban-exploration
-
+      In addition, when the type is Water or Ice, the additional items
+      Waterbody-River, Waterbody-Lake, Waterbody-Sandpit, Waterbody-Sea,
+      Waterbody-Pool, Waterbody-Cave, and Waterbody-Other can be
+      specified.  Waterbody-Unknown represents unknown waterbody types.
+      The items Beach and Nature can also specified for official and
 
 
 
@@ -449,6 +449,16 @@ Arkko                   Expires November 2, 2020                [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      unofficial swimming spots.  Thermal-Bath can be specified for
+      thermal baths (whether in a pool or a river or lake, for
+      instance).
+
+   Travel
+
+      There are no sub-activities.
+
+   Urban-exploration
 
       The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
       Quarries, Mines, Industrial, Silos, Ski-Lifts, Landfills, Castles,
@@ -488,16 +498,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    For example, an empty file contains just:
 
-             {
-               "type": "FeatureCollection",
-               "features": []
-             }
-
-   Here's an example of a file with just one entry:
-
-
-
-
 
 
 
@@ -505,6 +505,13 @@ Arkko                   Expires November 2, 2020                [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+             {
+               "type": "FeatureCollection",
+               "features": []
+             }
+
+   Here's an example of a file with just one entry:
 
      {
        "type": "FeatureCollection",
@@ -548,19 +555,17 @@ Internet-Draft                Activity JSON                     May 2020
 
    n
 
-      The name of the place.  By convention the last item of the name
-      (after last comma) should be city name.  Mandatory.
-
-   an
-
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 10]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      The name of the place.  By convention the last item of the name
+      (after last comma) should be city name.  Mandatory.
+
+   an
 
       This optional field allows listing alternative names, should the
       place have several names or several alternative spellings of the
@@ -606,11 +611,6 @@ Internet-Draft                Activity JSON                     May 2020
                       "fi": "Ei paskempi paikka!"
                     }
 
-   ad
-
-      Optional alternative descriptions, if any.  The value should be an
-      array of description objects, where each object should have the
-
 
 
 Arkko                   Expires November 2, 2020               [Page 11]
@@ -618,6 +618,10 @@ Arkko                   Expires November 2, 2020               [Page 11]
 Internet-Draft                Activity JSON                     May 2020
 
 
+   ad
+
+      Optional alternative descriptions, if any.  The value should be an
+      array of description objects, where each object should have the
       field "d" for the description (as above) and "s" for the source of
       the alternate description.
 
@@ -661,10 +665,6 @@ Internet-Draft                Activity JSON                     May 2020
       *  "peakof": This entity is a mountain peak, top lift, or other
          similar location in the entity referred to.
 
-      *  "peak": A reverse relationship of the above, i.e., this entity
-         points to another entity is a peak of this mountain or ski
-         area.
-
 
 
 
@@ -673,6 +673,10 @@ Arkko                   Expires November 2, 2020               [Page 12]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      *  "peak": A reverse relationship of the above, i.e., this entity
+         points to another entity is a peak of this mountain or ski
+         area.
 
       *  "secondaryto": This entity is an alternate/secondary entity
          that describes something already described by some other
@@ -718,10 +722,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       The cave map link URL, if any.  If there's no URL, the attribute
       SHOULD NOT be specified at all (and SHOULD NOT be set to, e.g.,
-      empty string, although it is RECOMMENDED that software recognises
-      empty strings similarly to missing attributes.
-
-   am
 
 
 
@@ -729,6 +729,11 @@ Arkko                   Expires November 2, 2020               [Page 13]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      empty string, although it is RECOMMENDED that software recognises
+      empty strings similarly to missing attributes.
+
+   am
 
       If there are several maps, additional links MAY be provided in
       this optional attribute.  Its value should be an array of URL
@@ -772,12 +777,7 @@ Internet-Draft                Activity JSON                     May 2020
 
    k
 
-      The city/town/county.  In Finland the relevant "kunta" or
-      community should be filled in.  This attribute is mandatory.
 
-   c
-
-      The country.  This attribute is mandatory.
 
 
 
@@ -785,6 +785,13 @@ Arkko                   Expires November 2, 2020               [Page 14]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      The city/town/county.  In Finland the relevant "kunta" or
+      community should be filled in.  This attribute is mandatory.
+
+   c
+
+      The country.  This attribute is mandatory.
 
    o
 
@@ -827,13 +834,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    r
 
-      If present and set to the value of 1, field denotes that the image
-      in the "i" field is a representative of the place.  This image can
-      then be shown in user interfaces, etc.  If not present or set to
-      0, the image may or may not be representative, and is less
-      preferred if better images are available.  Note that an image may
-      be a representative of a visit (e.g., a picture of the persons on
-      a trip) so even these images may be shown in user interfaces when
 
 
 
@@ -842,6 +842,13 @@ Arkko                   Expires November 2, 2020               [Page 15]
 Internet-Draft                Activity JSON                     May 2020
 
 
+      If present and set to the value of 1, field denotes that the image
+      in the "i" field is a representative of the place.  This image can
+      then be shown in user interfaces, etc.  If not present or set to
+      0, the image may or may not be representative, and is less
+      preferred if better images are available.  Note that an image may
+      be a representative of a visit (e.g., a picture of the persons on
+      a trip) so even these images may be shown in user interfaces when
       it comes to the article.  But the goal of the "r" field is to be
       able to show pictures of the places.
 
@@ -884,19 +891,17 @@ Internet-Draft                Activity JSON                     May 2020
 
    v
 
-      URL for a video.  This attribute is optional.  If no URL is known,
-      the attribute should not be specified at all.
-
-   pu
-
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 16]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      URL for a video.  This attribute is optional.  If no URL is known,
+      the attribute should not be specified at all.
+
+   pu
 
       URL for a publication that contains the article.  E.g., if there's
       an article about the topic or place in a book, place the book
@@ -942,17 +947,16 @@ Internet-Draft                Activity JSON                     May 2020
 
    For example, an empty file contains just:
 
-             []
-
-   Here's an example of a file with just one entry:
-
-
 
 
 Arkko                   Expires November 2, 2020               [Page 17]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+             []
+
+   Here's an example of a file with just one entry:
 
          [
           {"n": "Kattilajaerven iso lippaluola, Nuuksio, Espoo",
@@ -999,16 +1003,16 @@ Internet-Draft                Activity JSON                     May 2020
    The Psgeo software library supports both [Psgeo], so existing files
    with content in Generation 1 format continue to be readable.
 
-   For compatibility between generation 1 and 0, the differences are
-   again supported by software libraries and any Generation 0 content
-   continues to be acceptable by systems consuming Activity JSON.
-
 
 
 Arkko                   Expires November 2, 2020               [Page 18]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   For compatibility between generation 1 and 0, the differences are
+   again supported by software libraries and any Generation 0 content
+   continues to be acceptable by systems consuming Activity JSON.
 
 9.  Character Set
 
@@ -1053,10 +1057,6 @@ Internet-Draft                Activity JSON                     May 2020
               Arkko, J., "The Planetcaver",
               website https://planetcaver.net, May 2020.
 
-   [Planetskier]
-              Arkko, J., "Skiing the Planet",
-              website https://planetskier.net, May 2020.
-
 
 
 
@@ -1065,6 +1065,10 @@ Arkko                   Expires November 2, 2020               [Page 19]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   [Planetskier]
+              Arkko, J., "Skiing the Planet",
+              website https://planetskier.net, May 2020.
 
    [Psgeo]    Arkko, J., "Psgeo: Activity location library",
               website https://github.com/jariarkko/psgeo, May 2020.
@@ -1084,10 +1088,6 @@ Author's Address
    Finland
 
    Email: jari@arkko.com
-
-
-
-
 
 
 
