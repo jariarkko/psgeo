@@ -327,7 +327,12 @@
         There are no sub-activities.</t>
         
         <t hangText="Climbing"><vspace blankLines="1"/>
-        The sub-activities are Mountain, Rock, Ice, Wall, and Volcanoes.</t>
+        The sub-activities are Mountain, Rock, Ice, Wall, and
+        Volcanoes. The sub-activity Other represents a known climbing
+        type but one
+        that does not fit this classification.
+        The sub-activity Unknown  represents an unknown climbing type, and
+        None that no actual climbing was done.</t>
         
         <t hangText="Diving"><vspace blankLines="1"/>
         There are no sub-activities.</t>
@@ -366,9 +371,16 @@
         <t hangText="Surfing"><vspace blankLines="1"/>
         There are no sub-activities.</t>
         
-        <t hangText="Swimming"><vspace blankLines="1"/>
-        Indoor, Outdoor, Underground, Water, Ice, and Balls (as in
-        children's "ball pit"). In addition, when the type is Water or
+        <t hangText="Swimming"><vspace blankLines="1"/>Indoor,
+        Outdoor, Underground, Water, Ice, and Balls (as in children's
+        "ball pit"). The sub-activity Other represents a known
+        swimming place type but one that does not fit this
+        classification.  The sub-activity Unknown represents that the
+        swimming place type is not known, and None that no actual
+        swimming was done.
+        <vspace blankLines="1"/>
+
+        In addition, when the type is Water or
         Ice, the additional items Waterbody-River, Waterbody-Lake,
         Waterbody-Sandpit, Waterbody-Sea,
         Waterbody-Pool, Waterbody-Cave, and Waterbody-Other can be
