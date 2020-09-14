@@ -264,8 +264,16 @@
           <t hangText="Environment"><vspace blankLines="1"/>
 
           To describe the environment, use one of the following three
-          sub-activity tags: Rock, Ice, Man-Made, and Other-Material. <vspace
-          blankLines="1"/>
+          sub-activity tags: Rock, Glacier, Ice, Man-Made, and
+          Other-Material.
+          <vspace  blankLines="1"/>
+          
+          Note: As defined by Henderson and Halliday
+          (https://www.cambridge.org/core/journals/journal-of-glaciology/article/use-of-the-term-glacier-cave/488DFAAEC5F4C1C4D815CAD0207B622C),
+          glacier caves are caves that form within or under glacier
+          ice, whereas ice caves are caves that have long-lasting ice
+          inside them.
+          <vspace  blankLines="1"/>
           
           There is an additional sub-sub-activity tag for Rock, to
           describe the kind of rock being explored: Rock-Granite,
@@ -761,7 +769,7 @@
         <t hangText="sa"><vspace blankLines="1"/>
 
         The sub-activity, e.g., within caving sub-activities or cave
-        types are can be Rock, Ice, and so on, wereas within skiing
+        types are can be Rock, Glacier (caves in ice), and so on, wereas within skiing
         they the sub-activities can be Outdoor, Indoor, Snow, Sand,
         and so on. This attribute is mandatory.</t>
 

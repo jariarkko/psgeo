@@ -10,7 +10,7 @@
 -->   diving = sukellus
 --> systematic vocabulary tests
 -->   testing vocabulary rockType in language fi: ["Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
--->   testing vocabulary rockTypeAndOtherMaterial in language fi: ["Ice","Man-Made","Other-Material","Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
+-->   testing vocabulary rockTypeAndOtherMaterial in language fi: ["Glacier","Ice","Man-Made","Other-Material","Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
 -->   testing vocabulary morphology in language fi: ["Morphology-Crack","Morphology-Boulders","Morphology-Karst","Morphology-Volcanic","Morphology-Erosion","Morphology-Weathering","Morphology-Crystallization","Morphology-Organic","Morphology-Unknown"]
 -->   testing vocabulary cavingActivity in language fi: ["Basic","SRT","Swimming","Boating","Diving","Digging","Biking","Skiing","Surveying","Researching","Training","Studying"]
 -->   testing vocabulary swimmingPlace in language fi: ["Waterbody-River","Waterbody-Lake","Waterbody-Sandpit","Waterbody-Sea","Waterbody-Pool","Waterbody-Cave","Waterbody-Other","Waterbody-Unknown","Outdoor","Indoor","Underground","Beach","Nature","Thermal-Bath","Other","Unknown"]
@@ -24,7 +24,7 @@
 -->   testing vocabulary climbingType in language fi: ["Mountain","Rock","Ice","Wall","Volcanoes","None","Other","Unknown"]
 -->   testing vocabulary saunaType in language fi: ["Normal","Smoke","Steam","Infrared","Unknown"]
 -->   testing vocabulary rockType in language en: ["Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
--->   testing vocabulary rockTypeAndOtherMaterial in language en: ["Ice","Man-Made","Other-Material","Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
+-->   testing vocabulary rockTypeAndOtherMaterial in language en: ["Glacier","Ice","Man-Made","Other-Material","Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
 -->   testing vocabulary morphology in language en: ["Morphology-Crack","Morphology-Boulders","Morphology-Karst","Morphology-Volcanic","Morphology-Erosion","Morphology-Weathering","Morphology-Crystallization","Morphology-Organic","Morphology-Unknown"]
 -->   testing vocabulary cavingActivity in language en: ["Basic","SRT","Swimming","Boating","Diving","Digging","Biking","Skiing","Surveying","Researching","Training","Studying"]
 -->   testing vocabulary swimmingPlace in language en: ["Waterbody-River","Waterbody-Lake","Waterbody-Sandpit","Waterbody-Sea","Waterbody-Pool","Waterbody-Cave","Waterbody-Other","Waterbody-Unknown","Outdoor","Indoor","Underground","Beach","Nature","Thermal-Bath","Other","Unknown"]
@@ -38,7 +38,7 @@
 -->   testing vocabulary climbingType in language en: ["Mountain","Rock","Ice","Wall","Volcanoes","None","Other","Unknown"]
 -->   testing vocabulary saunaType in language en: ["Normal","Smoke","Steam","Infrared","Unknown"]
 -->   testing vocabulary rockType in language se: ["Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
--->   testing vocabulary rockTypeAndOtherMaterial in language se: ["Ice","Man-Made","Other-Material","Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
+-->   testing vocabulary rockTypeAndOtherMaterial in language se: ["Glacier","Ice","Man-Made","Other-Material","Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
 -->   testing vocabulary morphology in language se: ["Morphology-Crack","Morphology-Boulders","Morphology-Karst","Morphology-Volcanic","Morphology-Erosion","Morphology-Weathering","Morphology-Crystallization","Morphology-Organic","Morphology-Unknown"]
 -->   testing vocabulary cavingActivity in language se: ["Basic","SRT","Swimming","Boating","Diving","Digging","Biking","Skiing","Surveying","Researching","Training","Studying"]
 -->   testing vocabulary swimmingPlace in language se: ["Waterbody-River","Waterbody-Lake","Waterbody-Sandpit","Waterbody-Sea","Waterbody-Pool","Waterbody-Cave","Waterbody-Other","Waterbody-Unknown","Outdoor","Indoor","Underground","Beach","Nature","Thermal-Bath","Other","Unknown"]
