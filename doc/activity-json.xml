@@ -264,8 +264,16 @@
           <t hangText="Environment"><vspace blankLines="1"/>
 
           To describe the environment, use one of the following three
-          sub-activity tags: Rock, Ice, Man-Made, and Other-Material. <vspace
-          blankLines="1"/>
+          sub-activity tags: Rock, Glacier, Ice, Man-Made, and
+          Other-Material.
+          <vspace  blankLines="1"/>
+          
+          Note: As defined by Henderson and Halliday
+          (https://www.cambridge.org/core/journals/journal-of-glaciology/article/use-of-the-term-glacier-cave/488DFAAEC5F4C1C4D815CAD0207B622C),
+          glacier caves are caves that form within or under glacier
+          ice, whereas ice caves are caves that have long-lasting ice
+          inside them.
+          <vspace  blankLines="1"/>
           
           There is an additional sub-sub-activity tag for Rock, to
           describe the kind of rock being explored: Rock-Granite,
@@ -327,7 +335,12 @@
         There are no sub-activities.</t>
         
         <t hangText="Climbing"><vspace blankLines="1"/>
-        The sub-activities are Mountain, Rock, Ice, Wall, and Volcanoes.</t>
+        The sub-activities are Mountain, Rock, Ice, Wall, and
+        Volcanoes. The sub-activity Other represents a known climbing
+        type but one
+        that does not fit this classification.
+        The sub-activity Unknown  represents an unknown climbing type, and
+        None that no actual climbing was done.</t>
         
         <t hangText="Diving"><vspace blankLines="1"/>
         There are no sub-activities.</t>
@@ -346,13 +359,18 @@
         sub-activity Unknown represents an unknown Sauna type.</t>
         
         <t hangText="Skiing"><vspace blankLines="1"/> The
-        sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
-        Asphalt, Grass, Mud, Plastic, Other-Substances, and
-        Imported-Snow. If we do not know what material the skiing was
-        on, use Unknown-Substance. For the going up part, the sub-activities
-        Lifts, Heli, Hiking, Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other,
-        and Unknown-Uphill can be used. Use the Racing
-        subtype if there was a competition.</t>
+        sub-activities are Outdoor, Indoor, and Underground for the type of
+        place. Unknown represents an unknown location.
+        Snow, Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic,
+        Other-Substances, and Imported-Snow for the type of material
+        skied on. If we do not know what material the skiing was on,
+        use Unknown-Substance.
+        <vspace blankLines="1"/>
+        
+        For the going up part, the sub-activities Lifts, Heli, Hiking,
+        Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and
+        Unknown-Uphill can be used. Use the Racing subtype if there
+        was a competition.</t>
         
         <t hangText="Skydiving"><vspace blankLines="1"/>
         There are no sub-activities.</t>
@@ -366,17 +384,33 @@
         <t hangText="Surfing"><vspace blankLines="1"/>
         There are no sub-activities.</t>
         
-        <t hangText="Swimming"><vspace blankLines="1"/>
-        Indoor, Outdoor, Underground, Water, Ice, and Balls (as in
-        children's "ball pit"). In addition, when the type is Water or
+        <t hangText="Swimming"><vspace blankLines="1"/>Indoor,
+        Outdoor, and Underground.  The items Beach and Nature can also
+        specified for official and unofficial swimming
+        spots. Thermal-Bath can be specified for thermal baths
+        (whether in a pool or a river or lake, for instance). <vspace
+        blankLines="1"/>
+
+        The material in which one has been swimming can be specified
+        as Water, Ice, and Balls (as in children's "ball
+        pit"). Other-Material and Unknown-Material represent known but
+        unclassified materials and unknown materials.
+        <vspace blankLines="1"/>
+        
+        The sub-activity Other represents a known swimming place type
+        but one that does not fit this classification.  The
+        sub-activity Unknown represents that the swimming place type
+        is not known, and None that no actual swimming was done.
+        <vspace blankLines="1"/>
+
+        In addition, when the type is Water or
         Ice, the additional items Waterbody-River, Waterbody-Lake,
         Waterbody-Sandpit, Waterbody-Sea,
         Waterbody-Pool, Waterbody-Cave, and Waterbody-Other can be
         specified. Waterbody-Unknown represents unknown waterbody
-        types. The items Beach and Nature can also specified for
-        official and unofficial swimming spots. Thermal-Bath can be
-        specified
-        for thermal baths (whether in a pool or a river or lake, for instance).</t>
+        types.
+
+        </t>
         
         <t hangText="Travel"><vspace blankLines="1"/>
         There are no sub-activities.</t>
@@ -735,7 +769,7 @@
         <t hangText="sa"><vspace blankLines="1"/>
 
         The sub-activity, e.g., within caving sub-activities or cave
-        types are can be Rock, Ice, and so on, wereas within skiing
+        types are can be Rock, Glacier (caves in ice), and so on, wereas within skiing
         they the sub-activities can be Outdoor, Indoor, Snow, Sand,
         and so on. This attribute is mandatory.</t>
 

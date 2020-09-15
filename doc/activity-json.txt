@@ -67,20 +67,20 @@ Table of Contents
    2.  Normative Language  . . . . . . . . . . . . . . . . . . . . .   3
    3.  Goals . . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Modelling Activities  . . . . . . . . . . . . . . . . . . . .   4
-   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .   9
-     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .  10
-     5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  10
-     5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  15
-     5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  17
-   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  17
-   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  18
-   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  18
-   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  19
-   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  19
-     10.1.  Normative References . . . . . . . . . . . . . . . . . .  19
-     10.2.  Informative References . . . . . . . . . . . . . . . . .  19
-   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  20
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  20
+   5.  Generation 2 Format . . . . . . . . . . . . . . . . . . . . .  10
+     5.1.  Features  . . . . . . . . . . . . . . . . . . . . . . . .  11
+     5.2.  Properties  . . . . . . . . . . . . . . . . . . . . . . .  11
+     5.3.  Article Objects . . . . . . . . . . . . . . . . . . . . .  16
+     5.4.  Language Codes  . . . . . . . . . . . . . . . . . . . . .  18
+   6.  Generation 1 Format . . . . . . . . . . . . . . . . . . . . .  18
+   7.  Generation 0 Format . . . . . . . . . . . . . . . . . . . . .  19
+   8.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .  19
+   9.  Character Set . . . . . . . . . . . . . . . . . . . . . . . .  20
+   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  20
+     10.1.  Normative References . . . . . . . . . . . . . . . . . .  20
+     10.2.  Informative References . . . . . . . . . . . . . . . . .  20
+   Appendix A.  Contributors . . . . . . . . . . . . . . . . . . . .  21
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  21
 
 1.  Introduction
 
@@ -305,7 +305,15 @@ Internet-Draft                Activity JSON                     May 2020
       Environment
 
          To describe the environment, use one of the following three
-         sub-activity tags: Rock, Ice, Man-Made, and Other-Material.
+         sub-activity tags: Rock, Glacier, Ice, Man-Made, and Other-
+         Material.
+
+         Note: As defined by Henderson and Halliday
+         (https://www.cambridge.org/core/journals/journal-of-
+         glaciology/article/use-of-the-term-glacier-
+         cave/488DFAAEC5F4C1C4D815CAD0207B622C), glacier caves are caves
+         that form within or under glacier ice, whereas ice caves are
+         caves that have long-lasting ice inside them.
 
          There is an additional sub-sub-activity tag for Rock, to
          describe the kind of rock being explored: Rock-Granite, Rock-
@@ -323,6 +331,13 @@ Internet-Draft                Activity JSON                     May 2020
 
          More than one of these may appear in a single cave.
 
+
+
+Arkko                   Expires November 2, 2020                [Page 6]
+
+Internet-Draft                Activity JSON                     May 2020
+
+
          Note that while several types of Man-Made environments may
          exist, e.g., tunnels or bunkers.  These should additionally be
          categories of Urban-exploration, and properly specified there.
@@ -330,13 +345,6 @@ Internet-Draft                Activity JSON                     May 2020
          activity list of ["Caving","Urban-exploration"] and sub-
          activity list of [["Man-Made"],["Bunkers"]] is perfectly legal
          Activity JSON.
-
-
-
-Arkko                   Expires November 2, 2020                [Page 6]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       Caving method
 
@@ -369,10 +377,22 @@ Internet-Draft                Activity JSON                     May 2020
    Climbing
 
       The sub-activities are Mountain, Rock, Ice, Wall, and Volcanoes.
+      The sub-activity Other represents a known climbing type but one
+      that does not fit this classification.  The sub-activity Unknown
+      represents an unknown climbing type, and None that no actual
+      climbing was done.
 
    Diving
 
       There are no sub-activities.
+
+
+
+
+Arkko                   Expires November 2, 2020                [Page 7]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    Equipment
 
@@ -386,14 +406,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-
-
-
-Arkko                   Expires November 2, 2020                [Page 7]
-
-Internet-Draft                Activity JSON                     May 2020
-
-
    Sauna
 
       The sub-activities are Normal, Smoke, Steam, and Infrared.  The
@@ -401,12 +413,16 @@ Internet-Draft                Activity JSON                     May 2020
 
    Skiing
 
-      The sub-activities are Outdoor, Indoor, Snow, Sand, Rock, Ash,
-      Asphalt, Grass, Mud, Plastic, Other-Substances, and Imported-Snow.
-      If we do not know what material the skiing was on, use Unknown-
-      Substance.  For the going up part, the sub-activities Lifts, Heli,
-      Hiking, and Skinning can be used.  Use the Racing subtype if there
-      was a competition.
+      The sub-activities are Outdoor, Indoor, and Underground for the
+      type of place.  Unknown represents an unknown location.  Snow,
+      Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic, Other-Substances,
+      and Imported-Snow for the type of material skied on.  If we do not
+      know what material the skiing was on, use Unknown-Substance.
+
+      For the going up part, the sub-activities Lifts, Heli, Hiking,
+      Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and Unknown-
+      Uphill can be used.  Use the Racing subtype if there was a
+      competition.
 
    Skydiving
 
@@ -426,22 +442,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    Swimming
 
-      Indoor, Outdoor, Underground, Water, Ice, and Balls (as in
-      children's "ball pit").  In addition, when the type is Water or
-      Ice, the additional items Waterbody-River, Waterbody-Lake,
-      Waterbody-Sandpit, Waterbody-Sea, Waterbody-Pool, Waterbody-Cave,
-      and Waterbody-Other can be specified.  Waterbody-Unknown
-      represents unknown waterbody types.  The items Beach and Nature
-      can also specified for official and unofficial swimming spots.
-      Thermal-Bath can be specified for thermal baths (whether in a pool
-      or a river or lake, for instance).
-
-   Travel
-
-      There are no sub-activities.
-
-   Urban-exploration
-
 
 
 
@@ -449,6 +449,32 @@ Arkko                   Expires November 2, 2020                [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      Indoor, Outdoor, and Underground.  The items Beach and Nature can
+      also specified for official and unofficial swimming spots.
+      Thermal-Bath can be specified for thermal baths (whether in a pool
+      or a river or lake, for instance).
+
+      The material in which one has been swimming can be specified as
+      Water, Ice, and Balls (as in children's "ball pit").  Other-
+      Material and Unknown-Material represent known but unclassified
+      materials and unknown materials.
+
+      The sub-activity Other represents a known swimming place type but
+      one that does not fit this classification.  The sub-activity
+      Unknown represents that the swimming place type is not known, and
+      None that no actual swimming was done.
+
+      In addition, when the type is Water or Ice, the additional items
+      Waterbody-River, Waterbody-Lake, Waterbody-Sandpit, Waterbody-Sea,
+      Waterbody-Pool, Waterbody-Cave, and Waterbody-Other can be
+      specified.  Waterbody-Unknown represents unknown waterbody types.
+
+   Travel
+
+      There are no sub-activities.
+
+   Urban-exploration
 
       The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
       Quarries, Mines, Industrial, Silos, Ski-Lifts, Landfills, Castles,
@@ -471,6 +497,14 @@ Internet-Draft                Activity JSON                     May 2020
    Waterfalls
 
       There are no sub-activities.
+
+
+
+
+Arkko                   Expires November 2, 2020                [Page 9]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    Meteorites
 
@@ -501,7 +535,29 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020                [Page 9]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arkko                   Expires November 2, 2020               [Page 10]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -557,7 +613,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 10]
+Arkko                   Expires November 2, 2020               [Page 11]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -613,7 +669,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 11]
+Arkko                   Expires November 2, 2020               [Page 12]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -669,7 +725,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 12]
+Arkko                   Expires November 2, 2020               [Page 13]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -725,7 +781,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 13]
+Arkko                   Expires November 2, 2020               [Page 14]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -781,7 +837,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 14]
+Arkko                   Expires November 2, 2020               [Page 15]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -837,7 +893,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 15]
+Arkko                   Expires November 2, 2020               [Page 16]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -865,9 +921,9 @@ Internet-Draft                Activity JSON                     May 2020
    sa
 
       The sub-activity, e.g., within caving sub-activities or cave types
-      are can be Rock, Ice, and so on, wereas within skiing they the
-      sub-activities can be Outdoor, Indoor, Snow, Sand, and so on.
-      This attribute is mandatory.
+      are can be Rock, Glacier (caves in ice), and so on, wereas within
+      skiing they the sub-activities can be Outdoor, Indoor, Snow, Sand,
+      and so on.  This attribute is mandatory.
 
    p
 
@@ -893,7 +949,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 16]
+Arkko                   Expires November 2, 2020               [Page 17]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -949,7 +1005,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 17]
+Arkko                   Expires November 2, 2020               [Page 18]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -1005,7 +1061,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 18]
+Arkko                   Expires November 2, 2020               [Page 19]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -1061,7 +1117,7 @@ Internet-Draft                Activity JSON                     May 2020
 
 
 
-Arkko                   Expires November 2, 2020               [Page 19]
+Arkko                   Expires November 2, 2020               [Page 20]
 
 Internet-Draft                Activity JSON                     May 2020
 
@@ -1117,4 +1173,4 @@ Author's Address
 
 
 
-Arkko                   Expires November 2, 2020               [Page 20]
+Arkko                   Expires November 2, 2020               [Page 21]
