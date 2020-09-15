@@ -339,7 +339,7 @@
         Volcanoes. The sub-activity Other represents a known climbing
         type but one
         that does not fit this classification.
-        The sub-activity Unknown  represents an unknown climbing type, and
+        The sub-activity Unknown represents an unknown climbing type, and
         None that no actual climbing was done.</t>
         
         <t hangText="Diving"><vspace blankLines="1"/>
@@ -362,14 +362,14 @@
         sub-activities are Outdoor, Indoor, and Underground for the type of
         place. Unknown represents an unknown location.
         Snow, Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic,
-        Other-Substances, and Imported-Snow for the type of material
+        Substance-Other, and Imported-Snow for the type of material
         skied on. If we do not know what material the skiing was on,
-        use Unknown-Substance.
+        use Substance-Unknown.
         <vspace blankLines="1"/>
         
         For the going up part, the sub-activities Lifts, Heli, Hiking,
         Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and
-        Unknown-Uphill can be used. Use the Racing subtype if there
+        Uphill-Unknown can be used. Use the Racing subtype if there
         was a competition.</t>
         
         <t hangText="Skydiving"><vspace blankLines="1"/>

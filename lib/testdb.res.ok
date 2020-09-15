@@ -522,7 +522,7 @@ Luettavaa:
 Article https://example.net (AA '20)
 
 
---> Unknown6: Skiing: ["Unknown","Unknown-Uphill","Unknown-Substance"]
+--> Unknown6: Skiing: ["Unknown","Uphill-Unknown","Substance-Unknown"]
 --> UNKNOWN6
 
 Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
@@ -533,7 +533,7 @@ Luettavaa:
 Article https://example.net (AA '20)
 
 
---> Unknown7: Snowboarding: ["Lifts","Unknown","Unknown-Substance"]
+--> Unknown7: Snowboarding: ["Lifts","Unknown","Substance-Unknown"]
 --> UNKNOWN7
 
 Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
@@ -544,7 +544,7 @@ Luettavaa:
 Article https://example.net (AA '20)
 
 
---> Unknown8: Sliding: ["Ash","Unknown","Unknown-Uphill"]
+--> Unknown8: Sliding: ["Ash","Unknown","Uphill-Unknown"]
 --> UNKNOWN8
 
 Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)

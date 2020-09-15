@@ -415,13 +415,13 @@ Internet-Draft                Activity JSON                     May 2020
 
       The sub-activities are Outdoor, Indoor, and Underground for the
       type of place.  Unknown represents an unknown location.  Snow,
-      Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic, Other-Substances,
+      Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic, Substance-Other,
       and Imported-Snow for the type of material skied on.  If we do not
-      know what material the skiing was on, use Unknown-Substance.
+      know what material the skiing was on, use Substance-Unknown.
 
       For the going up part, the sub-activities Lifts, Heli, Hiking,
-      Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and Unknown-
-      Uphill can be used.  Use the Racing subtype if there was a
+      Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and Uphill-
+      Unknown can be used.  Use the Racing subtype if there was a
       competition.
 
    Skydiving
