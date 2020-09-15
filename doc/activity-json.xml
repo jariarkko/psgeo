@@ -297,10 +297,10 @@
 
           Note that while several types of Man-Made environments may
           exist, e.g., tunnels or bunkers. These should additionally
-          be categories of Urban-exploration, and properly specified
+          be categories of Urban-Exploration, and properly specified
           there. A single reading list item may cover multiple
           activities, so an activity list of
-          ["Caving","Urban-exploration"] and sub-activity list of
+          ["Caving","Urban-Exploration"] and sub-activity list of
           [["Man-Made"],["Bunkers"]] is perfectly legal Activity JSON.</t>
           
           <t hangText="Caving method"><vspace blankLines="1"/>
@@ -415,7 +415,7 @@
         <t hangText="Travel"><vspace blankLines="1"/>
         There are no sub-activities.</t>
         
-        <t hangText="Urban-exploration"><vspace blankLines="1"/>
+        <t hangText="Urban-Exploration"><vspace blankLines="1"/>
         The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
         Quarries, Mines, Industrial, Silos, Ski-Lifts, Landfills, Castles,
         Vehicles, Trenches, Memorial, Historic-Sites, Bridges,

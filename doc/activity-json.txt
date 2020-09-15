@@ -340,9 +340,9 @@ Internet-Draft                Activity JSON                     May 2020
 
          Note that while several types of Man-Made environments may
          exist, e.g., tunnels or bunkers.  These should additionally be
-         categories of Urban-exploration, and properly specified there.
+         categories of Urban-Exploration, and properly specified there.
          A single reading list item may cover multiple activities, so an
-         activity list of ["Caving","Urban-exploration"] and sub-
+         activity list of ["Caving","Urban-Exploration"] and sub-
          activity list of [["Man-Made"],["Bunkers"]] is perfectly legal
          Activity JSON.
 
@@ -474,7 +474,7 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-   Urban-exploration
+   Urban-Exploration
 
       The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
       Quarries, Mines, Industrial, Silos, Ski-Lifts, Landfills, Castles,
