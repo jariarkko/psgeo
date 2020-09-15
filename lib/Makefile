@@ -56,7 +56,8 @@ testlang.res:	$(SOURCES) $(TESTFILES)
 
 checksource:	checkgettextusage \
 		checkgettextcollectionusage \
-		checktabs
+		checktabs \
+		checklonglines
 
 checkgettextusage:
 	@fgrep 'getText("' *.js > gettext0.res
@@ -88,8 +89,62 @@ checkgettextcollectionusage:
 
 checktabs:
 	@(fgrep -l '	' *.js > checktabs.res; exec true)
-	@echo The following source files use TABs: `cat  checktabs.res` 
+	@echo The following source files use TABs: `cat checktabs.res` 
 	-@test ! -s checktabs.res
+
+LONGLINE=120
+LINECHECKAWK='                                                                                           \
+                                                                                                         \
+    BEGIN {                                                                                              \
+        quot = sprintf("%c",34);                                                                         \
+        squot = sprintf("%c",39);                                                                        \
+    }                                                                                                    \
+                                                                                                         \
+    function stringsiz(inputxin) {                                                                       \
+        inputx = inputxin;                                                                               \
+        sz = 0;                                                                                          \
+        while (1) {                                                                                      \
+            quotindex = index(inputx,quot);                                                              \
+            squotindex = index(inputx,squot);                                                            \
+            if (quotindex >= 1 && (squotindex < 1 || quotindex < squotindex)) {                          \
+              restx = substr(inputx,quotindex+1);                                                        \
+              if (index(restx,quot) < 1) return(sz);                                                     \
+              sz += index(restx,quot) - 1;                                                               \
+              inputx = substr(restx,index(restx,quot)+1);                                                \
+            } else if (squotindex >= 1) {                                                                \
+              restx = substr(inputx,squotindex+1);                                                       \
+              if (index(restx,squot) < 1) return(sz);                                                    \
+              sz += index(restx,squot) - 1;                                                              \
+              inputx = substr(restx,index(restx,squot)+1);                                               \
+            } else {                                                                                     \
+	      return(sz);                                                                                \
+            }                                                                                            \
+        }                                                                                                \
+    }                                                                                                    \
+                                                                                                         \
+    /.*/ {                                                                                               \
+        thisline = $$0;                                                                                  \
+        len = length(thisline); stringlen = stringsiz(thisline);                                         \
+        if ((len - stringlen) > lim && index(thisline,"pattern") < 1) {                                  \
+            printf("found %s %u %u: %s\n", FILENAME, len, stringlen, thisline) >> "/tmp/foo.txt";        \
+            if (li[FILENAME] == "") {                                                                    \
+                li[FILENAME]=FNR;                                                                        \
+                ctr[FILENAME]=0;                                                                         \
+            }                                                                                            \
+            ctr[FILENAME]++;                                                                             \
+        }                                                                                                \
+        next;                                                                                            \
+    }                                                                                                    \
+                                                                                                         \
+    END {                                                                                                \
+        for (x in ctr) printf("%s (%u lines, starting at %u)\n", x, ctr[x], li[x]);                      \
+    }'
+
+checklonglines:
+	-@rm -f checklines.res
+	@(awk -v lim=$(LONGLINE) $(LINECHECKAWK) *.js)>checklines.res
+	@echo The following source files have long lines: `cat checklines.res` 
+	-@test ! -s checklines.res
 
 updateversion:
 	@echo This makefile target updates one software source file based on tags in GitHub,
