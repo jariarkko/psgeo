@@ -8,10 +8,11 @@ However, this document talks about how we expect the software to be written, in 
 
 Psgeo is open source. We collaborate at the GitHub site:
 
-* All contributions should be made in GitHub.
+* All contributions should be made in [GitHub](https://github.com/jariarkko/psgeo).
 * Small contributions by experienced developers can be made directly on the master branch.
 * Anything large should generally be done in a separate branch, and a suitable Pull  Request be created to request its integration. This allows testing and review and modification by other contributors.
 * All PRs and commits to the GitHub master branch must be made only if "make" succeeds in the lib directory. This will ensure tests are run and their results are correct, i.e., no existing functionality is broken.
+* All code is subject to the [BSD license](https://github.com/jariarkko/psgeo/blob/master/LICENSE.txt).
 
 All bugs and feature requests should be documented in GitHub issue [list](https://github.com/jariarkko/psgeo/issues).
 
