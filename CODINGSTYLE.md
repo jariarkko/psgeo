@@ -24,12 +24,13 @@ All weekly and major releases should be tagged with a tag "v(i).(j).(k)". E.g., 
 
 And making a new version:
 
+    cd  lib
     git tag -a v2.0.0
     make updateversion
-    git add lib/psgeolib.js
+    git add psgeolib.js
     git commit -m"new version"
 
-Major versions increase the first number in the version string.
+Major versions increase the first number in the version string. New functionality should increase the second number; weekly releases and bug fixes should increase the last one.
 
 The currently active master branch version must always be runnable; critical bugs found in it should be promptly corrected. However, the master branch version is not meant to be directly used by invidiual installations. We recommend a weekly update of live production sites, after testing and getting an agreement from main contributors that all major features seem to be fine.
 
