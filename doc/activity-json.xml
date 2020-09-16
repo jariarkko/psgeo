@@ -297,10 +297,10 @@
 
           Note that while several types of Man-Made environments may
           exist, e.g., tunnels or bunkers. These should additionally
-          be categories of Urban-exploration, and properly specified
+          be categories of Urban-Exploration, and properly specified
           there. A single reading list item may cover multiple
           activities, so an activity list of
-          ["Caving","Urban-exploration"] and sub-activity list of
+          ["Caving","Urban-Exploration"] and sub-activity list of
           [["Man-Made"],["Bunkers"]] is perfectly legal Activity JSON.</t>
           
           <t hangText="Caving method"><vspace blankLines="1"/>
@@ -339,7 +339,7 @@
         Volcanoes. The sub-activity Other represents a known climbing
         type but one
         that does not fit this classification.
-        The sub-activity Unknown  represents an unknown climbing type, and
+        The sub-activity Unknown represents an unknown climbing type, and
         None that no actual climbing was done.</t>
         
         <t hangText="Diving"><vspace blankLines="1"/>
@@ -362,14 +362,14 @@
         sub-activities are Outdoor, Indoor, and Underground for the type of
         place. Unknown represents an unknown location.
         Snow, Sand, Rock, Ash, Asphalt, Grass, Mud, Plastic,
-        Other-Substances, and Imported-Snow for the type of material
+        Substance-Other, and Imported-Snow for the type of material
         skied on. If we do not know what material the skiing was on,
-        use Unknown-Substance.
+        use Substance-Unknown.
         <vspace blankLines="1"/>
         
         For the going up part, the sub-activities Lifts, Heli, Hiking,
         Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and
-        Unknown-Uphill can be used. Use the Racing subtype if there
+        Uphill-Unknown can be used. Use the Racing subtype if there
         was a competition.</t>
         
         <t hangText="Skydiving"><vspace blankLines="1"/>
@@ -415,7 +415,7 @@
         <t hangText="Travel"><vspace blankLines="1"/>
         There are no sub-activities.</t>
         
-        <t hangText="Urban-exploration"><vspace blankLines="1"/>
+        <t hangText="Urban-Exploration"><vspace blankLines="1"/>
         The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
         Quarries, Mines, Industrial, Silos, Ski-Lifts, Landfills, Castles,
         Vehicles, Trenches, Memorial, Historic-Sites, Bridges,
