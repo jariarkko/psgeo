@@ -17,7 +17,7 @@ All bugs and feature requests should be documented in GitHub issue [list](https:
 
 ## Releases
 
-All weekly and major releases should be tagged with a tag "v<i>.<j>.<k>". E.g., to view current tags, use
+All weekly and major releases should be tagged with a tag "v(i).(j).(k)". E.g., to view current tags, use
 
     git tag
 
@@ -27,6 +27,10 @@ And making a new version:
     make updateversion
     git add lib/psgeolib.js
     git commit -m"new version"
+
+Major versions increase the first number in the version string.
+
+The currently active master branch version must always be runnable; critical bugs found in it should be promptly corrected. However, the master branch version is not meant to be directly used by invidiual installations. We recommend a weekly update of live production sites, after testing and getting an agreement from main contributors that all major features seem to be fine.
 
 ## Testing
 
