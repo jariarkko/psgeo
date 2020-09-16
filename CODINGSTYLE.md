@@ -38,6 +38,10 @@ The Makefile in the lib directory runs various code checks and unit tests on the
 
 (A future change may involve continuous integration approach where this happens automatically for all attempted commits.)
 
+Please add a test when you add a new feature that can be tested in the unit tests. (Features in the UI may not be easily testable this way.)
+
+Sometimes new features and tests change the expected outputs from already implemented tests. For instance, you may change the format of some outputs to be better in some way. If this happens, you need to carefully review the expected and actual outputs and make the necessary changes. Old tests are part of the software and need to be retained and maintained just like other pieces of software.
+
 ## Community behaviour
 
 We strive for polite collaboration, welcome all contibutors, and respect the different needs diffferent people may have for the software and data formats.
@@ -51,6 +55,7 @@ We use JavaScript. The following additional quidelines apply:
 * Please comment all data structures, all functions (incl. input parameters and return values), and all complex pieces of code.
 * Please use defensive programming style, i.e,. for most functions this means that all input parameters should be checked, and appropriate exceptions thrown upon error.
 * Please indent your code appropriately, using 4 character indent settings. Please avoid the use of TABs, as their usage can sometimes be dependent on the contributor's programming environment, and look different to the other contributors.
-* Avoid leaving "FIXIT" type comments in the code, please use the GitHub issue list instead.
+* Activity JSON can represent many situations. Avoid code that is tied to specific situations; please write all activity- or sub-activity-specific code pieces in as data-driven fashion as possible. Ideally, drive everything from the functions provided by psgeolib.js that define the "schema" for Activity JSON. You can get the sub-activity types of a given activity via the functions in psgeolib, for instance.
+* Avoid leaving "FIXIT" type comments in the code, as we may never find them :-) Please use the GitHub issue list instead.
 * Please limit the use of external libraries to the minimum; we attempt to keep Psgeo as portable and independent of other systems as possible.
 
