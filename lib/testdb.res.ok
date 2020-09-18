@@ -606,4 +606,19 @@ Luettavaa:
 Article https://example.net (AA '20)
 
 
+--> -- filter tests
+--> in set 1: item-skiing
+--> in set 1: item-snowboarding
+--> in set 1: item-sliding
+--> in set 1: item-biking
+--> in set 3: item-biking
+--> in set 4: item-skiing
+--> in set 4: item-snowboarding
+--> in set 4: item-sliding
+--> in set 5: item-snowboarding
+--> in set 6: item-snowboarding
+--> in set 7: item-skiing
+--> in set 7: item-snowboarding
+--> in set 7: item-sliding
+--> in set 8: item-sliding
 --> test complete and successful
