@@ -421,7 +421,7 @@ Broken Ribs https://planetskier.blogspot.com/2016/03/broken-ribs.html ja video (
 
 Koordinaatit: N 24.85766 E 55.45572 (http://www.google.com/maps/place/24.857661,55.455722)
 
-Hiihtoa ulkona, hiekalla. Ylös kävelemällä.
+Lumilautailua ulkona, hiekalla. Ylös kävelemällä.
 
 
 --> -- swimming tests
@@ -538,7 +538,7 @@ Article https://example.net (AA '20)
 
 Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
 
-Hiihtoa tuntemattomassa paikassa, ei tiedossa olevalla materiaalilla. Ylös hissillä.
+Lumilautailua tuntemattomassa paikassa, ei tiedossa olevalla materiaalilla. Ylös hissillä.
 
 Luettavaa:
 Article https://example.net (AA '20)
@@ -549,7 +549,7 @@ Article https://example.net (AA '20)
 
 Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
 
-Hiihtoa tuntemattomassa paikassa, tuhkalla. Ylös ei tiedossa olevalla tavalla.
+Liukua tuntemattomassa paikassa, tuhkalla. Ylös ei tiedossa olevalla tavalla.
 
 Luettavaa:
 Article https://example.net (AA '20)
@@ -560,7 +560,7 @@ Article https://example.net (AA '20)
 
 Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
 
-Hiihtoa tuntemattomassa paikassa, tuhkalla. Ylös kävelemällä.
+Liukua tuntemattomassa paikassa, tuhkalla. Ylös kävelemällä.
 
 Luettavaa:
 Article https://example.net (AA '20)
@@ -607,6 +607,46 @@ Article https://example.net (AA '20)
 
 
 --> -- filter tests
+--> full set: ITEM-SKIING
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Hiihtoa tuntemattomassa paikassa, Ylös ei tiedossa olevalla tavalla.
+
+Luettavaa:
+Article https://example.net
+
+
+--> full set: ITEM-SNOWBOARDING
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Lumilautailua tuntemattomassa paikassa, hiekalla. Ylös ei tiedossa olevalla tavalla.
+
+Luettavaa:
+Article https://example.net
+
+
+--> full set: ITEM-SLIDING
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Liukua tuntemattomassa paikassa, nurmikolla. Ylös ei tiedossa olevalla tavalla.
+
+Luettavaa:
+Article https://example.net
+
+
+--> full set: ITEM-BIKING
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Pyöräily maastopyörällä ja poluilla.
+
+Luettavaa:
+Article https://example.net
+
+
 --> in set 1: item-skiing
 --> in set 1: item-snowboarding
 --> in set 1: item-sliding
