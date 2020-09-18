@@ -21,13 +21,15 @@ Include the following code on your .html page:
     </script>
     <script src="psgeomap.js"></script>
     <script src="psgeodb.js"></script>
+    <script src="psgeodbbackend.js"></script>
+    <script src="psgeodbtext.js"></script>
     <script src="psgeolang.js"></script>
+    <script src="psgeoschema.js"></script>
     <script src="psgeolib.js"></script>
     <script src="psgeostat.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&callback=psgeoInitMap"
     async defer></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </body>
 
 # Tailoring Psgeo
@@ -35,13 +37,8 @@ Include the following code on your .html page:
 By default, Psgeo uses the Planetskier/Planetcaver databases, but you
 can tailor it by:
 
-* Adding query parameters to your URL. The parameter "lang" can be
-  used to specify language for the UI. Currently supported languages
-  are "fi" and "en" for Finnish and English, respectively.
-  The "cavemaps" parameter, when set to "true" makes the UI behave as
-  primarily showing cave maps for caves that have them. The
-  "luolaseura" parameter, when set to "true" makes the UI tailored for
-  the Finnish Caving Association.
+* Adding query parameters to your URL. See the separate section on
+  query parameters.
 * Psgeo.js tailorable parameters. At the beginning of the file
    there are some parameters that can be modified. These can be used
    to set the database you want to feed from, for instance. There are
@@ -50,6 +47,30 @@ can tailor it by:
 * Modifying psgeo.js (as a last resort). If you're modifying
   the rest of the code, please make a general improvement and submit
   it to GitHub as an enhancement!
+
+# Query parameters
+
+Each web service running the Psgeo software supports URLs. The service
+itself has a specific url, e.g., the Finnish Caving Association URL
+is https://luolaseura.fi/luolakanta/kartta.html and the Planetskier URL is https://planetskier.net/geo.html
+
+By default, this URL starts the main view, goes to the default map
+view, centered on default place, default language, etc. that are
+relevant for the service in question.
+
+But you can tailor this service with query parameters, however:
+
+* The c parameter can be used to center the map initially on a given place. For instance, https://planetskier.net/geo.html?c=Chamonix centers the map on a ski area, Chamonix, registered in the Planetskier database. The name given on this search parameter can be the full name of a place or a partial match. For instance, https://planetskier.net/geo.html?c=Cham also centers the map on Chamonix. If there are multiple matches, the software picks the "best" answer (e.g., the longest cave) but it is generally good to use the full name if predictable results are desired :-) The name of the place should be URL encoded, e.g., https://planetskier.net/geo.html?c=Kauniainen%20ski%20hill,%20Kauniainen gets the map centered on the "Kauniainen ski Hill, Kauniainen" where the spaces have been percent-encoded.
+
+* The p parameter is like the c parameter, centers the map, but also brings up information window for the place in question.
+
+* The i parameter is like the p parameter, but instead of the information, it brings up an image representing the place.
+  
+* The parameter "lang" can be   used to specify language for the UI. Currently supported languages are "fi", "se", and "en" for Finnish, Swedish and English, respectively.
+
+* The "cavemaps" parameter, when set to "true" makes the UI behave as primarily showing cave maps for caves that have them.
+
+* The "luolaseura" parameter, when set to "true" makes the UI tailored for the Finnish Caving Association.
   
 # APIs
 
