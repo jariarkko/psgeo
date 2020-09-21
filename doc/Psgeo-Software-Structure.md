@@ -27,13 +27,13 @@ The modules are as follows:
 
 * PsgeoDBText. The software for PsgeoDBText module is in [psgeodbtext.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbtext.js).
 
-* PsgeoLib
+* PsgeoLib. The software for PsgeoLib module is in [psgeolib.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeolib.js).
 
-* PsgeoLang
+* PsgeoLang. The software for PsgeoDBLang module is in [psgeolang.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeolang.js).
 
-* PsgeoSchema
+* PsgeoSchema. The software for PsgeoDBSchema module is in [psgeoschema.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeoschema.js).
 
-* PsgeoStat. This module is currently unused, and may be removed.
+* PsgeoStat. This module is currently unused, and may be removed. The software for PsgeoDBStat module is in [psgeodbstat.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeostat.js).
 
 In addition, there are software components that are not part of a running instance of Psgeo, but are used for testing etc. These are:
 
