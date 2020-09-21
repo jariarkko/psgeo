@@ -32,22 +32,6 @@ Include the following code on your .html page:
     async defer></script>
     </body>
 
-# Tailoring Psgeo
-
-By default, Psgeo uses the Planetskier/Planetcaver databases, but you
-can tailor it by:
-
-* Adding query parameters to your URL. See the separate section on
-  query parameters.
-* Psgeo.js tailorable parameters. At the beginning of the file
-   there are some parameters that can be modified. These can be used
-   to set the database you want to feed from, for instance. There are
-   some reasonable defaults, however, and you add to the defaults
-   (that are based on origin domain).
-* Modifying psgeo.js (as a last resort). If you're modifying
-  the rest of the code, please make a general improvement and submit
-  it to GitHub as an enhancement!
-
 # Query parameters
 
 Each web service running the Psgeo software supports URLs. The service
@@ -93,4 +77,19 @@ Or loop through all entries that satisfy a particular criteria:
     db.applyAllExtraFilter(filt,
                            function (item) { console.log("Skiing in Sweden in " + db.getItemName(item)); });
                            
+# Tailoring Psgeo
+
+By default, Psgeo uses the Planetskier/Planetcaver databases, but you
+can tailor it by:
+
+* Adding query parameters to your URL. See the separate section on
+  query parameters.
+* Psgeo.js tailorable parameters. At the beginning of the file
+   there are some parameters that can be modified. These can be used
+   to set the database you want to feed from, for instance. There are
+   some reasonable defaults, however, and you add to the defaults
+   (that are based on origin domain).
+* Modifying psgeo.js (as a last resort). If you're modifying
+  the rest of the code, please make a general improvement and submit
+  it to GitHub as an enhancement!
 

@@ -25,7 +25,7 @@ The modules are as follows:
 
 * PsgeoDB. This module represents an interface to a database of a set of places. The interface can be used to iterate over places and access all kinds of information from each place, but it hides the details of how the places are stored, whether they are in local memory or elsewhere. This is the main interface between Psgeo and the a database of information about places. Typically, place data is initialized from Activity JSON files, but whether that happens locally in the browser or somewhere else on the server side isn't visible to users of PsgeoDB. PsgeoDB runs always in the client, in the browser's Javascript engine, but it may communicate with the actual database backend at a server for actual access to data, filtering the data, etc. PsgeoDB typically holds only minimal amount of data itself (e.g., names and coordinates of places) but the actual data is held by the PsgeoDBBackend. The software for PsgeoDB module is in [psgeodb.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodb.js).
 
-* PsgeoDBBackend. This module implements an in-memory full database of the places. It can  be  run in the browser's Javascript engine, but could also be run in a server. Running the full database in the server offers some benefits, e.g., with respect limiting access to the full database data when it is sensitive. Only limited amount of information needs to be actually known by the Psgeo user interface, such as the coordinates, and textual data to be displayed for items clicked by the user. PsgeoDBBackend can contain all the information. Note that PsgeoDBBackend is still only an in-memory database -- the actual storage of the data for long-term storage can be in Activity JSON files, remote URLs, SQL databases, etc. The software for PsgeoDBBackend module is in [psgeodbbackend.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbbackend.js).
+* PsgeoDBBackend. This module implements an in-memory full database of the places. It can  be  run in the browser's Javascript engine, but could also be run in a server. Running the full database in the server offers some benefits, e.g., with respect limiting access to the full database data when it is sensitive. Only limited amount of information needs to be actually known by the Psgeo user interface, such as the coordinates, and textual data to be displayed for items clicked by the user. PsgeoDBBackend can contain all the information. Note that PsgeoDBBackend is still only an in-memory database -- the actual storage of the data for long-term storage can be in Activity JSON files, remote URLs, SQL databases, etc. Note that the software is designed to be able to use _multiple_ data sources, and in fact regularly does use them in. The software for PsgeoDBBackend module is in [psgeodbbackend.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbbackend.js).
 
 * PsgeoDBText. This module takes the information about a place and can turn it into a natural language description, HTML page to display, etc. The software for PsgeoDBText module is in [psgeodbtext.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbtext.js).
 
@@ -37,6 +37,8 @@ The modules are as follows:
 
 * PsgeoStat. This module is currently unused, and may be removed. The software for PsgeoDBStat module is in [psgeodbstat.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeostat.js).
 
+### Auxiliary Software
+
 In addition, there are software components that are not part of a running instance of Psgeo, but are used for testing etc. These are:
 
 * Makefile: runs tests, checks some things from the software, etc.
@@ -46,3 +48,5 @@ In addition, there are software components that are not part of a running instan
 ## Principles
 
 There are number of architectural principles or ideas that are form the core of the design, and have dictated some aspects of the structure.
+
+*Limited dependencies*
