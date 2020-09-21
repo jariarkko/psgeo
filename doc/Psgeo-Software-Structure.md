@@ -21,11 +21,11 @@ The modules are as follows:
 
 * Psgeo. This is the main user interface for Psgeo, and handles the instantiation of the relevant Google Maps maps, Psgeo databases, etc. The software for Psgeo module is in [psgeo.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeo.js).
 
-* PsgeoDB. The software for PsgeoDB module is in [psgeo.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodb.js).
+* PsgeoDB. The software for PsgeoDB module is in [psgeodb.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodb.js).
 
-* PsgeoDBBackend. The software for PsgeoDBBackend module is in [psgeo.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbbackend.js).
+* PsgeoDBBackend. The software for PsgeoDBBackend module is in [psgeodbbackend.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbbackend.js).
 
-* PsgeoDBText. The software for PsgeoDBText module is in [psgeo.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbtext.js).
+* PsgeoDBText. The software for PsgeoDBText module is in [psgeodbtext.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbtext.js).
 
 * PsgeoLib
 
@@ -33,6 +33,10 @@ The modules are as follows:
 
 * PsgeoSchema
 
+* PsgeoStat. This module is currently unused, and may be removed.
+
 In addition, there are software components that are not part of a running instance of Psgeo, but are used for testing etc. These are:
 
-* Psgeo
+* Makefile: runs tests, checks some things from the software, etc.
+
+* Tests: There is a unit test for every module in the software, and they are run every time changes are made in the software, to ensure that no errors have crept in. The files are [psgeodbbackendtest.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbbackendtest.js), [psgeodbtexttest.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbtexttest.js), [psgeolibtest.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeolibtest.js), [psgeostattest.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeostattest.js), [psgeodbtest.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeodbtest.js), [psgeolangtest.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeolangtest.js), [psgeoschematest.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeoschematest.js), and [psgeotest.js](https://github.com/jariarkko/psgeo/blob/master/lib/psgeotest.js).
