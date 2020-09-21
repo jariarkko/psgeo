@@ -68,3 +68,7 @@ There are number of architectural principles or ideas that are form the core of 
 **Continuous integration and automated testing**. These ensure that development can be happen easily and safely, and that errors in previously built functionality are quickly discovered when building new things.
 
 **Clean and agile**: Compact implementation, limited dependencies to other libraries, limited use of too new language/browser/library features, and the use of a single language (Javascript) contribute to our ability to keep the code clean enough to be able to be used for multiple purposes and in different environments.
+
+**Language independence**: All software pieces need to work with a general language utility (PsgeoLang) when they show user-visible UI elements or other descriptions with text. This does not apply to internal errors and debugging information.
+
+**Data format specification**: Activity JSON, the data format used by Psgeo is specified and document, rather than an internal feature of Psgeo.
