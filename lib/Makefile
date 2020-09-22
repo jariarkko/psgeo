@@ -11,8 +11,12 @@ TESTFILES	=	psgeotest.js \
 			psgeolibtest.js \
 			psgeostattest.js \
 			test.res.ok \
+			testlib.res.ok \
+			testschema.res.ok \
 			testlang.res.ok \
-			testdb.res.ok
+			testdb.res.ok \
+			testdbtext.res.ok \
+			testdbbackend.res.ok
 JSC	=	jsc
 
 all:	test \
@@ -20,8 +24,11 @@ all:	test \
 
 test:	test.res \
 	testlib.res \
+	testschema.res \
 	testlang.res \
 	testdb.res \
+	testdbbackend.res \
+	testdbtext.res \
 	teststat.res
 
 test.res:	$(SOURCES) $(TESTFILES)
@@ -32,9 +39,21 @@ test.res:	$(SOURCES) $(TESTFILES)
 
 testdb.res:	$(SOURCES) $(TESTFILES)
 	-@rm -f *.res
-	$(JSC) psgeolang.js psgeolib.js psgeodb.js psgeodbtest.js 2> testdb.res
+	$(JSC) psgeolang.js psgeolib.js psgeodb.js psgeodbtext.js psgeodbbackend.js psgeodbtest.js 2> testdb.res
 	diff testdb.res testdb.res.ok
 	rm -f testdb.res
+
+testdbtext.res:	$(SOURCES) $(TESTFILES)
+	-@rm -f *.res
+	$(JSC) psgeolang.js psgeolib.js psgeodb.js psgeodbtext.js psgeodbbackend.js psgeodbtexttest.js 2> testdbtext.res
+	diff testdbtext.res testdbtext.res.ok
+	rm -f testdbtext.res
+
+testdbbackend.res:	$(SOURCES) $(TESTFILES)
+	-@rm -f *.res
+	$(JSC) psgeolang.js psgeolib.js psgeodb.js psgeodbtext.js psgeodbbackend.js psgeodbbackendtest.js 2> testdbbackend.res
+	diff testdbbackend.res testdbbackend.res.ok
+	rm -f testdbbackend.res
 
 teststat.res:	$(SOURCES) $(TESTFILES)
 	-@rm -f *.res
@@ -47,6 +66,12 @@ testlib.res:	$(SOURCES) $(TESTFILES)
 	$(JSC) psgeolib.js psgeodb.js psgeolibtest.js 2> testlib.res
 	diff testlib.res testlib.res.ok
 	rm -f testlib.res
+
+testschema.res:	$(SOURCES) $(TESTFILES)
+	-@rm -f *.res
+	$(JSC) psgeolib.js psgeolang.js psgeoschema.js psgeoschematest.js 2> testschema.res
+	diff testschema.res testschema.res.ok
+	rm -f testschema.res
 
 testlang.res:	$(SOURCES) $(TESTFILES)
 	-@rm -f *.res
