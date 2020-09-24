@@ -115,4 +115,13 @@ Literature reference: Joo joo. Suomen luolat. Kesäläinen et al. Salakirjat
 
 
 --> filter b non-sensitive: Blaa blaa
+--> -- bug #231 test
+--> {"n":"Beijing","lat":39.904361,"lon":116.391317,"k":"Beijing","c":"China","o":"Asia","rl":[{"t":"Beijing Visit","y":2012,"m":3,"w":["Jari Arkko"],"a":["Biking"],"sa":[["Normal","Bike-Unknown","Track-Unknown"]]}],"s":"bug231"}
+--> BEIJING
+
+Coordinates: N 39.90436 E 116.39132 (http://www.google.com/maps/place/39.904361,116.391317)
+
+Biking on an unknown bike type and on an unknown track.
+
+
 --> test complete and successful

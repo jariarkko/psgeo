@@ -283,9 +283,10 @@ Internet-Draft                Activity JSON                     May 2020
 
 
       Track-City, Track-Road, Track-Trail, Track-Nature, Indoor,
-      Outdoor, and Underground.  In addition, Equipment can be used to
-      designate places and events that have to do with bike technology
-      or equipment.
+      Outdoor, and Underground.  Unknown bike types are represented with
+      Bike-Unknown and unknown track types with Track-Unknown.  In
+      addition, Equipment can be used to designate places and events
+      that have to do with bike technology or equipment.
 
    Canoeing
 
@@ -329,7 +330,6 @@ Internet-Draft                Activity JSON                     May 2020
          Morphology-Organic, and Morphology-Other.  In addition,
          Morphology-Unknown signifies that the morphology is not known.
 
-         More than one of these may appear in a single cave.
 
 
 
@@ -337,6 +337,8 @@ Arkko                   Expires November 2, 2020                [Page 6]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+         More than one of these may appear in a single cave.
 
          Note that while several types of Man-Made environments may
          exist, e.g., tunnels or bunkers.  These should additionally be
@@ -384,8 +386,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    Diving
 
-      There are no sub-activities.
-
 
 
 
@@ -393,6 +393,8 @@ Arkko                   Expires November 2, 2020                [Page 7]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      There are no sub-activities.
 
    Equipment
 
@@ -409,7 +411,9 @@ Internet-Draft                Activity JSON                     May 2020
    Sauna
 
       The sub-activities are Normal, Smoke, Steam, and Infrared.  The
-      sub-activity Unknown represents an unknown Sauna type.
+      sub-activity Unknown represents an unknown Sauna type, and Other a
+      type of a sauna that is not listed in the above.  The sub-activity
+      None represents that no actual sauna was being taken.
 
    Skiing
 
@@ -438,10 +442,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    Surfing
 
-      There are no sub-activities.
-
-   Swimming
-
 
 
 
@@ -449,6 +449,10 @@ Arkko                   Expires November 2, 2020                [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      There are no sub-activities.
+
+   Swimming
 
       Indoor, Outdoor, and Underground.  The items Beach and Nature can
       also specified for official and unofficial swimming spots.
@@ -494,10 +498,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-   Waterfalls
-
-      There are no sub-activities.
-
 
 
 
@@ -505,6 +505,10 @@ Arkko                   Expires November 2, 2020                [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   Waterfalls
+
+      There are no sub-activities.
 
    Meteorites
 
@@ -528,10 +532,6 @@ Internet-Draft                Activity JSON                     May 2020
              }
 
    Here's an example of a file with just one entry:
-
-
-
-
 
 
 

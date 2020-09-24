@@ -240,9 +240,11 @@
         Bike-Mountain, Bike-Unicycle, Bike-Tandem, Bike-Tricycle, and
         Bike-Other. The sub-activities about type of place to bike in
         are Track-City, Track-Road, Track-Trail, Track-Nature, Indoor,
-        Outdoor, and Underground. In addition, Equipment can be used
-        to designate places and events that have to do with bike
-        technology or equipment.</t>
+        Outdoor, and Underground. Unknown bike types are represented
+        with Bike-Unknown and unknown track types with
+        Track-Unknown. In addition, Equipment can be used to designate
+        places and events that have to do with bike technology or
+        equipment.</t>
         
         <t hangText="Canoeing"><vspace blankLines="1"/>
         There are no sub-activities.</t>
@@ -356,7 +358,9 @@
         
         <t hangText="Sauna"><vspace blankLines="1"/>
         The sub-activities are Normal, Smoke, Steam, and Infrared. The
-        sub-activity Unknown represents an unknown Sauna type.</t>
+        sub-activity Unknown represents an unknown Sauna type, and
+        Other a type of a sauna that is not listed in the above. The
+        sub-activity None represents that no actual sauna was being taken.</t>
         
         <t hangText="Skiing"><vspace blankLines="1"/> The
         sub-activities are Outdoor, Indoor, and Underground for the type of
