@@ -411,7 +411,9 @@ Internet-Draft                Activity JSON                     May 2020
    Sauna
 
       The sub-activities are Normal, Smoke, Steam, and Infrared.  The
-      sub-activity Unknown represents an unknown Sauna type.
+      sub-activity Unknown represents an unknown Sauna type, and Other a
+      type of a sauna that is not listed in the above.  The sub-activity
+      None represents that no actual sauna was being taken.
 
    Skiing
 
@@ -440,8 +442,6 @@ Internet-Draft                Activity JSON                     May 2020
 
    Surfing
 
-      There are no sub-activities.
-
 
 
 
@@ -449,6 +449,8 @@ Arkko                   Expires November 2, 2020                [Page 8]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+      There are no sub-activities.
 
    Swimming
 
@@ -496,8 +498,6 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
-   Waterfalls
-
 
 
 
@@ -505,6 +505,8 @@ Arkko                   Expires November 2, 2020                [Page 9]
 
 Internet-Draft                Activity JSON                     May 2020
 
+
+   Waterfalls
 
       There are no sub-activities.
 
@@ -530,8 +532,6 @@ Internet-Draft                Activity JSON                     May 2020
              }
 
    Here's an example of a file with just one entry:
-
-
 
 
 

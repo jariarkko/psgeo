@@ -358,7 +358,9 @@
         
         <t hangText="Sauna"><vspace blankLines="1"/>
         The sub-activities are Normal, Smoke, Steam, and Infrared. The
-        sub-activity Unknown represents an unknown Sauna type.</t>
+        sub-activity Unknown represents an unknown Sauna type, and
+        Other a type of a sauna that is not listed in the above. The
+        sub-activity None represents that no actual sauna was being taken.</t>
         
         <t hangText="Skiing"><vspace blankLines="1"/> The
         sub-activities are Outdoor, Indoor, and Underground for the type of
