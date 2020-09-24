@@ -240,9 +240,11 @@
         Bike-Mountain, Bike-Unicycle, Bike-Tandem, Bike-Tricycle, and
         Bike-Other. The sub-activities about type of place to bike in
         are Track-City, Track-Road, Track-Trail, Track-Nature, Indoor,
-        Outdoor, and Underground. In addition, Equipment can be used
-        to designate places and events that have to do with bike
-        technology or equipment.</t>
+        Outdoor, and Underground. Unknown bike types are represented
+        with Bike-Unknown and unknown track types with
+        Track-Unknown. In addition, Equipment can be used to designate
+        places and events that have to do with bike technology or
+        equipment.</t>
         
         <t hangText="Canoeing"><vspace blankLines="1"/>
         There are no sub-activities.</t>
