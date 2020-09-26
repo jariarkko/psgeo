@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<!-- https://luolaseura.fi/luolakanta/testi-slide-in-from-bottom.html -->
+
+<head>
+<meta name="viewport" content="width=device-width", initial-scale=1>
+<meta charset="utf-8">
+<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place when the page is scolled */
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    // darken the whole screen with grey 0.1 opacity
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 100px;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+.dialogHeader {
+    padding: 5px;
+}
+.dialogPayload {
+    padding: 10px;
+}
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+
+</script>
+
+<script>
+    // dialog                [div] 100% grayed out
+    //   modalContent        [div] 80% max 10cm white
+    //     dialogHeader      [div] padding 5
+    //       closeBox        [span] float right
+    //         closeBtn      [textnode] &times;
+    //     dialogPayload     [div] padding 10
+    //       innerHTML       content created by psgeo
+    var closeBtn = document.createTextNode("\u00d7");
+    var closeBox = document.createElement('span');
+        closeBox.setAttribute("class","close");
+        closeBox.appendChild(closeBtn);
+        closeBox.onclick = function() { dialog.style.display = "none"; }
+    var dialogHeader = document.createElement("div");
+        dialogHeader.setAttribute("class", "dialogHeader");
+        dialogHeader.setAttribute("id", "dialogHeader");
+        dialogHeader.appendChild(closeBox);
+    var dialogPayload = document.createElement("div");
+        dialogPayload.setAttribute("class", "dialogPayload");
+        dialogPayload.setAttribute("id", "dialogPayload");
+    var modalContent = document.createElement('div');
+        modalContent.setAttribute("class", "modal-content");
+        modalContent.appendChild(dialogHeader);
+        modalContent.appendChild(dialogPayload);
+    var dialog = document.createElement('div');
+        dialog.setAttribute("class", "modal");
+        dialog.setAttribute("id", "dialog");
+        dialog.appendChild(modalContent);
+    window.onclick = function(event) {    // easy close
+        if (event.target == dialog) { dialog.style.display = "none"; }
+        }
+
+    //  AND SIMPLY FOR TESTING:
+        dialogPayload.innerHTML=("Testi! Testi! Testi! Testi! Testi! Testi! Testi! Testi! Testi!");
+        document.getElementById("map").appendChild(dialog);
+        // An open button
+        var opentext = document.createTextNode("AVAA DIALOGI");
+        var openBtn = document.createElement("button");
+        openBtn.appendChild(opentext);
+        document.body.appendChild(openBtn);
+        openBtn.onclick = function() { dialog.style.display = "block"; }
+
+</script>
+</body>
+</html>
