@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<style>
+/* The Modal (background) */
+.modal {
+    // display: none; /* Hidden by default */
+    position: fixed; /* Stay in place when the page is scolled */
+    z-index: 2;
+    left: 0;
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    // darken the whole screen with grey 0.1 opacity
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #aaa;
+    width: 80%; /* big and nice on smartphone */
+    max-width: 10cm; /* not overly wide on desktop */
+    border-radius: 25px; /* could also set each 4 separately  */
+    box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+    var modalContent = document.createElement('div');
+        modalContent.setAttribute("class", "modal-content");
+    var dialog = document.createElement('div');
+        dialog.setAttribute("class", "modal");
+        dialog.setAttribute("id", "dialog");
+        dialog.appendChild(modalContent);
+    //  AND SIMPLY FOR TESTING:
+        var text = document.createTextNode("Testi!");
+        modalContent.appendChild(text);
+        document.getElementById("map").appendChild(dialog);
+</script>
+</body>
+</html>
