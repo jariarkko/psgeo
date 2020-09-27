@@ -1,0 +1,91 @@
+/* MODAL DIALOG - DARKENED BACKGROUND */
+.modal {
+    /* visibility toggle */
+    display: none;
+    /* position and size */
+    z-index: 2;
+    position: fixed; /* Stay in place when the page is scolled */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    /* looks */
+    /* darken the whole screen with grey 0.1 opacity  */
+    background-color: rgb(0,0,0); /* Fallback */
+    background-color: rgba(0,0,0,0.1); 
+}
+
+/* MODAL DIALOG - CENTERED BOX */
+.modal-content-center {
+    /* position and size */
+    margin: 15% auto; /* 15% from the top and centered */
+    width: 80%; /* big and nice on smartphone */
+    max-width: 10cm; /* not overly wide on desktop */
+    /* looks */
+    border: none;
+    border-radius: 12px; /* could also set each 4 separately  */
+    box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.2);
+    background-color: white;
+    padding: 0;
+}
+
+/* MODAL DIALOG - SLIDES IN FROM BOTTOM */
+.modal-content-bottom {
+    /* position and size */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* looks */
+    background-color: white;
+    padding-bottom: 100px;
+    /* animation */
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+
+/* DIALOG DETAIL */
+.dialogHeader {
+    padding: 5px;
+}
+.dialogPayload {
+    padding: 10px;
+}
+/* The Close Button in the header */
+.close {
+  color: black;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ANIMATION */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
