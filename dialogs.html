@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width", initial-scale=1>
+<meta name="viewport" content="width=device-width", initial-scale="1">
 <meta charset="utf-8">
 <link rel="stylesheet" href="dialog.css">
 </head>
@@ -10,17 +10,31 @@
 <div id="map"></div>
 
 <script>
-function createDialog(dialogStyle,dialogContent) {
-    console.log("Entered createDialog");
-    // choose dialog style sheet
-    var stylesheet;
-    switch (dialogStyle) {
-        case "center": stylesheet = "modal-content-center"; break;;
-        case "bottom": stylesheet = "modal-content-bottom"; break;;
-        default:       stylesheet = "modal-content-center";; // Error
-    }
 
-    console.log("Style is "+dialogStyle+" and stylesheet is "+stylesheet);
+function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decoration) {
+    // dialogPlacement    string, "Center" or "Bottom". Placing on screen.
+    // headerHtml         string, HTML. Must be '' or non-empty. Undefined is not allowed.
+    // dialogContent      string, HTML and JS. The contents of the dialog.
+    // footerHtml         string, HTML. Must be '' or non-empty. Undefined is not allowed.
+    // decoration         boolean. True enables CSS classes
+    //                    .footerCenterDecorated or .footerBottomDecorated
+
+
+    // choose dialog style sheet
+    var dialogStyle;
+    var footerStyle;
+    switch (dialogPlacement) {
+        case "Center":   dialogStyle = "modal-content-center";
+                         if (decoration===true) footerStyle="dialogFooterCenterDecorated";
+                         else footerStyle="dialogFooterCenter";
+                         break;;
+        case "Bottom":   dialogStyle = "modal-content-bottom";
+                         if (decoration===true) footerStyle="dialogFooterBottomDecorated";
+                         else footerStyle="dialogFooterBottom";
+                         break;;
+        default:         dialogStyle = "modal-content-center"; // Error
+                         footerStyle= "footerCenter"; // Error
+    }
 
     // dialog                [div] 100%, grayed out (0.1)
     //   modalContent        [div] 80% max 10cm OR 100% slide in from bottom
@@ -29,6 +43,13 @@ function createDialog(dialogStyle,dialogContent) {
     //         closeBtn      [textnode] &times;
     //     dialogPayload     [div] padding 10
     //       innerHTML       content created by psgeo
+    //     dialogFooter      [div]
+    //
+    // NOTE: dialog, dialogHeader, dialogPayload, dialogFooter contain
+    //       either "Center" or "Bottom" to assert id uniqueness.
+    //       Same applies to dialog style and footer style and
+    //       in addition there are optional decorated footer styles.
+
     var closeBtn = document.createTextNode("\u00d7");
     var closeBox = document.createElement('span');
         closeBox.setAttribute("class","close");
@@ -36,50 +57,76 @@ function createDialog(dialogStyle,dialogContent) {
         closeBox.onclick = function() { dialog.style.display = "none"; }
     var dialogHeader = document.createElement("div");
         dialogHeader.setAttribute("class", "dialogHeader");
-        dialogHeader.setAttribute("id", "dialogHeader");
+        dialogHeader.setAttribute("id", "dialogHeader"+dialogPlacement);
         dialogHeader.appendChild(closeBox);
+    if (headerHtml != '' ) {
+    var headerHtmlNode = document.createElement("div");
+        headerHtmlNode.innerHTML=headerHtml;
+        dialogHeader.appendChild(headerHtmlNode);
+        }
     var dialogPayload = document.createElement("div");
         dialogPayload.setAttribute("class", "dialogPayload");
-        dialogPayload.setAttribute("id", "dialogPayload");
+        dialogPayload.setAttribute("id", "dialogPayload"+dialogPlacement);
         dialogPayload.innerHTML=dialogContent;
+    var dialogFooter = document.createElement("div");
+        dialogFooter.setAttribute("class", footerStyle); // FOOTER STYLE
+        dialogFooter.setAttribute("id", "dialogFooter"+dialogPlacement);
+    if (footerHtml != '' ) {
+    var footerHtmlNode = document.createElement("div");
+        footerHtmlNode.innerHTML=footerHtml;
+        dialogFooter.appendChild(footerHtmlNode);
+        }
     var modalContent = document.createElement('div');
-        modalContent.setAttribute("class", stylesheet); // from arguments
+        modalContent.setAttribute("class", dialogStyle); // DIALOG STYLE
         modalContent.appendChild(dialogHeader);
         modalContent.appendChild(dialogPayload);
+        modalContent.appendChild(dialogFooter);
     var dialog = document.createElement('div');
-        dialog.setAttribute("class", "modal");
-        dialog.setAttribute("id", "dialog");
+        dialog.setAttribute("class", "modal"); // greyed out background
+        dialog.setAttribute("id", "dialog"+dialogPlacement);
         dialog.appendChild(modalContent);
-    window.onclick = function(event) {    // easy close
-        if (event.target == dialog) { dialog.style.display = "none"; }
-        }
-
-    console.log("Dialog created");
+        dialog.addEventListener("click", function(e){
+            // EXPLICIT NAMES INSTEAD OF "THIS"
+            if (e.target == dialogBottom || e.target == dialogCenter) { 
+                e.target.style.display='none'; }
+        //  if (e.target===this) this.style.display="none"; 
+        }, false);
 
     return(dialog);
 }
 
-    //  AND SIMPLY FOR TESTING:
-        console.log("Starting");
-        var filterContent1="Testi! Testi! Testi! Testi! Testi! Testi! Testi! Testi! Testi!";
-        var filterContent2="TESTI! TESTI! TESTI! TESTI!<br>TESTI! TESTI! TESTI! TESTI!";
-        var filterDialogCenter = new createDialog("center",filterContent1);
-        var filterDialogBottom = new createDialog("bottom",filterContent2);
+//////////////////////////////////////////////////////////////////////////
 
-        document.getElementById("map").appendChild(filterDialogCenter);
-        document.getElementById("map").appendChild(filterDialogBottom);
+    // CREATE DIALOGS 
+    var statsLine1='<p align="center">Centered text 1 2 3 4 5 6 7 8 9</p>';
+    var statsLine2='Left aligned text 1 2 3 4 5 6 7 8 9';
+    var filterContent1="Testi! Testi! Testi! Testi! Testi! Testi! Testi! Testi! Testi!";
+    var filterContent2="TESTI! TESTI! TESTI! TESTI!<br>TESTI! TESTI! TESTI! TESTI!";
+    var filterDialogCenter = new createDialog("Center",'<h3>Optional header</h3>',filterContent1,statsLine1,true);
+    var filterDialogBottom = new createDialog("Bottom",'<h3>Optional header</h3>',filterContent2,statsLine2,true);
 
-        // An open button
-        var opentext1 = document.createTextNode("AVAA DIALOGI KESKELLE");
-        var opentext2 = document.createTextNode("AVAA DIALOGI ALAS");
-        var openBtn1 = document.createElement("button");
-        var openBtn2 = document.createElement("button");
+    // PLACE DIALOGS IN DOM
+    document.getElementById("map").appendChild(filterDialogCenter); //document.body.appendChild...
+    document.getElementById("map").appendChild(filterDialogBottom);
+
+    // OPEN/CLOSE PROGRAMMATICALLY
+    //    filterDialogBottom.style.display='block';
+    //    filterDialogBottom.style.display='none';
+    //    OR getElementById("dialogBottom")
+
+    // CREATE OPEN BUTTONS
+    var opentext1 = document.createTextNode("AVAA DIALOGI KESKELLE");
+    var openBtn1 = document.createElement("button");
         openBtn1.appendChild(opentext1);
-        openBtn2.appendChild(opentext2);
-        document.body.appendChild(openBtn1);
-        document.body.appendChild(openBtn2);
         openBtn1.onclick = function() { filterDialogCenter.style.display = "block"; }
+    var opentext2 = document.createTextNode("AVAA DIALOGI ALAS");
+    var openBtn2 = document.createElement("button");
+        openBtn2.appendChild(opentext2);
         openBtn2.onclick = function() { filterDialogBottom.style.display = "block"; }
+    document.body.appendChild(openBtn1);
+    document.body.appendChild(openBtn2);
+
+// TODO: header innerHTML as argument
 
 </script>
 </body>

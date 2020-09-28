@@ -38,7 +38,6 @@
     width: 100%;
     /* looks */
     background-color: white;
-    padding-bottom: 100px;
     /* animation */
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
@@ -50,10 +49,37 @@
 /* DIALOG DETAIL */
 .dialogHeader {
     padding: 5px;
+    padding-left: 10px;
 }
+.dialogHeader span {
+    float: right;
+}
+
 .dialogPayload {
     padding: 10px;
 }
+.dialogFooterCenter {
+    padding: 10px;
+    font-size: 12px;
+}
+.dialogFooterCenterDecorated {
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    font-size: 12px;
+    border-top: 1px solid red;
+}
+.dialogFooterBottom {
+    padding: 10px;
+    font-size: 12px;
+}
+.dialogFooterBottomDecorated {
+    padding: 10px;
+    font-size: 12px;
+    border-left: 10px solid blue;
+}
+// border-top: 1px solid red;
+
 /* The Close Button in the header */
 .close {
   color: black;
