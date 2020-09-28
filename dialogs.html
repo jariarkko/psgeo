@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width", initial-scale="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <link rel="stylesheet" href="dialog.css">
 </head>
@@ -12,7 +12,7 @@
 <script>
 
 function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decoration) {
-    // dialogPlacement    string, "Center" or "Bottom". Placing on screen.
+    // dialogPlacement    string, "Center" or "Bottom" or "Left". Placing on screen.
     // headerHtml         string, HTML. Must be '' or non-empty. Undefined is not allowed.
     // dialogContent      string, HTML and JS. The contents of the dialog.
     // footerHtml         string, HTML. Must be '' or non-empty. Undefined is not allowed.
@@ -32,6 +32,10 @@ function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decora
                          if (decoration===true) footerStyle="dialogFooterBottomDecorated";
                          else footerStyle="dialogFooterBottom";
                          break;;
+        case "Left":     dialogStyle = "modal-content-left";
+                         if (decoration===true) footerStyle="dialogFooterLeftDecorated";
+                         else footerStyle="dialogFooterLeft";
+                         break;;
         default:         dialogStyle = "modal-content-center"; // Error
                          footerStyle= "footerCenter"; // Error
     }
@@ -46,7 +50,7 @@ function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decora
     //     dialogFooter      [div]
     //
     // NOTE: dialog, dialogHeader, dialogPayload, dialogFooter contain
-    //       either "Center" or "Bottom" to assert id uniqueness.
+    //       either "Center" or "Bottom" or "Left" to assert id uniqueness.
     //       Same applies to dialog style and footer style and
     //       in addition there are optional decorated footer styles.
 
@@ -87,7 +91,7 @@ function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decora
         dialog.appendChild(modalContent);
         dialog.addEventListener("click", function(e){
             // EXPLICIT NAMES INSTEAD OF "THIS"
-            if (e.target == dialogBottom || e.target == dialogCenter) { 
+            if (e.target == dialogBottom || e.target == dialogCenter || e.target == dialogLeft) { 
                 e.target.style.display='none'; }
         //  if (e.target===this) this.style.display="none"; 
         }, false);
@@ -100,14 +104,18 @@ function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decora
     // CREATE DIALOGS 
     var statsLine1='<p align="center">Centered text 1 2 3 4 5 6 7 8 9</p>';
     var statsLine2='Left aligned text 1 2 3 4 5 6 7 8 9';
+    var statsLine3='1 2 3 4 5';
     var filterContent1="Testi! Testi! Testi! Testi! Testi! Testi! Testi! Testi! Testi!";
     var filterContent2="TESTI! TESTI! TESTI! TESTI!<br>TESTI! TESTI! TESTI! TESTI!";
+    var filterContent3="TESTI! TESTI!<br>TESTI! TESTI!<br>TESTI! TESTI!<br>TESTI! TESTI!";
     var filterDialogCenter = new createDialog("Center",'<h3>Optional header</h3>',filterContent1,statsLine1,true);
     var filterDialogBottom = new createDialog("Bottom",'<h3>Optional header</h3>',filterContent2,statsLine2,true);
+    var filterDialogLeft = new createDialog("Left",'<h3>Header</h3>',filterContent3,statsLine3,true);
 
     // PLACE DIALOGS IN DOM
     document.getElementById("map").appendChild(filterDialogCenter); //document.body.appendChild...
     document.getElementById("map").appendChild(filterDialogBottom);
+    document.getElementById("map").appendChild(filterDialogLeft);
 
     // OPEN/CLOSE PROGRAMMATICALLY
     //    filterDialogBottom.style.display='block';
@@ -123,8 +131,13 @@ function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decora
     var openBtn2 = document.createElement("button");
         openBtn2.appendChild(opentext2);
         openBtn2.onclick = function() { filterDialogBottom.style.display = "block"; }
+    var opentext3 = document.createTextNode("AVAA DIALOGI VASEMMALLE");
+    var openBtn3 = document.createElement("button");
+        openBtn3.appendChild(opentext3);
+        openBtn3.onclick = function() { filterDialogLeft.style.display = "block"; }
     document.body.appendChild(openBtn1);
     document.body.appendChild(openBtn2);
+    document.body.appendChild(openBtn3);
 
 // TODO: header innerHTML as argument
 

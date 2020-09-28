@@ -45,6 +45,23 @@
     animation-duration: 0.4s
 }
 
+/* MODAL DIALOG - SLIDES IN FROM LEFT */
+.modal-content-left {
+    /* position and size */
+    position: fixed;
+    left: 0;
+    height: 100%;
+    padding-top: 30px;
+    /* looks */
+    background-color: white;
+    opacity: 0.8; 
+    /* animation */
+    -webkit-animation-name: slideInLeft;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideInLeft;
+    animation-duration: 0.4s
+}
+
 
 /* DIALOG DETAIL */
 .dialogHeader {
@@ -78,6 +95,15 @@
     font-size: 12px;
     border-left: 10px solid blue;
 }
+.dialogFooterLeft {
+    padding: 10px;
+    font-size: 12px;
+}
+.dialogFooterLeftDecorated {
+    padding: 10px;
+    font-size: 12px;
+    border-top: 1px solid red;
+}
 // border-top: 1px solid red;
 
 /* The Close Button in the header */
@@ -103,6 +129,16 @@
 @keyframes slideIn {
   from {bottom: -300px; opacity: 0}
   to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes slideInLeft {
+  from {left: -300px; opacity: 0} 
+  to {left: 0; opacity: 1}
+}
+
+@keyframes slideInLeft {
+  from {left: -300px; opacity: 0}
+  to {left: 0; opacity: 1}
 }
 
 @-webkit-keyframes fadeIn {
