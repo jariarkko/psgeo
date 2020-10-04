@@ -191,13 +191,14 @@ Hyypiänmäki massive roof cave https://planetskier.blogspot.com/2020/08/hyypian
 Kirjallisuusviite: U59 Hyypiänmäen lippaluola. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
 
 
+--> alternative names = []
 --> KORKBERGETIN LOHKARELUOLA, KIRKKONUMMI
 
 Map entry: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkeloisen verkoston pituus on pidempi kuin muissa tunnetuissa suomalaisissa luolissa. Luola on n. 25 metrisen kallionjyrkänteen ja Humaljärven välissä. Luolasta löytyy tarkka kartta. Basic entry: Luolan tunniste U22. Geneettis-morfologinen luokitus {E}. Valtava lohkaresokkelo.
 
 Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (Map entry). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (Basic entry, 43m etäisyydellä).
 
-Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6m. Materiaali: muu kivi kuin vulkaaninen tai sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily ja kartoitus. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1 ja Korkbergetin luolat.
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6m. Materiaali: muu kivi kuin vulkaaninen tai sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily ja kartoitus. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
 
 Luettavaa:
 The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html (JA,JA,JR... '16)
@@ -208,6 +209,7 @@ Luolia Suomessa, Korkberget https://luolaseura.fi/suomessa/luolia-suomessa/#Kork
 Kirjallisuusviite: U22 Korkbergetin luolat. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
 
 
+--> alternative names = ["Korkbergetin eli Korpbergetin luolat 1, Kirkkonummi","Korkbergetin luolat, Kirkkonummi","Korkbergetin luolat","Korpbergetin luolat"]
 --> -- video tests
 --> HULUBERGSGROTTAN, SIPOO
 
@@ -545,4 +547,68 @@ Article https://example.net
 --> in set 7: item-snowboarding
 --> in set 7: item-sliding
 --> in set 8: item-sliding
+--> -- quick subsumption tests
+--> 
+--> Test case basic Javascript
+--> jslist1 = [{"foo":1,"bar":2,"snaap":3}]
+--> jslist2 = [{"foo":1,"bar":2,"snaap":3}]
+--> 
+--> Test case QS1:
+--> 
+--> Test case QS2:
+--> QS2: KORKBERGETIN LOHKARELUOLA, KIRKKONUMMI
+
+QS2: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkeloisen verkoston pituus on pidempi kuin muissa kartoitetuissa suomalaisissa luolissa. Luola on n. 25 metrisen kallionjyrkänteen ja Humaljärven välissä. Luolasta löytyy tarkka kartta. QS2: Luolan tunniste U22. Geneettis-morfologinen luokitus {E}.  Valtava lohkaresokkelo.
+
+Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (QS2). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (QS2, 43m etäisyydellä).
+
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6m. Materiaali: muu kivi kuin vulkaaninen tai sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily ja kartoitus. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+
+Luettavaa:
+The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html ja video (https://vimeo.com/197046265) (JA,JA,JR... '16)
+A Pile of Rocks https://planetskier.blogspot.com/2016/01/a-pile-of-rocks.html ja video (https://vimeo.com/150548167) (JA,JA,JR... '15)
+More cave photo & flash exercise https://planetskier.blogspot.com/2018/10/more-cave-photo-flash-exercise.html (JA,JP&JR '18)
+Virtual caving club meeting. In a cave. https://planetskier.blogspot.com/2020/04/virtual-caving-club-meeting-in-cave.html (JA,JR,RS... '20)
+Luolia Suomessa, Korkberget https://luolaseura.fi/suomessa/luolia-suomessa/#Korkbergetin%20lohkareluola (SL '20)
+Kirjallisuusviite: U22 Korkbergetin luolat. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+
+
+--> 
+--> Test case QS3:
+--> QS3: KORKBERGETIN LOHKARELUOLA, KIRKKONUMMI
+
+QS2: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkeloisen verkoston pituus on pidempi kuin muissa kartoitetuissa suomalaisissa luolissa. Luola on n. 25 metrisen kallionjyrkänteen ja Humaljärven välissä. Luolasta löytyy tarkka kartta. QS2: Luolan tunniste U22. Geneettis-morfologinen luokitus {E}.  Valtava lohkaresokkelo.
+
+Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (QS2). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (QS2, 43m etäisyydellä).
+
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6m. Materiaali: muu kivi kuin vulkaaninen tai sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily ja kartoitus. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+
+Luettavaa:
+The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html ja video (https://vimeo.com/197046265) (JA,JA,JR... '16)
+A Pile of Rocks https://planetskier.blogspot.com/2016/01/a-pile-of-rocks.html ja video (https://vimeo.com/150548167) (JA,JA,JR... '15)
+More cave photo & flash exercise https://planetskier.blogspot.com/2018/10/more-cave-photo-flash-exercise.html (JA,JP&JR '18)
+Virtual caving club meeting. In a cave. https://planetskier.blogspot.com/2020/04/virtual-caving-club-meeting-in-cave.html (JA,JR,RS... '20)
+Luolia Suomessa, Korkberget https://luolaseura.fi/suomessa/luolia-suomessa/#Korkbergetin%20lohkareluola (SL '20)
+Kirjallisuusviite: U22 Korkbergetin luolat. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+
+
+--> 
+--> Test case QS4:
+--> QS4: KORKBERGETIN LOHKARELUOLA, KIRKKONUMMI
+
+QS2: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkeloisen verkoston pituus on pidempi kuin muissa kartoitetuissa suomalaisissa luolissa. Luola on n. 25 metrisen kallionjyrkänteen ja Humaljärven välissä. Luolasta löytyy tarkka kartta. QS2: Luolan tunniste U22. Geneettis-morfologinen luokitus {E}.  Valtava lohkaresokkelo.
+
+Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (QS2). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (QS2, 43m etäisyydellä).
+
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6m. Materiaali: muu kivi kuin vulkaaninen tai sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily ja kartoitus. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+
+Luettavaa:
+The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html ja video (https://vimeo.com/197046265) (JA,JA,JR... '16)
+A Pile of Rocks https://planetskier.blogspot.com/2016/01/a-pile-of-rocks.html ja video (https://vimeo.com/150548167) (JA,JA,JR... '15)
+More cave photo & flash exercise https://planetskier.blogspot.com/2018/10/more-cave-photo-flash-exercise.html (JA,JP&JR '18)
+Virtual caving club meeting. In a cave. https://planetskier.blogspot.com/2020/04/virtual-caving-club-meeting-in-cave.html (JA,JR,RS... '20)
+Luolia Suomessa, Korkberget https://luolaseura.fi/suomessa/luolia-suomessa/#Korkbergetin%20lohkareluola (SL '20)
+Kirjallisuusviite: U22 Korkbergetin luolat. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+
+
 --> test complete and successful
