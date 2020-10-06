@@ -1,3 +1,24 @@
+// /* start of desktop styles */
+//
+// @media screen and (max-width: 991px) {
+// /* start of large tablet styles */
+//
+// }
+//
+// @media screen and (max-width: 767px) {
+// /* start of medium tablet styles */
+//
+// }
+//
+// @media screen and (max-width: 479px) {
+// /* start of phone styles */
+//
+// }
+
+// Common viewport widths: 360,412,480 (Android phones) and 375,414 (iPhone) and 768- (tablets)
+
+
+
 /* MODAL DIALOG - DARKENED BACKGROUND */
 .modal {
     /* visibility toggle */
