@@ -30,8 +30,7 @@ function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decora
 
     // 1) center, bottom or left
     switch (dialogPlacement) {
-        case "Center":   if (!modal) dialogStyle = "content-center";  // no margins (set in script)
-                         else dialogStyle = "content-center-modal";   // explicit margins
+        case "Center":   dialogStyle = "content-center";
  
                          if (decoration===true) footerStyle="dialogFooterCenterDecorated";
                          else footerStyle="dialogFooterCenter";
@@ -113,7 +112,7 @@ function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decora
         dialogFooter.appendChild(footerHtmlNode);
         }
     var content = document.createElement('div');
-        content.setAttribute("class", dialogStyle); // DIALOG STYLE center/bottom/left
+        content.setAttribute("class", dialogStyle);
         content.appendChild(dialogHeader);
         content.appendChild(dialogPayload);
         content.appendChild(dialogFooter);
@@ -131,7 +130,7 @@ function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decora
         }, false);
     } 
 
-    if ( !modal && dialogPlacement == "Center" ) {
+    if ( dialogPlacement == "Center" ) {
         console.log("dialogMode: "+dialogMode+" dialogPlacement: "+dialogPlacement);
 
         // calculate absolute margins
@@ -144,19 +143,18 @@ function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decora
             ypos=ypos.toFixed(0); // round to integer
             console.log("screen: " + window.innerHeight + "px. " + top + "% margin is " + ypos + "px. Rounded to integer.");
 
-        // apply margins
-        console.log("Setting left: "+xpos+"px");
-        dialog.style.left=xpos+"px";
-
-        console.log("Setting top: "+ypos+"px");
-        dialog.style.top=ypos+"px";
-
-        // translate window
-
-        console.log("Setting transform: translate("+xlate+"%,"+ylate+"%)");
-        dialog.style.transform="translate("+xlate+"%,"+ylate+"%)";
-
-        if (!modal) dragElement(dialog);
+        if (!modal) {        
+            //   dialog.style.left=xpos+"px";
+            //   dialog.style.top=ypos+"px";
+            //   dialog.style.transform="translate("+xlate+"%,"+ylate+"%)";
+            dialog.style.transform="translate("+xpos+"px,"+ypos+"px) translate("+xlate+"%,"+ylate+"%)";
+            // allow dragging
+            dragElement(dialog);
+        } else {
+            // for some reason left: and top: margins are ignored
+            // (they SHOULD work with fixed too, but no!)
+            content.style.transform="translate("+xpos+"px,"+ypos+"px) translate("+xlate+"%,"+ylate+"%)";
+        }
     }
     return (dialog);
 }
@@ -265,7 +263,7 @@ function touchDragElement(container,elmnt) {
     var filterContent2="TESTI! TESTI! TESTI! TESTI!<br>TESTI! TESTI! TESTI! TESTI!";
     var filterContent3="TESTI! TESTI!<br>TESTI! TESTI!<br>TESTI! TESTI!<br>TESTI! TESTI!";
 
-    var filterDialogCenter = new createDialog("Center",'<h3>Modal</h3>',filterContent1,statsLine1,true,true);
+    var filterDialogCenter = new createDialog("Center",'<h3>Modal</h3>',filterContent1,statsLine1,true,true,[50,50,-50,-50]);
     var filterDialogBottom = new createDialog("Bottom",'<h3>Modal</h3>',filterContent2,statsLine2,true,true);
     var filterDialogLeft = new createDialog("Left",'<h3>Modal</h3>',filterContent3,statsLine3,true,true);
 

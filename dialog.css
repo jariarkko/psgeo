@@ -31,16 +31,6 @@
 /* ** THREE ALTERNATIVE PLACEMENT STYLES BELOW ** */
 
 /* DIALOG - CENTERED BOX */
-.content-center-modal {
-    margin: 7% auto;     /* horizontally centered */
-    width: 80%;           /* big and nice on smartphone */
-    max-width: 10cm;      /* not overly wide on desktop */
-    border: none;         /* rounded corners */
-    border-radius: 12px;  /* - could also set each 4 separately  */
-    box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.2);
-    background-color: white;
-    padding: 0;
-}
 .content-center {
     width: 80%;           /* big and nice on smartphone */
     max-width: 10cm;      /* not overly wide on desktop */
