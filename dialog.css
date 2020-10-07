@@ -1,82 +1,77 @@
-// /* start of desktop styles */
-//
-// @media screen and (max-width: 991px) {
-// /* start of large tablet styles */
-//
-// }
-//
-// @media screen and (max-width: 767px) {
-// /* start of medium tablet styles */
-//
-// }
-//
-// @media screen and (max-width: 479px) {
-// /* start of phone styles */
-//
-// }
-
-// Common viewport widths: 360,412,480 (Android phones) and 375,414 (iPhone) and 768- (tablets)
-
-
+/* MAP */
+.map {
+    /* position: relative */
+    width=100%;
+}
 
 /* MODAL DIALOG - DARKENED BACKGROUND */
 .modal {
-    /* visibility toggle */
-    display: none;
-    /* position and size */
-    z-index: 2;
-    position: fixed; /* Stay in place when the page is scolled */
+    display: none;        /* initially hidden */
+    z-index: 20;          /* on top */
+    position: fixed;      /* shade stays in place when page is scrolled */
     left: 0;
     top: 0;
-    width: 100%; 
+    width: 100%;          /* size */
     height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    /* looks */
-    /* darken the whole screen with grey 0.1 opacity  */
-    background-color: rgb(0,0,0); /* Fallback */
-    background-color: rgba(0,0,0,0.1); 
+    background-color: rgb(0,0,0);      /* fallback black */
+    background-color: rgba(0,0,0,0.1); /* opacity 0.1 grey */
+    overflow: auto;       /* enable scroll if needed */
 }
 
-/* MODAL DIALOG - CENTERED BOX */
-.modal-content-center {
-    /* position and size */
-    margin: 15% auto; /* 15% from the top and centered */
-    width: 80%; /* big and nice on smartphone */
-    max-width: 10cm; /* not overly wide on desktop */
-    /* looks */
-    border: none;
-    border-radius: 12px; /* could also set each 4 separately  */
+/* PALETTE DIALOG - ACTIVE BACKGROUND - LEFT/BOTTOM SLIDE-OUT PALETTES */
+.palette {
+    display: none;        /* initially hidden */
+    z-index: 10;          /* between modal window and main content */
+    position: absolute;   /* window is animated */
+    /* no size definition; shrink around content; expose background */
+    overflow: auto;       /* Enable scroll if needed */
+}
+
+
+/* ** THREE ALTERNATIVE PLACEMENT STYLES BELOW ** */
+
+/* DIALOG - CENTERED BOX */
+.content-center-modal {
+    margin: 7% auto;     /* horizontally centered */
+    width: 80%;           /* big and nice on smartphone */
+    max-width: 10cm;      /* not overly wide on desktop */
+    border: none;         /* rounded corners */
+    border-radius: 12px;  /* - could also set each 4 separately  */
+    box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.2);
+    background-color: white;
+    padding: 0;
+}
+.content-center {
+    width: 80%;           /* big and nice on smartphone */
+    max-width: 10cm;      /* not overly wide on desktop */
+    border: none;         /* rounded corners */
+    border-radius: 12px;  /* - could also set each 4 separately  */
     box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.2);
     background-color: white;
     padding: 0;
 }
 
-/* MODAL DIALOG - SLIDES IN FROM BOTTOM */
-.modal-content-bottom {
-    /* position and size */
+/* DIALOG - SLIDES IN FROM BOTTOM */
+.content-bottom {
     position: fixed;
     bottom: 0;
     width: 100%;
-    /* looks */
     background-color: white;
-    /* animation */
+    opacity: 1;
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
     animation-duration: 0.4s
 }
 
-/* MODAL DIALOG - SLIDES IN FROM LEFT */
-.modal-content-left {
-    /* position and size */
+/* DIALOG - SLIDES IN FROM LEFT */
+.content-left {
     position: fixed;
     left: 0;
     height: 100%;
-    padding-top: 30px;
-    /* looks */
+    padding-top: 40px;       /* no overlap with tools on top! */
     background-color: white;
-    opacity: 0.8; 
-    /* animation */
+    opacity: 0.8;            /* because it is possible :) */
     -webkit-animation-name: slideInLeft;
     -webkit-animation-duration: 0.4s;
     animation-name: slideInLeft;
@@ -84,9 +79,12 @@
 }
 
 
-/* DIALOG DETAIL */
+/* ** DIALOG INTERNALS BELOW ** */
+
+/* DIALOG HEADER AND PAYLOAD STYLES */
+
 .dialogHeader {
-    padding: 5px;
+    padding: 5px;            /* keep a distance to rounded corners */
     padding-left: 10px;
 }
 .dialogHeader span {
@@ -96,6 +94,24 @@
 .dialogPayload {
     padding: 10px;
 }
+
+/* CLOSE BUTTON IN HEADER */
+
+.close {
+  color: black;
+  float: right;
+  font-size: 24px;            /* IDEALLY dependent on viewport */
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;                 /* black is boring */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* DIALOG FOOTER STYLES */
+
 .dialogFooterCenter {
     padding: 10px;
     font-size: 12px;
@@ -125,23 +141,9 @@
     font-size: 12px;
     border-top: 1px solid red;
 }
-// border-top: 1px solid red;
-
-/* The Close Button in the header */
-.close {
-  color: black;
-  float: right;
-  font-size: 24px;
-  font-weight: bold;
-}
-.close:hover,
-.close:focus {
-  color: red;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /* ANIMATION */
+
 @-webkit-keyframes slideIn {
   from {bottom: -300px; opacity: 0} 
   to {bottom: 0; opacity: 1}
