@@ -154,6 +154,8 @@ function createDialog(dialogPlacement,headerHtml,dialogContent,footerHtml,decora
             // for some reason left: and top: margins are ignored
             // (they SHOULD work with fixed too, but no!)
             content.style.transform="translate("+xpos+"px,"+ypos+"px) translate("+xlate+"%,"+ylate+"%)";
+            content.style.position="absolute";
+            dragElement(content);
         }
     }
     return (dialog);
