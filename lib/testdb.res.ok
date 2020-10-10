@@ -79,16 +79,16 @@
 --> -- converting complex names
 -->   creating db
 -->   showing convert db results
---> convert result: {"n":"Rokokallion luolat, Vihti","lat":60.4985969,"lon":24.477130225,"d":"Pituudet (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m). Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on {BE,F}.","l":86,"la":"exact","c":"Finland","o":"Europe","rl":[{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders","Rock-Unknown"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat"}],"k":"Vihti","s":"convert"}
+--> convert result: {"n":"Rokokallion luolat, Vihti","lat":60.4985969,"lon":24.477130225,"d":"Pituudet (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m). Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on {BE,F}.","l":86,"la":"exact","c":"Finland","o":"Europe","rl":[{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders","Rock-Unknown"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat"}],"s":"convert","k":"Vihti"}
 --> -- merging of items
 -->   creating merge db
 -->   showing merge db results
---> merge result: {"n":"Vuorisen luola","lat":62.067613573832,"lon":23.822323132184,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[],"k":"Vuorisen luola","s":"merge"}
---> merge result: {"n":"Tommin luola","lat":61.059315413301,"lon":23.386241059515,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[{"t":"Tommin luola","w":["Tommi Vuorinen"],"a":["Caving"],"sa":["Rock"]}],"k":"Tommin luola","s":"merge"}
+--> merge result: {"n":"Vuorisen luola","lat":62.067613573832,"lon":23.822323132184,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[],"s":"merge","k":"Vuorisen luola"}
+--> merge result: {"n":"Tommin luola","lat":61.059315413301,"lon":23.386241059515,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[{"t":"Tommin luola","w":["Tommi Vuorinen"],"a":["Caving"],"sa":["Rock"]}],"s":"merge","k":"Tommin luola"}
 --> merge result: {"n":"Pääluola, Rokokallio, Vihti","lat":60.489854,"lon":24.476853,"an":["Rokokallion luolat, Vihti"],"d":"One description of this cave. Lets see if we can see another one.","lc":"5<<50","la":"approx","k":"Vihti","c":"Finland","o":"Europe","rl":[{"t":"Going to Rokokallio!","i":"https://example.com//blog811_edit.jpg","y":2020,"m":7,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Rock","Rock-Granite","Morphology-Crack","Morphology-Boulders","Basic"]],"u":"https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html"},{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat","s":"merge"}],"s":"merge","ac":[{"lat":60.4985969,"lon":24.477130225,"s":"merge"}],"ad":[{"d":"Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on {BE,F}. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","s":"merge"}]}
 -->   creating lang object
 -->   describing all items
---> x = {"n":"Vuorisen luola","lat":62.067613573832,"lon":23.822323132184,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[],"k":"Vuorisen luola","s":"merge"}
+--> x = {"n":"Vuorisen luola","lat":62.067613573832,"lon":23.822323132184,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[],"s":"merge","k":"Vuorisen luola"}
 --> describing item Vuorisen luola:
 --> Basic HTML description:
 <p><b>Vuorisen luola</b></p><p>Koordinaatit: <a href="http://www.google.com/maps/place/62.067613573832,23.822323132184" target="_blank">N 62.06761 E 23.82232</a></p><p>Pituus: ~15m.</p>
@@ -108,7 +108,7 @@ Koordinaatit: N 62.06761 E 23.82232 (http://www.google.com/maps/place/62.0676135
 Pituus: ~15m.
 
 
---> x = {"n":"Tommin luola","lat":61.059315413301,"lon":23.386241059515,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[{"t":"Tommin luola","w":["Tommi Vuorinen"],"a":["Caving"],"sa":["Rock"]}],"k":"Tommin luola","s":"merge"}
+--> x = {"n":"Tommin luola","lat":61.059315413301,"lon":23.386241059515,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[{"t":"Tommin luola","w":["Tommi Vuorinen"],"a":["Caving"],"sa":["Rock"]}],"s":"merge","k":"Tommin luola"}
 --> describing item Tommin luola:
 --> Basic HTML description:
 <p><b>Tommin luola</b></p><p>Koordinaatit: <a href="http://www.google.com/maps/place/61.059315413301,23.386241059515" target="_blank">N 61.05932 E 23.38624</a></p><p>Pituus: ~15m.</p>

@@ -10,6 +10,7 @@ TESTFILES	=	psgeotest.js \
 			psgeodbtest.js \
 			psgeolibtest.js \
 			psgeostattest.js \
+			psgeotestdatabases.js \
 			test.res.ok \
 			testlib.res.ok \
 			testschema.res.ok \
@@ -20,7 +21,8 @@ TESTFILES	=	psgeotest.js \
 JSC	=	jsc
 
 all:	test \
-	checksource
+	checksource \
+	checkdatabases
 
 test:	test.res \
 	testlib.res \
@@ -170,6 +172,18 @@ checklonglines:
 	@(awk -v lim=$(LONGLINE) $(LINECHECKAWK) *.js)>checklines.res
 	@echo The following source files have long lines: `cat checklines.res` 
 	-@test ! -s checklines.res
+
+checkdatabases:
+	-@rm -f /tmp/caves.luolaseura.json
+	-@rm -f /tmp/locations.json
+	(cd /tmp; wget -q https://luolaseura.fi/luolakanta/db/caves.luolaseura.json)
+	(cd /tmp; wget -q https://planetcaver.net/locations.json)
+	$(JSC) psgeolang.js psgeolib.js psgeodb.js psgeodbtext.js psgeodbbackend.js psgeotestdatabases.js -- Planetcaver /tmp/locations.json Luolaseura /tmp/caves.luolaseura.json 2> checkdatabases.res
+	egrep -v '(Warning:)|(Note:)' checkdatabases.res
+	fgrep 'Warning:' checkdatabases.res | grep Planetcaver: > checkdatabases.planetcaver.warnings.res
+	fgrep 'Note:' checkdatabases.res | grep Planetcaver: > checkdatabases.planetcaver.notes.res
+	fgrep 'Warning:' checkdatabases.res | grep Luolaseura: > checkdatabases.luolaseura.warnings.res
+	fgrep 'Note:' checkdatabases.res | grep Luolaseura: > checkdatabases.luolaseura.notes.res
 
 updateversion:
 	@echo This makefile target updates one software source file based on tags in GitHub,
