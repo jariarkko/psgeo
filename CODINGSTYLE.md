@@ -29,6 +29,8 @@ And making a new version:
     make updateversion
     git add psgeolib.js
     git commit -m"new version"
+    git push
+    git push --tags
 
 Major versions increase the first number in the version string. New functionality should increase the second number; weekly releases and bug fixes should increase the last one.
 
