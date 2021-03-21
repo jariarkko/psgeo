@@ -124,4 +124,21 @@ Coordinates: N 39.90436 E 116.39132 (http://www.google.com/maps/place/39.904361,
 Biking on an unknown bike type and on an unknown track.
 
 
+--> -- 3d model test
+--> {"n":"Grottbergetin luola, Siuntio","lat":39.904361,"lon":116.391317,"k":"Siuntio","c":"Finland","o":"Europe","l":10.6,"m":"https://example.com/map1.pdf","am":["https://example.com/map2.pdf"],"d3":"https://example.com/model1-obj.zip","ad3":["https://example.com/model2-STL.zip","https://example.com/model2-GLB.glb","https://example.com/model3.bar"],"rl":[{"t":"3D test","y":2021,"m":3,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Basic","Rock","Surveying","Rock-Unknown","Morphology-Unknown"]]}],"s":"model"}
+--> GROTTBERGETIN LUOLA, SIUNTIO
+
+Coordinates: N 39.90436 E 116.39132 (http://www.google.com/maps/place/39.904361,116.391317)
+
+Cave map: map (https://example.com/map1.pdf), map (https://example.com/map2.pdf). 3D cave model: OBJ model (https://example.com/model1-obj.zip), STL model (https://example.com/model2-STL.zip), GLB model (https://example.com/model2-GLB.glb), model (https://example.com/model3.bar). Length: ~10.6m. Cave activities: basic caving and surveying.
+
+
+--> {"n":"Keinoluola, Kiuntio","lat":0.904361,"lon":100.391317,"k":"Kiuntio","c":"Finland","o":"Europe","m":"https://example.com/keinomap.pdf","d3":"https://example.com/keinomodel.glb","rl":[{"t":"3D test","y":2021,"m":3,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Basic","Rock","Surveying","Rock-Unknown","Morphology-Unknown"]]}],"s":"model"}
+--> KEINOLUOLA, KIUNTIO
+
+Coordinates: N 0.90436 E 100.39132 (http://www.google.com/maps/place/0.904361,100.391317)
+
+Cave map: map (https://example.com/keinomap.pdf). 3D cave model: GLB model (https://example.com/keinomodel.glb). Cave activities: basic caving and surveying.
+
+
 --> test complete and successful

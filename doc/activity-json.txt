@@ -400,6 +400,10 @@ Internet-Draft                Activity JSON                     May 2020
 
       There are no sub-activities.
 
+   Snowshoeing
+
+      There are the Basic and Equipment sub-activities.
+
    Hiking
 
       There are no sub-activities.
@@ -413,7 +417,8 @@ Internet-Draft                Activity JSON                     May 2020
       The sub-activities are Normal, Smoke, Steam, and Infrared.  The
       sub-activity Unknown represents an unknown Sauna type, and Other a
       type of a sauna that is not listed in the above.  The sub-activity
-      None represents that no actual sauna was being taken.
+      Media represents movies, books, etc. about saunas.  The sub-
+      activity None represents that no actual sauna was being taken.
 
    Skiing
 
@@ -424,15 +429,26 @@ Internet-Draft                Activity JSON                     May 2020
       know what material the skiing was on, use Substance-Unknown.
 
       For the going up part, the sub-activities Lifts, Heli, Hiking,
-      Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and Uphill-
-      Unknown can be used.  Use the Racing subtype if there was a
-      competition.
+      Snowshoeing, Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other,
+      and Uphill-Unknown can be used.  Use the Racing subtype if there
+      was a competition, and Training subtype if this was about training
+      people to ski.
+
+      Equipment sub-activity can be used for equipment-related topics
+      and events.
 
    Skydiving
 
       There are no sub-activities.
 
    Sliding
+
+
+
+Arkko                   Expires November 2, 2020                [Page 8]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
       The sub-activities are the same as for Skiing.
 
@@ -441,14 +457,6 @@ Internet-Draft                Activity JSON                     May 2020
       The sub-activities are the same as for Skiing.
 
    Surfing
-
-
-
-
-Arkko                   Expires November 2, 2020                [Page 8]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
       There are no sub-activities.
 
@@ -481,14 +489,22 @@ Internet-Draft                Activity JSON                     May 2020
    Urban-Exploration
 
       The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
-      Quarries, Mines, Industrial, Silos, Ski-Lifts, Landfills, Castles,
-      Vehicles, Trenches, Memorial, Historic-Sites, Bridges, Skating-
-      Rinks, Amusement-Parks, Airports, Catacombs, Railways,
-      Smokestacks, Towers, Prisons, Harbours, and Military.  If the
-      target does not fit in these categories, use the sub-activity
-      Other.  If the target type is unknown, use the Unknown sub-
-      activity.  If no actual target was used, use the sub-activity
-      None.
+      Quarries, Mines, Industrial, Silos, Containers, Ski-Lifts,
+      Landfills, Castles, Vehicles, Trenches, Memorial, Historic-Sites,
+      Bridges, Skating-Rinks, Amusement-Parks, Airports, Catacombs,
+      Railways, Smokestacks, Towers, Prisons, Harbours, and Military.
+      The sub-activity Equipment designates activity focused on the
+      technical aids needs for urban exploration.  If the target does
+      not fit in these categories, use the sub-activity Other.  If the
+      target type is unknown, use the Unknown sub-activity.  If no
+      actual target was used, use the sub-activity None.
+
+
+
+Arkko                   Expires November 2, 2020                [Page 9]
+
+Internet-Draft                Activity JSON                     May 2020
+
 
    Wakeboarding
 
@@ -497,14 +513,6 @@ Internet-Draft                Activity JSON                     May 2020
    Walking
 
       There are no sub-activities.
-
-
-
-
-Arkko                   Expires November 2, 2020                [Page 9]
-
-Internet-Draft                Activity JSON                     May 2020
-
 
    Waterfalls
 
@@ -532,14 +540,6 @@ Internet-Draft                Activity JSON                     May 2020
              }
 
    Here's an example of a file with just one entry:
-
-
-
-
-
-
-
-
 
 
 

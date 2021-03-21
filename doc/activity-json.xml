@@ -350,17 +350,22 @@
         <t hangText="Equipment"><vspace blankLines="1"/>
         There are no sub-activities.</t>
         
+        <t hangText="Snowshoeing"><vspace blankLines="1"/>
+        There are the Basic and Equipment sub-activities.</t>
+        
         <t hangText="Hiking"><vspace blankLines="1"/>
         There are no sub-activities.</t>
         
         <t hangText="History"><vspace blankLines="1"/>
         There are no sub-activities.</t>
         
-        <t hangText="Sauna"><vspace blankLines="1"/>
-        The sub-activities are Normal, Smoke, Steam, and Infrared. The
+        <t hangText="Sauna"><vspace blankLines="1"/> The
+        sub-activities are Normal, Smoke, Steam, and Infrared. The
         sub-activity Unknown represents an unknown Sauna type, and
         Other a type of a sauna that is not listed in the above. The
-        sub-activity None represents that no actual sauna was being taken.</t>
+        sub-activity Media represents movies, books, etc. about
+        saunas. The sub-activity None represents that no actual sauna
+        was being taken.</t>
         
         <t hangText="Skiing"><vspace blankLines="1"/> The
         sub-activities are Outdoor, Indoor, and Underground for the type of
@@ -371,10 +376,16 @@
         use Substance-Unknown.
         <vspace blankLines="1"/>
         
-        For the going up part, the sub-activities Lifts, Heli, Hiking,
+        For the going up part, the sub-activities Lifts, Heli, Hiking, Snowshoeing,
         Skinning, Car, Bus, Train, Horse, Dogs, Uphill-Other, and
         Uphill-Unknown can be used. Use the Racing subtype if there
-        was a competition.</t>
+        was a competition, and Training subtype if this was about
+        training people to ski.
+        <vspace blankLines="1"/>
+
+        Equipment sub-activity can be used for equipment-related
+        topics and events.
+        </t>
         
         <t hangText="Skydiving"><vspace blankLines="1"/>
         There are no sub-activities.</t>
@@ -421,10 +432,12 @@
         
         <t hangText="Urban-Exploration"><vspace blankLines="1"/>
         The sub-activities are Tunnels, Buildings, Ruins, Bunkers,
-        Quarries, Mines, Industrial, Silos, Ski-Lifts, Landfills, Castles,
+        Quarries, Mines, Industrial, Silos, Containers, Ski-Lifts, Landfills, Castles,
         Vehicles, Trenches, Memorial, Historic-Sites, Bridges,
         Skating-Rinks, Amusement-Parks, Airports, Catacombs, Railways,
-        Smokestacks, Towers, Prisons, Harbours, and Military. If the
+        Smokestacks, Towers, Prisons, Harbours, and Military. The
+        sub-activity Equipment designates activity focused on the
+        technical aids needs for urban exploration. If the
         target does not fit in these categories, use the sub-activity Other. If the
         target type is unknown, use the Unknown sub-activity. If no
         actual target was used, use the sub-activity None.</t>
@@ -661,6 +674,18 @@
 
         <t hangText="am"><vspace blankLines="1"/>
         If there are several maps, additional links MAY be provided in
+        this optional attribute. Its value should be an array of URL strings.
+        </t>
+        
+        <t hangText="d3"><vspace blankLines="1"/>
+        The cave 3D model link URL, if any. If there's no URL, the
+        attribute SHOULD NOT be specified at all (and SHOULD NOT be
+        set to, e.g., empty string, although it is RECOMMENDED that
+        software recognises empty strings similarly to missing
+        attributes.</t>
+
+        <t hangText="ad3"><vspace blankLines="1"/>
+        If there are several 3D models, additional links MAY be provided in
         this optional attribute. Its value should be an array of URL strings.
         </t>
         
