@@ -125,12 +125,12 @@ Biking on an unknown bike type and on an unknown track.
 
 
 --> -- 3d model test
---> {"n":"Grottbergetin luola, Siuntio","lat":39.904361,"lon":116.391317,"k":"Siuntio","c":"Finland","o":"Europe","l":10.6,"m":"https://example.com/map1.pdf","am":["https://example.com/map2.pdf"],"d3":"https://example.com/model1-obj.zip","ad3":["https://example.com/model2-STL.zip","https://example.com/model2-GLB.glb","https://example.com/model3.bar"],"rl":[{"t":"3D test","y":2021,"m":3,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Basic","Rock","Surveying","Rock-Unknown","Morphology-Unknown"]]}],"s":"model"}
+--> {"n":"Grottbergetin luola, Siuntio","lat":39.904361,"lon":116.391317,"k":"Siuntio","c":"Finland","o":"Europe","l":10.6,"m":"https://example.com/map1.pdf","am":["https://example.com/map2.pdf","https://example.com/map-inferiorA.pdf"],"d3":"https://example.com/model1-obj.zip","ad3":["https://example.com/model2-STL.zip","https://example.com/model2-GLB.glb","https://example.com/model3.bar","https://example.com/model-inferiorB.glb","https://example.com/model-inferiorC.stl"],"rl":[{"t":"3D test","y":2021,"m":3,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Basic","Rock","Surveying","Rock-Unknown","Morphology-Unknown"]]},{"t":"3D test other item","y":2021,"m":3,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Basic","Rock","Surveying","Rock-Unknown","Morphology-Unknown"]],"s":"inferior dataset"}],"s":"model","as":["inferior dataset"],"ac":[{"lat":39.904,"lon":116.391,"s":"inferior dataset"}]}
 --> GROTTBERGETIN LUOLA, SIUNTIO
 
-Coordinates: N 39.90436 E 116.39132 (http://www.google.com/maps/place/39.904361,116.391317)
+Coordinates: N 39.90436 E 116.39132 (http://www.google.com/maps/place/39.904361,116.391317) (Model). Other reported coordinates: N 39.90400 E 116.39100 (http://www.google.com/maps/place/39.904,116.391) (Inferior dataset, 48m off).
 
-Cave map: map (https://example.com/map1.pdf), map (https://example.com/map2.pdf). 3D cave model: OBJ model (https://example.com/model1-obj.zip), STL model (https://example.com/model2-STL.zip), GLB model (https://example.com/model2-GLB.glb), model (https://example.com/model3.bar). Length: ~10.6m. Cave activities: basic caving and surveying.
+Cave map: map (https://example.com/map1.pdf), map (https://example.com/map2.pdf), map (https://example.com/map-inferiorA.pdf). 3D cave model: OBJ model (https://example.com/model1-obj.zip), STL model (https://example.com/model2-STL.zip), GLB model (https://example.com/model2-GLB.glb), model (https://example.com/model3.bar), GLB model (https://example.com/model-inferiorB.glb), STL model (https://example.com/model-inferiorC.stl). Length: ~10.6m. Cave activities: basic caving and surveying.
 
 
 --> {"n":"Keinoluola, Kiuntio","lat":0.904361,"lon":100.391317,"k":"Kiuntio","c":"Finland","o":"Europe","m":"https://example.com/keinomap.pdf","d3":"https://example.com/keinomodel.glb","rl":[{"t":"3D test","y":2021,"m":3,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Basic","Rock","Surveying","Rock-Unknown","Morphology-Unknown"]]}],"s":"model"}
