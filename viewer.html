@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D Model</title>
+	<meta name="viewport" content="initial-scale=1.0">
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+<h2>3D Model</h1>
+<div id="model">
+</div>
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const name = urlParams.get('n');;  
+  const model = urlParams.get('m');;
+  const title = "3D Model: " + name;
+  var modelHtml = '<model-viewer';
+  var maxfov;
+  var minfov = 1;
+  if (window.innerWidth < 400) {
+    maxfov = 60;
+  } else if (window.innerWidth < 600) {
+    maxfov = 50;
+  } else if (window.innerWidth < 800) {
+    maxfov = 40;
+  } else {
+    maxfov = 30;
+  }
+  modelHtml += ' style="width: 100%; height: ' + window.innerHeight.toString() + 'px; top: 0px;  position: sticky; background-color: black;"\n';
+  modelHtml += ' src="' + model + '"\n'
+  modelHtml += ' alt="A 3D model of a cave" auto-rotate auto-rotate-delay="500" camera-controls\n';
+  modelHtml += ' camera-orbit="0deg 75deg 300%" max-field-of-view="' + maxfov.toString() + 'deg" min-field-of-view="' + minfov.toString() + 'deg">\n';
+  modelHtml += '</model-viewer>\n';
+  document.title = title;
+  $("h2").text(title);
+  console.log("modelHtml:\n" + modelHtml);
+  $("#model").html(modelHtml);
+</script>
+</body>
+</html>
+

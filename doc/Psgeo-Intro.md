@@ -48,9 +48,13 @@ But you can tailor this service with query parameters, however:
 
 * The p parameter is like the c parameter, centers the map, but also brings up information window for the place in question.
 
-* The i parameter is like the p parameter, but instead of the information, it brings up an image representing the place.
+* The i parameter is like the p parameter, but instead of the information, it brings up an image representing the place. 
   
-* The parameter "lang" can be   used to specify language for the UI. Currently supported languages are "fi", "se", and "en" for Finnish, Swedish and English, respectively.
+* The m parameter is like the p parameter, but instead of the information, it brings up a map representing the internals of the place (typically, a cave or ski hill). If no map is available, this parameter behaves as the p parameter, i.e.,  just brings up an information window.
+  
+* The o parameter is like the p parameter, but instead of the information, it brings up the 3D model for the place in question (typically, a cave). If no 3D model is available, this parameter behaves as the p parameter, i.e.,  just brings up an information window.
+  
+* The parameter "lang" can be   used to specify language for the UI. Currently supported languages are "fi", "sv", and "en" for Finnish, Swedish and English, respectively.
 
 * The "cavemaps" parameter, when set to "true" makes the UI behave as primarily showing cave maps for caves that have them.
 
