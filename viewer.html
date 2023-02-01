@@ -8,7 +8,6 @@
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-<h2>3D Model</h1>
 <div id="model">
 </div>
 <script>
@@ -29,13 +28,15 @@
   } else {
     maxfov = 30;
   }
-  modelHtml += ' style="width: 100%; height: ' + window.innerHeight.toString() + 'px; top: 0px;  position: sticky; background-color: black;"\n';
+  const desiredHeightPercentage = 90;
+  var desiredHeight = Math.ceil((window.innerHeight.toString() * desiredHeightPercentage) / 100.0);
+  modelHtml += ' style="width: 100%; height: ' + desiredHeight + 'px; top: 0px;  position: sticky; background-color: black;"\n';
   modelHtml += ' src="' + model + '"\n'
   modelHtml += ' alt="A 3D model of a cave" auto-rotate auto-rotate-delay="500" camera-controls\n';
   modelHtml += ' camera-orbit="0deg 75deg 300%" max-field-of-view="' + maxfov.toString() + 'deg" min-field-of-view="' + minfov.toString() + 'deg">\n';
   modelHtml += '</model-viewer>\n';
   document.title = title;
-  $("h2").text(title);
+  //$("h2").text(title);
   console.log("modelHtml:\n" + modelHtml);
   $("#model").html(modelHtml);
 </script>
