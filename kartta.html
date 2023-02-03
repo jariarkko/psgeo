@@ -61,19 +61,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Dynamically load Google Maps java script API in finnish or english based on ?lang=XX -->
 	<script>
-		var fileref=document.createElement('script');
+                const apiKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+                let uiLanguage;
+                if      ( window.location.search == "?lang=fi" ) { uiLanguage = "fi" }
+                else if ( window.location.search == "?lang=sv" ) { uiLanguage = "sv" }
+                else                                             { uiLanguage = "en" }
+
+		const fileref=document.createElement('script');
 		fileref.setAttribute("type","text/javascript");
 		fileref.setAttribute("async","true");
 		fileref.setAttribute("defer","true");
-		if ( window.location.search == "?lang=fi" ) {
-			fileref.setAttribute("src","https://maps.googleapis.com/maps/api/js?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&language=fi&callback=psgeoInitMap" );
-		}
-		else if ( window.location.search == "?lang=sv" ) {
-			fileref.setAttribute("src","https://maps.googleapis.com/maps/api/js?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&language=sv&callback=psgeoInitMap" );
-		}
-		else {
-			fileref.setAttribute("src","https://maps.googleapis.com/maps/api/js?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&language=se&callback=psgeoInitMap" );
-		}
+                fileref.setAttribute("src","https://maps.googleapis.com/maps/api/js?key="+apiKey+"&language="+uiLanguage+"&callback=psgeoInitMap" ); 
 
 		document.getElementsByTagName("head")[0].appendChild(fileref);
 	</script>
