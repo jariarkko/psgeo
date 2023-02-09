@@ -176,7 +176,7 @@ checklonglines:
 checkdatabases:
 	-@rm -f /tmp/caves.luolaseura.json
 	-@rm -f /tmp/locations.json
-	(cd /tmp; wget -q https://luolaseura.fi/luolakanta/db/caves.luolaseura.json)
+	(cd /tmp; wget -q https://kartta.luolaseura.fi/db/caves.luolaseura.json)
 	(cd /tmp; wget -q https://planetcaver.net/locations.json)
 	$(JSC) psgeolang.js psgeolib.js psgeodb.js psgeodbtext.js psgeodbbackend.js psgeotestdatabases.js -- Planetcaver /tmp/locations.json Luolaseura /tmp/caves.luolaseura.json 2> checkdatabases.res
 	egrep -v '(Warning:)|(Note:)' checkdatabases.res
