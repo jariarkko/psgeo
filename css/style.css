@@ -1,0 +1,61 @@
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        }
+
+#map {
+        /* Map canvas */
+        height: 100%;
+        }
+
+#Filter {
+        /* Basic Filter Pane (upper left) */
+        font-family: Arial, sans-serif;
+        font-size: 90%;
+        background: #fff;
+        padding: 6px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+        }
+
+#Filter h3 {
+        margin-top: 0;
+        }
+
+#MoreFilter {
+        /* Pop-up window. Google Maps custom control. Bottom center. */
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 4px;
+        width: 90%;
+        margin: 10px;
+        padding: 10px;
+        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        }
+
+#Fullstats {
+        font-family: Arial, sans-serif;
+        font-size: 80%;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+        }
+
+#Info {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+        }
+
+#Info h3 {
+        margin-top: 0;
+        }
+
+#Info img {
+        vertical-align: middle;
+        }
+
