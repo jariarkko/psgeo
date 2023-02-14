@@ -59,3 +59,21 @@ html, body {
         vertical-align: middle;
         }
 
+.genericMenuButton {
+        background: none;
+        padding: 0;
+        borderWith: 0;
+        border: none;
+        textDecoration: underline;
+        fontFamily: arial,sans-serif;
+        fontSize: 90%;
+}
+
+#closeButton {
+        /* hardcoded to belong to the genericMenuButton class */
+        float: right;
+}
+
+
+
+
