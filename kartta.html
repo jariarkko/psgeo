@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Kartta</title>
-	<meta name="viewport" devcontent="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
 </head>
@@ -21,10 +21,10 @@
 	<!-- Dynamically load Google Maps java script API in finnish or english based on ?lang=XX -->
 	<script>
                 const apiKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-                let uiLanguage;
-                if      ( window.location.search == "?lang=en" ) { uiLanguage = "en" }
-                else if ( window.location.search == "?lang=sv" ) { uiLanguage = "sv" }
-                else                                             { uiLanguage = "fi" }
+
+                let uiLanguage = "fi"; // default
+                if ( window.location.search == "?lang=en" ) { uiLanguage = "en" }
+                if ( window.location.search == "?lang=sv" ) { uiLanguage = "sv" }
 
 		const fileref=document.createElement('script');
 		fileref.setAttribute("type","text/javascript");

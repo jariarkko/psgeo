@@ -24,17 +24,19 @@ html, body {
         }
 
 #MoreFilter {
-        /* Pop-up window. Google Maps custom control. Bottom center. */
+        /* Advanced Filter Pane (bottom center, on-demand). Google Maps custom control. */
+        font-family: Arial, sans-serif; 
         background-color: white;
+        padding: 10px;
+        margin: 0 0 22px 0;
+        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        width: 60%;
         border: 2px solid black;
         border-radius: 4px;
-        width: 60%;
-        margin: 0 0 22px 0;
-        padding: 10px;
-        boxShadow = 0 4px 12px rgba(0,0,0,.3);
         }
 
 #Fullstats {
+        /* Statistics pane (lower left). */
         font-family: Arial, sans-serif;
         font-size: 80%;
         background: #fff;
@@ -43,7 +45,8 @@ html, body {
         box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
         }
 
-#Info {
+#MoreInfo {
+        // Popup opened by the (i) button.
         font-family: Arial, sans-serif;
         background: #fff;
         padding: 10px;
@@ -57,6 +60,18 @@ html, body {
 
 #Info img {
         vertical-align: middle;
+        }
+
+#OtherTools {
+        // More tools. E.g. other cavemaps.
+        font-family: Arial, sans-serif; 
+        background-color: white;
+        padding: 10px;
+        margin: 0 0 22px 0;
+        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        width: 30%;
+        border: 2px solid black;
+        border-radius: 4px;
         }
 
 .genericMenuButton {
@@ -73,7 +88,4 @@ html, body {
         /* hardcoded to belong to the genericMenuButton class */
         float: right;
 }
-
-
-
 
