@@ -1,3 +1,7 @@
+/* psGeo borderless style */
+/* Filter and Fullstats are borderless */
+/* The popups More Filter, More Info, Other tools and About are borderless */
+
 html, body {
         height: 100%;
         margin: 0;
@@ -31,8 +35,6 @@ html, body {
         margin: 0 0 22px 0;
         boxShadow = 0 4px 12px rgba(0,0,0,.3);
         width: 60%;
-        border: 2px solid black;
-        border-radius: 4px;
         }
 
 #Fullstats {
@@ -70,8 +72,6 @@ html, body {
         margin: 0 0 22px 0;
         boxShadow = 0 4px 12px rgba(0,0,0,.3);
         width: 30%;
-        border: 2px solid black;
-        border-radius: 4px;
         }
 
 #AboutMenu {
@@ -82,8 +82,6 @@ html, body {
         margin: 0 0 22px 0;
         boxShadow = 0 4px 12px rgba(0,0,0,.3);
         width: 30%;
-        border: 2px solid black;
-        border-radius: 4px;
         }
 
 .genericMenuButton {
