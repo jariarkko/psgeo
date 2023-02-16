@@ -1,0 +1,101 @@
+/* psGeo borderless style */
+/* Filter and Fullstats are borderless */
+/* The popups More Filter, More Info, Other tools and About are borderless */
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        }
+
+#map {
+        /* Map canvas */
+        height: 100%;
+        }
+
+#Filter {
+        /* Basic Filter Pane (upper left) */
+        font-family: Arial, sans-serif;
+        font-size: 90%;
+        background: #fff;
+        padding: 6px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+        }
+
+#Filter h3 {
+        margin-top: 0;
+        }
+
+#MoreFilter {
+        /* Advanced Filter Pane (bottom center, on-demand). Google Maps custom control. */
+        font-family: Arial, sans-serif; 
+        background-color: white;
+        padding: 10px;
+        margin: 0 0 22px 0;
+        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        width: 60%;
+        }
+
+#Fullstats {
+        /* Statistics pane (lower left). */
+        font-family: Arial, sans-serif;
+        font-size: 80%;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+        }
+
+#MoreInfo {
+        // Popup opened by the (i) button.
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+        }
+
+#Info h3 {
+        margin-top: 0;
+        }
+
+#Info img {
+        vertical-align: middle;
+        }
+
+#OtherTools {
+        // More tools. E.g. other cavemaps.
+        font-family: Arial, sans-serif; 
+        background-color: white;
+        padding: 10px;
+        margin: 0 0 22px 0;
+        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        width: 30%;
+        }
+
+#AboutMenu {
+        // Credits
+        font-family: Arial, sans-serif; 
+        background-color: white;
+        padding: 10px;
+        margin: 0 0 22px 0;
+        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        width: 30%;
+        }
+
+.genericMenuButton {
+        background: none;
+        padding: 0;
+        borderWith: 0;
+        border: none;
+        textDecoration: underline;
+        fontFamily: arial,sans-serif;
+        fontSize: 90%;
+}
+
+#closeButton {
+        /* hardcoded to belong to the genericMenuButton class */
+        float: right;
+}
+
