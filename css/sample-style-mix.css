@@ -33,7 +33,7 @@ html, body {
         background-color: white;
         padding: 10px;
         margin: 0 0 22px 0;
-        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        box-shadow: 0 4px 12px rgba(0,0,0,.3);
         width: 60%;
         border: 2px solid black;
         border-radius: 4px;
@@ -50,7 +50,7 @@ html, body {
         }
 
 #MoreInfo {
-        // Popup opened by the (i) button.
+        /* Popup opened by the (i) button. */
         font-family: Arial, sans-serif;
         background: #fff;
         padding: 10px;
@@ -69,24 +69,24 @@ html, body {
         }
 
 #OtherTools {
-        // More tools. E.g. other cavemaps.
+        /* More tools. E.g. other cavemaps. */
         font-family: Arial, sans-serif; 
         background-color: white;
         padding: 10px;
         margin: 0 0 22px 0;
-        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        box-shadow: 0 4px 12px rgba(0,0,0,.3);
         width: 30%;
         border: 2px solid black;
         border-radius: 4px;
         }
 
 #AboutMenu {
-        // Credits
+        /* Credits */
         font-family: Arial, sans-serif; 
         background-color: white;
         padding: 10px;
         margin: 0 0 22px 0;
-        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        box-shadow: 0 4px 12px rgba(0,0,0,.3);
         width: 30%;
         border: 2px solid black;
         border-radius: 4px;
@@ -95,11 +95,11 @@ html, body {
 .genericMenuButton {
         background: none;
         padding: 0;
-        borderWith: 0;
+        border-width: 0;
         border: none;
-        textDecoration: underline;
-        fontFamily: arial,sans-serif;
-        fontSize: 90%;
+        text-decoration: underline;
+        font-family: arial,sans-serif;
+        font-size: 90%;
 }
 
 #closeButton {
