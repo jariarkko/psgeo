@@ -192,7 +192,7 @@
     ],
     "lat": 65.4,
     "lng": 24.6,
-    "zoom": 7,
+    "zoom": 5,
     "mapId": "",
     "filter": "Caving",
     "name": "Luolakartat Suomessa",
@@ -264,7 +264,7 @@
             "show": true,        
             "textId": "topoMapsUK",
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
-            "layers": "Outdoor_2770",
+            "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
