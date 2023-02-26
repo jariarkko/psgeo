@@ -240,7 +240,7 @@
             "show": true,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
-            "wmtsQuery": "{{zoom}}/{{coord.y}}/{{coord.x}}.png?api-key={{apiKey}}",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
@@ -248,7 +248,7 @@
             "show": true,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "wmtsQuery": "{{apiKey}}/1.0.0/topowebb/default/3857/{{zoom}}/{{coord.y}}/{{coord.x}}.png",
+            "layers": "",
             "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
             },
         "Norway":
