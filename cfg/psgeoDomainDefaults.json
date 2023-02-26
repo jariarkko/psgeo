@@ -192,7 +192,7 @@
     ],
     "lat": 65.4,
     "lng": 24.6,
-    "zoom": 5,
+    "zoom": 7,
     "mapId": "",
     "filter": "Caving",
     "name": "Luolakartat Suomessa",
@@ -256,9 +256,16 @@
             "show": true,        
             "textId": "topoMapsNorway",
             "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
-            "wmtsQuery": "?layers={{layers}}&zoom={{zoom}}&x={{coord.x}&y={{coord.y}}",
             "layers": "topo4",
             "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_2770",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": true,
