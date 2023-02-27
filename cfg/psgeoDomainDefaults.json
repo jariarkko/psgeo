@@ -237,17 +237,39 @@
         {
         "Finland":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+<<<<<<< HEAD
             "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzM3ODQwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3MzM3ODQwLCJpYXQiOjE2NzczMzc4NDAsImp0aSI6IjA2MDE2YjQwLTJkY2QtNDU2Ni1hNGU5LWQzMTc1N2RkYmNiNSJ9.bi5Ix5Uugw2XjbixylHvMsdFfMv1_NEID9yxD0b9d-fB4ra7TpTIotT8lW0um4typBYXsITTZNcp1IWWFq6i1KSAab8nnatWywNxkNFpu96bHFAgzj8UZ_OQY65TVx4aH3nelnS1OeSLygLACq2xLADvvlldIL0Ea3QbMsscB7LqQf7HHzo3gK_v7nBbo00OlWJw-Uvylc5T8EYdKrwO3Aev2ViUkM1j_zzi0DM9oE4zkMMwNyo_3vUPzCZGPFnlIlj3L42JPQDIKqWsXfrw4F2D_h31UfI7cotgiw4t3mVgymdZqxtgzsRj4xH8imBGAA9dCP3tFPpnbuX9G1J_Nw"
+=======
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+>>>>>>> dev-ralf
             }
         },
     "otherToolsMenu": true,
@@ -274,6 +296,7 @@
     "zoomouthidesdetails": true,
     "zoomlevelfordetails": 14,
     "sourcesCheckboxes": true,
+<<<<<<< HEAD
     "topographicMaps":
         {
         "Finland":
@@ -291,6 +314,8 @@
             "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzM3ODQwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3MzM3ODQwLCJpYXQiOjE2NzczMzc4NDAsImp0aSI6IjA2MDE2YjQwLTJkY2QtNDU2Ni1hNGU5LWQzMTc1N2RkYmNiNSJ9.bi5Ix5Uugw2XjbixylHvMsdFfMv1_NEID9yxD0b9d-fB4ra7TpTIotT8lW0um4typBYXsITTZNcp1IWWFq6i1KSAab8nnatWywNxkNFpu96bHFAgzj8UZ_OQY65TVx4aH3nelnS1OeSLygLACq2xLADvvlldIL0Ea3QbMsscB7LqQf7HHzo3gK_v7nBbo00OlWJw-Uvylc5T8EYdKrwO3Aev2ViUkM1j_zzi0DM9oE4zkMMwNyo_3vUPzCZGPFnlIlj3L42JPQDIKqWsXfrw4F2D_h31UfI7cotgiw4t3mVgymdZqxtgzsRj4xH8imBGAA9dCP3tFPpnbuX9G1J_Nw"
             }
         },
+=======
+>>>>>>> dev-ralf
     "otherToolsMenu": true,
     "nameSearch": true,
     "rockTypeSearch": true,
