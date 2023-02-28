@@ -13,6 +13,7 @@
     "lat": 0,
     "lng": 0,
     "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "Skiing",
     "name": "Planetskier",
@@ -31,17 +32,35 @@
         {
         "Finland":
             {
-            "show": "false",        
+            "show": false,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": false,
@@ -90,6 +109,7 @@
     "lat": 65.4,
     "lng": 24.6,
     "zoom": 5,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "Caving",
     "name": "Luolakartat Suomessa",
@@ -134,17 +154,35 @@
         {
         "Finland":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": true,
@@ -193,6 +231,7 @@
     "lat": 65.4,
     "lng": 24.6,
     "zoom": 5,
+    "mapTypeControlStyle": "DEFAULT",
     "mapId": "",
     "filter": "Caving",
     "name": "Luolakartat Suomessa",
@@ -331,6 +370,7 @@
     "lat": 65.4,
     "lng": 24.6,
     "zoom": 5,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "Caving",
     "name": "Luolakartat Suomessa",
@@ -350,17 +390,35 @@
         {
         "Finland":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": true,
@@ -403,6 +461,7 @@
     "lat": 65.4,
     "lng": 24.6,
     "zoom": 5,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "CavingFinland",
     "name": "Planetcaver Cave Maps",
@@ -422,17 +481,35 @@
         {
         "Finland":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": true,
@@ -475,6 +552,7 @@
     "lat": 0,
     "lng": 0,
     "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "CavingFinland",
     "name": "Planetcaver",
@@ -494,17 +572,35 @@
         {
         "Finland":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": true,
@@ -547,6 +643,7 @@
     "lat": 0,
     "lng": 0,
     "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "Urbanex",
     "name": "The Urban Explorer",
@@ -566,17 +663,35 @@
         {
         "Finland":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": true,
@@ -619,6 +734,7 @@
     "lat": 0,
     "lng": 0,
     "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "Climbing",
     "name": "Planetclimber",
@@ -637,17 +753,35 @@
         {
         "Finland":
             {
-            "show": "false",        
+            "show": false,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "false",        
+            "show": false,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": false,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": false,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": false,
@@ -690,6 +824,7 @@
     "lat": 0,
     "lng": 0,
     "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "Biking",
     "name": "Planetbiker",
@@ -708,17 +843,35 @@
         {
         "Finland":
             {
-            "show": "false",        
+            "show": false,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "false",        
+            "show": false,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": false,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": false,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": false,
@@ -761,6 +914,7 @@
     "lat": 0,
     "lng": 0,
     "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "Swimming",
     "name": "Planetswimmer",
@@ -779,17 +933,35 @@
         {
         "Finland":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": true,
@@ -832,6 +1004,7 @@
     "lat": 0,
     "lng": 0,
     "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "Flying",
     "name": "Planetflyer",
@@ -850,17 +1023,35 @@
         {
         "Finland":
             {
-            "show": "false",        
+            "show": false,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "false",        
+            "show": false,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": false,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": false,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": false,
@@ -903,6 +1094,7 @@
     "lat": 0,
     "lng": 0,
     "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
     "filter": "Sauna",
     "name": "Saunablogger",
@@ -921,17 +1113,35 @@
         {
         "Finland":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
             "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
             },
         "Sweden":
             {
-            "show": "true",        
+            "show": true,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
-            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3MzI5NjUwLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoxNjc3MzMzMjUwLCJpYXQiOjE2NzczMjk2NTAsImp0aSI6ImFkZmQ3NzI4LTM5MDItNGRmZi1hYzQ5LWE4ZjAyYTYxNzRhYiJ9.XkUIyF-iuPn5azBp9FqbVYuKBIc0sm0SK5s6GByJv9zmcUBR73bFT5UqjOLf0em15ABsSB6k2APg5DJ7DrQyif8WOb1i3z3SNPR94lqutnq5dXwPBw2yfYAyz6l5EpueBq7rii3g_PZWieXKRp2x6ZRCZ-HKhfjY4VU1Tuw6qutUxLHcN6dCT7B2qGtqh_2TNKKPVkVqxO6T--jmlt5lOzvUPuj-YoAkNVVA1ix3WEp7JDEZhnSgE8bwZfGGJ5Cb8CAy8hO5AeAWGbF5-H7ZYoyk3g2YqoYRrwujAJw0eLZT7Rsbk6Ycdn-1UdH1VO-rkoXpWc_E4hLS_ljyNuU8bA"
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
             }
         },
     "otherToolsMenu": false,
