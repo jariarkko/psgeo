@@ -61,6 +61,18 @@
                                 psgeoUpdateStatsPaneText
 6.                  psgeoUpdateStatsPane
 7.                      psgeoUpdateStatsPaneText
+                            statLines = tbl.getStatLines
+                            psgeoMoreFilterWindowNeeded
+                            psgeoGetFilterMenuButton
+                                psgeoFilterMenuBringUp ////
+                            google.maps.event.addListener(markerMyPosition ...
+                            psgeoGetGeolocationButton
+                                geolocationPending
+                                geolocationStopWatchPosition
+                                geolocationAchieved
+                                geolocationFailed
+                            psgeoGetMoreMenuButton
+                                psgeoMoreMenuBringUp
 6.                  psgeoInitPlace
                         psgeoInitPlaceAux 
                             db.getNamedItemsPartialMatch
