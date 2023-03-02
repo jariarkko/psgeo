@@ -1,0 +1,108 @@
+function psgeoDebug(message)  {
+function psgeoExtraDebug(message)  {
+function psgeoInitMarkerImages() {
+function psgeoZoomChanged(db,level,psgeoDomainDefault) {
+function psgeoGetClickableUrl(db,item) {
+function psgeoMarkerPopup(map,marker,popup,db,lib,lang,myPosition,cfg,psgeoDomainDefault) {
+function psgeoMarkerPopupItem(map,item,popup,db,lib,lang,style,myPosition,cfg,psgeoDomainDefault) {
+function psgeoGetModelType(lib,lang,modelUrl) {
+function psgeoDescribeModel(lib,lang,modelUrl) {
+function psgeoMarkerClick(lang, db, lib, marker,myPosition,cfg,psgeoDomainDefault,psgeoPopup) {
+function psgeoArticlesText(db,lang,item) {
+function psgeoInitMarker(db,lib,lang,item,filter,myPosition,psgeoPopup,cfg,psgeoDomainDefault) {
+
+CHECKBOX
+function psgeoCreateRangeCheckbox(db,lang,document,subsubdiv1b,size,name,br) {
+function psgeoCreateCaveMapCheckbox(db,lang,document,subsubdiv1b,name,br,psgeoDomainDefault) {
+function psgeoCreateActivityCheckbox(db,lang,document,subsubdiv1b,activitylist,name,br) {
+function psgeoAllBoxesChecked(list) {
+
+function psgeoInitFilterPaneText(db,lib,lang,map,div,smallPane,myPosition,psgeoPopup,tbl,cfg,psgeoDomainDefault) {
+
+FILTER
+function psgeoCreateSubactivityFilterFromCheckboxes(db,activities,list) {
+function psgeoCreateNameFilter(db,lib,lang,map) {
+function psgeoCreateSubtypeGroupFilters(db,lib,lang,map) {
+function psgeoCreateSubtypeGroupFilter(db,lib,lang,map,entry) {
+function psgeoCreateOnlyFinlandFilter(db,lib,lang,map,psgeoDomainDefault) {
+    function finlandPartFilter(checked,psgeoDomainDefault) { 
+    function otherPartFilter(checked,psgeoDomainDefault) { 
+function psgeoRerunFilters(db,lib,lang,map,myPosition,psgeoPopup,tbl,cfg,psgeoDomainDefault) {
+function psgeoMakeSourceFilter(db,sourceCheckboxes) {
+function psgeoItemShouldBeVisibleAtThisZoomLevel(db,item,zoomLevel,psgeoDomainDefault) {
+function psgeoRecheckVisibility(db,zoomLevel,psgeoDomainDefault) {
+function psgeoMoreFilterWindowNeeded(psgeoDomainDefault) {
+
+STAT
+function psgeoStatLineEmpty(lang,n) {
+function psgeoStatLineNumberOfCaves(lang,n) {
+function psgeoStatLineNumberOfPlaces(lang,n) {
+function psgeoStatLineNumberOfCities(lang,n) {
+function psgeoStatLineNumberOfCountries(lang,n) {
+function psgeoStatLineNumberOfContinents(lang,n) {
+function psgeoStatLineNumberOfStates(lang,n) {
+function psgeoStatLineNumberOfProvinces(lang,n) {
+function psgeoStatLineNumberOfCaveMaps(lang,n) {
+
+
+function psgeoUpdateStatsPaneText(db,
+        function geolocationPending() {
+        function geolocationStopWatchPosition() {
+        function geolocationAchieved(position) {
+    function geolocationFailed(error) {
+function psgeoUpdateStatsPane(db,lib,lang,map,myPosition,psgeoPopup,tbl,cfg,psgeoDomainDefault) {
+function psgeoInitStatsPane(db,lib,lang,map,myPosition,psgeoPopup,tbl,cfg,psgeoDomainDefault) {
+function psgeoInitList(db,lib,lang,map,myPosition,psgeoPopup,tbl,cfg,psgeoDomainDefault) {
+    psgeoDomainDefault.sources.forEach(function (source) { 
+        // For each source, launch an import function (these run in parallel):
+function psgeoFinishLoading(db,lib,lang,map,filterForMarkers,myPosition,psgeoPopup,tbl,cfg,psgeoDomainDefault) {
+function psgeoGetSources() {
+function psgeoOtherToolsMenuBringUp(db,lib,lang,map,cfg,psgeoDomainDefault,psgeoPopup) {
+            psgeoGenericMenuButton(lang,'',lang.getText("close"),div, function () {
+function psgeoFilterSectionPrefix(lang,text,subdiv) {
+function psgeoFilterMenuContents(db,lib,lang,map,subdiv,myPosition,psgeoPopup,tbl,cfg,psgeoDomainDefault) {
+function psgeoMoreMenuContents(db,lib,lang,map,subdiv,cfg,psgeoDomainDefault,psgeoPopup) {
+function psgeoFilterMenuBringUp(db,lib,lang,map,toOpen,psgeoSmallDisplayMode,myPosition,psgeoPopup,tbl,cfg,psgeoDomainDefault) {
+        psgeoGenericMenuButton(lang,'',lang.getText("close"),div, function () {
+function psgeoMoreMenuBringUp(db,lib,lang,map,toOpen,cfg,psgeoDomainDefault,psgeoPopup) { // Lisätiedot ja työkalut (i)
+            psgeoGenericMenuButton(lang,'',lang.getText("close"),div, function () {
+function psgeoCustomLinkBringUp(link,popup,size) {
+function psgeoAboutMenuBringUp(db,lib,lang,map,cfg,psgeoDomainDefault,psgeoPopup) { 
+
+BUTTONS
+psgeoGenericMenuButton(lang,'',lang.getText("close"),div, function () {
+function psgeoGenericMenuButton(lang,imgurl,text,structure,fn,spacer,buttonId,cfg,psgeoDomainDefault) {
+function psgeoGetOtherToolsMenuButton(lang,structure,fn,cfg,psgeoDomainDefault) {
+function psgeoGetFilterMenuButton(lang,structure,fn,cfg,psgeoDomainDefault) { // XXXXXXXXX DEFAULT ICONS?
+function psgeoGetGeolocationButton(lang,structure,fn,cfg,psgeoDomainDefault) {
+function psgeoGetMoreMenuButton(lang,structure,fn,cfg,psgeoDomainDefault) {
+function psgeoGetAboutMenuButton(lang,structure,fn,cfg,psgeoDomainDefault) {
+function psgeoGetCustomLinkMenuButton(lang,structure,customLink,fn,cfg,psgeoDomainDefault) {
+
+function psgeoGetNameInput(lib,lang,structure) {
+function psgeoGetGenericCheckbox(id,text,structure,initiallyChecked,br) {
+function psgeoGetSubtypeGroupCheckboxList(lib,lang,group,structure) {
+function psgeoGetOnlyFinlandCheckbox(lib,lang,structure,psgeoDomainDefault) {
+function psgeoGetOtherCountriesCheckbox(lib,lang,structure,psgeoDomainDefault) {
+function psgeoGetSourcesCheckboxes(lib,lang,structure,psgeoSources) {
+function PsgeoFilterPaneWin(div1, map) {
+function PsgeoStatsPaneWin(div, map) {
+        div.appendChild(subdiv); // statsPaneDiv of calling function gets appended
+function psgeoInitStatsPaneControl(map) {
+function psgeoInitDisplaySize(cfg) {
+function psgeoInitLanguage(urlParams,psgeoDomainDefault) {
+function psgeoInitPlaceAux(db,lib,lang,map,param,style,changeCenter,changeZoom,myPosition,cfg,psgeoPopup,psgeoDomainDefault) {
+function psgeoInitPlace(db,lib,lang,map,urlParams,myPosition,cfg,psgeoPopup,psgeoDomainDefault) {
+function psgeoPickBest(db,entries) {
+function psgeoInitCavemaps(pathname,urlParams,psgeoDomainDefault) {
+function psgeoForceDisplayOfCustomLinks(hostname,urlParams,psgeoDomainDefault) {
+function psgeoInitMapTerrain(psgeoMap,lang,mapLegend,psgeoSmallDisplayMode,baseUrl,layers,apiKey,country,psgeoDomainDefault) {
+    // Countries use slightly different URL formats. Adjust getTile() function accordingly.
+function psgeoInitPopup(map) {
+function psgeoMapClick(map,psgeoPopup) {
+function psgeoInitLinkHandlers(db,lib,lang,map,myPosition,cfg,psgeoDomainDefault) {
+function psgeoInitLib() {
+function parseQueryString() {
+async function psgeoInit() {
+    const lib = psgeoInitLib();    // a general use function library
+function psgeoInitMap(lib,db,cfg,tbl,lang,psgeoDomainDefault,psgeoSmallDisplayMode,myPosition,markerMyPosition,queryString,urlParams,pathname,hostname) {

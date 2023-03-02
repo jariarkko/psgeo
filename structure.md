@@ -4,20 +4,21 @@
 //    - numbers represent function call nesting depth
 
 1. psgeoInit
-    lib = pseoInitLib
-    cfg = psgeoSettings
-    db  = psgeoDB
-    tbl = psgeoTables
-    psgeoDomainDefault = cfg.getDomainDefault
+    lib = psgeoInitLib                                     FUNCTION LIBRARY - AUXILIARY STUFF
+    cfg = psgeoSettings                                    HANDLES ALL SETTINGS
+    db  = psgeoDB                                          ACTIVITY DATABASE AND FILTERING
+    tbl = psgeoTables                                      INTERNAL STRUCTURES
+    psgeoDomainDefault = cfg.getDomainDefault              IMPORT SETTINGS FROM JSON USING FETCH API
     psgeoSources = psgeoDomainDefault.sources
-    psgeoInitDisplaySize
-    psgeoInitLanguage
-    psgeoInitCavemaps
-    psgeoForceDisplayOfCustomLinks
-    lang = PsgeoLang
+    psgeoInitDisplaySize                                   SMALL OR NOT?
+    psgeoInitLanguage                                      OVERRIDE DEFAULTS WITH PARAMS?
+    psgeoInitCavemaps                                      ONE OVERRIDE MORE
+    psgeoForceDisplayOfCustomLinks                         ONE OVERRIDE MORE
+    lang = PsgeoLang                                       TRANSLATION LIBRARY USED FOR UI
 2.  psgeoInitMap
-        topoMap = psgeoInitMapTerrain
+        topoMap = psgeoInitMapTerrain                      GOTTA CATH 'EM ALL
         psgeoMap.addListener: psgeoZoomChanged             ADD LISTENER ZOOM
+        psgeoMap.addListener: maptypeid_changed            ADD LISTENER CHANGE TO UK TOPOGRAPHIC MAP
         psgeoInitMarkerImages
         psgeoInitStatsPaneControl
             statsPaneWin = new PsgeoStatsPaneWin
@@ -27,7 +28,7 @@
             db.setFilter
             db.getFilter
             lib.getDefaultFilterSkiing
-            $.getJSON
+            $.getJSON                                      READ THE ACTIVITY DATABASE
                 db.addPlacesWithFilter
 4.          psgeoFinishLoading
                 db.filterMatchMap
@@ -35,8 +36,8 @@
                 db.setFilter
                 db.applyAllNoFilter
                     psgeoInitMarker
-5.              psgeoInitStatsPane 
-6.                  psgeoInitFilterPaneText
+5.              psgeoInitStatsPane                         STATS PANE IS THE MAIN CONTROL
+6.                  psgeoInitFilterPaneText                ON LARGE DISPLAYS IT SPAWNS A SEPARATE FILTERPANE
                         psgeoFilterSectionPrefix
                         lib.isOtherActivity
                         lib.getActivityShortName
@@ -59,8 +60,25 @@
                                 psgeoItemShouldBeVisibleAtThisZoomLevel
 8.                          psgeoUpdateStatsPane
                                 psgeoUpdateStatsPaneText
-6.                  psgeoUpdateStatsPane
+6.                  psgeoUpdateStatsPane                    THIS IS THE MAIN THING HERE
 7.                      psgeoUpdateStatsPaneText
+                            statLines = tbl.getStatLines    TABLES TELL WHETHER WE HAVE A CAVING RELATED VIEW OR A GENERAL VIEW
+                            psgeoMoreFilterWindowNeeded  
+                            psgeoGetFilterMenuButton        OPENS ADVANCED FILTERING/SEARCH
+                                psgeoFilterMenuBringUp
+                                    psgeoGenericMenuButton
+                                    psgeoFilterMenuContents ///
+                            google.maps.event.addListener(markerMyPosition ...
+                            psgeoGetGeolocationButton           ADD WEB WORKER WITH CALLBACKS
+                                geolocationPending
+                                geolocationStopWatchPosition
+                                geolocationAchieved
+                                geolocationFailed
+                            psgeoGetMoreMenuButton          OPENS A WINDOW WITH CUSTOM LINKS AND ABOUT
+                                psgeoMoreMenuBringUp
+                                    psgeoGenericMenuButton
+                                    psgeoMoreMenuContents ///
+                                    
 6.                  psgeoInitPlace
                         psgeoInitPlaceAux 
                             db.getNamedItemsPartialMatch
