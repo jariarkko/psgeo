@@ -107,3 +107,13 @@ html, body {
         float: right;
 }
 
+.checkboxControlButtons {
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 1px 5px 1px 5px;
+        margin-left: 5px
+        border-radius: 2px;
+}
+
