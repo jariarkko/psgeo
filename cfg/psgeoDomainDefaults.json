@@ -331,6 +331,41 @@
     "zoomouthidesdetails": true,
     "zoomlevelfordetails": 14,
     "sourcesCheckboxes": true,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": true,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            }
+        },
     "otherToolsMenu": true,
     "nameSearch": true,
     "rockTypeSearch": true,
