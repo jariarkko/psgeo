@@ -67,14 +67,27 @@
                             psgeoGetFilterMenuButton        OPENS ADVANCED FILTERING/SEARCH
                                 psgeoFilterMenuBringUp
                                     psgeoGenericMenuButton
-                                    psgeoFilterMenuContents ///
+                                    psgeoFilterMenuContents
+                                        psgeoFilterSectionPrefix
+                                        psgeoNameFilterInput
+                                            psgeoGetNameInput
+                                            psgeoRerunFilters ///
+                                        psgeoInitFilterPaneText
+                                            lib.getActivityList
+                                            lib.getActivityShortName
+                                            psgeoCreateActivityCheckbox
+                                            psgeoRangeCheckbox
+                                        psgeoGetSubtypeGroupCheckboxList
+                                        psgeoGetOnlyFinlandCheckbox
+                                        psgeoGetGetOtherCountriesCheckbox
+                                        psgeoGetSourcesCheckboxes
                             google.maps.event.addListener(markerMyPosition ...
                             psgeoGetGeolocationButton           ADD WEB WORKER WITH CALLBACKS
                                 geolocationPending
                                 geolocationStopWatchPosition
                                 geolocationAchieved
                                 geolocationFailed
-                            psgeoGetMoreMenuButton          OPENS A WINDOW WITH CUSTOM LINKS AND ABOUT
+                            psgeoGetMoreMenuButton              OPENS A WINDOW WITH CUSTOM LINKS AND ABOUT
                                 psgeoMoreMenuBringUp
                                     psgeoGenericMenuButton
                                     psgeoMoreMenuContents ///
