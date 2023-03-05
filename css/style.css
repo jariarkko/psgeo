@@ -110,3 +110,13 @@ html, body {
         
 }
 
+#rangeHighInput {
+        /* number */
+        width: 6em;
+}
+
+#rangeLowInput {
+        /* number */
+        width: 6em;
+}
+
