@@ -15,6 +15,7 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": false,
     "filter": "Skiing",
     "name": "Planetskier",
     "lang": "en",
@@ -66,6 +67,7 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "length",
         "unit": "kilometers",
         "limitLow": 1,
@@ -111,6 +113,7 @@
     "zoom": 5,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": true,
     "filter": "Caving",
     "name": "Luolakartat Suomessa",
     "lang": "fi",
@@ -188,6 +191,7 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "length",
         "unit": "meters",
         "limitLow": 5,
@@ -233,6 +237,7 @@
     "zoom": 5,
     "mapTypeControlStyle": "DEFAULT",
     "mapId": "",
+    "singleActivityMode": true,
     "filter": "Caving",
     "name": "Luolakartat Suomessa",
     "lang": "fi",
@@ -310,6 +315,7 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "length",
         "unit": "meters",
         "limitLow": 5,
@@ -407,6 +413,7 @@
     "zoom": 5,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": true,
     "filter": "Caving",
     "name": "Luolakartat Suomessa",
     "lang": "fi",
@@ -459,6 +466,7 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "length",
         "unit": "meters",
         "limitLow": 5,
@@ -498,6 +506,7 @@
     "zoom": 5,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": true,
     "filter": "CavingFinland",
     "name": "Planetcaver Cave Maps",
     "lang": "en",
@@ -550,6 +559,7 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "length",
         "unit": "meters",
         "limitLow": 5,
@@ -589,6 +599,7 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": true,
     "filter": "CavingFinland",
     "name": "Planetcaver",
     "lang": "en",
@@ -641,6 +652,7 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "length",
         "unit": "meters",
         "limitLow": 5,
@@ -680,6 +692,7 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": false,
     "filter": "Urbanex",
     "name": "The Urban Explorer",
     "lang": "en",
@@ -732,6 +745,7 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "time",
         "unit": "hours",
         "limitLow": 1,
@@ -771,6 +785,7 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": false,
     "filter": "Climbing",
     "name": "Planetclimber",
     "lang": "en",
@@ -822,6 +837,7 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "height",
         "unit": "meters",
         "limitLow": 1000,
@@ -861,6 +877,7 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": false,
     "filter": "Biking",
     "name": "Planetbiker",
     "lang": "en",
@@ -912,6 +929,7 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "length",
         "unit": "kilometers",
         "limitLow": 10,
@@ -951,6 +969,7 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": false,
     "filter": "Swimming",
     "name": "Planetswimmer",
     "lang": "en",
@@ -1002,6 +1021,7 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "temperature",
         "unit": "celcius",
         "limitLow": 16,
@@ -1041,6 +1061,7 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": false,
     "filter": "Flying",
     "name": "Planetflyer",
     "lang": "en",
@@ -1092,6 +1113,7 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "length",
         "unit": "kilometers",
         "limitLow": 2000,
@@ -1131,6 +1153,7 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
+    "singleActivityMode": false,
     "filter": "Sauna",
     "name": "Saunablogger",
     "lang": "en",
@@ -1182,6 +1205,7 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
+        "allowChanging": true,
         "measure": "temperature",
         "unit": "celcius",
         "limitLow": 70,
