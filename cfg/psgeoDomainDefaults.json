@@ -414,7 +414,7 @@
     "lat": 65.4,
     "lng": 24.6,
     "zoom": 5,
-    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapTypeControlStyle": "DEFAULT",
     "mapId": "",
     "singleActivityMode": true,
     "displayRangeCategoryFilterInSingleActivityMode": true,
