@@ -117,3 +117,19 @@ html, body {
         border-radius: 2px;
 }
 
+#rangeHighInput {
+        /* number */
+        width: 5em;
+}
+
+#rangeLowInput {
+        /* number */
+        width: 6em;
+}
+
+.flexboxRow {
+        display: flex;
+        flex-direction: row;
+        white-space: pre
+}
+

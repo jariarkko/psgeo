@@ -112,11 +112,17 @@ html, body {
 
 #rangeHighInput {
         /* number */
-        width: 6em;
+        width: 5em;
 }
 
 #rangeLowInput {
         /* number */
         width: 6em;
+}
+
+.flexboxRow {
+        display: flex;
+        flex-direction: row;
+        white-space: pre
 }
 
