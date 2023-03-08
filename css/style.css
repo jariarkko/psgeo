@@ -126,3 +126,13 @@ html, body {
         white-space: pre
 }
 
+.flexboxColumn {
+        display: flex;
+        flex-direction: column;
+        white-space: pre
+}
+
+.columnRightMargin {
+        margin-right: 3em;
+}
+
