@@ -137,3 +137,22 @@ html, body {
         white-space: pre
 }
 
+.flexboxColumn {
+        display: flex;
+        flex-direction: column;
+        white-space: pre
+}
+
+.columnRightMarginNarrow {
+        margin-right: 1em;
+}
+
+.columnRightMarginWide {
+        margin-right: 3em;
+}
+
+.elementHideOnSmallScreen {
+        /* use document.getElementsByClassName to set display to none or block */
+        display: block;
+}
+
