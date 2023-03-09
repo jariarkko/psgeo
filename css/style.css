@@ -124,6 +124,7 @@ html, body {
 .flexboxRow {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         white-space: pre
 }
 
@@ -133,12 +134,33 @@ html, body {
         white-space: pre
 }
 
-.columnRightMarginNarrow {
+.marginRightNarrow {
         margin-right: 1em;
 }
 
-.columnRightMarginWide {
+.marginRightWide {
         margin-right: 3em;
+}
+
+.marginTopNarrow {
+        /* Instead of adding <br> */
+        margin-top: 1em;
+}
+
+.marginTopWide {
+        margin-top: 3em;
+}
+
+.filterWindowTabbedMenuButton {
+
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 1em;
+        margin-right: 1em;
+        border-radius: 2px;
+
 }
 
 .elementHideOnSmallScreen {

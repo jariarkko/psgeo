@@ -130,6 +130,7 @@ html, body {
 .flexboxRow {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         white-space: pre
 }
 
@@ -145,6 +146,15 @@ html, body {
 
 .columnRightMarginWide {
         margin-right: 3em;
+}
+
+.marginTopNarrow {
+        /* Instead of adding <br> */
+        margin-top: 1em;
+}
+
+.marginTopWide {
+        margin-top: 3em;
 }
 
 .elementHideOnSmallScreen {
