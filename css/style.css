@@ -152,6 +152,10 @@ html, body {
         margin-top: 3em;
 }
 
+.marginBottomNone {
+        margin-bottom: 0;
+}
+
 .filterWindowTabbedMenuButton {
 
         font-weight: bold;
