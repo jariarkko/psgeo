@@ -237,7 +237,7 @@
     "lat": 65.4,
     "lng": 24.6,
     "zoom": 5,
-    "mapTypeControlStyle": "DEFAULT",
+    "mapTypeControlStyle": "DROPDOWN_MENU",
     "mapId": "",
     "singleActivityMode": true,
     "displayRangeCategoryFilterInSingleActivityMode": true,
