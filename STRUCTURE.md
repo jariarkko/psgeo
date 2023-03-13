@@ -20,44 +20,45 @@
         psgeoMap.addListener: psgeoZoomChanged             ADD LISTENER ZOOM
         psgeoMap.addListener: maptypeid_changed            ADD LISTENER CHANGE TO UK TOPOGRAPHIC MAP
         psgeoInitMarkerImages
+        psgeoInitFilterPaneControl
+            filterPaneWin = new PsgeoFilterPaneWin
         psgeoInitStatsPaneControl
-            statsPaneWin = new PsgeoStatsPaneWin
             filterPaneWin = new PsgeoFilterPaneWin
 3.      psgeoInitList
             lib.getDefaultFilterCaving
-            db.setFilter
             db.getFilter
+            db.setFilter
             lib.getDefaultFilterSkiing
-            $.getJSON                                      READ THE ACTIVITY DATABASE
+4.          async function fetchData                       PARALLEL IMPORT. LAST TO COMPLETE RUNS psgeoFINISH LOADING
                 db.addPlacesWithFilter
-4.          psgeoFinishLoading
-                db.filterMatchMap
-                db.filterAnd
-                db.setFilter
-                db.applyAllNoFilter
-                    psgeoInitMarker
-5.              psgeoInitStatsPane                         STATS PANE IS THE MAIN CONTROL
-6.                  psgeoInitFilterPaneText                ON LARGE DISPLAYS IT SPAWNS A SEPARATE FILTERPANE
-                        psgeoFilterSectionPrefix
-                        lib.isOtherActivity
-                        lib.getActivityShortName
-                        psgeoCreateActivityCheckbox
-                        psgeoCreateRangeCheckbox
-                        psgeoCreateCaveMapCheckbox
-7.                      addEventListener: psgeoRerunFilters      ADD LISTENER RERUN FILTERS
-                            psgeoCreateOnlyFinlandFilter
-                            psgeoCreateNameFilter
-                            psgeoCreateSubtypGroupFilters
-                            db.filterMatchActivities
-                            db.filterMatchMap
-                            db.filterRange
-                            db.filterOr
-                            db.filterAnd
-                            psgeoMakeSourceFilter
-                            db.setFilter
-8.                          psgeoRecheckVisibility
-                                db.matchFilter
-                                psgeoItemShouldBeVisibleAtThisZoomLevel
+5.              psgeoFinishLoading
+                    db.filterMatchMap
+                    db.filterAnd
+                    db.setFilter
+                    db.applyAllNoFilter
+                        psgeoInitMarker
+6.                  psgeoInitFilterPane                        STATS PANE IS THE MAIN CONTROL
+7.                      psgeoInitFilterPaneText                ON LARGE DISPLAYS IT SPAWNS A SEPARATE FILTERPANE
+                            psgeoFilterSectionPrefix
+                            lib.isOtherActivity
+                            lib.getActivityShortName
+                            psgeoCreateActivityCheckbox
+                            psgeoCreateRangeCheckbox
+                            psgeoCreateCaveMapCheckbox
+8.                          addEventListener: psgeoRerunFilters      ADD LISTENER RERUN FILTERS
+                                psgeoCreateOnlyFinlandFilter
+                                psgeoCreateNameFilter
+                                psgeoCreateSubtypGroupFilters
+                                db.filterMatchActivities
+                                db.filterMatchMap
+                                db.filterRange
+                                db.filterOr
+                                db.filterAnd
+                                psgeoMakeSourceFilter
+                                db.setFilter
+9.                              psgeoRecheckVisibility
+                                    db.matchFilter
+                                    psgeoItemShouldBeVisibleAtThisZoomLevel   ZZZZZZZZZZZZZZZZ
 8.                          psgeoUpdateStatsPane
                                 psgeoUpdateStatsPaneText
 6.                  psgeoUpdateStatsPane                    THIS IS THE MAIN THING HERE

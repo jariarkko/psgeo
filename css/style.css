@@ -41,6 +41,10 @@ html, body {
         align-content: center;
         }
 
+.largeFont {
+        font-size: 200%;
+}
+
 #Fullstats {
         /* Statistics pane (lower left). */
         font-family: Arial, sans-serif;
