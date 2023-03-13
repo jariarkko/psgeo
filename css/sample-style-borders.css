@@ -41,6 +41,14 @@ html, body {
         border-radius: 4px;
         }
 
+.largeFont {
+        font-size: 180%;
+}
+
+.largeInputFont {
+        font-size: 90%;
+}
+
 #Fullstats {
         /* Statistics pane (lower left). */
         font-family: Arial, sans-serif;
@@ -144,11 +152,11 @@ html, body {
         white-space: pre
 }
 
-.columnRightMarginNarrow {
+.marginRightNarrow {
         margin-right: 1em;
 }
 
-.columnRightMarginWide {
+.marginRightWide {
         margin-right: 3em;
 }
 
@@ -161,8 +169,17 @@ html, body {
         margin-top: 3em;
 }
 
-.elementHideOnSmallScreen {
-        /* use document.getElementsByClassName to set display to none or block */
-        display: block;
+.marginBottomNone {
+        margin-bottom: 0;
+}
+
+.filterWindowTabbedMenuButton {
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 1em; 
+        margin-right: 1em;
+        border-radius: 2px;
 }
 

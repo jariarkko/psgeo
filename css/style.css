@@ -42,7 +42,21 @@ html, body {
         }
 
 .largeFont {
+        /* Used in MoreFilter when window is small */
         font-size: 180%;
+}
+
+.largeInputFont {
+        /* Used in MoreFilter when window is small */
+        font-size: 90%;
+}
+
+.grid2columns {
+  /* Not used yet */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  justify-items: start;
 }
 
 #Fullstats {
@@ -105,14 +119,16 @@ html, body {
 #closeButton {
         /* hardcoded to belong to the genericMenuButton class */
         float: right;
+        /* background-color: #555555; */
 }
 
 .checkboxControlButtons {
         /* Also other buttons in filter window */
-        font-weight: bold;
+        /* font-weight: bold; */
         text-decoration: none;
         color: white;
         background-color: #007bff;
+        /* background-color: #555555; */
         padding: 1px 5px 1px 5px;
         margin-left: 5px;
         border-radius: 2px;
@@ -164,18 +180,13 @@ html, body {
 }
 
 .filterWindowTabbedMenuButton {
-
         font-weight: bold;
         text-decoration: none;
         color: white;
         background-color: #007bff;
+        /* background-color: #555555; */
         padding: 1em;
         margin-right: 1em;
         border-radius: 2px;
-
 }
 
-.elementHideOnSmallScreen {
-        /* use document.getElementsByClassName to set display to none or block */
-        display: block;
-}
