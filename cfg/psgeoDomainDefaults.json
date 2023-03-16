@@ -63,6 +63,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": false,
@@ -191,6 +199,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": true,
@@ -319,6 +335,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "rangeCategoryLimits":
@@ -419,6 +443,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": true,
@@ -513,6 +545,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": true,
@@ -607,6 +647,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": true,
@@ -701,6 +749,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": true,
@@ -794,6 +850,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": false,
@@ -887,6 +951,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": false,
@@ -980,6 +1052,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": true,
@@ -1073,6 +1153,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": false,
@@ -1166,6 +1254,14 @@
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
             "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
             }
         },
     "otherToolsMenu": false,
