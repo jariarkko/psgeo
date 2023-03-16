@@ -51,14 +51,6 @@ html, body {
         font-size: 90%;
 }
 
-.grid2columns {
-  /* Not used yet */
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  justify-items: start;
-}
-
 #Fullstats {
         /* Statistics pane (lower left). */
         font-family: Arial, sans-serif;
@@ -188,5 +180,21 @@ html, body {
         padding: 1em;
         margin-right: 1em;
         border-radius: 2px;
+}
+
+#otherToolsTableOnSmallDisplay img {
+        width: 60%;
+}
+
+#otherToolsTableOnSmallDisplay table {
+        border-spacing: 7;        
+}
+
+#otherToolsTableOnLargeDisplay img {
+        width: 80%;
+}
+
+#otherToolsTableOnLargeDisplay table {
+        border-spacing: 20;        
 }
 
