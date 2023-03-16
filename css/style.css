@@ -85,7 +85,7 @@ html, body {
         padding: 10px;
         margin: 0 0 22px 0;
         box-shadow: 0 4px 12px rgba(0,0,0,.3);
-        width: 30%;
+        width: 30em;
         }
 
 #AboutMenu {
@@ -187,7 +187,7 @@ html, body {
 }
 
 #otherToolsTableOnSmallDisplay table {
-        border-spacing: 7;        
+        border-spacing: 0;        
 }
 
 #otherToolsTableOnLargeDisplay img {
@@ -195,6 +195,6 @@ html, body {
 }
 
 #otherToolsTableOnLargeDisplay table {
-        border-spacing: 20;        
+        border-spacing: 0;        
 }
 

@@ -87,7 +87,7 @@ html, body {
         padding: 10px;
         margin: 0 0 22px 0;
         box-shadow: 0 4px 12px rgba(0,0,0,.3);
-        width: 30%;
+        width: 30em;
         border: 2px solid black;
         border-radius: 4px;
         }
@@ -182,4 +182,21 @@ html, body {
         margin-right: 1em;
         border-radius: 2px;
 }
+
+#otherToolsTableOnSmallDisplay img {
+        width: 60%;
+}
+
+#otherToolsTableOnSmallDisplay table {
+        border-spacing: 0;
+}
+
+#otherToolsTableOnLargeDisplay img {
+        width: 80%;
+}
+
+#otherToolsTableOnLargeDisplay table {
+        border-spacing: 0; 
+}
+
 

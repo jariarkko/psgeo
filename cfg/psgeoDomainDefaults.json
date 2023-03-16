@@ -131,7 +131,8 @@
         "icon": "neu_interface_add_circle_insert_plus_icon_149548.svg",
         "url": "https://luolaseura.fi/luolaretkelle/kerro-meille/",
         "popup":false,
-        "popupSize": ""
+        "popupWidth": 300,
+        "popupHeight": 600
         },
         {
         "textId": "modifyRecord",
@@ -139,7 +140,8 @@
         "icon": "neu_interface_pen_edit_modify_icon_149414.svg",
         "url": "https://luolaseura.fi/luolaretkelle/kerro-meille/luolan-tietojen-paivitys/",
         "popup":false,
-        "popupSize": ""
+        "popupWidth": 300,
+        "popupHeight": 600
         },
         {
         "textId": "caveClassification",
@@ -147,7 +149,8 @@
         "icon": "neu_interface_faq_question_icon_149479.svg",
         "url": "https://kartta.luolaseura.fi/luokittelu-fi.html",
         "popup":true,
-        "popupSize": "width=300,height=600"
+        "popupWidth": 300,
+        "popupHeight": 600
         }
     ],
     "finlandselection": true,
@@ -256,7 +259,8 @@
         "icon": "neu_interface_add_circle_insert_plus_icon_149548.svg",
         "url": "https://luolaseura.fi/luolaretkelle/kerro-meille/",
         "popup":false,
-        "popupSize": ""
+        "popupWidth": 300,
+        "popupHeight": 600
         },
         {
         "textId": "modifyRecord",
@@ -264,7 +268,8 @@
         "icon": "neu_interface_pen_edit_modify_icon_149414.svg",
         "url": "https://luolaseura.fi/luolaretkelle/kerro-meille/luolan-tietojen-paivitys/",
         "popup":false,
-        "popupSize": ""
+        "popupWidth": 300,
+        "popupHeight": 600
         },
         {
         "textId": "caveClassification",
@@ -272,7 +277,8 @@
         "icon": "neu_interface_faq_question_icon_149479.svg",
         "url": "https://kartta.luolaseura.fi/luokittelu-fi.html",
         "popup":true,
-        "popupSize": "width=300,height=600"
+        "popupWidth": 300,
+        "popupHeight": 600
         }
     ],
     "finlandselection": true,
@@ -394,7 +400,7 @@
             {
             "show": true,        
             "textId": "topoMapsSweden",
-            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+                "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
             "layers": "topowebb",
             "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
             },
