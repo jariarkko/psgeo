@@ -39,26 +39,31 @@
                         psgeoInitMarker
 6.                  psgeoInitFilterPane                        STATS PANE IS THE MAIN CONTROL
 7.                      psgeoInitFilterPaneText                ON LARGE DISPLAYS IT SPAWNS A SEPARATE FILTERPANE
-                            psgeoFilterSectionPrefix
-                            lib.isOtherActivity
-                            lib.getActivityShortName
-                            psgeoCreateActivityCheckbox
-                            psgeoCreateRangeCheckbox
-                            psgeoCreateCaveMapCheckbox
-8.                          addEventListener: psgeoRerunFilters      ADD LISTENER RERUN FILTERS
-                                psgeoCreateOnlyFinlandFilter
-                                psgeoCreateNameFilter
-                                psgeoCreateSubtypGroupFilters
-                                db.filterMatchActivities
-                                db.filterMatchMap
-                                db.filterRange
-                                db.filterOr
-                                db.filterAnd
-                                psgeoMakeSourceFilter
-                                db.setFilter
-9.                              psgeoRecheckVisibility
-                                    db.matchFilter
-                                    psgeoItemShouldBeVisibleAtThisZoomLevel   ZZZZZZZZZZZZZZZZ
+                            psgeoInitFilterPaneTextActivities
+                                psgeoFilterSectionPrefix
+                                lib.getActivityShortName
+                                lib.isOtherActivity
+                                psgeoCreateActivityCheckbox
+                            psgeoInitFilterPaneTextRangeCategories
+                                psgeoFilterSectionPrefix
+                                psgeoCreateRangeCheckbox
+                            psgeoInitFilterPaneTextContent
+                                psgeoFilterSectionPrefix
+                                psgeoCreateCaveMapCheckbox
+8.                          addEventListener: psgeoRerunFilters      ADD LISTENER RERUN FILTERS  // ?????????
+                                    psgeoCreateOnlyFinlandFilter
+                                    psgeoCreateNameFilter
+                                    psgeoCreateSubtypGroupFilters
+                                    db.filterMatchActivities
+                                    db.filterMatchMap
+                                    db.filterRange
+                                    db.filterOr
+                                    db.filterAnd
+                                    psgeoMakeSourceFilter
+                                    db.setFilter
+9.                                  psgeoRecheckVisibility
+                                        db.matchFilter
+                                        psgeoItemShouldBeVisibleAtThisZoomLevel
 8.                          psgeoUpdateStatsPane
                                 psgeoUpdateStatsPaneText
 6.                  psgeoUpdateStatsPane                    THIS IS THE MAIN THING HERE
@@ -72,7 +77,7 @@
                                         psgeoFilterSectionPrefix
                                         psgeoNameFilterInput
                                             psgeoGetNameInput
-                                            psgeoRerunFilters ///
+                                            psgeoRerunFilters   /// child functions will not be included in this list
                                         psgeoInitFilterPaneText
                                             lib.getActivityList
                                             lib.getActivityShortName
@@ -91,8 +96,12 @@
                             psgeoGetMoreMenuButton              OPENS A WINDOW WITH CUSTOM LINKS AND ABOUT
                                 psgeoMoreMenuBringUp
                                     psgeoGenericMenuButton
-                                    psgeoMoreMenuContents ///
-                                    
+                                    psgeoMoreMenuContents       /// child functions will not be included in this list
+                    addEventListener:resize
+                        adjustUserInterfaceForSmallScreen
+                        adjustUserInterfaceForLargeScreen
+                        putStuffBackInFilterPane                STORE DIVS BEFORE THEIR CONTAINER MENU IS DESTROYED
+                        updateStatsPane
 6.                  psgeoInitPlace
                         psgeoInitPlaceAux 
                             db.getNamedItemsPartialMatch
