@@ -15,9 +15,13 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
-    "singleActivityMode": false,
-    "displayRangeCategoryFilterInSingleActivityMode": false,
-    "filter": "Skiing",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Skiing",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false 
+        },
     "name": "Planetskier",
     "lang": "en",
     "cavemaps": false,
@@ -25,10 +29,13 @@
     "statLines": "general",
     "showCustomLinks": false,
     "customLinks": [],
-    "homecountrySelection": false,
-    "homecountry": "Finland",
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "sourcesCheckboxes": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -75,9 +82,11 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "length",
-        "unit": "kilometers",
+        "unit": "meters",
+        "keyInJSON": "l",
         "limitLow": 1,
         "limitHigh": 10
         },
@@ -121,9 +130,13 @@
     "zoom": 5,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
-    "singleActivityMode": true,
-    "displayRangeCategoryFilterInSingleActivityMode": true,
-    "filter": "Caving",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Caving",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
     "name": "Luolakartat Suomessa",
     "lang": "fi",
     "cavemaps": true,
@@ -159,11 +172,14 @@
         "popupHeight": 600
         }
     ],
-    "homecountrySelection": true,
-    "homecountry": "Finland",
+    "homeCountrySelection": true,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "zoomlevelfordetails": 14,
     "sourcesCheckboxes": true,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -210,9 +226,11 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "length",
         "unit": "meters",
+        "keyInJSON": "l",
         "limitLow": 5,
         "limitHigh": 50
         },
@@ -256,21 +274,17 @@
     "zoom": 5,
     "mapTypeControlStyle": "DROPDOWN_MENU",
     "mapId": "",
+    "cavemaps": true,
+    "cavemapsInitiallyOn": false,
     "defaultFilter":
         {
-        "COMMENT": "Replaces: singleActivityMode,displayRange...,filter,finland,cavemaps,cavemaps, ",
-        "enabled": false,
+        "enabled": true,
         "filter": "Caving",
-        "showMaps": false,
-        "allowChange": true
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
         },
-    "singleActivityMode": true,
-    "displayRangeCategoryFilterInSingleActivityMode": true,
-    "filter": "Caving",
     "name": "Luolakartat Suomessa",
     "lang": "fi",
-    "cavemaps": true,
-    "cavemapsFilterInitiallyOn": false,
     "statLines": "caving",
     "showCustomLinks": true,
     "customLinks": [
@@ -302,11 +316,14 @@
         "popupHeight": 600
         }
     ],
-    "homecountrySelection": true,
-    "homecountry": "Finland",
+    "homeCountrySelection": true,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "zoomlevelfordetails": 14,
     "sourcesCheckboxes": true,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -352,9 +369,11 @@
         },
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "length",
         "unit": "meters",
+        "keyInJSON": "l",
         "limitLow": 5,
         "limitHigh": 50
         },
@@ -399,9 +418,13 @@
     "zoom": 5,
     "mapTypeControlStyle": "DEFAULT",
     "mapId": "",
-    "singleActivityMode": true,
-    "displayRangeCategoryFilterInSingleActivityMode": true,
-    "filter": "Caving",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Caving",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
     "name": "Luolakartat Suomessa",
     "lang": "fi",
     "cavemaps": true,
@@ -409,11 +432,14 @@
     "statLines": "caving",
     "showCustomLinks": true,
     "customLinks": [],
-    "homecountrySelection": true,
-    "homecountry": "Finland",
+    "homeCountrySelection": true,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "zoomlevelfordetails": 14,
     "sourcesCheckboxes": true,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -460,9 +486,11 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "length",
         "unit": "meters",
+        "keyInJSON": "l",
         "limitLow": 5,
         "limitHigh": 50
         },
@@ -500,9 +528,13 @@
     "zoom": 5,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
-    "singleActivityMode": true,
-    "displayRangeCategoryFilterInSingleActivityMode": true,
-    "filter": "CavingFinland",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "CavingFinland",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
     "name": "Planetcaver Cave Maps",
     "lang": "en",
     "cavemaps": true,
@@ -510,11 +542,14 @@
     "statLines": "caving",
     "showCustomLinks": false,
     "customLinks": [],
-    "homecountrySelection": true,
-    "homecountry": "Finland",
+    "homeCountrySelection": true,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "zoomlevelfordetails": 14,
     "sourcesCheckboxes": false,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "activityCheckboxes": false,
     "topographicMaps":
         {
         "Finland":
@@ -561,9 +596,11 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "length",
         "unit": "meters",
+        "keyInJSON": "l",
         "limitLow": 5,
         "limitHigh": 50
         },
@@ -601,9 +638,13 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
-    "singleActivityMode": true,
-    "displayRangeCategoryFilterInSingleActivityMode": true,
-    "filter": "CavingFinland",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Caving",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
     "name": "Planetcaver",
     "lang": "en",
     "cavemaps": false,
@@ -611,11 +652,14 @@
     "statLines": "general",
     "showCustomLinks": false,
     "customLinks": [],
-    "homecountrySelection": false,
-    "homecountry": "Finland",
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "zoomlevelfordetails": 14,
     "sourcesCheckboxes": false,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -662,9 +706,11 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "length",
         "unit": "meters",
+        "keyInJSON": "l",
         "limitLow": 5,
         "limitHigh": 50
         },
@@ -702,9 +748,13 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
-    "singleActivityMode": false,
-    "displayRangeCategoryFilterInSingleActivityMode": false,
-    "filter": "Urbanex",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Urbanex",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
     "name": "The Urban Explorer",
     "lang": "en",
     "cavemaps": false,
@@ -712,11 +762,14 @@
     "statLines": "general",
     "showCustomLinks": false,
     "customLinks": [],
-    "homecountrySelection": false,
-    "homecountry": "Finland",
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "zoomlevelfordetails": 14,
     "sourcesCheckboxes": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
     "topographicMaps":
         {
         "Finland":
@@ -763,9 +816,11 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "time",
         "unit": "hours",
+        "keyInJSON": "",
         "limitLow": 1,
         "limitHigh": 3 
         },
@@ -803,9 +858,13 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
-    "singleActivityMode": false,
-    "displayRangeCategoryFilterInSingleActivityMode": false,
-    "filter": "Climbing",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Climbing",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
     "name": "Planetclimber",
     "lang": "en",
     "cavemaps": false,
@@ -813,10 +872,13 @@
     "statLines": "general",
     "showCustomLinks": false,
     "customLinks": [],
-    "homecountrySelection": false,
-    "homecountry": "Finland",
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "sourcesCheckboxes": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
     "topographicMaps":
         {
         "Finland":
@@ -863,9 +925,11 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "height",
         "unit": "meters",
+        "keyInJSON": "h",
         "limitLow": 1000,
         "limitHigh": 2000 
         },
@@ -903,9 +967,13 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
-    "singleActivityMode": false,
-    "displayRangeCategoryFilterInSingleActivityMode": false,
-    "filter": "Biking",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Biking",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
     "name": "Planetbiker",
     "lang": "en",
     "cavemaps": false,
@@ -913,10 +981,13 @@
     "statLines": "general",
     "showCustomLinks": false,
     "customLinks": [],
-    "homecountrySelection": false,
-    "homecountry": "Finland",
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "sourcesCheckboxes": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
     "topographicMaps":
         {
         "Finland":
@@ -963,9 +1034,11 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "length",
         "unit": "kilometers",
+        "keyInJSON": "",
         "limitLow": 10,
         "limitHigh": 100 
         },
@@ -1003,9 +1076,13 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
-    "singleActivityMode": false,
-    "displayRangeCategoryFilterInSingleActivityMode": false,
-    "filter": "Swimming",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Swimming",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
     "name": "Planetswimmer",
     "lang": "en",
     "cavemaps": false,
@@ -1013,10 +1090,13 @@
     "statLines": "general",
     "showCustomLinks": false,
     "customLinks": [],
-    "homecountrySelection": false,
-    "homecountry": "Finland",
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "sourcesCheckboxes": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
     "topographicMaps":
         {
         "Finland":
@@ -1063,9 +1143,11 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "temperature",
         "unit": "celcius",
+        "keyInJSON": "",
         "limitLow": 16,
         "limitHigh": 24
         },
@@ -1103,9 +1185,13 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
-    "singleActivityMode": false,
-    "displayRangeCategoryFilterInSingleActivityMode": false,
-    "filter": "Flying",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Flying",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
     "name": "Planetflyer",
     "lang": "en",
     "cavemaps": false,
@@ -1113,10 +1199,13 @@
     "statLines": "general",
     "showCustomLinks": false,
     "customLinks": [],
-    "homecountrySelection": false,
-    "homecountry": "Finland",
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "sourcesCheckboxes": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
     "topographicMaps":
         {
         "Finland":
@@ -1163,9 +1252,11 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "length",
         "unit": "kilometers",
+        "keyInJSON": "",
         "limitLow": 2000,
         "limitHigh": 6000 
         },
@@ -1203,9 +1294,13 @@
     "zoom": 2,
     "mapTypeControlStyle": "HORIZONTAL_BAR",
     "mapId": "",
-    "singleActivityMode": false,
-    "displayRangeCategoryFilterInSingleActivityMode": false,
-    "filter": "Sauna",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Sauna",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
     "name": "Saunablogger",
     "lang": "en",
     "cavemaps": false,
@@ -1213,10 +1308,13 @@
     "statLines": "general",
     "showCustomLinks": false,
     "customLinks": [],
-    "homecountrySelection": false,
-    "homecountry": "Finland",
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
     "zoomouthidesdetails": true,
     "sourcesCheckboxes": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
     "topographicMaps":
         {
         "Finland":
@@ -1263,9 +1361,11 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
+        "allowFiltering": true,
         "allowChanging": true,
         "measure": "temperature",
         "unit": "celcius",
+        "keyInJSON": "",
         "limitLow": 70,
         "limitHigh": 90
         },
