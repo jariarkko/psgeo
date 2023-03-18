@@ -199,4 +199,8 @@ html, body {
         border-spacing: 0; 
 }
 
+.highlightError {
+        background-color: #FF0000;
+        color: white;
+}
 
