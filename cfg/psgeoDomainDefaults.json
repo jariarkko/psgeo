@@ -527,8 +527,8 @@
     "defaultFilter":
         {
         "enabled": true,
-        "filter": "CavingFinland",
-        "onlyHomeCountry": false,
+        "filter": "Caving",
+        "onlyHomeCountry": true,
         "showMapsByDefault": false
         },
     "name": "Planetcaver Cave Maps",
