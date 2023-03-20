@@ -33,11 +33,19 @@ html, body {
         background-color: white;
         padding: 10px;
         margin: 0 0 22px 0;
-        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        box-shadow: 0 4px 12px rgba(0,0,0,.3);
         width: 60%;
         border: 2px solid black;
         border-radius: 4px;
         }
+
+.largeFont {
+        font-size: 180%;
+}
+
+.largeInputFont {
+        font-size: 90%;
+}
 
 #Fullstats {
         /* Statistics pane (lower left). */
@@ -50,7 +58,7 @@ html, body {
         }
 
 #MoreInfo {
-        // Popup opened by the (i) button.
+        /* Popup opened by the (i) button. */
         font-family: Arial, sans-serif;
         background: #fff;
         padding: 10px;
@@ -69,24 +77,24 @@ html, body {
         }
 
 #OtherTools {
-        // More tools. E.g. other cavemaps.
+        /* More tools. E.g. other cavemaps. */
         font-family: Arial, sans-serif; 
         background-color: white;
         padding: 10px;
         margin: 0 0 22px 0;
-        boxShadow = 0 4px 12px rgba(0,0,0,.3);
-        width: 30%;
+        box-shadow: 0 4px 12px rgba(0,0,0,.3);
+        width: 30em;
         border: 2px solid black;
         border-radius: 4px;
         }
 
 #AboutMenu {
-        // Credits
+        /* Credits */
         font-family: Arial, sans-serif; 
         background-color: white;
         padding: 10px;
         margin: 0 0 22px 0;
-        boxShadow = 0 4px 12px rgba(0,0,0,.3);
+        box-shadow: 0 4px 12px rgba(0,0,0,.3);
         width: 30%;
         border: 2px solid black;
         border-radius: 4px;
@@ -95,15 +103,101 @@ html, body {
 .genericMenuButton {
         background: none;
         padding: 0;
-        borderWith: 0;
+        border-width: 0;
         border: none;
-        textDecoration: underline;
-        fontFamily: arial,sans-serif;
-        fontSize: 90%;
+        text-decoration: underline;
+        font-family: arial,sans-serif;
+        font-size: 90%;
 }
 
 #closeButton {
         /* hardcoded to belong to the genericMenuButton class */
         float: right;
 }
+
+.checkboxControlButtons {
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 1px 5px 1px 5px;
+        margin-left: 5px;
+        border-radius: 2px;
+}
+
+#rangeHighInput {
+        /* number */
+        width: 5em;
+}
+
+#rangeLowInput {
+        /* number */
+        width: 6em;
+}
+
+.flexboxRow {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        white-space: pre
+}
+
+.flexboxColumn {
+        display: flex;
+        flex-direction: column;
+        white-space: pre
+}
+
+.marginRightNarrow {
+        margin-right: 1em;
+}
+
+.marginRightWide {
+        margin-right: 3em;
+}
+
+.marginTopNarrow {
+        /* Instead of adding <br> */
+        margin-top: 1em;
+}
+
+.marginTopWide {
+        margin-top: 3em;
+}
+
+.marginBottomNone {
+        margin-bottom: 0;
+}
+
+.filterWindowTabbedMenuButton {
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 1em; 
+        margin-right: 1em;
+        border-radius: 2px;
+}
+
+#otherToolsTableOnSmallDisplay img {
+        width: 60%;
+}
+
+#otherToolsTableOnSmallDisplay table {
+        border-spacing: 0;
+}
+
+#otherToolsTableOnLargeDisplay img {
+        width: 80%;
+}
+
+#otherToolsTableOnLargeDisplay table {
+        border-spacing: 0; 
+}
+
+.highlightError {
+        background-color: #FF0000;
+        color: white;
+}
+
 

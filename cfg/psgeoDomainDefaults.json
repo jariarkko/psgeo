@@ -1,0 +1,1390 @@
+[
+{
+    "domains": ["planetskier.net","www.planetskier.net"],
+    "paths": [],
+    "sources": [
+        {
+        "textId": "Planetcaver",
+        "link": "https://www.planetskier.net",
+        "datafile": "https://www.planetcaver.net/locations.json",
+        "descriptionTextId": "dataExplanation"
+        }
+    ],
+    "lat": 0,
+    "lng": 0,
+    "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Skiing",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false 
+        },
+    "name": "Planetskier",
+    "lang": "en",
+    "cavemaps": false,
+    "statLines": "general",
+    "showCustomLinks": false,
+    "customLinks": [],
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "sourcesCheckboxes": false,
+    "articleCheckbox": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": true,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": false,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": false,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "length",
+        "unit": "meters",
+        "keyInJSON": "l",
+        "limitLow": 1,
+        "limitHigh": 10
+        },
+    "nameSearch": true,
+    "rockTypeSearch": false,
+    "morphologySearch": false,
+    "waterbodySearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": true,
+    "skiingUphillSearch": true,
+    "skiingPlaceSearch": true,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": false,
+    "classicUI":true
+},
+{
+    "domains": ["kartta.luolaseura.fi"],
+    "paths": [],
+    "sources": [
+        {
+        "textId": "Luolaseura",
+        "link": "https://luolaseura.fi",
+        "datafile": "https://kartta.luolaseura.fi/db/caves.luolaseura.json",
+        "descriptionTextId": "dataExplanationCavingAssociation"
+        },
+        {
+        "textId": "Planetcaver",
+        "link": "https://www.planetcaver.net",
+        "datafile": "https://www.planetcaver.net/locations.caving.json",
+        "descriptionTextId": ""
+        }
+    ],
+    "lat": 65.4,
+    "lng": 24.6,
+    "zoom": 5,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Caving",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "Luolakartat Suomessa",
+    "lang": "fi",
+    "cavemaps": true,
+    "statLines": "caving",
+    "showCustomLinks": false,
+    "customLinks": [
+        {
+        "textId": "addRecord",
+        "iconSet": "./icons/neu_interface/",
+        "icon": "neu_interface_add_circle_insert_plus_icon_149548.svg",
+        "url": "https://luolaseura.fi/luolaretkelle/kerro-meille/",
+        "popup":false,
+        "popupWidth": 300,
+        "popupHeight": 600
+        },
+        {
+        "textId": "modifyRecord",
+        "iconSet": "./icons/neu_interface/",
+        "icon": "neu_interface_pen_edit_modify_icon_149414.svg",
+        "url": "https://luolaseura.fi/luolaretkelle/kerro-meille/luolan-tietojen-paivitys/",
+        "popup":false,
+        "popupWidth": 300,
+        "popupHeight": 600
+        },
+        {
+        "textId": "caveClassification",
+        "iconSet": "./icons/neu_interface/",
+        "icon": "neu_interface_faq_question_icon_149479.svg",
+        "url": "https://kartta.luolaseura.fi/luokittelu-fi.html",
+        "popup":true,
+        "popupWidth": 300,
+        "popupHeight": 600
+        }
+    ],
+    "homeCountrySelection": true,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "zoomlevelfordetails": 14,
+    "sourcesCheckboxes": true,
+    "articleCheckbox": true,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "activityCheckboxes": true,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": true,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": true,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "length",
+        "unit": "meters",
+        "keyInJSON": "l",
+        "limitLow": 5,
+        "limitHigh": 50
+        },
+    "nameSearch": true,
+    "rockTypeSearch": true,
+    "morphologySearch": true,
+    "waterbodySearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": true,
+    "classicUI":false
+},
+{
+    "domains": ["dev.luolaseura.fi"],
+    "paths": [""],
+    "sources": [
+        {
+        "textId": "Luolaseura",
+        "link": "https://luolaseura.fi",
+        "datafile": "https://dev.luolaseura.fi/db/caves.luolaseura.json",
+        "descriptionTextId": "dataExplanationCavingAssociation"
+        },
+        {
+        "textId": "Planetcaver",
+        "link": "https://www.planetcaver.net",
+        "datafile": "https://www.planetcaver.net/locations.caving.json",
+        "descriptionTextId": ""
+        }
+    ],
+    "lat": 65.4,
+    "lng": 24.6,
+    "zoom": 5,
+    "mapTypeControlStyle": "DROPDOWN_MENU",
+    "mapId": "",
+    "cavemaps": true,
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Caving",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "Luolakartat Suomessa",
+    "lang": "fi",
+    "statLines": "caving",
+    "showCustomLinks": true,
+    "customLinks": [
+        {
+        "textId": "addRecord",
+        "iconSet": "./icons/neu_interface/",
+        "icon": "neu_interface_add_circle_insert_plus_icon_149548.svg",
+        "url": "https://luolaseura.fi/luolaretkelle/kerro-meille/",
+        "popup":false,
+        "popupWidth": 300,
+        "popupHeight": 600
+        },
+        {
+        "textId": "modifyRecord",
+        "iconSet": "./icons/neu_interface/",
+        "icon": "neu_interface_pen_edit_modify_icon_149414.svg",
+        "url": "https://luolaseura.fi/luolaretkelle/kerro-meille/luolan-tietojen-paivitys/",
+        "popup":false,
+        "popupWidth": 300,
+        "popupHeight": 600
+        },
+        {
+        "textId": "caveClassification",
+        "iconSet": "./icons/neu_interface/",
+        "icon": "neu_interface_faq_question_icon_149479.svg",
+        "url": "https://kartta.luolaseura.fi/luokittelu-fi.html",
+        "popup":true,
+        "popupWidth": 300,
+        "popupHeight": 600
+        }
+    ],
+    "homeCountrySelection": true,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "zoomlevelfordetails": 14,
+    "sourcesCheckboxes": true,
+    "articleCheckbox": true,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "activityCheckboxes": true,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": true,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "length",
+        "unit": "meters",
+        "keyInJSON": "l",
+        "limitLow": 5,
+        "limitHigh": 50
+        },
+    "otherToolsMenu": true,
+    "nameSearch": true,
+    "rockTypeSearch": true,
+    "morphologySearch": true,
+    "waterbodySearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": true,
+    "classicUI":false
+},
+{
+    "domains": ["luolaseura.planetcaver.net"],
+    "paths": [],
+    "sources": [
+        {
+        "textId": "Luolaseura",
+        "link": "https://luolaseura.fi",
+        "datafile": "https://kartta.luolaseura.fi/db/caves.luolaseura.json",
+        "descriptionTextId": "dataExplanationCavingAssociation"
+        },
+        {
+        "textId": "Planetcaver",
+        "link": "https://planetcaver.net",
+        "datafile": "https://www.planetcaver.net/locations.caving.json",
+        "descriptionTextId": ""
+        }
+    ],
+    "lat": 65.4,
+    "lng": 24.6,
+    "zoom": 5,
+    "mapTypeControlStyle": "DEFAULT",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Caving",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "Luolakartat Suomessa",
+    "lang": "fi",
+    "cavemaps": true,
+    "statLines": "caving",
+    "showCustomLinks": true,
+    "customLinks": [],
+    "homeCountrySelection": true,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "zoomlevelfordetails": 14,
+    "sourcesCheckboxes": true,
+    "articleCheckbox": true,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "activityCheckboxes": true,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": true,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+                "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": true,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "length",
+        "unit": "meters",
+        "keyInJSON": "l",
+        "limitLow": 5,
+        "limitHigh": 50
+        },
+    "nameSearch": true,
+    "rockTypeSearch": true,
+    "morphologySearch": true,
+    "waterbodySearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": true,
+    "classicUI":false
+},
+{
+    "domains": ["planetcaver.net","www.planetcaver.net"],
+    "paths": ["mapmap.html","kartta.html"],
+    "sources": [
+        {
+        "textId": "Planetcaver",
+        "link": "https://www.planetcaver.net",
+        "datafile": "https://www.planetcaver.net/locations.json",
+        "descriptionTextId": "dataExplanation"
+        }
+    ],
+    "lat": 65.4,
+    "lng": 24.6,
+    "zoom": 5,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Caving",
+        "onlyHomeCountry": true,
+        "showMapsByDefault": true
+        },
+    "name": "Planetcaver Cave Maps",
+    "lang": "en",
+    "cavemaps": true,
+    "statLines": "caving",
+    "showCustomLinks": false,
+    "customLinks": [],
+    "homeCountrySelection": true,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "zoomlevelfordetails": 14,
+    "sourcesCheckboxes": false,
+    "articleCheckbox": true,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "activityCheckboxes": false,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": true,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": true,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "length",
+        "unit": "meters",
+        "keyInJSON": "l",
+        "limitLow": 5,
+        "limitHigh": 50
+        },
+    "nameSearch": true,
+    "rockTypeSearch": true,
+    "morphologySearch": true,
+    "waterbodySearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": true,
+    "classicUI": false
+},
+{
+    "domains": ["planetcaver.net","www.planetcaver.net"],
+    "paths": [],
+    "sources": [
+        {
+        "textId": "Planetcaver",
+        "link": "https://www.planetcaver.net",
+        "datafile": "https://www.planetcaver.net/locations.json",
+        "descriptionTextId": "dataExplanation"
+        }
+    ],
+    "lat": 0,
+    "lng": 0,
+    "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Caving",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "Planetcaver",
+    "lang": "en",
+    "cavemaps": false,
+    "statLines": "general",
+    "showCustomLinks": false,
+    "customLinks": [],
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "zoomlevelfordetails": 14,
+    "sourcesCheckboxes": false,
+    "articleCheckbox": true,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "activityCheckboxes": true,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": true,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": true,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "length",
+        "unit": "meters",
+        "keyInJSON": "l",
+        "limitLow": 5,
+        "limitHigh": 50
+        },
+    "nameSearch": true,
+    "rockTypeSearch": true,
+    "morphologySearch": true,
+    "waterbodySearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": true,
+    "classicUI": false
+},
+{
+    "domains": ["theurbanexplorer.net","www.theurbanexplorer.net"],
+    "paths": [],
+    "sources": [
+        {
+        "textId": "Planetcaver",
+        "link": "https://theurbanexplorer.net",
+        "datafile": "https://www.planetcaver.net/locations.json",
+        "descriptionTextId": "dataExplanation"
+        }
+    ],
+    "lat": 0,
+    "lng": 0,
+    "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Urbanex",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "The Urban Explorer",
+    "lang": "en",
+    "cavemaps": false,
+    "statLines": "general",
+    "showCustomLinks": false,
+    "customLinks": [],
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "zoomlevelfordetails": 14,
+    "sourcesCheckboxes": false,
+    "articleCheckbox": true,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": true,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": true,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "time",
+        "unit": "hours",
+        "keyInJSON": "",
+        "limitLow": 1,
+        "limitHigh": 3 
+        },
+    "nameSearch": true,
+    "rockTypeSearch": false,
+    "morphologySearch": false,
+    "waterbodySearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": true,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": false,
+    "classicUI": false
+},
+{
+    "domains": ["planetclimber.net","www.planetclimber.net"],
+    "paths": [],
+    "sources": [
+        {
+        "textId": "Planetcaver",
+        "link": "https://planetclimber.net",
+        "datafile": "https://www.planetcaver.net/locations.json",
+        "descriptionTextId": "dataExplanation"
+        }
+    ],
+    "lat": 0,
+    "lng": 0,
+    "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Climbing",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "Planetclimber",
+    "lang": "en",
+    "cavemaps": false,
+    "statLines": "general",
+    "showCustomLinks": false,
+    "customLinks": [],
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "sourcesCheckboxes": false,
+    "articleCheckbox": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": false,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": false,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": false,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": false,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": false,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "height",
+        "unit": "meters",
+        "keyInJSON": "h",
+        "limitLow": 1000,
+        "limitHigh": 2000 
+        },
+    "nameSearch": true,
+    "rockTypeSearch": false,
+    "morphologySearch": false,
+    "waterbodySearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": true,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": true,
+    "classicUI": false
+},
+{
+    "domains": ["planetbiker.net","www.planetbiker.net"],
+    "paths": [],
+    "sources": [
+        {
+        "textId": "Planetcaver",
+        "link": "https://planetbiker.net",
+        "datafile": "https://www.planetcaver.net/locations.json",
+        "descriptionTextId": "dataExplanation"
+        }
+    ],
+    "lat": 0,
+    "lng": 0,
+    "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Biking",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "Planetbiker",
+    "lang": "en",
+    "cavemaps": false,
+    "statLines": "general",
+    "showCustomLinks": false,
+    "customLinks": [],
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "sourcesCheckboxes": false,
+    "articleCheckbox": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": false,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": false,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": false,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": false,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": false,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "length",
+        "unit": "kilometers",
+        "keyInJSON": "",
+        "limitLow": 10,
+        "limitHigh": 100 
+        },
+    "nameSearch": true,
+    "rockTypeSearch": false,
+    "morphologySearch": false,
+    "waterbodySearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "bikingSearch": true,
+    "urbanexTargetSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": false,
+    "classicUI": false
+},
+{
+    "domains": ["planetswimmer.com","www.planetswimmer.com"],
+    "paths": [],
+    "sources": [
+        {
+        "textId": "Planetswimmer",
+        "link": "https://www.planetswimmer.com",
+        "datafile": "https://www.planetswimmer.com/locations.json",
+        "descriptionTextId": "dataExplanation"
+        }
+    ],
+    "lat": 0,
+    "lng": 0,
+    "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Swimming",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "Planetswimmer",
+    "lang": "en",
+    "cavemaps": false,
+    "statLines": "general",
+    "showCustomLinks": false,
+    "customLinks": [],
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "sourcesCheckboxes": false,
+    "articleCheckbox": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": true,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": true,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "temperature",
+        "unit": "celcius",
+        "keyInJSON": "",
+        "limitLow": 16,
+        "limitHigh": 24
+        },
+    "nameSearch": true,
+    "rockTypeSearch": false,
+    "morphologySearch": false,
+    "waterbodySearch": true,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": false,
+    "classicUI": false
+},
+{
+    "domains": ["planetflier.com","www.planetflier.com"],
+    "paths": [],
+    "sources": [
+        {
+        "textId": "Planetcaver",
+        "link": "https://www.planetflier.com",
+        "datafile": "https://www.planetcaver.net/locations.json",
+        "descriptionTextId": "dataExplanation"
+        }
+    ],
+    "lat": 0,
+    "lng": 0,
+    "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Flying",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "Planetflyer",
+    "lang": "en",
+    "cavemaps": false,
+    "statLines": "general",
+    "showCustomLinks": false,
+    "customLinks": [],
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "sourcesCheckboxes": false,
+    "articleCheckbox": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": false,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": false,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": false,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": false,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": false,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "length",
+        "unit": "kilometers",
+        "keyInJSON": "",
+        "limitLow": 2000,
+        "limitHigh": 6000 
+        },
+    "nameSearch": true,
+    "rockTypeSearch": false,
+    "morphologySearch": false,
+    "waterbodySearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": true,
+    "classicUI": false
+},
+{
+    "domains": ["saunablogger.cool","www.saunablogger.cool"],
+    "paths": [],
+    "sources": [
+        {
+        "textId": "Planetcaver",
+        "link": "https://saunablogger.cool",
+        "datafile": "https://www.planetcaver.net/locations.json",
+        "descriptionTextId": "dataExplanation"
+        }
+    ],
+    "lat": 0,
+    "lng": 0,
+    "zoom": 2,
+    "mapTypeControlStyle": "HORIZONTAL_BAR",
+    "mapId": "",
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Sauna",
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "Saunablogger",
+    "lang": "en",
+    "cavemaps": false,
+    "statLines": "general",
+    "showCustomLinks": false,
+    "customLinks": [],
+    "homeCountrySelection": false,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "sourcesCheckboxes": false,
+    "articleCheckbox": false,
+    "mapsCheckbox": false,
+    "model3dCheckbox": false,
+    "activityCheckboxes": false,
+    "topographicMaps":
+        {
+        "Finland":
+            {
+            "show": true,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "otherToolsMenu": false,
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "temperature",
+        "unit": "celcius",
+        "keyInJSON": "",
+        "limitLow": 70,
+        "limitHigh": 90
+        },
+    "nameSearch": true,
+    "rockTypeSearch": false,
+    "morphologySearch": false,
+    "waterbodySearch": false,
+    "saunaTypeSearch": true,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": false,
+    "classicUI": false
+}
+]
