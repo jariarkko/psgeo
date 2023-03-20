@@ -81,8 +81,8 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
-        "allowFiltering": true,
-        "allowChanging": true,
+        "allowFiltering": false,
+        "allowChanging": false,
         "measure": "length",
         "unit": "meters",
         "keyInJSON": "l",
@@ -809,8 +809,8 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
-        "allowFiltering": true,
-        "allowChanging": true,
+        "allowFiltering": false,
+        "allowChanging": false,
         "measure": "time",
         "unit": "hours",
         "keyInJSON": "",
@@ -917,8 +917,8 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
-        "allowFiltering": true,
-        "allowChanging": true,
+        "allowFiltering": false,
+        "allowChanging": false,
         "measure": "height",
         "unit": "meters",
         "keyInJSON": "h",
@@ -1025,8 +1025,8 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
-        "allowFiltering": true,
-        "allowChanging": true,
+        "allowFiltering": false,
+        "allowChanging": false,
         "measure": "length",
         "unit": "kilometers",
         "keyInJSON": "",
@@ -1133,8 +1133,8 @@
     "otherToolsMenu": true,
     "rangeCategoryLimits":
         {
-        "allowFiltering": true,
-        "allowChanging": true,
+        "allowFiltering": false,
+        "allowChanging": false,
         "measure": "temperature",
         "unit": "celcius",
         "keyInJSON": "",
@@ -1241,8 +1241,8 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
-        "allowFiltering": true,
-        "allowChanging": true,
+        "allowFiltering": false,
+        "allowChanging": false,
         "measure": "length",
         "unit": "kilometers",
         "keyInJSON": "",
@@ -1349,8 +1349,8 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
-        "allowFiltering": true,
-        "allowChanging": true,
+        "allowFiltering": false,
+        "allowChanging": false,
         "measure": "temperature",
         "unit": "celcius",
         "keyInJSON": "",
