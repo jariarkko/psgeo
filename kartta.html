@@ -4,6 +4,7 @@
 	<title>Activity map</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
+        <meta permission-policy: geolocation=(self)>
         <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,6 +13,7 @@
 	<script src="./lib/psgeo.js"></script>
 	<script src="./lib/psgeotables.js"></script>
 	<script src="./lib/psgeosettings.js"></script>
+	<script src="./lib/psgeolocation.js"></script>
 	<script src="./lib/psgeodb.js"></script>
 	<script src="./lib/psgeodbbackend.js"></script>
 	<script src="./lib/psgeodbtext.js"></script>
@@ -23,9 +25,13 @@
 	<script>
                 const apiKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-                let uiLanguage = "fi"; // default
-                if ( window.location.search == "?lang=en" ) { uiLanguage = "en" }
-                if ( window.location.search == "?lang=sv" ) { uiLanguage = "sv" }
+                // Define a proxy for URLSearchParams with a simplified get
+                // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
+                // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+                const params = new Proxy(new URLSearchParams(window.location.search), {
+                                   get: (searchParams, prop) => searchParams.get(prop),
+                                   });
+                let uiLanguage = params.lang;
 
 		const fileref=document.createElement('script');
 		fileref.setAttribute("type","text/javascript");
