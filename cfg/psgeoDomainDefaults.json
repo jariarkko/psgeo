@@ -529,7 +529,7 @@
         "enabled": true,
         "filter": "Caving",
         "onlyHomeCountry": true,
-        "showMapsByDefault": false
+        "showMapsByDefault": true
         },
     "name": "Planetcaver Cave Maps",
     "lang": "en",
