@@ -1033,7 +1033,7 @@
             },
         "World":
             {
-            "show": true,
+            "show": false,
             "textId": "openTopo",
             "baseUrl": "https://tile.opentopomap.org/",
             "layers": "",
@@ -1111,7 +1111,7 @@
         {
         "Finland":
             {
-            "show": true,        
+            "show": false,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
             "layers": "",
@@ -1119,7 +1119,7 @@
             },
         "Sweden":
             {
-            "show": true,        
+            "show": false,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
             "layers": "topowebb",
@@ -1127,7 +1127,7 @@
             },
         "Norway":
             {
-            "show": true,        
+            "show": false,        
             "textId": "topoMapsNorway",
             "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
             "layers": "topo4",
@@ -1135,7 +1135,7 @@
             },
         "UnitedKingdom":
             {
-            "show": true,        
+            "show": false,        
             "textId": "topoMapsUK",
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
@@ -1143,7 +1143,7 @@
             },
         "World":
             {
-            "show": true,
+            "show": false,
             "textId": "openTopo",
             "baseUrl": "https://tile.opentopomap.org/",
             "layers": "",
@@ -1331,7 +1331,7 @@
         {
         "Finland":
             {
-            "show": true,        
+            "show": false,        
             "textId": "topoMapsFinland",
             "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
             "layers": "",
@@ -1339,7 +1339,7 @@
             },
         "Sweden":
             {
-            "show": true,        
+            "show": false,        
             "textId": "topoMapsSweden",
             "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
             "layers": "topowebb",
@@ -1347,7 +1347,7 @@
             },
         "Norway":
             {
-            "show": true,        
+            "show": false,        
             "textId": "topoMapsNorway",
             "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
             "layers": "topo4",
@@ -1355,7 +1355,7 @@
             },
         "UnitedKingdom":
             {
-            "show": true,        
+            "show": false,        
             "textId": "topoMapsUK",
             "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
             "layers": "Outdoor_3857",
@@ -1363,7 +1363,7 @@
             },
         "World":
             {
-            "show": true,
+            "show": false,
             "textId": "openTopo",
             "baseUrl": "https://tile.opentopomap.org/",
             "layers": "",
@@ -1373,7 +1373,7 @@
     "otherToolsMenu": false,
     "rangeCategoryLimits":
         {
-        "allowFiltering": false,
+        "allowFilfalsetering": false,
         "allowChanging": false,
         "measure": "temperature",
         "unit": "celcius",
