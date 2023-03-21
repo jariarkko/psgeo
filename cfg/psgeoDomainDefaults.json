@@ -767,8 +767,8 @@
     "zoomlevelfordetails": 14,
     "sourcesCheckboxes": false,
     "articleCheckbox": true,
-    "mapsCheckbox": false,
-    "model3dCheckbox": false,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
     "activityCheckboxes": false,
     "topographicMaps":
         {
