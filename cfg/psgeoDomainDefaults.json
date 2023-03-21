@@ -554,7 +554,7 @@
     "articleCheckbox": true,
     "mapsCheckbox": true,
     "model3dCheckbox": true,
-    "activityCheckboxes": true,
+    "activityCheckboxes": false,
     "topographicMaps":
         {
         "Finland":
