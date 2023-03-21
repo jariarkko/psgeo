@@ -443,7 +443,7 @@
     "articleCheckbox": true,
     "mapsCheckbox": true,
     "model3dCheckbox": true,
-    "activityCheckboxes": true,
+    "activityCheckboxes": false,
     "topographicMaps":
         {
         "Finland":
@@ -554,7 +554,7 @@
     "articleCheckbox": true,
     "mapsCheckbox": true,
     "model3dCheckbox": true,
-    "activityCheckboxes": false,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -776,7 +776,7 @@
     "articleCheckbox": true,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
-    "activityCheckboxes": false,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -886,7 +886,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
-    "activityCheckboxes": false,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -996,7 +996,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
-    "activityCheckboxes": false,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -1106,7 +1106,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
-    "activityCheckboxes": false,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -1216,7 +1216,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
-    "activityCheckboxes": false,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
@@ -1326,7 +1326,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
-    "activityCheckboxes": false,
+    "activityCheckboxes": true,
     "topographicMaps":
         {
         "Finland":
