@@ -27,6 +27,12 @@ html, body {
         margin-top: 0;
         }
 
+@media only screen and (max-width: 800px) {
+    #Filter {
+        font-size: 110%;
+    }
+}
+
 #MoreFilter {
         /* Advanced Filter Pane (bottom center, on-demand). Google Maps custom control. */
         font-family: Arial, sans-serif; 
@@ -60,6 +66,12 @@ html, body {
         margin: 10px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
         }
+
+@media only screen and (max-width: 800px) {
+    #Fullstats {
+        font-size: 110%;
+    }
+}
 
 #MoreInfo {
         /* Popup opened by the (i) button. */
