@@ -153,7 +153,13 @@ html, body {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        white-space: pre
+        height: max-content;
+        align-items: center;
+        white-space: pre;
+}
+
+.flexboxRow button {
+        height: 100%
 }
 
 .flexboxColumn {
@@ -168,6 +174,11 @@ html, body {
 
 .marginRightWide {
         margin-right: 3em;
+}
+
+.marginTopNone {
+        /* to keep checkbox contol buttons the same size */
+        margin-top: 0;
 }
 
 .marginTopNarrow {
