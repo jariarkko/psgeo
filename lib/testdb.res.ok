@@ -91,13 +91,13 @@
 --> x = {"n":"Vuorisen luola","lat":62.067613573832,"lon":23.822323132184,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[],"s":"merge","k":"Vuorisen luola"}
 --> describing item Vuorisen luola:
 --> Basic HTML description:
-<p><b>Vuorisen luola</b></p><p>Koordinaatit: <a href="http://www.google.com/maps/place/62.067613573832,23.822323132184" target="_blank">N 62.06761 E 23.82232</a></p><p>Pituus: ~15m.</p>
+<p><b>Vuorisen luola</b></p><p>Koordinaatit: <a href="http://www.google.com/maps/place/62.067613573832,23.822323132184" target="_blank">N 62.06761 E 23.82232</a></p><p>Pituus: ~15 m.</p>
 --> Basic TXT description:
 VUORISEN LUOLA
 
 Koordinaatit: N 62.06761 E 23.82232 (http://www.google.com/maps/place/62.067613573832,23.822323132184)
 
-Pituus: ~15m.
+Pituus: ~15 m.
 
 
 --> Compact TXT description:
@@ -105,19 +105,19 @@ VUORISEN LUOLA
 
 Koordinaatit: N 62.06761 E 23.82232 (http://www.google.com/maps/place/62.067613573832,23.822323132184)
 
-Pituus: ~15m.
+Pituus: ~15 m.
 
 
 --> x = {"n":"Tommin luola","lat":61.059315413301,"lon":23.386241059515,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[{"t":"Tommin luola","w":["Tommi Vuorinen"],"a":["Caving"],"sa":["Rock"]}],"s":"merge","k":"Tommin luola"}
 --> describing item Tommin luola:
 --> Basic HTML description:
-<p><b>Tommin luola</b></p><p>Koordinaatit: <a href="http://www.google.com/maps/place/61.059315413301,23.386241059515" target="_blank">N 61.05932 E 23.38624</a></p><p>Pituus: ~15m.</p>
+<p><b>Tommin luola</b></p><p>Koordinaatit: <a href="http://www.google.com/maps/place/61.059315413301,23.386241059515" target="_blank">N 61.05932 E 23.38624</a></p><p>Pituus: ~15 m.</p>
 --> Basic TXT description:
 TOMMIN LUOLA
 
 Koordinaatit: N 61.05932 E 23.38624 (http://www.google.com/maps/place/61.059315413301,23.386241059515)
 
-Pituus: ~15m.
+Pituus: ~15 m.
 
 
 --> Compact TXT description:
@@ -125,7 +125,7 @@ TOMMIN LUOLA
 
 Koordinaatit: N 61.05932 E 23.38624 (http://www.google.com/maps/place/61.059315413301,23.386241059515)
 
-Pituus: ~15m.
+Pituus: ~15 m.
 
 
 --> x = {"n":"Pääluola, Rokokallio, Vihti","lat":60.489854,"lon":24.476853,"an":["Rokokallion luolat, Vihti"],"d":"One description of this cave. Lets see if we can see another one.","lc":"5<<50","la":"approx","k":"Vihti","c":"Finland","o":"Europe","rl":[{"t":"Going to Rokokallio!","i":"https://example.com//blog811_edit.jpg","y":2020,"m":7,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Rock","Rock-Granite","Morphology-Crack","Morphology-Boulders","Basic"]],"u":"https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html"},{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat","s":"merge"}],"s":"merge","ac":[{"lat":60.4985969,"lon":24.477130225,"s":"merge"}],"ad":[{"d":"Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on {BE,F}. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","s":"merge"}]}
@@ -167,7 +167,7 @@ Dataset 1: Suomalainen luolakoodi luolalle on TP24. Luolassa on useita reittejä
 
 Koordinaatit: N 60.43057 E 22.28060 (http://www.google.com/maps/place/60.430570994,22.280602151) (Dataset 1). Muita ilmoitettuja koordinaatteja: N 60.42999 E 22.27778 (http://www.google.com/maps/place/60.429993,22.277781) (Dataset 2, 168m etäisyydellä).
 
-Pituus: ~60m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako/lohkare. Luola-aktiviteetit: luolailu ja opetus.
+Pituus: ~60 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako/lohkare. Luola-aktiviteetit: luolailu ja opetus.
 
 Luettavaa:
 Kirjallisuusviite: Esimerkki retkestä luolaan Luolavuoren luola. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '20)
@@ -184,7 +184,7 @@ Map entry: Valtava lippaluola suuren kalliojyrkänteen alapuolella, Hyypiänmäe
 
 Koordinaatit: N 60.40911 E 24.70933 (http://www.google.com/maps/place/60.40910603,24.70933372) (Map entry). Muita ilmoitettuja koordinaatteja: N 60.40808 E 24.71043 (http://www.google.com/maps/place/60.408075528,24.710425509) (Basic entry, 129m etäisyydellä).
 
-Luolakartta: kartta (https://www.arkko.com/klaukkala-luolat/Klaukkalan-hyypianmaen-lippaluola.pdf). Pituus: 78.2m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako/rapautumis.
+Luolakartta: kartta (https://www.arkko.com/klaukkala-luolat/Klaukkalan-hyypianmaen-lippaluola.pdf). Pituus: 78.2 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako/rapautumis.
 
 Luettavaa:
 Hyypiänmäki massive roof cave https://planetskier.blogspot.com/2020/08/hyypianmaki-massive-roof-cave.html (JA '20)
@@ -198,7 +198,7 @@ Map entry: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen s
 
 Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (Map entry). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (Basic entry, 43m etäisyydellä).
 
-Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
 
 Luettavaa:
 The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html (JA,JA,JR... '16)
@@ -217,7 +217,7 @@ Luolaseura: Luolan tunniste U82. Geneettis-morfologinen luokitus {C}. Planetswim
 
 Koordinaatit: N 60.32342 E 25.27709 (http://www.google.com/maps/place/60.323422154,25.277089468) (Luolaseura). Muita ilmoitettuja koordinaatteja: N 60.32343 E 25.27722 (http://www.google.com/maps/place/60.32343278,25.27721764) (Planetswimmer, 7m etäisyydellä).
 
-Pituus: 18m. Materiaali: kalkkikivi/dolomiitti. Luolan tyyppi: karsti.
+Pituus: 18 m. Materiaali: kalkkikivi/dolomiitti. Luolan tyyppi: karsti.
 
 Luettavaa:
 Hulubergsgrottan https://luolaseura.fi/luolaretkelle/suomen-luolat/#Hulubergsgrottan (AK '15)
@@ -232,7 +232,7 @@ Geneettis-morfologinen luokitus {C}.
 
 Koordinaatit: N 51.82734 W 3.14682 (http://www.google.com/maps/place/51.82734,-3.14682)
 
-Pituus: 27.0km. Luolan tyyppi: karsti. Muita nimiä: Ogof Cnwc ja Price's Dig.
+Pituus: 27.0 km. Luolan tyyppi: karsti. Muita nimiä: Ogof Cnwc ja Price's Dig.
 
 Luettavaa:
 Ogof Cnwc https://lohkareikko.wordpress.com/2013/12/07/7-12-prices-dig-eli-ei-nain/ (VA '20)
@@ -277,7 +277,7 @@ Yksi suurimmista ellei suurin maanalainen halkeama Suomessa. Korkeus 7-8 metriä
 
 Koordinaatit: N 60.16188 E 24.45257 (http://www.google.com/maps/place/60.161885,24.452573)
 
-Pituus: ~15m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako. Kiipeilytyyppi on kalliokiipeily.
+Pituus: ~15 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako. Kiipeilytyyppi on kalliokiipeily.
 
 Luettavaa:
 Massive crack cave at Korkberget https://planetskier.blogspot.com/2019/08/massive-crack-cave-at-korkberget.html (JA,TP,JR... '19)
@@ -562,7 +562,7 @@ QS2: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkelo
 
 Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (QS2). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (QS2, 43m etäisyydellä).
 
-Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
 
 Luettavaa:
 The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html ja video (https://vimeo.com/197046265) (JA,JA,JR... '16)
@@ -581,7 +581,7 @@ QS2: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkelo
 
 Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (QS2). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (QS2, 43m etäisyydellä).
 
-Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
 
 Luettavaa:
 The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html ja video (https://vimeo.com/197046265) (JA,JA,JR... '16)
@@ -600,7 +600,7 @@ QS2: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkelo
 
 Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (QS2). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (QS2, 43m etäisyydellä).
 
-Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
 
 Luettavaa:
 The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html ja video (https://vimeo.com/197046265) (JA,JA,JR... '16)
