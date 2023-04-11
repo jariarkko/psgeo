@@ -385,6 +385,8 @@
     "rockTypeSearch": true,
     "morphologySearch": true,
     "waterbodySearch": false,
+    "divingEnvironmentSearch": true,
+    "divingTaskSearch": true,
     "saunaTypeSearch": false,
     "skiingSubstanceSearch": false,
     "skiingUphillSearch": false,
