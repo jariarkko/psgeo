@@ -329,6 +329,14 @@
     "activityCheckboxes": true,
     "topographicMaps":
         {
+        "FinlandSea":
+            {
+            "show": true,        
+            "textId": "seaChartsFinland",
+            "baseUrl": "https://julkinen.traficom.fi/rasteripalvelu/wmts?request=GetTile&version=1.0.0&service=wmts&layer=Traficom:Merikarttasarja%20C%20public&TILEMATRIXSET=WGS84_Pseudo-Mercator&TileMatrix=WGS84_Pseudo-Mercator:",
+            "layers": "",
+            "apiKey": ""
+            },
         "Finland":
             {
             "show": true,        
@@ -385,6 +393,8 @@
     "rockTypeSearch": true,
     "morphologySearch": true,
     "waterbodySearch": false,
+    "divingEnvironmentSearch": true,
+    "divingTaskSearch": true,
     "saunaTypeSearch": false,
     "skiingSubstanceSearch": false,
     "skiingUphillSearch": false,
