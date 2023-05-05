@@ -1,0 +1,80 @@
+LAAJA VERSIO
+
+{
+	"type": "FeatureCollection",
+	"features":
+	[
+		{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [59.021272, 18.005646]},			 
+		"properties": {
+			"n": "Ojamon kaivos",
+			"an": ["Ojamo","Ojamon kaivoslampi"],
+			"d": {	"fi": "Lyhyt parin rivin kuvailu suomeksi",
+					"se": "Beskrivning på svenska",
+					"en": "Description in english" },
+			"m": "https://example.com/divesite-linemap.pdf",
+			"la": "exact",
+			"l": 5000,
+			"h": 238,
+			"alt": 15,
+		    "ac": [ {lat: 59.021272, lon: 18.005646},{lat: 59.021270, lon: 18.005650}]
+			"k": "Lohja",
+			"c": "Finland",
+			"o": "Europe",
+			"rn": "Master site = Related record name (n).",
+			"rt": "entranceof",
+			"rl": [{ "t": "Sukellusreissu Ojamolle helmikuussa 2023",
+				"w": ["Jorma Turhala", "Turha Jormala", "Aimo Sukeltaja"],
+				"y": 2023,
+				"m": 2,
+				"a": ["Sukellus"],
+				"sa": [["Jääsukellus","Kaivossukellus"]],
+				"p": "Kirjallisuusviite, kirja, sivu, jne.",
+				"pu": "https://publication-online.com/linkki-julkaisuun",
+				"i": "https://example.com/kohteen-kuva-tietoikkunaan.jpg",
+				"u": "https://example.com/linkki-blogiin-tai-wikiin.html",
+				"v": "https://example.com/linkki-videoon" }]
+			}
+		}
+	]
+
+LYHYT VERSIO
+
+{
+	"type": "FeatureCollection",
+	"features":
+	[
+		{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [59.021272, 18.005646]},			 
+		"properties": {
+			"n": "Ojamon kaivoksen veteenmenopaikka",
+			"d": {	"fi": "Lyhyt parin rivin kuvailu suomeksi" },
+			"m": "https://example.com/divesite-linemap.pdf",
+			"la": "exact",
+			"h": 238,		
+			"k": "Lohja",
+			"c": "Finland",
+			"o": "Europe",
+			"rn": "Ojamon kaivos",
+			"rt": "entranceof",
+			"rl": [{ "t": "Sukellusreissu Ojamolle helmikuussa 2023",
+				"w": ["Jorma Turhala", "Turha Jormala", "Aimo Sukeltaja"],
+				"y": 2023,
+				"a": ["Sukellus"],
+				"sa": [["Jääsukellus","Kaivossukellus"]],
+				"i": "https://example.com/kohteen-kuva-tietoikkunaan.jpg",
+				"u": "https://example.com/linkki-blogiin-tai-wikiin.html",
+				"v": "https://example.com/linkki-videoon" }]
+			}
+		}
+	]
+
+CSV
+
+maanosa;maa;paikkakunta;lat;lng;kohteen tai siihen liittyvän veteenmenopaikan nimi;syvyys;lyhyt kuvailu;(linkki-videoon),(linkki-valokuvaan),(linkki-artikkeliin),(linkki-lainikarttaan);(pääkohteen nimi jos tämä on yksi sen veteenmenopaikoista);raportoijan nimi;vuosi;pilkutettu lista sukellustyypeistä
