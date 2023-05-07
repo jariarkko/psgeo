@@ -31,6 +31,8 @@ html, body {
 
 #MoreFilter {
         /* Advanced Filter Pane (bottom center, on-demand). Google Maps custom control. */
+        max-height: 90%;
+        overflow: auto;
         font-family: Arial, sans-serif; 
         background-color: white;
         padding: 10px;
