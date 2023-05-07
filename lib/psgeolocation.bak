@@ -5,75 +5,76 @@
 
 function indexedDbSupported() {
 
+    // Make sure indexedDB is supported by the browser
     window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
     if (!window.indexedDB) {
         psgeoDebug("Your browser doesn't support a stable version of IndexedDB.")
         return false
+    } else {
+        return true
     }
-    return true
 }
 
 function openConnectionToIndexedDb() {
 
+    // Open database connection
     // Note that request needs to be a var, not let/const
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz
-
     const databaseName="Psgeo"
     const version = 1
     var request = indexedDB.open(databaseName,version)
+
     request.onerror = function (event) { 
         psgeoDebug("Opening indexedDB failed.")
         psgeoDebug(lib.debugPrintObject(event))
+        // Is this excessive logging if permission is denied?
     } 
+
     request.onupgradeneeded = function () {
-        psgeoDebug("Creating/updating database Psgeo (indexeddb).")
+
+        // This is only run the very first time we create a database
+        // or when we increase the version number.
+
+        psgeoDebug("Database connection open")
+        psgeoDebug("Creating database Psgeo in browser or updating database schema.")
+
         var db = request.result
-        var trackList      = db.createObjectStore("trackList", { keyPath: "trackId" }) // Avoid TDZ
-        var recordedTracks = db.createObjectStore("recordedTracks", { keyPath: "timestamp" }) // Avoid TDZ
-        trackList.createIndex("trackDate", ["trackDate"], { unique: false })
-        recordedTracks.createIndex("trackId", ["trackId"], { unique: false })
+
+        // Create a 'table' of recorded tracks
+        //     date + name of objectstore (name of object store is YYYY-MM-DDTHH:MM:SSZ)
+        var recordedTracks = db.createObjectStore("recordedTracks", { keyPath: "track" }) // Avoid TDZ
+        recordedTracks.createIndex("date", ["date"], { unique: false })
+
+        // Create 'table' 
+        psgeoDebug("Creating objectStore")
+        var objectStore = db.createObjectStore("positionTracking", { keyPath: "positionRecordIndex" }) // Avoid TDZ
+        // Create index
+        psgeoDebug("Creating index")
+        objectStore.createIndex("date", ["date"], { unique: false })
+        objectStore.createIndex("hour", ["hour"], { unique: false })
     }
+
     return request
 }
 
-function dbAppendTrackList(trackId,trackDate) {
-    psgeoDebug("Appending track list")
-    var request = openConnectionToIndexedDb()
-    request.onfailure = () => db.Close()
-    request.onsuccess = function () {
-        var db = request.result
-        var transaction = db.transaction("trackList", "readwrite")
-        var trackList = transaction.objectStore("trackList")
-        var trackListIndex = trackList.index("trackDate")
-
-        psgeoDebug("Database connection open. About to put.")
-        var putPromise = trackList.put({trackId: trackId, trackDate: trackDate})
-        putPromise.onsuccess = function () {
-            psgeoDebug("Recorded new track into indexedDB.")
-            db.close()
-        }
-        putPromise.onfailure = function () {
-            psgeoDebug("Recording a new track to indexedDB failed.")
-            db.close()
-        }
-    }
-}
-
-function dbAppendTrackRecord(trackId,trackDate,latlon) {
+function dbPutRecord(latlon) {
 
     if (!indexedDbSupported) return false
 
-    const positionTimestamp = new Date()  // seconds since 1.1.1970
-    psgeoDebug("New position. Timestamp (posix): "+positionTimestamp+" Track ID: "+trackId+" Track date: "+trackDate)
-
-    // XXXX trackId ja trackDate ovat alkuarvoissaan. EIVÄT PÄIVITY!!!
-
     var request = openConnectionToIndexedDb()
     request.onsuccess = function () {
         var db = request.result
-        var transaction = db.transaction("recordedTracks", "readwrite")
-        var recordedTracks = transaction.objectStore("recordedTracks")
-        var trackIndex = recordedTracks.index("trackId")
+        var transaction = db.transaction("positionTracking", "readwrite")
+        var objectStore = transaction.objectStore("positionTracking")
+        var dateIndex = objectStore.index("date")
+        var hourIndex = objectStore.index("hour")
+
+        // Calculate index and date
+        const posixTime = new Date()                              // seconds since 1.1.1970
+        const positionRecordIndex = posixTime                     // Store ~every position
+        const isoDate = posixTime.toISOString().substring(0, 10)  // YYYY-MM-DD for filtering
+        const currentHour = posixTime.toISOString().substring(11, 13) // HH
+        psgeoDebug("New position. Timestamp (Unix/Posix): "+posixTime+" Date: "+isoDate+" Hour: "+currentHour)
 
         // Store new position or update an existing one. This completes sometime later.
         // Problems with sequence order are unlikely:
@@ -81,13 +82,14 @@ function dbAppendTrackRecord(trackId,trackDate,latlon) {
         //     - no major impact on plotted route at walking speeds
         //     - at high speeds (e.g. flying) movement is largely linear, no sudden turns
         // Points can be sorted by positionRecordIndex before plotting if this ever becomes a problem
+        var putPromise = objectStore.put({ positionRecordIndex: positionRecordIndex, date: isoDate, hour: currentHour, position: latlon })
 
-        var positionRecord = { timestamp: positionTimestamp, position: latlon, trackId: trackId }
-        var putPromise = recordedTracks.put(positionRecord)
+        // putPromise.oncomplete = function () {
         putPromise.onsuccess = function () {
             psgeoDebug("Recorded new position to indexedDB.")
             db.close()
         }
+
         putPromise.onfailure = function () {
             psgeoDebug("Recording a new position to indexedDB failed.")
             db.close()
@@ -95,7 +97,7 @@ function dbAppendTrackRecord(trackId,trackDate,latlon) {
     }
 }
 
-function restoreTraceFromDb(lib,geolocation,trackId) {
+function restoreTraceFromDb(lib,geolocation,today,startHour) {
 
     // This function is a draft - work in progress
     //
@@ -103,46 +105,30 @@ function restoreTraceFromDb(lib,geolocation,trackId) {
     //         by keeping a record of geolocation start times
     //         More detail on Github.
 
-    psgeoDebug("Loading recorded track data for "+trackId)
+    psgeoDebug("Loading recorded track data for "+today)
 
         var request = openConnectionToIndexedDb()
         request.onsuccess = function () {
             var db = request.result
-            if (!db.objectStoreNames.contains("recordedTracks")) {
-                // Nothing to restore
-                return
-            }
+            var transaction = db.transaction("positionTracking", "readwrite")
+            var objectStore = transaction.objectStore("positionTracking")
+            var dateIndex = objectStore.index("date")
+            var hourIndex = objectStore.index("hour")
+            var dateQuery
 
-            // Track list - indexed by data
-            var transaction         = db.transaction(["trackList", "recordedTracks"], IDBTransaction.READ_ONLY)
-            var trackList           = transaction.objectStore("trackList")
-            var trackListIndex      = trackList.index("trackDate")
-            // Track data - indexed by track ID
-            var recordedTracks      = transaction.objectStore("recordedTracks")
-            var recordedTracksIndex = recordedTracks.index("trackId")
-
-            const timestamp = new Date()
-            const todaysDate = timestamp.toISOString().substring(0, 10)
-            var tracksOfToday = trackListIndex.getAll([todaysDate])
-            tracksOfToday.onsuccess = function () {
-                for (const track of tracksOfToday.result) {
-
-                    var trackDataRequest = recordedTracksIndex.getAll([track.trackId])
-                    trackDataRequest.onsuccess = function () {
-                        let trackDataArray = trackDataRequest.result
-                        psgeoDebug(lib.debugPrintObject(trackDataArray))
-                        var trace = []
-                        for (const index in trackDataArray) {
-                            let LatLng = trackDataArray[index].position
-                            psgeoDebug("Recovered position: "+lib.debugPrintObject(LatLng))
-                            trace.push(LatLng)
-                        }
-                        psgeoDebug("Plotting "+trace.length+" datapoints.") 
-                        plotTrace(psgeoMap,trace)
-                    }
+            // Retrieve data
+            psgeoDebug("Making query")
+            dateQuery = dateIndex.getAll([today])
+            dateQuery.onsuccess = function () {
+                psgeoDebug("We have a result")
+                psgeoDebug(lib.debugPrintObject(dateQuery.result))
+                for (const index in dateQuery.result) {
+                    let LatLng = dateQuery.result[index].position
+                    geolocation.trace.push(LatLng)
                 }
+                psgeoDebug("We got "+geolocation.trace.length+" records in trace.")
+                db.close()
             }
-            db.close()
         }
 }
 
@@ -161,11 +147,9 @@ function plotTrace(psgeoMap,trace) {
 function PsgeoLocation() {
 
     // REQUIRES: psgeoGenericMenuButton (visible in the scope?)
-    // DELIVERS: geolocationButton, trace, restoreTraceFromDb, trackId, trackDate
+    // DELIVERS: geolocationButton, trace, restoreTraceFromDb
 
     var trace = []
-    var trackId = "0001-01-01T00:00:00Z" // Will be replaced
-    var trackDate = "0001-01-01"         //
     
     function psgeoGetGeolocationButton(lang,structure,fn,cfg,psgeoDomainDefault) {
         var icon = cfg.getDefaultIcons.imgGeolocation;
@@ -230,13 +214,6 @@ function PsgeoLocation() {
         // GEOLOCATION HELPER FUNCTIONS
 
         async function geolocationPending() {
-            // Record the trackId into the table of contents
-            const timestamp = new Date()          // seconds since 1.1.1970
-            trackId = timestamp.toISOString()     // Declared in Psgeolocation. Stored in geolocation object.
-            trackDate = trackId.substring(0, 10)
-            dbAppendTrackList(trackId,trackDate)
-            psgeoDebug("Stored trackId: "+trackId+" on "+trackDate)
-
             markerMyPosition.setPosition(psgeoMap.getCenter());
             markerMyPosition.setContent(lang.getText("geolocationWaitForPosition"));
             markerMyPosition.open(psgeoMap);
@@ -272,7 +249,7 @@ function PsgeoLocation() {
             markerMyPosition.setPosition(LatLng);
 
             // Store location in browser local storage (for trace)
-            await dbAppendTrackRecord(trackId,trackDate,LatLng)
+            await dbPutRecord(LatLng)
 
             // Update location history and put it on map
             trace.push(LatLng)
@@ -394,8 +371,6 @@ function PsgeoLocation() {
     }
     
     return {
-        trackId,
-        trackDate,
         trace: trace,
         restoreTraceFromDb: restoreTraceFromDb,
         getGeolocationButton: getGeolocationButton
