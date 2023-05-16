@@ -36,6 +36,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
+    "videoCheckbox": false,
     "activityCheckboxes": true,
     "topographicMaps":
         {
@@ -181,6 +182,7 @@
     "articleCheckbox": true,
     "mapsCheckbox": true,
     "model3dCheckbox": true,
+    "videoCheckbox": false,
     "activityCheckboxes": true,
     "topographicMaps":
         {
@@ -326,6 +328,7 @@
     "articleCheckbox": true,
     "mapsCheckbox": true,
     "model3dCheckbox": true,
+    "videoCheckbox": true,
     "activityCheckboxes": true,
     "topographicMaps":
         {
@@ -453,6 +456,7 @@
     "articleCheckbox": true,
     "mapsCheckbox": true,
     "model3dCheckbox": true,
+    "videoCheckbox": false,
     "activityCheckboxes": false,
     "topographicMaps":
         {
@@ -564,6 +568,7 @@
     "articleCheckbox": true,
     "mapsCheckbox": true,
     "model3dCheckbox": true,
+    "videoCheckbox": false,
     "activityCheckboxes": false,
     "topographicMaps":
         {
@@ -675,6 +680,7 @@
     "articleCheckbox": true,
     "mapsCheckbox": true,
     "model3dCheckbox": true,
+    "videoCheckbox": false,
     "activityCheckboxes": true,
     "topographicMaps":
         {
@@ -786,6 +792,7 @@
     "articleCheckbox": true,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
+    "videoCheckbox": false,
     "activityCheckboxes": true,
     "topographicMaps":
         {
@@ -896,6 +903,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
+    "videoCheckbox": false,
     "activityCheckboxes": true,
     "topographicMaps":
         {
@@ -1006,6 +1014,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
+    "videoCheckbox": false,
     "activityCheckboxes": true,
     "topographicMaps":
         {
@@ -1116,6 +1125,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
+    "videoCheckbox": false,
     "activityCheckboxes": true,
     "topographicMaps":
         {
@@ -1226,6 +1236,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
+    "videoCheckbox": false,
     "activityCheckboxes": true,
     "topographicMaps":
         {
@@ -1336,6 +1347,7 @@
     "articleCheckbox": false,
     "mapsCheckbox": false,
     "model3dCheckbox": false,
+    "videoCheckbox": false,
     "activityCheckboxes": true,
     "topographicMaps":
         {
