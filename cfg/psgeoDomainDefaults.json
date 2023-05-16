@@ -278,10 +278,10 @@
     "zoom": 5,
     "mapTypeControlStyle": "DROPDOWN_MENU",
     "mapId": "",
-    "cavemaps": true,
+    "cavemaps": false,
     "defaultFilter":
         {
-        "enabled": true,
+        "enabled": false,
         "filter": "Caving",
         "filterDb": true,
         "onlyHomeCountry": false,
