@@ -408,6 +408,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
     "classicUI":false
