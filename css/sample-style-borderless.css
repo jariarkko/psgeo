@@ -27,7 +27,7 @@ html, body {
         margin-top: 0;
         }
 
-#MoreFilter {
+#MoreFilter, #Gpx {
         /* Advanced Filter Pane (bottom center, on-demand). Google Maps custom control. */
         max-height: 90%;
         overflow: auto;
