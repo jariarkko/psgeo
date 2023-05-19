@@ -61,6 +61,12 @@ html, body {
         align-content: center;
         }
 
+@media only screen and (max-width: 800px) {
+    #Gpx {
+        font-size: 110%;
+    }
+}
+
 .largeFont {
         font-size: 180%;
 }
@@ -136,6 +142,7 @@ html, body {
         text-decoration: underline;
         font-family: arial,sans-serif;
         font-size: 90%;
+        float: left;
 }
 
 #closeButton {
