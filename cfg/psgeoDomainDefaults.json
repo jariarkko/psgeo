@@ -411,6 +411,13 @@
     "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
+    "locationTracking":               
+        {
+        "enabled": true, 
+        "trackRecording": true, 
+        "showPositionMarker": true,
+        "showTrack": true
+        },
     "classicUI":false
 },
 {
