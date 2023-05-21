@@ -416,7 +416,9 @@
         "enabled": true, 
         "trackRecording": true, 
         "showPositionMarker": true,
-        "showTrack": true
+        "showTrack": true,
+        "richPositionInfo-UNUSED": true,
+        "geolocationContinuousUpdate-UNUSED": true
         },
     "classicUI":false
 },
