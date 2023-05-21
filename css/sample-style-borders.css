@@ -33,15 +33,39 @@ html, body {
         /* Advanced Filter Pane (bottom center, on-demand). Google Maps custom control. */
         max-height: 90%;
         overflow: auto;
-        font-family: Arial, sans-serif; 
+        font-family: Arial, sans-serif;
         background-color: white;
-        padding: 10px;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 1em;
+        padding-bottom: 0em;
         margin: 0 0 22px 0;
-        box-shadow = 0 4px 12px rgba(0,0,0,.3);
-        width: 60%;
-        border: 2px solid black;
-        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,.3);
+        width: 25em;
+        align-content: center;
         }
+
+#positionTrackingMenuDiv {
+        /* Advanced Filter Pane (bottom center, on-demand). Google Maps custom control. */
+        max-height: 90%;
+        overflow: auto;
+        font-family: Arial, sans-serif;
+        background-color: white;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin: 0 0 22px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,.3);
+        width: 25em;
+        align-content: center;
+        }
+
+@media only screen and (max-width: 800px) {
+    #positionTrackingMenuDiv {
+        font-size: 110%;
+    }
+}
 
 .largeFont {
         font-size: 180%;
@@ -49,6 +73,10 @@ html, body {
 
 .largeInputFont {
         font-size: 90%;
+}
+
+.boldText {
+        font-weight: bold;
 }
 
 #Fullstats {
@@ -114,6 +142,7 @@ html, body {
         text-decoration: underline;
         font-family: arial,sans-serif;
         font-size: 90%;
+        float: left;
 }
 
 #closeButton {

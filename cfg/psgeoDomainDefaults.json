@@ -108,6 +108,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": false,
+    "locationTracking":
+        {
+        "enabled": false,
+        "trackRecording": true,
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
     "classicUI":true
 },
 {
@@ -254,6 +263,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
+    "locationTracking":
+        {
+        "enabled": true,
+        "trackRecording": false,
+        "showPositionMarker": true,
+        "showTrack": false,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 5 
+        },
     "classicUI":false
 },
 {
@@ -408,8 +426,184 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
+    "locationTracking":               
+        {
+        "enabled": true, 
+        "trackRecording": true, 
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
+    "classicUI":false
+},
+{
+    "domains": ["kolotus.luolaseura.fi"],
+    "paths": [""],
+    "sources": [
+        {
+        "textId": "Luolaseura",
+        "link": "https://luolaseura.fi",
+        "datafile": "https://dev.luolaseura.fi/db/caves.luolaseura.json",
+        "descriptionTextId": "dataExplanationCavingAssociation"
+        },
+        {
+        "textId": "Planetcaver",
+        "link": "https://www.planetcaver.net",
+        "datafile": "https://www.planetcaver.net/locations.caving.json",
+        "descriptionTextId": ""
+        }
+    ],
+    "lat": 65.4,
+    "lng": 24.6,
+    "zoom": 5,
+    "mapTypeControlStyle": "DROPDOWN_MENU",
+    "mapId": "",
+    "cavemaps": true,
+    "defaultFilter":
+        {
+        "enabled": true,
+        "filter": "Caving",
+        "filterDb": true,
+        "onlyHomeCountry": false,
+        "showMapsByDefault": false
+        },
+    "name": "Suomen luolaseuran luolakanta",
+    "lang": "fi",
+    "statLines": "caving",
+    "showCustomLinks": true,
+    "customLinks": [
+        {
+        "textId": "addRecord",
+        "iconSet": "./icons/neu_interface/",
+        "icon": "neu_interface_add_circle_insert_plus_icon_149548.svg",
+        "url": "https://luolaseura.fi/luolaretkelle/kerro-meille/",
+        "popup":false,
+        "popupWidth": 300,
+        "popupHeight": 600
+        },
+        {
+        "textId": "modifyRecord",
+        "iconSet": "./icons/neu_interface/",
+        "icon": "neu_interface_pen_edit_modify_icon_149414.svg",
+        "url": "https://luolaseura.fi/luolaretkelle/kerro-meille/luolan-tietojen-paivitys/",
+        "popup":false,
+        "popupWidth": 300,
+        "popupHeight": 600
+        },
+        {
+        "textId": "caveClassification",
+        "iconSet": "./icons/neu_interface/",
+        "icon": "neu_interface_faq_question_icon_149479.svg",
+        "url": "https://kartta.luolaseura.fi/luokittelu-fi.html",
+        "popup":true,
+        "popupWidth": 300,
+        "popupHeight": 600
+        }
+    ],
+    "homeCountrySelection": true,
+    "homeCountry": "Finland",
+    "zoomouthidesdetails": true,
+    "zoomlevelfordetails": 14,
+    "sourcesCheckboxes": true,
+    "articleCheckbox": true,
+    "mapsCheckbox": true,
+    "model3dCheckbox": true,
+    "videoCheckbox": true,
+    "activityCheckboxes": false,
+    "topographicMaps":
+        {
+        "FinlandSea":
+            {
+            "show": true,        
+            "textId": "seaChartsFinland",
+            "baseUrl": "https://julkinen.traficom.fi/rasteripalvelu/wmts?request=GetTile&version=1.0.0&service=wmts&layer=Traficom:Merikarttasarja%20C%20public&TILEMATRIXSET=WGS84_Pseudo-Mercator&TileMatrix=WGS84_Pseudo-Mercator:",
+            "layers": "",
+            "apiKey": ""
+            },
+        "Finland":
+            {
+            "show": true,        
+            "textId": "topoMapsFinland",
+            "baseUrl": "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/",
+            "layers": "",
+            "apiKey": "b3623347-9fcf-4ded-b01e-3b52188e14e4"
+            },
+        "Sweden":
+            {
+            "show": true,        
+            "textId": "topoMapsSweden",
+            "baseUrl": "https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/",
+            "layers": "topowebb",
+            "apiKey": "eyJ4NXQiOiJPVEk1TjJRMVltWmlOekkxT0RjMVlUVTJNREZsT0RVNU9EUTRPVE15WVdRMFkyVXpOamN5T1EiLCJraWQiOiJNVE5tTkRNeVpHSmxOakJrTXpoallqTm1ZMlV5Tm1Ka1lUQTROR0ZoTmpNMU1ETmpabVJoTjJGbVkySTJOVGc0TmpKbVl6ZGxZamhqWkRFeFpURTVOd19SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJyYWxmc3RyYW5kZWxsIiwiYXV0IjoiQVBQTElDQVRJT04iLCJhdWQiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwibmJmIjoxNjc3NDIxODQzLCJhenAiOiJvNzlTd1lobTcxMVZBb3ZfRDE1SkpCZXlzaThhIiwic2NvcGUiOiJkZWZhdWx0IiwiaXNzIjoiaHR0cHM6XC9cL2FwaW1hbmFnZXIubGFudG1hdGVyaWV0LnNlIiwiZXhwIjoyMDM3NDIxODQzLCJpYXQiOjE2Nzc0MjE4NDMsImp0aSI6IjY0NDc0Y2YyLWNkNDQtNGY5MC1iNjY5LTM0MjZjMTVjOThhMyJ9.dIt4MEBSeUawRY4wSuZFULsQCYqGXvU9KFWwKQZ2VChAgDW7r5-6TMCz2Z-Y56mBJkYi0Je2KY5tNI3R-qea06ag00AQSQEkBy7ZM0VAfw6p2u1K4_4G8HKpLP6jWvMz5NALPHC7ZEh1skahwAQu4zIVSWIAC0EUFeETW91OIDS1Rfk2cXqB2zHNw7byz8uRzYYbwv1UNIaAOixB3N26rwjcBmV-VMgh7UB918meMGrV1eKclla131Uu-pEoRmxnMPMm8l9oGYFdV9tub-FJRzT-pTIDKzlz-DePXvNavMkrgkDOYz-43XaUg5IEShyRb6UmOVqQUZwcI1PUepHUsA"
+            },
+        "Norway":
+            {
+            "show": true,        
+            "textId": "topoMapsNorway",
+            "baseUrl": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps",
+            "layers": "topo4",
+            "apiKey": ""
+            },
+        "UnitedKingdom":
+            {
+            "show": true,        
+            "textId": "topoMapsUK",
+            "baseUrl": "https://api.os.uk/maps/raster/v1/zxy/",
+            "layers": "Outdoor_3857",
+            "apiKey": "DvNJvDjg1NPIVntuQjPMBDYrmOmFfDLE"
+            },
+        "World":
+            {
+            "show": true,
+            "textId": "openTopo",
+            "baseUrl": "https://tile.opentopomap.org/",
+            "layers": "",
+            "apiKey": ""
+            }
+        },
+    "rangeCategoryLimits":
+        {
+        "allowFiltering": true,
+        "allowChanging": true,
+        "measure": "length",
+        "unit": "meters",
+        "keyInJSON": "l",
+        "limitLow": 5,
+        "limitHigh": 50
+        },
+    "otherToolsMenu": true,
+    "nameSearch": true,
+    "rockTypeSearch": true,
+    "morphologySearch": true,
+    "waterbodySearch": false,
+    "divingEnvironmentSearch": false,
+    "divingTaskSearch": false,
+    "saunaTypeSearch": false,
+    "skiingSubstanceSearch": false,
+    "skiingUphillSearch": false,
+    "skiingPlaceSearch": false,
+    "climbingTypeSearch": false,
+    "urbanexTargetSearch": false,
+    "bikingSearch": false,
+    "hideButtontextFilter": true,
+    "hideButtontextMore": true,
+    "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
+    "geolocationContinuousUpdate": true,
+    "richPositionInfo": true,
+    "locationTracking":               
+        {
+        "enabled": true, 
+        "trackRecording": true, 
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
     "classicUI":false
 },
 {
@@ -528,6 +722,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
+    "locationTracking":
+        {
+        "enabled": false,
+        "trackRecording": false,
+        "showPositionMarker": true,
+        "showTrack": false,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 5
+        },
     "classicUI":false
 },
 {
@@ -640,6 +843,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
+    "locationTracking":
+        {
+        "enabled": false,
+        "trackRecording": true,
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
     "classicUI": false
 },
 {
@@ -752,6 +964,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
+    "locationTracking":
+        {
+        "enabled": false,
+        "trackRecording": true,
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
     "classicUI": false
 },
 {
@@ -864,6 +1085,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": false,
+    "locationTracking":
+        {
+        "enabled": false,
+        "trackRecording": true,
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
     "classicUI": false
 },
 {
@@ -975,6 +1205,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
+    "locationTracking":
+        {
+        "enabled": false,
+        "trackRecording": true,
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
     "classicUI": false
 },
 {
@@ -1086,6 +1325,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": false,
+    "locationTracking":
+        {
+        "enabled": false,
+        "trackRecording": true,
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
     "classicUI": false
 },
 {
@@ -1197,6 +1445,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": false,
+    "locationTracking":
+        {
+        "enabled": false,
+        "trackRecording": true,
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
     "classicUI": false
 },
 {
@@ -1308,6 +1565,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
+    "locationTracking":
+        {
+        "enabled": false,
+        "trackRecording": true,
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
     "classicUI": false
 },
 {
@@ -1419,6 +1685,15 @@
     "hideButtontextGeolocation": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": false,
+    "locationTracking":
+        {
+        "enabled": false,
+        "trackRecording": true,
+        "showPositionMarker": true,
+        "showTrack": true,
+        "richPositionInfo": true,
+        "initialZoomWhenTrackingPosition": 15
+        },
     "classicUI": false
 }
 ]

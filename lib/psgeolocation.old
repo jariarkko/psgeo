@@ -200,6 +200,7 @@ function iterateOverTracks(lib,lang,psgeoMap,fn,sharedCounter,sharedOutput,track
                 var trackDataRequest = await recordedTracksIndex.getAll([track.trackId]) // async!
                 trackDataRequest.onsuccess = function (e) {
                     let trackData = e.target.result // MUST BE LET OR PARAM
+                    psgeoDebug('Starting fn process '+tracksToProcess.value)
                     fn(lib,lang,trackData,psgeoMap,tracksToProcess,sharedOutput)
                     }
                 }
@@ -240,24 +241,27 @@ function getTrackDownloadLink(trackName,trace) {
     return link 
 }
 
-function positionTrackingMenuInit(lib,lang,cfg,psgeoMap,psgeoDomainDefault,trackStartDate) {
+async function showTrackRecordingDialog(lib,lang,cfg,psgeoMap,psgeoDomainDefault,trackStartDate) { 
     // !! trackStartDate is an optional parameter. It can be undefined.
 
-    // 1) Create a container div fot the menu
-    let positionTrackingMenuDiv = document.createElement('div')
-        positionTrackingMenuDiv.setAttribute("id", "positionTrackingMenuDiv")
+    let tracksForDownloadDiv = document.createElement('div') // sharedOutput for async functions
+        tracksForDownloadDiv.setAttribute("id", "Gpx")
+
+    // 1) Add a close button to the dialog
     let closeButton = psgeoGenericMenuButton(
-            lang,'','&#10005;',positionTrackingMenuDiv,
-            () => positionTrackingMenuDiv.style.display="none",
+            lang,'','&#10005;',tracksForDownloadDiv,
+            () => psgeoMap.controls[google.maps.ControlPosition.BOTTOM_CENTER].removeAt(4),
             '','closeButton',cfg,psgeoDomainDefault)
         closeButton.classList.add('checkboxControlButtons')
 
     // 2) Add radio buttons for track recording settings
+
     let headerOpts = document.createElement('p')
         headerOpts.classList.add("boldText")
     let headerOptsText = document.createTextNode(lang.getText('trackDisplay'))
         headerOpts.appendChild(headerOptsText)
-        positionTrackingMenuDiv.appendChild(headerOpts)
+        tracksForDownloadDiv.appendChild(headerOpts)
+
     let radioGroup = "positionDisplay"
     let idArray = [ "showPositionMarker","showTrack","showPositionMarkerAndTrack" ]
     let fnArray = [ () => { psgeoDomainDefault.locationTracking.showPositionMarker=true
@@ -267,31 +271,23 @@ function positionTrackingMenuInit(lib,lang,cfg,psgeoMap,psgeoDomainDefault,track
                     () => { psgeoDomainDefault.locationTracking.showPositionMarker=true;
                             psgeoDomainDefault.locationTracking.showTrack=true }
                   ]
-    let buttons = psgeoGetGenericRadioGroup(lang,radioGroup,idArray,fnArray,positionTrackingMenuDiv,psgeoDomainDefault)
+    let buttons = psgeoGetGenericRadioGroup(lang,radioGroup,idArray,fnArray,tracksForDownloadDiv,psgeoDomainDefault)
 
     // 3) Add a header for GPX download
+
     let headerGpx = document.createElement('p')
         headerGpx.classList.add("boldText")
     let headerGpxText = document.createTextNode(lang.getText('downloadGPX'))
         headerGpx.appendChild(headerGpxText)
-        positionTrackingMenuDiv.appendChild(headerGpx)
+        tracksForDownloadDiv.appendChild(headerGpx)
 
-    // 4) Add a container for GPX download links
-    let tracksForDownloadDiv = document.createElement('div') // sharedOutput for async functions
-        tracksForDownloadDiv.setAttribute("id", "Gpx")
-        positionTrackingMenuDiv.appendChild(tracksForDownloadDiv)
 
-    // 5) Publish
-    positionTrackingMenuDiv.style.display="none"
-    psgeoMap.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(positionTrackingMenuDiv)
-}
 
-async function showTrackRecordingDialog(lib,lang,cfg,psgeoMap,psgeoDomainDefault,trackStartDate) { 
-
-    // 1) Define a handler for the database records
+    // 4) Define a handler for the database records
     var fn = function(lib,lang,trackData,psgeoMap,sharedCounter,sharedOutput) {
         if (trackData.length > 0) {
             let trackName = trackData[0].trackId   // [{timestamp,position,trackId},...]
+            psgeoDebug('Processing record '+trackName)
             let trackPointArray = []
             for (const trackPoint of trackData) trackPointArray.push(trackPoint.position)
             const link = getTrackDownloadLink(trackName,trackPointArray)
@@ -300,20 +296,22 @@ async function showTrackRecordingDialog(lib,lang,cfg,psgeoMap,psgeoDomainDefault
             sharedOutput.appendChild(br)   // use object literals??? ZZZZZZZ
         }
         tracksToProcess.value--
-        if (tracksToProcess.value === 0) { // Last fn process // Close Group
+            psgeoDebug('The result now has ' + sharedOutput.childElementCount + ' child nodes.')
+            console.log(sharedOutput) // ZZZZZZ
+            psgeoDebug(tracksToProcess.value+' tracks left.')
+        if (tracksToProcess.value === 0) {
             if (document.getElementById('MoreFilter') !== null) document.getElementById('MoreFilter').style.display='none';
             if (document.getElementById('MoreInfo')   !== null) document.getElementById('MoreInfo').style.display='none';
             if (document.getElementById('AboutMenu') !== null)  document.getElementById('AboutMenu').style.display='none';
             if (document.getElementById('OtherTools') !== null)  document.getElementById('OtherTools').style.display='none';
-            document.getElementById("positionTrackingMenuDiv").style.display='block'
+            psgeoMap.controls[google.maps.ControlPosition.BOTTOM_CENTER].setAt(4,sharedOutput)
+
         }
     }
 
-    // 2) And run download link generation!
-    let tracksForDownloadDiv = document.getElementById('Gpx') // Locate the div
-        tracksForDownloadDiv.innerHTML = ""                   // Clear old contents
-    let tracksToProcess = { "value": 0 }                      // SharedCounter for async functions
-    iterateOverTracks(lib,lang,psgeoMap,fn,tracksToProcess,tracksForDownloadDiv,trackStartDate) // Update
+    // 5) And run download link generation!
+    let tracksToProcess = { "value": 0 }                     // sharedCounter for async functions
+    iterateOverTracks(lib,lang,psgeoMap,fn,tracksToProcess,tracksForDownloadDiv,trackStartDate)
 }
 
 
@@ -635,8 +633,7 @@ function PsgeoLocation() {
         trace: trace,
         showTrackRecordingDialog: showTrackRecordingDialog,
         restoreTraceFromDb: restoreTraceFromDb,
-        getGeolocationButton: getGeolocationButton,
-        positionTrackingMenuInit: positionTrackingMenuInit
+        getGeolocationButton: getGeolocationButton
     }
     
 } // End of PsgeoLocation
