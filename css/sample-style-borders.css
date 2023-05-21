@@ -45,7 +45,7 @@ html, body {
         align-content: center;
         }
 
-#Gpx {
+#positionTrackingMenuDiv {
         /* Advanced Filter Pane (bottom center, on-demand). Google Maps custom control. */
         max-height: 90%;
         overflow: auto;
@@ -62,7 +62,7 @@ html, body {
         }
 
 @media only screen and (max-width: 800px) {
-    #Gpx {
+    #positionTrackingMenuDiv {
         font-size: 110%;
     }
 }
