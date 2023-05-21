@@ -418,7 +418,8 @@
         "showPositionMarker": true,
         "showTrack": true,
         "richPositionInfo-UNUSED": true,
-        "geolocationContinuousUpdate-UNUSED": true
+        "geolocationContinuousUpdate-UNUSED": true,
+        "initialZoomWhenTrackingPosition": 15
         },
     "classicUI":false
 },
