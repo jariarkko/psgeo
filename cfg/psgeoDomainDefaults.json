@@ -106,6 +106,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": false,
     "locationTracking":
@@ -261,6 +262,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
     "locationTracking":
@@ -720,6 +722,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
     "locationTracking":
@@ -841,6 +844,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
     "locationTracking":
@@ -962,6 +966,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
     "locationTracking":
@@ -1083,6 +1088,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": false,
     "locationTracking":
@@ -1203,6 +1209,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
     "locationTracking":
@@ -1323,6 +1330,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": false,
     "locationTracking":
@@ -1443,6 +1451,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": false,
     "locationTracking":
@@ -1563,6 +1572,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": true,
     "locationTracking":
@@ -1683,6 +1693,7 @@
     "hideButtontextFilter": true,
     "hideButtontextMore": true,
     "hideButtontextGeolocation": true,
+    "hideButtontextGpx": true,
     "geolocationContinuousUpdate": true,
     "richPositionInfo": false,
     "locationTracking":
