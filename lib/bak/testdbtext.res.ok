@@ -1,0 +1,144 @@
+--> -- DB text tests
+--> -- publications and articles
+--> JEREMIAN LUOLAT, KUSTAVI
+
+Suomalainen luolakoodi luolalle on TP32. Luolan tyyppi on {F}.
+
+Coordinates: N 60.54615 E 21.33865 (http://www.google.com/maps/place/60.546145452,21.33865155)
+
+Length: 8 m. Cave type: boulder.
+
+Reading list:
+Esimerkki retkestä luolaan Jeremian luolat https://luolaseura.fi/suomessa/suomen-luolat/#Jeremian%20luolat (AK '20)
+Literature reference: Esimerkki retkestä luolaan Jeremian luolat. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '20)
+
+
+--> JEREMIAN LUOLAT 2, KUSTAVI
+
+Suomalainen luolakoodi luolalle on TP32. Luolan tyyppi on {F}.
+
+Coordinates: N 50.54615 E 11.33865 (http://www.google.com/maps/place/50.546145452,11.33865155)
+
+Length: 8 m. Cave type: boulder.
+
+Reading list:
+Literature reference: Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK)
+Esimerkki retkestä luolaan Jeremian luolat https://luolaseura.fi/suomessa/suomen-luolat/#Jeremian%20luolat (AY)
+
+
+--> BRUNNSKOBBIN LUOLA, VÅRDÖ
+
+Luolan tunniste AL21. Geneettis-morfologinen luokitus {A}.
+
+Coordinates: N 60.44292 E 20.38394 (http://www.google.com/maps/place/60.442924881,20.383939821)
+
+Length: 2 m. Material: non-volcanic, non-sedimentary. Cave type: blister. Other names: Brunnskobbin luola and Brunnskoppankittel.
+
+
+--> -- test against the bug that causes extra empty lines in article lists
+--> SOIDENKALLION ONKALOT, LAPINJÄRVI
+
+Luolan tunniste U26. Geneettis-morfologinen luokitus {BD2D3}. 1-5x25m
+
+Coordinates: N 60.65716 E 26.02430 (http://www.google.com/maps/place/60.657160204,26.024298863)
+
+Length: 25 m. Cave type: crevice/weathering.
+
+Reading list:
+Literature reference: U26 Soidenkallion onkalot. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+
+
+--> -- biking description tests
+--> PHILADELPHIA, PENNSYLVANIA
+
+Coordinates: N 40.00467 W 75.25810 (http://www.google.com/maps/place/40.0046684,-75.2581)
+
+Biking on an MTB and on a trail, on roads and outdoors.
+
+Reading list:
+Forbidden Drive https://planetskier.blogspot.com/2011/10/forbidden-drive.html (JA '11)
+
+
+--> SIBBERGROEVE, VALKENBURG
+
+Coordinates: N 50.84699 E 5.83030 (http://www.google.com/maps/place/50.846991,5.830299)
+
+Material: man-made/marble. Cave activities: biking. Biking on an MTB and underground. Target is a mine.
+
+Reading list:
+Underground biking in Maastricht https://planetskier.blogspot.com/2020/08/underground-biking-in-maastricht.html (JA,TK,MB... '10)
+
+
+--> -- tests with several activities
+--> FLAKTURM STIFTSKASERNE, VIENNA
+
+Coordinates: N 48.20162 E 16.35602 (http://www.google.com/maps/place/48.201621,16.356024)
+
+Material: man-made. Target is a bunker and a military site.
+
+Reading list:
+Re-visiting the Vienna flak towers https://planetskier.blogspot.com/2020/01/re-visiting-vienna-flak-towers.html (JA&JA '20)
+
+
+--> -- video tests
+--> HÖGBERGET, KIRKKONUMMI
+
+This is the world-famous Finnish cave, even if just 7 meters long. The cave looks exactly like an ... onion.
+
+Coordinates: N 60.10687 E 24.48624 (http://www.google.com/maps/place/60.10687,24.486241)
+
+Cave map: map (https://www.arkko.com/hogberget/Hogberget.pdf). Length: 6.5 km. Material: non-volcanic, non-sedimentary. Cave type: erosion. Cave activities: basic caving and surveying. Other names: Högbergetin luola.
+
+Reading list:
+Lights on ... again https://planetskier.blogspot.com/2019/08/lights-on-again.html (JA,PB&RS '19)
+Map of the Högberget Cave https://planetskier.blogspot.fi/2017/06/map-of-hogberget-cave.html (JA,JT&MS '17)
+Högberget Cave https://planetskier.blogspot.com/2015/12/hogberget-cave.html and video (https://player.vimeo.com/video/148812270) (JA,JR,ER... '15)
+
+
+
+--> representative image = https://example.com/blog189_cave_onion.jpg
+--> -- representative image tests
+--> representative image = https://example.com/blog189_cave_onion.jpg
+--> representative image = https://example.com/blog189_cave_onion.jpg
+--> -- shortening book  names
+--> -- search tests
+--> BLAA BLAA
+
+Luolan tunniste A1. Geneettis-morfologinen luokitus {A}
+
+Coordinates: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Length: 4000.0 km. Material: non-volcanic, non-sedimentary. Cave type: blister.
+
+Reading list:
+Literature reference: Joo joo. Suomen luolat. Kesäläinen et al. Salakirjat
+
+
+--> filter b non-sensitive: Blaa blaa
+--> -- bug #231 test
+--> {"n":"Beijing","lat":39.904361,"lon":116.391317,"k":"Beijing","c":"China","o":"Asia","rl":[{"t":"Beijing Visit","y":2012,"m":3,"w":["Jari Arkko"],"a":["Biking"],"sa":[["Normal","Bike-Unknown","Track-Unknown"]]}],"s":"bug231"}
+--> BEIJING
+
+Coordinates: N 39.90436 E 116.39132 (http://www.google.com/maps/place/39.904361,116.391317)
+
+Biking on an unknown bike type and on an unknown track.
+
+
+--> -- 3d model test
+--> {"n":"Grottbergetin luola, Siuntio","lat":39.904361,"lon":116.391317,"k":"Siuntio","c":"Finland","o":"Europe","l":10.6,"m":"https://example.com/map1.pdf","am":["https://example.com/map2.pdf","https://example.com/map-inferiorA.pdf"],"d3":"https://example.com/model1-obj.zip","ad3":["https://example.com/model2-STL.zip","https://example.com/model2-GLB.glb","https://example.com/model3.bar","https://example.com/model-inferiorB.glb","https://example.com/model-inferiorC.stl"],"rl":[{"t":"3D test","y":2021,"m":3,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Basic","Rock","Surveying","Rock-Unknown","Morphology-Unknown"]]},{"t":"3D test other item","y":2021,"m":3,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Basic","Rock","Surveying","Rock-Unknown","Morphology-Unknown"]],"s":"inferior dataset"}],"s":"model","as":["inferior dataset"],"ac":[{"lat":39.904,"lon":116.391,"s":"inferior dataset"}]}
+--> GROTTBERGETIN LUOLA, SIUNTIO
+
+Coordinates: N 39.90436 E 116.39132 (http://www.google.com/maps/place/39.904361,116.391317) (Model). Other reported coordinates: N 39.90400 E 116.39100 (http://www.google.com/maps/place/39.904,116.391) (Inferior dataset, 48m off).
+
+Cave map: map (https://example.com/map1.pdf), map (https://example.com/map2.pdf), map (https://example.com/map-inferiorA.pdf). 3D cave model: OBJ model (https://example.com/model1-obj.zip), STL model (https://example.com/model2-STL.zip), GLB model (https://example.com/model2-GLB.glb), model (https://example.com/model3.bar), GLB model (https://example.com/model-inferiorB.glb), STL model (https://example.com/model-inferiorC.stl). Length: ~10.6 m. Cave activities: basic caving and surveying.
+
+
+--> {"n":"Keinoluola, Kiuntio","lat":0.904361,"lon":100.391317,"k":"Kiuntio","c":"Finland","o":"Europe","m":"https://example.com/keinomap.pdf","d3":"https://example.com/keinomodel.glb","rl":[{"t":"3D test","y":2021,"m":3,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Basic","Rock","Surveying","Rock-Unknown","Morphology-Unknown"]]}],"s":"model"}
+--> KEINOLUOLA, KIUNTIO
+
+Coordinates: N 0.90436 E 100.39132 (http://www.google.com/maps/place/0.904361,100.391317)
+
+Cave map: map (https://example.com/keinomap.pdf). 3D cave model: GLB model (https://example.com/keinomodel.glb). Cave activities: basic caving and surveying.
+
+
+--> test complete and successful

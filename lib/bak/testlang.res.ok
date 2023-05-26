@@ -1,0 +1,56 @@
+--> basic tests
+--> missing language tests
+--> variable replacement tests
+--> string processing tests
+-->   list0 = 
+-->   list1 = foo
+-->   list2 = foo and bar
+-->   list3 = foo, bar and snaap
+--> vocabulary tests
+-->   diving = sukellus
+--> systematic vocabulary tests
+-->   testing vocabulary rockType in language fi: ["Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
+-->   testing vocabulary rockTypeAndOtherMaterial in language fi: ["Glacier","Ice","Man-Made","Material-Other","Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
+-->   testing vocabulary morphology in language fi: ["Morphology-Crack","Morphology-Boulders","Morphology-Karst","Morphology-Volcanic","Morphology-Erosion","Morphology-Weathering","Morphology-Crystallization","Morphology-Organic","Morphology-Unknown"]
+-->   testing vocabulary cavingActivity in language fi: ["Basic","SRT","Swimming","Boating","Diving","Digging","Biking","Skiing","Surveying","Researching","Training","Studying","Social","Media"]
+-->   testing vocabulary swimmingPlace in language fi: ["Waterbody-River","Waterbody-Lake","Waterbody-Sandpit","Waterbody-Sea","Waterbody-Pool","Waterbody-Cave","Waterbody-Other","Waterbody-Unknown","Outdoor","Indoor","Underground","Beach","Nature","Thermal-Bath","Other","Unknown"]
+-->   testing vocabulary swimmingMaterial in language fi: ["Water","Ice","Balls","Material-Other","None","Material-Unknown"]
+-->   testing vocabulary skiMaterial in language fi: ["Snow","Sand","Rock","Ash","Asphalt","Grass","Mud","Plastic","Substance-Other","Imported-Snow","Substance-Unknown"]
+-->   testing vocabulary skiPlace in language fi: ["Indoor","Outdoor","Underground","Unknown"]
+-->   testing vocabulary skiUphill in language fi: ["Lifts","Heli","Hiking","Snowshoeing","Skinning","Car","Bus","Train","Horse","Dogs","Uphill-Other","Uphill-Unknown"]
+-->   testing vocabulary urbanexTarget in language fi: ["Tunnels","Buildings","Ruins","Bunkers","Quarries","Mines","Industrial","Silos","Containers","Ski-Lifts","Landfills","Castles","Vehicles","Trenches","Memorial","Historic-Sites","Bridges","Skating-Rinks","Amusement-Parks","Airports","Catacombs","Railways","Smokestacks","Towers","Prisons","Harbours","Military","Other","None","Unknown"]
+-->   testing vocabulary bikeTrack in language fi: ["Track-City","Track-Road","Track-Trail","Track-Nature","Indoor","Outdoor","Underground","Track-Unknown"]
+-->   testing vocabulary bikeType in language fi: ["Bike-City","Bike-Road","Bike-Mountain","Bike-Unicycle","Bike-Tandem","Bike-Tricycle","Bike-Other","Bike-Unknown"]
+-->   testing vocabulary climbingType in language fi: ["Mountain","Rock","Ice","Wall","Volcanoes","None","Other","Unknown"]
+-->   testing vocabulary saunaType in language fi: ["Normal","Smoke","Steam","Infrared","None","Other","Unknown"]
+-->   testing vocabulary rockType in language en: ["Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
+-->   testing vocabulary rockTypeAndOtherMaterial in language en: ["Glacier","Ice","Man-Made","Material-Other","Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
+-->   testing vocabulary morphology in language en: ["Morphology-Crack","Morphology-Boulders","Morphology-Karst","Morphology-Volcanic","Morphology-Erosion","Morphology-Weathering","Morphology-Crystallization","Morphology-Organic","Morphology-Unknown"]
+-->   testing vocabulary cavingActivity in language en: ["Basic","SRT","Swimming","Boating","Diving","Digging","Biking","Skiing","Surveying","Researching","Training","Studying","Social","Media"]
+-->   testing vocabulary swimmingPlace in language en: ["Waterbody-River","Waterbody-Lake","Waterbody-Sandpit","Waterbody-Sea","Waterbody-Pool","Waterbody-Cave","Waterbody-Other","Waterbody-Unknown","Outdoor","Indoor","Underground","Beach","Nature","Thermal-Bath","Other","Unknown"]
+-->   testing vocabulary swimmingMaterial in language en: ["Water","Ice","Balls","Material-Other","None","Material-Unknown"]
+-->   testing vocabulary skiMaterial in language en: ["Snow","Sand","Rock","Ash","Asphalt","Grass","Mud","Plastic","Substance-Other","Imported-Snow","Substance-Unknown"]
+-->   testing vocabulary skiPlace in language en: ["Indoor","Outdoor","Underground","Unknown"]
+-->   testing vocabulary skiUphill in language en: ["Lifts","Heli","Hiking","Snowshoeing","Skinning","Car","Bus","Train","Horse","Dogs","Uphill-Other","Uphill-Unknown"]
+-->   testing vocabulary urbanexTarget in language en: ["Tunnels","Buildings","Ruins","Bunkers","Quarries","Mines","Industrial","Silos","Containers","Ski-Lifts","Landfills","Castles","Vehicles","Trenches","Memorial","Historic-Sites","Bridges","Skating-Rinks","Amusement-Parks","Airports","Catacombs","Railways","Smokestacks","Towers","Prisons","Harbours","Military","Other","None","Unknown"]
+-->   testing vocabulary bikeTrack in language en: ["Track-City","Track-Road","Track-Trail","Track-Nature","Indoor","Outdoor","Underground","Track-Unknown"]
+-->   testing vocabulary bikeType in language en: ["Bike-City","Bike-Road","Bike-Mountain","Bike-Unicycle","Bike-Tandem","Bike-Tricycle","Bike-Other","Bike-Unknown"]
+-->   testing vocabulary climbingType in language en: ["Mountain","Rock","Ice","Wall","Volcanoes","None","Other","Unknown"]
+-->   testing vocabulary saunaType in language en: ["Normal","Smoke","Steam","Infrared","None","Other","Unknown"]
+-->   testing vocabulary rockType in language sv: ["Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
+-->   testing vocabulary rockTypeAndOtherMaterial in language sv: ["Glacier","Ice","Man-Made","Material-Other","Rock-Volcanic","Rock-Sandstone","Rock-Mudrock","Rock-Limestone","Rock-Gypsum","Rock-Salt","Rock-Marble","Rock-Granite","Rock-Unknown"]
+-->   testing vocabulary morphology in language sv: ["Morphology-Crack","Morphology-Boulders","Morphology-Karst","Morphology-Volcanic","Morphology-Erosion","Morphology-Weathering","Morphology-Crystallization","Morphology-Organic","Morphology-Unknown"]
+-->   testing vocabulary cavingActivity in language sv: ["Basic","SRT","Swimming","Boating","Diving","Digging","Biking","Skiing","Surveying","Researching","Training","Studying","Social","Media"]
+-->   testing vocabulary swimmingPlace in language sv: ["Waterbody-River","Waterbody-Lake","Waterbody-Sandpit","Waterbody-Sea","Waterbody-Pool","Waterbody-Cave","Waterbody-Other","Waterbody-Unknown","Outdoor","Indoor","Underground","Beach","Nature","Thermal-Bath","Other","Unknown"]
+-->   testing vocabulary swimmingMaterial in language sv: ["Water","Ice","Balls","Material-Other","None","Material-Unknown"]
+-->   testing vocabulary skiMaterial in language sv: ["Snow","Sand","Rock","Ash","Asphalt","Grass","Mud","Plastic","Substance-Other","Imported-Snow","Substance-Unknown"]
+-->   testing vocabulary skiPlace in language sv: ["Indoor","Outdoor","Underground","Unknown"]
+-->   testing vocabulary skiUphill in language sv: ["Lifts","Heli","Hiking","Snowshoeing","Skinning","Car","Bus","Train","Horse","Dogs","Uphill-Other","Uphill-Unknown"]
+-->   testing vocabulary urbanexTarget in language sv: ["Tunnels","Buildings","Ruins","Bunkers","Quarries","Mines","Industrial","Silos","Containers","Ski-Lifts","Landfills","Castles","Vehicles","Trenches","Memorial","Historic-Sites","Bridges","Skating-Rinks","Amusement-Parks","Airports","Catacombs","Railways","Smokestacks","Towers","Prisons","Harbours","Military","Other","None","Unknown"]
+-->   testing vocabulary bikeTrack in language sv: ["Track-City","Track-Road","Track-Trail","Track-Nature","Indoor","Outdoor","Underground","Track-Unknown"]
+-->   testing vocabulary bikeType in language sv: ["Bike-City","Bike-Road","Bike-Mountain","Bike-Unicycle","Bike-Tandem","Bike-Tricycle","Bike-Other","Bike-Unknown"]
+-->   testing vocabulary climbingType in language sv: ["Mountain","Rock","Ice","Wall","Volcanoes","None","Other","Unknown"]
+-->   testing vocabulary saunaType in language sv: ["Normal","Smoke","Steam","Infrared","None","Other","Unknown"]
+--> test set of languages
+-->   languages = ["en","fi","sv"]
+--> test complete and successful

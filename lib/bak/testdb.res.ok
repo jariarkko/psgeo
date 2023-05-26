@@ -1,0 +1,616 @@
+--> db4.nArticles == 2
+--> db4p = Patschkofel,Vuokatti,Copper Mountain, Colorado
+--> db4a = Sauna im Stubai,Vuokatti
+--> state tests
+--> db4.states = Colorado
+--> filter tests
+--> fs = true
+--> cave size filter tests
+--> cs len 1
+--> cs min1 0 max1 5
+--> cs len 1
+--> cs min1 5 max1 100
+--> cave size or filter tests
+--> filter object = {"op":"or","conds":[{"op":"and","conds":[{"op":"minRange","param1":0},{"op":"maxRange","param1":5}]},{"op":"minRange","param1":100}]}
+--> filter condition list length = 2
+--> filter string = ((range>=0 and range<5) or range>=100)
+--> cs len 2
+--> cs min1 0 max1 5
+--> cs min2 100 max2 ud
+--> generation 0 format test
+-->   dbgen0.PsgeoDB
+-->   dbgen0.itemgen0
+-->   dbgen0.applyAll
+--> generation 1 format test
+--> generation 2 format test
+--> source = hah
+--> itemgen2 = {"n":"Kattilajärven iso lippaluola, Nuuksio, Espoo","m":"https://example.com/cavemap-kattilajarvi.pdf","lc":"5<<50","la":"exact","k":"Espoo","c":"Finland","o":"Europe","rl":[{"t":"Kattilajärvi roof caves","i":"https://example.com/a-picture.jpg","w":["Jari"],"y":2020,"m":5,"a":["Caving"],"sa":["Rock"],"u":"https://example.com/an-article.html"}],"lat":60.30145486,"lon":24.62792567,"s":"hah"}
+--> itemgen2.lc = 5<<50
+--> itemgen2.lc.min = 5
+--> itemgen2.lc.max = 50
+--> -- all ranges
+--> entry Lintukiiman Silmäsuon luola, Nummi-Pusula passed the filter (all cave sizes)
+--> entry Peuramaan iso vaakahalkeama, Kirkkonummi passed the filter (all cave sizes)
+--> -- all cave sizes except big
+--> entry Lintukiiman Silmäsuon luola, Nummi-Pusula passed the filter (except big)
+--> entry Peuramaan iso vaakahalkeama, Kirkkonummi passed the filter (except big)
+--> -- all cave sizes except small
+--> entry Lintukiiman Silmäsuon luola, Nummi-Pusula passed the filter (except small)
+--> -- all cave sizes except medium
+--> entry Peuramaan iso vaakahalkeama, Kirkkonummi passed the filter (except medium)
+--> -- no cave sizes
+--> -- side caves and relationships
+--> Solamäen luola, Siuntio is not a side cave
+--> Solamäen luola, Siuntio is a primary entity
+--> Solamäen luola, Siuntio has a sidecave relation to Solamäen kivenalusluola, Siuntio
+--> Solamäen luola, Siuntio has a sidecave relation to Solamäen lippaluolanen, Siuntio
+--> Solamäen kivenalusluola, Siuntio is a side cave
+--> Solamäen kivenalusluola, Siuntio is a primary entity
+--> Solamäen kivenalusluola, Siuntio has a sidecaveof relation to Solamäen luola, Siuntio
+--> Solamäen lippaluolanen, Siuntio is a side cave
+--> Solamäen lippaluolanen, Siuntio is a primary entity
+--> Solamäen lippaluolanen, Siuntio has a sidecaveof relation to Solamäen luola, Siuntio
+--> Extraluola 1 is not a side cave
+--> Extraluola 1 is a primary entity
+--> Extraluola 1 has no relationships
+--> Extraluola 2 is not a side cave
+--> Extraluola 2 is a primary entity
+--> Extraluola 2 has no relationships
+--> -- names and searching
+--> result length 1
+--> result item name Solamäen kivenalusluola, Siuntio
+--> result main cave Solamäen luola, Siuntio
+--> main result length 1
+--> main result item name Solamäen luola, Siuntio
+--> main result main cave undefined
+--> main result side caves ["Solamäen kivenalusluola, Siuntio","Solamäen lippaluolanen, Siuntio"]
+--> -- article filters
+--> has map "https://www.arkko.com/solamaen-luolat/Solamaki.pdf"
+--> has article true
+--> -- article filters all entries
+-->   map filter entry Solamäen luola, Siuntio
+-->   map filter entry Solamäen kivenalusluola, Siuntio
+-->   map filter entry Solamäen lippaluolanen, Siuntio
+-->   map filter entry Extraluola 2
+-->   article filter entry Solamäen luola, Siuntio
+-->   article filter entry Solamäen kivenalusluola, Siuntio
+-->   article filter entry Solamäen lippaluolanen, Siuntio
+-->   article filter entry Extraluola 1
+--> -- converting complex names
+-->   creating db
+-->   showing convert db results
+--> convert result: {"n":"Rokokallion luolat, Vihti","lat":60.4985969,"lon":24.477130225,"d":"Pituudet (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m). Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on {BE,F}.","l":86,"la":"exact","c":"Finland","o":"Europe","rl":[{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders","Rock-Unknown"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat"}],"s":"convert","k":"Vihti"}
+--> -- merging of items
+-->   creating merge db
+-->   showing merge db results
+--> merge result: {"n":"Vuorisen luola","lat":62.067613573832,"lon":23.822323132184,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[],"s":"merge","k":"Vuorisen luola"}
+--> merge result: {"n":"Tommin luola","lat":61.059315413301,"lon":23.386241059515,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[{"t":"Tommin luola","w":["Tommi Vuorinen"],"a":["Caving"],"sa":["Rock"]}],"s":"merge","k":"Tommin luola"}
+--> merge result: {"n":"Pääluola, Rokokallio, Vihti","lat":60.489854,"lon":24.476853,"an":["Rokokallion luolat, Vihti"],"d":"One description of this cave. Lets see if we can see another one.","lc":"5<<50","la":"approx","k":"Vihti","c":"Finland","o":"Europe","rl":[{"t":"Going to Rokokallio!","i":"https://example.com//blog811_edit.jpg","y":2020,"m":7,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Rock","Rock-Granite","Morphology-Crack","Morphology-Boulders","Basic"]],"u":"https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html"},{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat","s":"merge"}],"s":"merge","ac":[{"lat":60.4985969,"lon":24.477130225,"s":"merge"}],"ad":[{"d":"Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on {BE,F}. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","s":"merge"}]}
+-->   creating lang object
+-->   describing all items
+--> x = {"n":"Vuorisen luola","lat":62.067613573832,"lon":23.822323132184,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[],"s":"merge","k":"Vuorisen luola"}
+--> describing item Vuorisen luola:
+--> Basic HTML description:
+<p><b>Vuorisen luola</b></p><p>Koordinaatit: <a href="http://www.google.com/maps/place/62.067613573832,23.822323132184" target="_blank">N 62.06761 E 23.82232</a></p><p>Pituus: ~15 m.</p>
+--> Basic TXT description:
+VUORISEN LUOLA
+
+Koordinaatit: N 62.06761 E 23.82232 (http://www.google.com/maps/place/62.067613573832,23.822323132184)
+
+Pituus: ~15 m.
+
+
+--> Compact TXT description:
+VUORISEN LUOLA
+
+Koordinaatit: N 62.06761 E 23.82232 (http://www.google.com/maps/place/62.067613573832,23.822323132184)
+
+Pituus: ~15 m.
+
+
+--> x = {"n":"Tommin luola","lat":61.059315413301,"lon":23.386241059515,"l":15,"la":"approx","c":"Finland","o":"Europe","rl":[{"t":"Tommin luola","w":["Tommi Vuorinen"],"a":["Caving"],"sa":["Rock"]}],"s":"merge","k":"Tommin luola"}
+--> describing item Tommin luola:
+--> Basic HTML description:
+<p><b>Tommin luola</b></p><p>Koordinaatit: <a href="http://www.google.com/maps/place/61.059315413301,23.386241059515" target="_blank">N 61.05932 E 23.38624</a></p><p>Pituus: ~15 m.</p>
+--> Basic TXT description:
+TOMMIN LUOLA
+
+Koordinaatit: N 61.05932 E 23.38624 (http://www.google.com/maps/place/61.059315413301,23.386241059515)
+
+Pituus: ~15 m.
+
+
+--> Compact TXT description:
+TOMMIN LUOLA
+
+Koordinaatit: N 61.05932 E 23.38624 (http://www.google.com/maps/place/61.059315413301,23.386241059515)
+
+Pituus: ~15 m.
+
+
+--> x = {"n":"Pääluola, Rokokallio, Vihti","lat":60.489854,"lon":24.476853,"an":["Rokokallion luolat, Vihti"],"d":"One description of this cave. Lets see if we can see another one.","lc":"5<<50","la":"approx","k":"Vihti","c":"Finland","o":"Europe","rl":[{"t":"Going to Rokokallio!","i":"https://example.com//blog811_edit.jpg","y":2020,"m":7,"w":["Jari Arkko"],"a":["Caving"],"sa":[["Rock","Rock-Granite","Morphology-Crack","Morphology-Boulders","Basic"]],"u":"https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html"},{"t":"Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}","w":["Aimo Kejonen"],"a":["Caving"],"sa":[["Rock","Morphology-Crack","Morphology-Boulders"]],"pu":"https://www.salakirjat.net/product/242/suomen-luolat","p":"Suomen luolat","s":"merge"}],"s":"merge","ac":[{"lat":60.4985969,"lon":24.477130225,"s":"merge"}],"ad":[{"d":"Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on {BE,F}. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.","s":"merge"}]}
+--> describing item Pääluola, Rokokallio, Vihti:
+--> Basic HTML description:
+<p><b>Pääluola, Rokokallio, Vihti</b></p><a href="?i=P%C3%A4%C3%A4luola,%20Rokokallio,%20Vihti"><img src="https://example.com//blog811_edit.jpg" width="140"></a><p>Merge: One description of this cave. Lets see if we can see another one. Merge: Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on {BE,F}. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.</p><p>Koordinaatit: <a href="http://www.google.com/maps/place/60.489854,24.476853" target="_blank">N 60.48985 E 24.47685</a> (Merge). Muita ilmoitettuja koordinaatteja: <a href="http://www.google.com/maps/place/60.4985969,24.477130225" target="_blank">N 60.49860 E 24.47713</a> (Merge, 972m etäisyydellä).</p><p>Pituusluokka: 5-50 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako/lohkare. Muita nimiä: Rokokallion luolat.</p><p>Luettavaa:<br/><a href="https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html" target="_blank">Going to Rokokallio!</a> (JA '20)<br/>Kirjallisuusviite: Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}. <a href="https://www.salakirjat.net/product/242/suomen-luolat" target="_blank">Suomen luolat</a> (AK)</p>
+--> Basic TXT description:
+PÄÄLUOLA, ROKOKALLIO, VIHTI
+
+Merge: One description of this cave. Lets see if we can see another one. Merge: Suomalainen luolakoodi luolalle on U93. Luolan tyyppi on {BE,F}. Mitat 27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m.
+
+Koordinaatit: N 60.48985 E 24.47685 (http://www.google.com/maps/place/60.489854,24.476853) (Merge). Muita ilmoitettuja koordinaatteja: N 60.49860 E 24.47713 (http://www.google.com/maps/place/60.4985969,24.477130225) (Merge, 972m etäisyydellä).
+
+Pituusluokka: 5-50 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako/lohkare. Muita nimiä: Rokokallion luolat.
+
+Luettavaa:
+Going to Rokokallio! https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html (JA '20)
+Kirjallisuusviite: Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}. Suomen luolat https://www.salakirjat.net/product/242/suomen-luolat (AK)
+
+
+--> Compact TXT description:
+PÄÄLUOLA, ROKOKALLIO, VIHTI
+
+One description of this cave. Lets see if we can see another one.
+
+Koordinaatit: N 60.48985 E 24.47685 (http://www.google.com/maps/place/60.489854,24.476853)
+
+Pituusluokka: 5-50 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako/lohkare.
+
+Luettavaa:
+Going to Rokokallio! https://planetskier.blogspot.com/2020/07/going-to-rokokallio.html
+Kirjallisuusviite: Rokokallion luolat, Vihti (27m,lippa 1-8x32m,14m,lippa 3-4x6m,lippa 3x7m) [U93] {BE,F}. Suomen luolat https://www.salakirjat.net/product/242/suomen-luolat
+
+
+--> -- complex merge and gen 2 test
+--> LUOLAVUOREN LUOLA, TURKU
+
+Dataset 1: Suomalainen luolakoodi luolalle on TP24. Luolassa on useita reittejä. Luolan tyyppi on {BEF}. Dataset 2: Loistava kaupunkiluola, lähellä Turun keskustaa. Helppo luola aloittelijoille käydä, ja luolaa onkin käytety Suomen Luolaseuran opetustilaisuuksissa. Mutta edetessäsi tämän 60-metrisen luolan sisempiin osiin tarjoaa se myös haasteita ja ahtaita paikkoja kaikentasoisille luolailijoille!
+
+Koordinaatit: N 60.43057 E 22.28060 (http://www.google.com/maps/place/60.430570994,22.280602151) (Dataset 1). Muita ilmoitettuja koordinaatteja: N 60.42999 E 22.27778 (http://www.google.com/maps/place/60.429993,22.277781) (Dataset 2, 168m etäisyydellä).
+
+Pituus: ~60 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako/lohkare. Luola-aktiviteetit: luolailu ja opetus.
+
+Luettavaa:
+Kirjallisuusviite: Esimerkki retkestä luolaan Luolavuoren luola. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '20)
+More multi-flash practice in caves https://planetskier.blogspot.com/2018/10/more-multi-flash-practice-in-caves.html (JA,JP,RS... '18)
+
+
+--> n (all) = 1
+--> n (filter 1) = 1
+--> n (filter 2) = 1
+--> -- testing merge failure issue #60
+--> HYYPIÄNMÄEN LIPPALUOLA, NURMIJÄRVI
+
+Map entry: Valtava lippaluola suuren kalliojyrkänteen alapuolella, Hyypiänmäen pohjoisreunalla ja lähellä Klaukkalan Valkjärveä. Hyypiänmäki on myös loistava mustikkapaikka. Basic entry: Luolan tunniste U59. Geneettis-morfologinen luokitus {BED3}. 2-6x55m
+
+Koordinaatit: N 60.40911 E 24.70933 (http://www.google.com/maps/place/60.40910603,24.70933372) (Map entry). Muita ilmoitettuja koordinaatteja: N 60.40808 E 24.71043 (http://www.google.com/maps/place/60.408075528,24.710425509) (Basic entry, 129m etäisyydellä).
+
+Luolakartta: kartta (https://www.arkko.com/klaukkala-luolat/Klaukkalan-hyypianmaen-lippaluola.pdf). Pituus: 78.2 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako/rapautumis.
+
+Luettavaa:
+Hyypiänmäki massive roof cave https://planetskier.blogspot.com/2020/08/hyypianmaki-massive-roof-cave.html (JA '20)
+Kirjallisuusviite: U59 Hyypiänmäen lippaluola. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+
+
+--> alternative names = []
+--> KORKBERGETIN LOHKARELUOLA, KIRKKONUMMI
+
+Map entry: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkeloisen verkoston pituus on pidempi kuin muissa tunnetuissa suomalaisissa luolissa. Luola on n. 25 metrisen kallionjyrkänteen ja Humaljärven välissä. Luolasta löytyy tarkka kartta. Basic entry: Luolan tunniste U22. Geneettis-morfologinen luokitus {E}. Valtava lohkaresokkelo.
+
+Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (Map entry). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (Basic entry, 43m etäisyydellä).
+
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+
+Luettavaa:
+The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html (JA,JA,JR... '16)
+A Pile of Rocks https://planetskier.blogspot.com/2016/01/a-pile-of-rocks.html (JA,JA,JR... '15)
+More cave photo & flash exercise https://planetskier.blogspot.com/2018/10/more-cave-photo-flash-exercise.html (JA,JP&JR '18)
+Virtual caving club meeting. In a cave. https://planetskier.blogspot.com/2020/04/virtual-caving-club-meeting-in-cave.html (JA,JR,RS... '20)
+Luolia Suomessa, Korkberget https://luolaseura.fi/suomessa/suomen-luolat/#Korkbergetin%20lohkareluola (SL '20)
+Kirjallisuusviite: U22 Korkbergetin luolat. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+
+
+--> alternative names = ["Korkbergetin eli Korpbergetin luolat 1, Kirkkonummi","Korkbergetin luolat, Kirkkonummi","Korkbergetin luolat","Korpbergetin luolat"]
+--> -- video tests
+--> HULUBERGSGROTTAN, SIPOO
+
+Luolaseura: Luolan tunniste U82. Geneettis-morfologinen luokitus {C}. Planetswimmer: Suomessa harvinainen kalkkikiviluola. Pieni, osin veden täyttämä.
+
+Koordinaatit: N 60.32342 E 25.27709 (http://www.google.com/maps/place/60.323422154,25.277089468) (Luolaseura). Muita ilmoitettuja koordinaatteja: N 60.32343 E 25.27722 (http://www.google.com/maps/place/60.32343278,25.27721764) (Planetswimmer, 7m etäisyydellä).
+
+Pituus: 18 m. Materiaali: kalkkikivi/dolomiitti. Luolan tyyppi: karsti.
+
+Luettavaa:
+Hulubergsgrottan https://luolaseura.fi/luolaretkelle/suomen-luolat/#Hulubergsgrottan (AK '15)
+Kirjallisuusviite: U82 Hulubergsgrottan. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+Water in Boots https://vimeo.com/172493398 (video) (JA&JA '16)
+
+
+--> -- issue102 tests
+--> OGOF CNWC, SOUTH WALES
+
+Geneettis-morfologinen luokitus {C}.
+
+Koordinaatit: N 51.82734 W 3.14682 (http://www.google.com/maps/place/51.82734,-3.14682)
+
+Pituus: 27.0 km. Luolan tyyppi: karsti. Muita nimiä: Ogof Cnwc ja Price's Dig.
+
+Luettavaa:
+Ogof Cnwc https://lohkareikko.wordpress.com/2013/12/07/7-12-prices-dig-eli-ei-nain/ (VA '20)
+
+
+--> -- secret location tests
+--> NIXLUCKE, EBENSEE
+
+Pieni luola Ebenseen kylän lähellä. Luolalle pääsy vaatii jyrkän puron kiipeämistä (kivivyöryvaara). Luolassa on kuumaitoa, luolamuotoja, jne. Hieno paikka!
+
+Tarkka sijainti salainen
+
+Pituusluokka: 50- m. Materiaali: kalkkikivi/dolomiitti. Luolan tyyppi: karsti. Luola-aktiviteetit: luolailu ja SRT.
+
+Luettavaa:
+Nixlucke https://planetskier.blogspot.com/2018/08/nixlucke.html (JA&BT '18)
+
+
+--> SMALL CAVE, CERVINIA
+
+Pieni halkeamaluola, jonka läpi voi talvella hiihtää!
+
+Koordinaatit: N 45.94948 E 7.67274 (http://www.google.com/maps/place/45.949483,7.672735)
+
+Pituusluokka: 0-5 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: hiihto. Hiihtoa ulkona ja maan alla, lumella. Ylös hissillä.
+
+Luettavaa:
+Cave Skiing https://planetskier.blogspot.com/2016/02/cave-skiing.html ja video (https://vimeo.com/155217904) (JA&JR '16)
+Cave Skiing https://planetskier.blogspot.com/2016/02/cave-skiing.html ja video (https://vimeo.com/155217904) (JA&JR '16)
+
+
+--> PU'U HULUHULU, BIG ISLAND, HAWAII
+
+Koordinaatit: N 19.37165 W 155.20500 (http://www.google.com/maps/place/19.371647,-155.205)
+
+Kiipeilytyyppi on vuoristo.
+
+
+--> KORKBERGETIN HALKEAMALUOLA, KIRKKONUMMI
+
+Yksi suurimmista ellei suurin maanalainen halkeama Suomessa. Korkeus 7-8 metriä. Piipputekniikkaa tarvitaan liikkumiseen.
+
+Koordinaatit: N 60.16188 E 24.45257 (http://www.google.com/maps/place/60.161885,24.452573)
+
+Pituus: ~15 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: rako. Kiipeilytyyppi on kalliokiipeily.
+
+Luettavaa:
+Massive crack cave at Korkberget https://planetskier.blogspot.com/2019/08/massive-crack-cave-at-korkberget.html (JA,TP,JR... '19)
+
+Pääluola: Korkbergetin lohkareluola (?p=Korkbergetin%20lohkareluola,%20Kirkkonummi)
+--> KITZSTEINHORN, KAPRUN
+
+Koordinaatit: N 47.18806 E 12.68750 (http://www.google.com/maps/place/47.188056,12.6875)
+
+Suomalainen sauna. Kiipeilytyyppi on vuoristo. Hiihtoa ulkona, lumella. Ylös hissillä.
+
+Luettavaa:
+Hero or Bonehead? https://planetskier.blogspot.com/2012/04/hero-or-bonehead.html (JA '12)
+
+
+--> MICHLIFEN, IFRANE
+
+Koordinaatit: N 33.41387 W 5.07898 (http://www.google.com/maps/place/33.4138679,-5.07898)
+
+Kiipeilytyyppi on vuoristo ja tulivuorikiipeily. Hiihtoa ulkona, lumella. Ylös hissillä ja hevosella.
+
+Luettavaa:
+Broken Ribs https://planetskier.blogspot.com/2016/03/broken-ribs.html ja video (https://vimeo.com/159595899) (JA '16)
+
+
+--> SAND DUNES, DUBAI
+
+Koordinaatit: N 24.85766 E 55.45572 (http://www.google.com/maps/place/24.857661,55.455722)
+
+Lumilautailua ulkona, hiekalla. Ylös kävelemällä.
+
+
+--> -- swimming tests
+--> LIPPAJÄRVEN SALAINEN LAITURI, LIPPAJÄRVI, ESPOO
+
+Koordinaatit: N 60.22639 E 24.72337 (http://www.google.com/maps/place/60.226389,24.723373)
+
+Uintia ulkona, järvellä ja virallisella uintipaikalla, vedessä.
+
+Luettavaa:
+Lippajärvi swim https://planetskier.blogspot.com/2020/07/lippajarvi-swim.html (JA '20)
+
+
+--> EX. YUGOSLAVIAN MILITARY SHELTER FOR SUBMARINES, ROGAČIĆ, VIS
+
+Koordinaatit: N 43.07816 E 16.18141 (http://www.google.com/maps/place/43.078158,16.181413)
+
+Uintia sisällä, ulkona, maan alla, meressä ja jossain muussa vesialtaassa, vedessä. Kohde on tunneli, bunkkeri ja satama.
+
+Luettavaa:
+Afternoon swim at the abandoned underground submarine base https://planetskier.blogspot.com/2019/08/afternoon-swim-at-abandoned-underground.html (JA '19)
+
+
+--> HOTEL UYUT, ALMATY
+
+Koordinaatit: N 43.25968 E 76.93383 (http://www.google.com/maps/place/43.259678,76.93383)
+
+Suomalainen sauna. Uintia sisällä ja uima-altaassa, vedessä.
+
+Luettavaa:
+Kazakhstan Sauna! https://planetskier.blogspot.ru/2018/02/kazakhstan-sauna.html (JA,TK&JR '18)
+
+
+--> -- unknown additions
+--> Unknown0: Sauna: ["Smoke"]
+--> UNKNOWN0
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Savusauna.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown1: Sauna: ["Unknown"]
+--> UNKNOWN1
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Saunatyyppi ei tiedossa.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown2: Swimming: ["Balls","Unknown"]
+--> UNKNOWN2
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Uintia ei tiedossa olevassa paikassa, pallomeressä.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown3: Swimming: ["Waterbody-Lake","Unknown"]
+--> UNKNOWN3
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Uintia järvellä ja ei tiedossa olevassa paikassa,
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown4: Swimming: ["Water","Unknown","Waterbody-Unknown"]
+--> UNKNOWN4
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Uintia ei tiedossa olevassa paikassa ja ei tiedossa olevassa vesialtaassa, vedessä.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown5: Climbing: ["Unknown"]
+--> UNKNOWN5
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Kiipeilytyyppi on tuntematon kiipeilytyyppi.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown6: Skiing: ["Unknown","Uphill-Unknown","Substance-Unknown"]
+--> UNKNOWN6
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Hiihtoa tuntemattomassa paikassa, ei tiedossa olevalla materiaalilla. Ylös ei tiedossa olevalla tavalla.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown7: Snowboarding: ["Lifts","Unknown","Substance-Unknown"]
+--> UNKNOWN7
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Lumilautailua tuntemattomassa paikassa, ei tiedossa olevalla materiaalilla. Ylös hissillä.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown8: Sliding: ["Ash","Unknown","Uphill-Unknown"]
+--> UNKNOWN8
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Liukua tuntemattomassa paikassa, tuhkalla. Ylös ei tiedossa olevalla tavalla.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown9: Sliding: ["Ash","Hiking","Unknown"]
+--> UNKNOWN9
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Liukua tuntemattomassa paikassa, tuhkalla. Ylös kävelemällä.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown10: Caving: []
+--> UNKNOWN10
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown11: Caving: ["Ice"]
+--> UNKNOWN11
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Materiaali: jää.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown12: Caving: ["Rock","Rock-Unknown","Morphology-Unknown"]
+--> UNKNOWN12
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> Unknown13: Caving: ["Rock","Morphology-Crack","Rock-Unknown"]
+--> UNKNOWN13
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Luolan tyyppi: rako.
+
+Luettavaa:
+Article https://example.net (AA '20)
+
+
+--> -- filter tests
+--> full set: ITEM-SKIING
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Hiihtoa tuntemattomassa paikassa, Ylös ei tiedossa olevalla tavalla.
+
+Luettavaa:
+Article https://example.net
+
+
+--> full set: ITEM-SNOWBOARDING
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Lumilautailua tuntemattomassa paikassa, hiekalla. Ylös ei tiedossa olevalla tavalla.
+
+Luettavaa:
+Article https://example.net
+
+
+--> full set: ITEM-SLIDING
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Liukua tuntemattomassa paikassa, nurmikolla. Ylös ei tiedossa olevalla tavalla.
+
+Luettavaa:
+Article https://example.net
+
+
+--> full set: ITEM-BIKING
+
+Koordinaatit: N 12.34000 E 56.78000 (http://www.google.com/maps/place/12.34,56.78)
+
+Pyöräily maastopyörällä ja poluilla.
+
+Luettavaa:
+Article https://example.net
+
+
+--> in set 1: item-skiing
+--> in set 1: item-snowboarding
+--> in set 1: item-sliding
+--> in set 1: item-biking
+--> in set 3: item-biking
+--> in set 4: item-skiing
+--> in set 4: item-snowboarding
+--> in set 4: item-sliding
+--> in set 5: item-snowboarding
+--> in set 6: item-snowboarding
+--> in set 7: item-skiing
+--> in set 7: item-snowboarding
+--> in set 7: item-sliding
+--> in set 8: item-sliding
+--> -- quick subsumption tests
+--> 
+--> Test case basic Javascript
+--> jslist1 = [{"foo":1,"bar":2,"snaap":3}]
+--> jslist2 = [{"foo":1,"bar":2,"snaap":3}]
+--> 
+--> Test case QS1:
+--> 
+--> Test case QS2:
+--> QS2: KORKBERGETIN LOHKARELUOLA, KIRKKONUMMI
+
+QS2: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkeloisen verkoston pituus on pidempi kuin muissa kartoitetuissa suomalaisissa luolissa. Luola on n. 25 metrisen kallionjyrkänteen ja Humaljärven välissä. Luolasta löytyy tarkka kartta. QS2: Luolan tunniste U22. Geneettis-morfologinen luokitus {E}.  Valtava lohkaresokkelo.
+
+Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (QS2). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (QS2, 43m etäisyydellä).
+
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+
+Luettavaa:
+The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html ja video (https://vimeo.com/197046265) (JA,JA,JR... '16)
+A Pile of Rocks https://planetskier.blogspot.com/2016/01/a-pile-of-rocks.html ja video (https://vimeo.com/150548167) (JA,JA,JR... '15)
+More cave photo & flash exercise https://planetskier.blogspot.com/2018/10/more-cave-photo-flash-exercise.html (JA,JP&JR '18)
+Virtual caving club meeting. In a cave. https://planetskier.blogspot.com/2020/04/virtual-caving-club-meeting-in-cave.html (JA,JR,RS... '20)
+Luolia Suomessa, Korkberget https://luolaseura.fi/suomessa/suomen-luolat/#Korkbergetin%20lohkareluola (SL '20)
+Kirjallisuusviite: U22 Korkbergetin luolat. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+
+
+--> 
+--> Test case QS3:
+--> QS3: KORKBERGETIN LOHKARELUOLA, KIRKKONUMMI
+
+QS2: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkeloisen verkoston pituus on pidempi kuin muissa kartoitetuissa suomalaisissa luolissa. Luola on n. 25 metrisen kallionjyrkänteen ja Humaljärven välissä. Luolasta löytyy tarkka kartta. QS2: Luolan tunniste U22. Geneettis-morfologinen luokitus {E}.  Valtava lohkaresokkelo.
+
+Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (QS2). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (QS2, 43m etäisyydellä).
+
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+
+Luettavaa:
+The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html ja video (https://vimeo.com/197046265) (JA,JA,JR... '16)
+A Pile of Rocks https://planetskier.blogspot.com/2016/01/a-pile-of-rocks.html ja video (https://vimeo.com/150548167) (JA,JA,JR... '15)
+More cave photo & flash exercise https://planetskier.blogspot.com/2018/10/more-cave-photo-flash-exercise.html (JA,JP&JR '18)
+Virtual caving club meeting. In a cave. https://planetskier.blogspot.com/2020/04/virtual-caving-club-meeting-in-cave.html (JA,JR,RS... '20)
+Luolia Suomessa, Korkberget https://luolaseura.fi/suomessa/suomen-luolat/#Korkbergetin%20lohkareluola (SL '20)
+Kirjallisuusviite: U22 Korkbergetin luolat. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+
+
+--> 
+--> Test case QS4:
+--> QS4: KORKBERGETIN LOHKARELUOLA, KIRKKONUMMI
+
+QS2: Tämä lohkareluola on ehkä suurin luola Suomessa, tai ainakin sen sokkeloisen verkoston pituus on pidempi kuin muissa kartoitetuissa suomalaisissa luolissa. Luola on n. 25 metrisen kallionjyrkänteen ja Humaljärven välissä. Luolasta löytyy tarkka kartta. QS2: Luolan tunniste U22. Geneettis-morfologinen luokitus {E}.  Valtava lohkaresokkelo.
+
+Koordinaatit: N 60.16210 E 24.45277 (http://www.google.com/maps/place/60.162099,24.452772) (QS2). Muita ilmoitettuja koordinaatteja: N 60.16175 E 24.45243 (http://www.google.com/maps/place/60.16174974,24.452431084) (QS2, 43m etäisyydellä).
+
+Luolakartta: kartta (https://www.arkko.com/korkberget/korkberget-full.pdf). Pituus: 302.6 m. Materiaali: kivi, ei vulkaaninen, ei sedimentti. Luolan tyyppi: lohkare/rako. Luola-aktiviteetit: luolailu, veneily, kartoitus ja sosiaalinen. Muita nimiä: Korkbergetin eli Korpbergetin luolat 1, Korkbergetin eli Korpbergetin luolat 1, Korkbergetin luolat, Korkbergetin luolat ja Korpbergetin luolat.
+
+Luettavaa:
+The Korkberget Files https://planetskier.blogspot.fi/2016/12/the-korkberget-files.html ja video (https://vimeo.com/197046265) (JA,JA,JR... '16)
+A Pile of Rocks https://planetskier.blogspot.com/2016/01/a-pile-of-rocks.html ja video (https://vimeo.com/150548167) (JA,JA,JR... '15)
+More cave photo & flash exercise https://planetskier.blogspot.com/2018/10/more-cave-photo-flash-exercise.html (JA,JP&JR '18)
+Virtual caving club meeting. In a cave. https://planetskier.blogspot.com/2020/04/virtual-caving-club-meeting-in-cave.html (JA,JR,RS... '20)
+Luolia Suomessa, Korkberget https://luolaseura.fi/suomessa/suomen-luolat/#Korkbergetin%20lohkareluola (SL '20)
+Kirjallisuusviite: U22 Korkbergetin luolat. Suomen luolat. Kesäläinen, Kejonen, Kielosto, Salonen, Lahti. 2015. Salakirjat. ISBN 978-952-5774-80-1 (AK '15)
+
+
+--> 
+--> Test case for issue 265
+--> test complete and successful
