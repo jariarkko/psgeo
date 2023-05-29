@@ -435,7 +435,9 @@
         "showPositionMarker": true,
         "showTrack": true,
         "richPositionInfo": true,
-        "initialZoomWhenTrackingPosition": 15
+        "initialZoomWhenTrackingPosition": 17,
+        "ignoreFirstPositionsInPlotting": 10,
+        "requireA": 20
         },
     "classicUI":false
 },
