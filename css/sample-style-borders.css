@@ -64,6 +64,7 @@ html, body {
 @media only screen and (max-width: 800px) {
     #positionTrackingMenuDiv {
         font-size: 110%;
+        width: 18em;
     }
 }
 

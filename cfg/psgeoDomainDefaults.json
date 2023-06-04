@@ -431,13 +431,11 @@
     "locationTracking":               
         {
         "enabled": true, 
-        "trackRecording": true, 
+        "trackRecording": false, 
         "showPositionMarker": true,
         "showTrack": true,
         "richPositionInfo": true,
-        "initialZoomWhenTrackingPosition": 17,
-        "ignoreFirstPositionsInPlotting": 10,
-        "requireA": 20
+        "initialZoomWhenTrackingPosition": 19
         },
     "classicUI":false
 },

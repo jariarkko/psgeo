@@ -156,11 +156,11 @@
     "locationTracking":               
         {
         "enabled": true, 
-        "trackRecording": true, 
+        "trackRecording": false, 
         "showPositionMarker": true,
         "showTrack": true,
         "richPositionInfo": true,
-        "initialZoomWhenTrackingPosition": 15
+        "initialZoomWhenTrackingPosition": 19
         },
     "classicUI":false
 }
